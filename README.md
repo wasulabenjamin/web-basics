@@ -1,6 +1,6 @@
 <p align="center">
 	<a href="https://github.com/wasulabenjamin/web_basics.git">
-		<img src=".github/assets/icons8_github_100px.png" alt="logo">
+		<img src="https://img.icons8.com/?size=120&id=114334&format=png&color=000000" alt="logo">
 	</a>
 </p>
 
@@ -17,7 +17,7 @@
 <p align="center">
 	<br> <br>
 	<a href="https://app.codacy.com/gh/wasulabenjamin/web_basics/dashboard">
-		<img src="https://app.codacy.com/project/badge/Grade/ee49b6bb231e46fc9f5ee300e96738d4"/>
+		<img src="https://app.codacy.com/project/badge/Grade/0a0cf227762141d699edcfcdd5b5caa7"/>
 	</a>
     &nbsp;
 	<a href="https://github.com/wasulabenjamin/web_basics/graphs/contributors">
@@ -50,9 +50,21 @@ tutorials.
 Whether you're reviewing fundamentals or pushing into real-time apps, this repo captures one developer’s personal 
 journey—openly shared, continually evolving.
 
-## 🧭 Learning Roadmap
+## Audience
 
-### Phase 1. Web Fundamentals
+This tutorial has been prepared for: 
+- Beginners looking for a clean, modern intro to web development.
+- Developers revisiting fundamentals with a focus on real-world workflows.
+- Anyone curious about integrating Vue.js with Supabase and PostgreSQL.
+
+## Prerequisites
+
+Before you start practicing various types of examples given in this reference, we assume that you are already aware 
+about GitHub and the Git Version Control System.
+
+# 🧭 Learning Roadmap
+
+## Phase 1: Web Fundamentals
 
 These are the core web building blocks:
 - **HTML5**: Tags, elements, forms, semantics
@@ -62,9 +74,9 @@ These are the core web building blocks:
 - **Bootstrap**: UI framework for rapid prototyping
 - **Tailwind CSS**: Utility-first CSS framework for custom UIs
 
-📂 Explore inside: `fundamentals/`
+Explore inside: `fundamentals/` 📂 
 
-### Phase 2. Frontend Framework – Vue JS
+## Phase 2: Frontend Framework – Vue JS
 
 Lightweight, reactive, component-driven frontend framework
 - Introduction to Vue
@@ -72,10 +84,11 @@ Lightweight, reactive, component-driven frontend framework
 - Props and state management
 - Reusable components
 - Todo App as capstone
+- **Capstone Project**: Task manager with local storage
 
-📂 Explore inside: `vue_tutorials/`
+Explore inside: `vue_tutorials/` 📂 
 
-### Phase 3. Backend & Databases
+## Phase 3: Backend & Databases
 
 Here we focus on backend learning without getting lost in boilerplate
 - **SQL with PostgreSQL**: Core CRUD operations, schema design, joins, indexes
@@ -84,146 +97,75 @@ Here we focus on backend learning without getting lost in boilerplate
   - Hosted PostgreSQL database
   - Auto-generated RESTful and real-time APIs
   - Row-level security
+  - **Capstone Project**: Fullstack app with auth and CRUD
 
-📂 Explore inside: `backend/`
+Explore inside: `backend/` 📂 
 
-## 🚀 Getting Started
+# 🚀 Getting Started
 
-### Requirements
+## Requirements
 
-- Any text editor (Sublime Text recommended)
+Before diving in, ensure you have:
+- Basic understanding of programming concepts
+- [Git](https://git-scm.com/) installed
+- Code editor ([Sublime Text](https://www.sublimetext.com/download) recommended)
 - Modern web browser (Google Chrome recommended)
-- Git (for cloning)
+- [Node.js](https://nodejs.org/en/download) installed for Vue.js projects
+
+## Folder Structure
 
 Each topic is organized by folder. Start with `/fundamentals/01_html` and progress through the folders in order.
 
----
-
-## 📁 Folder Structure
-
 ```bash
 web_basics/
-├── .github/
+├── .github/ 									# Contribution guidelines
 ├── assets/
-├── backend_supabase/
-│   ├── 01_sql_basics/
-│   ├── 02_supabase_auth/
-│   ├── 03_supabase_crud/
-│   └── 04_realtime/
-├── fundamentals/
-│   ├── 01_html/
-│   ├── 02_css/
-│   ├── 03_js/
-│   ├── 04_json/
-│   ├── 05_bootstrap/
-│   └── 06_tailwind/
+├── backend_supabase/ 				# Server-side technologies
+│   ├── 01_postgresql/        # Database fundamentals
+│   ├── 02_supabase_auth/ 		# Supabase Auth
+│   ├── 03_supabase_crud/ 		# Supabase APIs
+│   └── 04_realtime/ 					# Supabase Realtime
+├── fundamentals/ 						# Core web technologies
+│   ├── 01_html/ 							# Semantic markup examples
+│   ├── 02_css/ 							# Layouts, animations, responsive
+│   ├── 03_js/ 								# Modern JS patterns
+│   ├── 04_json/ 							# JavaScript Object Notation
+│   ├── 05_bootstrap/ 				# Component-based prototyping
+│   └── 06_tailwind/ 					# Utility-first CSS workflows
 ├── notes/
-├── vue_tutorials/
-│   ├── 01_intro/
-│   ├── 02_components/
+├── vue_tutorials/ 						# Vue.js ecosystem
+│   ├── 01_intro/ 						# Core concepts
+│   ├── 02_components/ 				# Reusable patterns
 │   ├── 03_reactivity/
-│   └── 04_project_todo/
+│   └── 04_project_todo/ 			# Practical application
 ├── .codacy.yaml
+├── .editorconfig
+├── .gitattributes
 ├── .gitignore
 ├── 404.html
 ├── CHANGELOG.md
+├── LICENSE
+├── README.md
 ├── favicon.ico
 ├── icon.png
 ├── icon.svg
 ├── index.html
-├── LICENCE
-├── 
-├── 
-├── 
-├── 
-├── 
-└
+├── robots.txt
+├── site.webmanifest
+├── webpack.common.js
+├── webpack.config.dev.js
+└── webpack.config.prod.js
 ```
 
----
-
-## 🧩 Contributing
-
-All contributions are welcome—big or small. Found a typo? Fix it. Got a better way to explain a concept? Add it.
-
-📄 Please read [CONTRIBUTING.md][contributing_guidelines] for guidelines.
-
----
-
-## 🐛 Bugs and Feature Requests
-
-If you spot a bug, performance issue, or something unclear:
-
-* [Report a bug][report_bug]
-* [Request a new feature][request_feature]
-
----
-
-## 📚 License
-
-Distributed under the [MIT License](LICENSE). Feel free to use, learn from, and improve on this project.
-
----
-
-## 🙌 Acknowledgements
-
-* Supabase team for simplifying backend
-* Tailwind Labs for incredible dev ergonomics
-* Vue core team for building something simple yet powerful
-
-> Don’t forget to ⭐️ this repo if you find it helpful!
-
----
-
-[report_bug]: https://github.com/wasulabenjamin/web_basics/issues/new?template=bug_report.md
-[request_feature]: https://github.com/wasulabenjamin/web_basics/issues/new?template=feature_request.md
-[contributing_guidelines]: https://github.com/wasulabenjamin/web_basics/blob/main/.github/CONTRIBUTING.md
-
-```
-
----
-
-### 💡 Notes
-
-- Clean structure with developer-friendly language.
-- Follows best practices: badges, links, roadmap, license, folder map.
-- Modular: easy to extend to React, Firebase, Node, etc. in future forks or branches.
-
-Let me know if you want a **lightweight README variant** for mobile users or learners using limited bandwidth.
-```
-
-
-------------------------------------------------------------------------------------------------------------------------
-# Introduction
-
-Markdown is an easy-to-read, easy-to-write language for formatting plain text. You can use Markdown syntax, along with 
-some additional HTML tags, to format your writing on GitHub, in places like repository READMEs and comments on pull 
-requests and issues. 
-
-### Audience
-
-This tutorial has been prepared for the beginners to help them understand the basic to advanced formatting features 
-through creating and editing various templates.
-
-### Prerequisites
-
-Before you start practicing various types of examples given in this reference, we assume that you are already aware 
-about Github and the Git Version Control System.
-
-### Usage
+## Usage
 
 - Fork repository and clone it locally
-- Customize the content inside `.github`, `CHANGELOG.md` and `README.md` as per your project requirements or intention
+- Explore learning paths by customizing the content inside `fundamentals/`, `vue_tutorials/` and `backend/` as per your 
+requirements or intention
 
-Please share the goodness & don't forget leaving a :star: on the repository.
+> Please share the goodness & don't forget leaving a :star: on the repository.
 
-# Bugs and Feature Requests
-
-Have a bug or a feature request? **Here is to how you can help:** 
-* Having problems with the tutorial? [Please report a bug][report_bug]
-* Is your problem or idea you would wish implemented not addressed yet? [Please request a feature][request_feature]
-
-# Contributing
+# 🧩 Contributing
 
 This is an open source example template, therefore developers are encouraged to contribute and help maintain the project 
 throughout its life cycle. Any contributions will be highly appreciated.
@@ -232,6 +174,19 @@ Looking to contribute something to this template?
 
 Please read through the [contributing guidelines][contributing_guidelines], included are directions for opening issues, 
 coding standards, and notes on development.
+
+# 🐛 Bugs and Feature Requests
+
+Have a bug or a feature request? **Here is to how you can help:** 
+* Having problems with the tutorial? [Please report a bug][report_bug]
+* Is your problem or idea you would wish implemented not addressed yet? [Please request a feature][request_feature]
+
+# 🙌 Acknowledgements
+
+* [Bootstrap](https://getbootstrap.com/docs/5.3) for a powerful, feature-packed frontend toolkit.
+* [Tailwind](https://tailwindcss.com/docs/) Labs for incredible dev ergonomics
+* [Vue core](https://www.tutorialspoint.com/vuejs/index.htm) team for building something simple yet powerful
+* [Supabase](https://supabase.com/dashboard/org) team for simplifying backend
 
 
 <!--
