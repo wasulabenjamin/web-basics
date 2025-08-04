@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JS Basics</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <meta name="description" content="">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:alt" content="">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+</head>
+<body>
+
+	<br>
+	<h1>Lesson 01. Javascript Basics Tutorial</h1>
+	<!---->
+	<h2>Home</h2>
+	<!---->
+	<h2>Roadmap</h2>
+	<!---->
+	<h2>Overview</h2>
+	<!---->
+	<h2>Features</h2>
+	<!---->
+	<h2>Enabling</h2>
+	<!---->
+	<h2>Placement</h2>
+	<!---->
+	<h2>Syntax</h2>
+	<!---->
+	<h2>Hello World</h2>
+	<!---->
+	<h2>Console.log()</h2>
+	<!---->
+	<h2>Comments</h2>
+	<!---->
+	<h2>Variables</h2>
+	<!---->
+	<h2>let Statement</h2>
+	<!---->
+	<h2>Constants</h2>
+	<!---->
+	<h2>Data Types</h2>
+	<!---->
+	<h2>Type Conversions</h2>
+	<!---->
+	<h2>Strict Mode</h2>
+	<!---->
+	<h2>Reserved Keywords</h2>
+	<!---->
+
+	<br>
+	<h1>Lesson 02. JavaScript Operators</h1>
+	<!---->
+	<h2>Operators</h2>
+	<!---->
+	<h2>Arithmetic Operators</h2>
+	<!---->
+	<h2>Comparison Operators</h2>
+	<!---->
+	<h2>Logical Operators</h2>
+	<!---->
+	<h2>Bitwise Operators</h2>
+	<!---->
+	<h2>Assignment Operators</h2>
+	<!---->
+	<h2>Conditional Operators</h2>
+	<!---->
+	<h2>typeof Operator</h2>
+	<!---->
+	<h2>Nullish Coalescing Operator</h2>
+	<!---->
+	<h2>Safe Assignment Operator</h2>
+	<!---->
+	<h2>Delete Operator</h2>
+	<!---->
+	<h2>Comma Operator</h2>
+	<!---->
+	<h2>Grouping Operator</h2>
+	<!---->
+	<h2>Yield Operator</h2>
+	<!---->
+	<h2>Spread Operator</h2>
+	<!---->
+	<h2>Exponentiation Operator</h2>
+	<!---->
+	<h2>Operator Precedence</h2>
+	<!---->
+
+	<br>
+	<h1>Lesson 03. JavaScript Control Flow</h1>
+	<!---->
+	<h2>If...Else</h2>
+	<!---->
+	<h2>While Loop</h2>
+	<!---->
+	<h2>For Loop</h2>
+	<!---->
+	<h2>For...in</h2>
+	<!---->
+	<h2>For...of</h2>
+	<!---->
+	<h2>Loop Control</h2>
+	<!---->
+	<h2>Break Statement</h2>
+	<!---->
+	<h2>Continue Statement</h2>
+	<!---->
+	<h2>Switch Case</h2>
+	<!---->
+	<h2>User Defined Iterators</h2>
+	<!---->
+
+	<br>
+	<h1>Lesson 04. JavaScript Functions</h1>
+	<!---->
+	<h2>Functions</h2>
+	<!---->
+	<h2>Function Expressions</h2>
+	<!---->
+	<h2>Function Parameters</h2>
+	<!---->
+	<h2>Default Parameters</h2>
+	<!---->
+	<h2>Function() Constructor</h2>
+	<!---->
+	<h2>Function Hoisting</h2>
+	<!---->
+	<h2>Self-Invoking Functions</h2>
+	<!---->
+	<h2>Arrow Functions</h2>
+	<!---->
+	<h2>Function Invocation</h2>
+	<!---->
+	<h2>Function call()</h2>
+	<!---->
+	<h2>Function apply()</h2>
+	<!---->
+	<h2>Function bind()</h2>
+	<!---->
+	<h2>Closures</h2>
+	<!---->
+	<h2>Variable Scope</h2>
+	<!---->
+	<h2>Global Variables</h2>
+	<!---->
+	<h2>Smart Function Parameters</h2>
+	<!---->
+
+	<br>
+	<h1>Lesson 05. JavaScript Objects</h1>
+	<!---->
+	<h2>Number</h2>
+	<!---->
+	<h2>Boolean</h2>
+	<!---->
+	<h2>Strings</h2>
+	<!---->
+	<h2>Arrays</h2>
+	<!---->
+	<h2>Date</h2>
+	<!---->
+	<h2>DataView</h2>
+	<!---->
+	<h2>Handler</h2>
+	<!---->
+	<h2>Math</h2>
+	<!---->
+	<h2>RegExp</h2>
+	<!---->
+	<h2>Symbol</h2>
+	<!---->
+	<h2>Sets</h2>
+	<!---->
+	<h2>WeakSet</h2>
+	<!---->
+	<h2>Maps</h2>
+	<!---->
+	<h2>WeakMap</h2>
+	<!---->
+	<h2>Iterables</h2>
+	<!---->
+	<h2>Reflect</h2>
+	<!---->
+	<h2>TypedArray</h2>
+	<!---->
+	<h2>Template Literals</h2>
+	<!---->
+	<h2>Tagged Templates</h2>
+	<!---->
+
+	<br>
+	<h1>Lesson 06. Object Oriented JavaScript</h1>
+	<!---->
+	<h2>Objects</h2>
+	<!---->
+	<h2>Classes</h2>
+	<!---->
+	<h2>Object Properties</h2>
+	<!---->
+	<h2>Object Methods</h2>
+	<!---->
+	<h2>Static Methods</h2>
+	<!---->
+	<h2>Display Objects</h2>
+	<!---->
+	<h2>Object Accessors</h2>
+	<!---->
+	<h2>Object Constructors</h2>
+	<!---->
+	<h2>Native Prototypes</h2>
+	<!---->
+	<h2>ES5 Object Methods</h2>
+	<!---->
+	<h2>Encapsulation</h2>
+	<!---->
+	<h2>Inheritance</h2>
+	<!---->
+	<h2>Abstraction</h2>
+	<!---->
+	<h2>Polymorphism</h2>
+	<!---->
+	<h2>Destructuring</h2>
+	<!---->
+	<h2>Destructuring Assignment</h2>
+	<!---->
+	<h2>Object Destructuring</h2>
+	<!---->
+	<h2>Array Destructuring</h2>
+	<!---->
+	<h2>Nested Destructuring</h2>
+	<!---->
+	<h2>Optional Chaining</h2>
+	<!---->
+	<h2>Global Object</h2>
+	<!---->
+	<h2>Mixins</h2>
+	<!---->
+	<h2>Proxies</h2>
+	<!---->
+
+	<br>
+	<h1>Lesson 07. JavaScript Versions</h1>
+	<!---->
+	<h2>History</h2>
+	<!---->
+	<h2>Versions</h2>
+	<!---->
+	<h2>ES5</h2>
+	<!---->
+	<h2>ES6</h2>
+	<!---->
+	<h2>ECMAScript 2016</h2>
+	<!---->
+	<h2>ECMAScript 2017</h2>
+	<!---->
+	<h2>ECMAScript 2018</h2>
+	<!---->
+	<h2>ECMAScript 2019</h2>
+	<!---->
+	<h2>ECMAScript 2020</h2>
+	<!---->
+	<h2>ECMAScript 2021</h2>
+	<!---->
+	<h2>ECMAScript 2022</h2>
+	<!---->
+
+	<br>
+	<h1>Lesson 08. JavaScript Asynchronous</h1>
+	<!---->
+	<h2>Asynchronous</h2>
+	<!---->
+	<h2>Callback Functions</h2>
+	<!---->
+	<h2>Promises</h2>
+	<!---->
+	<h2>Async/Await</h2>
+	<!---->
+	<h2>Microtasks</h2>
+	<!---->
+	<h2>Promisification</h2>
+	<!---->
+	<h2>Promises Chaining</h2>
+	<!---->
+	<h2>Timing Events</h2>
+	<!---->
+	<h2>setTimeout()</h2>
+	<!---->
+	<h2>setInterval()</h2>
+	<!---->
+
+	<br>
+	<h1>Lesson 09. JavaScript Cookies</h1>
+	<!---->
+	<h2>Cookies</h2>
+	<!---->
+	<h2>Cookie Attributes</h2>
+	<!---->
+	<h2>Deleting Cookies</h2>
+	<!---->
+
+	<br>
+	<h1>Lesson 10. JavaScript Browser BOM</h1>
+	<!---->
+	<h2>Browser Object Model</h2>
+	<!---->
+	<h2>Window Object</h2>
+	<!---->
+	<h2>Document Object</h2>
+	<!---->
+	<h2>Screen Object</h2>
+	<!---->
+	<h2>History Object</h2>
+	<!---->
+	<h2>Navigator Object</h2>
+	<!---->
+	<h2>Location Object</h2>
+	<!---->
+	<h2>Console Object</h2>
+	<!---->
+
+	<br>
+	<h1>Lesson 11. JavaScript Web APIs</h1>
+	<!---->
+	<h2>Web API</h2>
+	<!---->
+	<h2>History API</h2>
+	<!---->
+	<h2>Storage API</h2>
+	<!---->
+	<h2>Forms API</h2>
+	<!---->
+	<h2>Worker API</h2>
+	<!---->
+	<h2>Fetch API</h2>
+	<!---->
+	<h2>Geolocation API</h2>
+	<!---->
+
+	<br>
+	<h1>Lesson 12. JavaScript Events</h1>
+	<!---->
+	<h2>Events</h2>
+	<!---->
+	<h2>DOM Events</h2>
+	<!---->
+	<h2>addEventListener()</h2>
+	<!---->
+	<h2>Mouse Events</h2>
+	<!---->
+	<h2>Keyboard Events</h2>
+	<!---->
+	<h2>Form Events</h2>
+	<!---->
+	<h2>Window/Document Events</h2>
+	<!---->
+	<h2>Event Delegation</h2>
+	<!---->
+	<h2>Event Bubbling</h2>
+	<!---->
+	<h2>Event Capturing</h2>
+	<!---->
+	<h2>Custom Events</h2>
+	<!---->
+
+	<br>
+	<h1>Lesson 13. JavaScript Error Handling</h1>
+	<!---->
+	<h2>Error Handling</h2>
+	<!---->
+	<h2>try...catch</h2>
+	<!---->
+	<h2>Debugging</h2>
+	<!---->
+	<h2>Custom Errors</h2>
+	<!---->
+	<h2>Extending Errors</h2>
+	<!---->
+
+	<br>
+	<h1>Lesson 14. JavaScript Important Keywords</h1>
+	<!---->
+	<h2>this Keyword</h2>
+	<!---->
+	<h2>void Keyword</h2>
+	<!---->
+	<h2>new Keyword</h2>
+	<!---->
+	<h2>var Keyword</h2>
+	<!---->
+
+	<br>
+	<h1>Lesson 15. JavaScript HTML DOM</h1>
+	<!---->
+	<h2>HTML DOM</h2>
+	<!---->
+	<h2>DOM Methods & Properties</h2>
+	<!---->
+	<h2>DOM Document</h2>
+	<!---->
+	<h2>DOM Elements</h2>
+	<!---->
+	<h2>DOM Attributes (Attr)</h2>
+	<!---->
+	<h2>DOM Forms</h2>
+	<!---->
+	<h2>Changing HTML</h2>
+	<!---->
+	<h2>Changing CSS</h2>
+	<!---->
+	<h2>DOM Animation</h2>
+	<!---->
+	<h2>DOM Navigation</h2>
+	<!---->
+	<h2>DOM Collections</h2>
+	<!---->
+	<h2>DOM NodeList</h2>
+	<!---->
+	<h2>DOM DOMTokenList</h2>
+	<!---->
+
+	<br>
+	<h1>Lesson 16. JavaScript Advanced Chapters</h1>
+	<!---->
+	<h2>Bubble Sort Algorithm</h2>
+	<!---->
+	<h2>Circular Reference Error</h2>
+	<!---->
+	<h2>Code Testing with Jest</h2>
+	<!---->
+	<h2>CORS Handling</h2>
+	<!---->
+	<h2>Data Analysis</h2>
+	<!---->
+	<h2>Dead Zone</h2>
+	<!---->
+	<h2>Design Patterns</h2>
+	<!---->
+	<h2>Engine and Runtime</h2>
+	<!---->
+	<h2>Execution Context</h2>
+	<!---->
+	<h2>Function Composition</h2>
+	<!---->
+	<h2>Immutability</h2>
+	<!---->
+	<h2>Kaboom.js</h2>
+	<!---->
+	<h2>Lexical Scope</h2>
+	<!---->
+	<h2>Local Storage</h2>
+	<!---->
+	<h2>Memoization</h2>
+	<!---->
+	<h2>Minifying JS</h2>
+	<!---->
+	<h2>Mutability vs Immutability</h2>
+	<!---->
+	<h2>Package Manager</h2>
+	<!---->
+	<h2>Parse S-Expressions</h2>
+	<!---->
+	<h2>Prototypal Inheritance</h2>
+	<!---->
+	<h2>Reactivity</h2>
+	<!---->
+	<h2>Require Function</h2>
+	<!---->
+	<h2>Selection API</h2>
+	<!---->
+	<h2>Session Storage</h2>
+	<!---->
+	<h2>SQL CRUD Operations</h2>
+	<!---->
+	<h2>Supercharged Sorts</h2>
+	<!---->
+	<h2>Temporal Dead Zone</h2>
+	<!---->
+	<h2>Throttling</h2>
+	<!---->
+	<h2>TRPC Library</h2>
+	<!---->
+	<h2>Truthy and Falsy Values</h2>
+	<!---->
+	<h2>Upload Files</h2>
+	<!---->
+	<h2>Date Comparison</h2>
+	<!---->
+	<h2>Recursion</h2>
+	<!---->
+	<h2>Data Structures</h2>
+	<!---->
+	<h2>Base64 Encoding</h2>
+	<!---->
+	<h2>Callback Function</h2>
+	<!---->
+	<h2>Current Date/Time</h2>
+	<!---->
+	<h2>Date Validation</h2>
+	<!---->
+	<h2>Filter Method</h2>
+	<!---->
+	<h2>Generating Colors</h2>
+	<!---->
+	<h2>HTTP Requests</h2>
+	<!---->
+	<h2>Insertion Sort</h2>
+	<!---->
+	<h2>Lazy Loading</h2>
+	<!---->
+	<h2>Linked List</h2>
+	<!---->
+	<h2>Nested Loop</h2>
+	<!---->
+	<h2>Null Checking</h2>
+	<!---->
+	<h2>Get Current URL</h2>
+	<!---->
+	<h2>Graph Algorithms</h2>
+	<!---->
+	<h2>Higher Order Functions</h2>
+	<!---->
+	<h2>Empty String Check</h2>
+	<!---->
+	<h2>Form Handling</h2>
+	<!---->
+	<h2>Functional Programming</h2>
+	<!---->
+	<h2>Parameters vs Arguments</h2>
+	<!---->
+	<h2>Prototype</h2>
+	<!---->
+	<h2>Reactive Programming</h2>
+	<!---->
+	<h2>Reduce Method</h2>
+	<!---->
+	<h2>Rest Operator</h2>
+	<!---->
+	<h2>Short Circuiting</h2>
+	<!---->
+	<h2>Undefined Check</h2>
+	<!---->
+	<h2>Unit Testing</h2>
+	<!---->
+	<h2>Validate URL</h2>
+	<!---->
+
+	<br>
+	<h1>Lesson 17. JavaScript Miscellaneous</h1>
+	<!---->
+	<h2>Ajax</h2>
+	<!---->
+	<h2>Async Iteration</h2>
+	<!---->
+	<h2>Atomics Objects</h2>
+	<!---->
+	<h2>Rest Parameter</h2>
+	<!---->
+	<h2>Page Redirect</h2>
+	<!---->
+	<h2>Dialog Boxes</h2>
+	<!---->
+	<h2>Page Printing</h2>
+	<!---->
+	<h2>Validations</h2>
+	<!---->
+	<h2>Animation</h2>
+	<!---->
+	<h2>Multimedia</h2>
+	<!---->
+	<h2>Image Map</h2>
+	<!---->
+	<h2>Browsers</h2>
+	<!---->
+	<h2>JSON</h2>
+	<!---->
+	<h2>Multiline Strings</h2>
+	<!---->
+	<h2>Date Formats</h2>
+	<!---->
+	<h2>Get Date Methods</h2>
+	<!---->
+	<h2>Set Date Methods</h2>
+	<!---->
+	<h2>Modules</h2>
+	<!---->
+	<h2>Dynamic Imports</h2>
+	<!---->
+	<h2>BigInt</h2>
+	<!---->
+	<h2>Blob</h2>
+	<!---->
+	<h2>Unicode</h2>
+	<!---->
+	<h2>Shallow Copy</h2>
+	<!---->
+	<h2>Call Stack</h2>
+	<!---->
+	<h2>Reference Type</h2>
+	<!---->
+	<h2>IndexedDB</h2>
+	<!---->
+	<h2>Clickjacking Attack</h2>
+	<!---->
+	<h2>Currying</h2>
+	<!---->
+	<h2>Graphics</h2>
+	<!---->
+	<h2>Canvas</h2>
+	<!---->
+	<h2>Debouncing</h2>
+	<!---->
+	<h2>Performance</h2>
+	<!---->
+	<h2>Style Guide</h2>
+	<!---->
+
+	<br>
+	<h1>Lesson 18. JavaScript Useful Resources</h1>
+	<!---->
+	<h2>Questions And Answers</h2>
+	<!---->
+	<h2>Quick Guide</h2>
+	<!---->
+	<h2>Cheatsheet</h2>
+	<!---->
+	<h2>Functions</h2>
+	<!---->
+	<h2>Resources</h2>
+	<!---->
+	<h2>Online Editor</h2>
+	<!---->
+
+	<br>
+	<h1>Lesson 19. Selected Reading</h1>
+	<!---->
+	<h2>UPSC IAS Exams Notes</h2>
+	<!---->
+	<h2>Developer's Best Practices</h2>
+	<!---->
+	<h2>Questions and Answers</h2>
+	<!---->
+	<h2>Effective Resume Writing</h2>
+	<!---->
+	<h2>AI Based Resume Builder</h2>
+	<!---->
+	<h2>Personal AI Study Assistant</h2>
+	<!---->
+	<h2>Generate Coding Logic</h2>
+	<!---->
+	<h2>HR Interview Questions</h2>
+	<!---->
+	<h2>Computer Glossary</h2>
+	<!---->
+	<h2>Who is Who</h2>
+	<!---->
+
+</body>
+</html>
