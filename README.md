@@ -50,21 +50,21 @@ tutorials.
 Whether you're reviewing fundamentals or pushing into real-time apps, this repo captures one developer’s personal 
 journey—openly shared, continually evolving.
 
-## Audience
+### Audience
 
 This tutorial has been prepared for: 
 - Beginners looking for a clean, modern intro to web development.
 - Developers revisiting fundamentals with a focus on real-world workflows.
 - Anyone curious about integrating Vue.js with Supabase and PostgreSQL.
 
-## Prerequisites
+### Prerequisites
 
 Before you start practicing various types of examples given in this reference, we assume that you are already aware 
 about GitHub and the Git Version Control System.
 
 # 🧭 Learning Roadmap
 
-## Phase 1: Web Fundamentals
+### Phase 1: Web Fundamentals
 
 These are the core web building blocks:
 - **HTML5**: Tags, elements, forms, semantics
@@ -76,7 +76,7 @@ These are the core web building blocks:
 
 Explore inside: `fundamentals/` 📂 
 
-## Phase 2: Frontend Framework – Vue JS
+### Phase 2: Frontend Framework – Vue JS
 
 Lightweight, reactive, component-driven frontend framework
 - Introduction to Vue
@@ -88,7 +88,7 @@ Lightweight, reactive, component-driven frontend framework
 
 Explore inside: `vue_tutorials/` 📂 
 
-## Phase 3: Backend & Databases
+### Phase 3: Backend & Databases
 
 Here we focus on backend learning without getting lost in boilerplate
 - **SQL with PostgreSQL**: Core CRUD operations, schema design, joins, indexes
@@ -103,7 +103,7 @@ Explore inside: `backend/` 📂
 
 # 🚀 Getting Started
 
-## Requirements
+### Requirements
 
 Before diving in, ensure you have:
 - Basic understanding of programming concepts
@@ -112,32 +112,32 @@ Before diving in, ensure you have:
 - Modern web browser (Google Chrome recommended)
 - [Node.js](https://nodejs.org/en/download) installed for Vue.js projects
 
-## Folder Structure
+### Folder Structure
 
 Each topic is organized by folder. Start with `/fundamentals/01_html` and progress through the folders in order.
 
 ```bash
 web_basics/
-├── .github/ 									# Contribution guidelines
+├── .github/                 # Contribution guidelines
 ├── assets/
-├── backend_supabase/ 				# Server-side technologies
-│   ├── 01_postgresql/        # Database fundamentals
-│   ├── 02_supabase_auth/ 		# Supabase Auth
-│   ├── 03_supabase_crud/ 		# Supabase APIs
-│   └── 04_realtime/ 					# Supabase Realtime
-├── fundamentals/ 						# Core web technologies
-│   ├── 01_html/ 							# Semantic markup examples
-│   ├── 02_css/ 							# Layouts, animations, responsive
-│   ├── 03_js/ 								# Modern JS patterns
-│   ├── 04_json/ 							# JavaScript Object Notation
-│   ├── 05_bootstrap/ 				# Component-based prototyping
-│   └── 06_tailwind/ 					# Utility-first CSS workflows
+├── backend_supabase/        # Server-side technologies
+│   ├── 01_postgresql/       # Database fundamentals
+│   ├── 02_supabase_auth/    # Supabase Auth
+│   ├── 03_supabase_crud/    # Supabase APIs
+│   └── 04_realtime/         # Supabase Realtime
+├── fundamentals/            # Core web technologies
+│   ├── 01_html/             # Semantic markup examples
+│   ├── 02_css/              # Layouts, animations, responsive
+│   ├── 03_js/               # Modern JS patterns
+│   ├── 04_json/             # JavaScript Object Notation
+│   ├── 05_bootstrap/        # Component-based prototyping
+│   └── 06_tailwind/         # Utility-first CSS workflows
 ├── notes/
-├── vue_tutorials/ 						# Vue.js ecosystem
-│   ├── 01_intro/ 						# Core concepts
-│   ├── 02_components/ 				# Reusable patterns
+├── vue_tutorials/           # Vue.js ecosystem
+│   ├── 01_intro/            # Core concepts
+│   ├── 02_components/       # Reusable patterns
 │   ├── 03_reactivity/
-│   └── 04_project_todo/ 			# Practical application
+│   └── 04_project_todo/     # Practical application
 ├── .codacy.yaml
 ├── .editorconfig
 ├── .gitattributes
@@ -157,7 +157,7 @@ web_basics/
 └── webpack.config.prod.js
 ```
 
-## Usage
+### Usage
 
 - Fork repository and clone it locally
 - Explore learning paths by customizing the content inside `fundamentals/`, `vue_tutorials/` and `backend/` as per your 
