@@ -18,7 +18,6 @@
 *.log
 *.tmp
 *.temp
-*.bak
 *.old
 *.swp
 *.swo
@@ -147,9 +146,27 @@ linux/flutter/ephemeral/
 # ------------------------------
 *.sqlite
 *.db
-*.sql
+
+# Only ignore database backups and dumps
 *.dump
-*.json
+*.bak
+*.backup
+
+# Only ignore auto-generated JSON
+*.log.json
+*.temp.json
+coverage-report.json
+stats.json
+
+# BUT KEEP IMPORTANT JSON FILES
+!package.json
+!package-lock.json
+!*.config.json
+!tsconfig.json
+
+# Ignore database backups, not all SQL
+*.sql.bak
+dump*.sql
 
 # ------------------------------
 # UI/UX Assets

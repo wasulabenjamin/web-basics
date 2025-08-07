@@ -13,14 +13,17 @@ module.exports = merge(common, {
     }),
     new CopyPlugin({
       patterns: [
-        { from: 'assets/img', to: 'assets/img' },
-        { from: 'assets/css', to: 'assets/css' },
-        { from: 'assets/js/vendor', to: 'assets/js/vendor' },
-        { from: 'icon.svg', to: 'icon.svg' },
-        { from: 'favicon.ico', to: 'favicon.ico' },
-        { from: 'robots.txt', to: 'robots.txt' },
-        { from: 'icon.png', to: 'icon.png' },
+        { from: 'assets', to: 'assets' },
+        { from: 'backend', to: 'backend' },
+        { from: 'fundamentals', to: 'fundamentals' },
+        { from: 'vue_tutorials', to: 'vue_tutorials' },
+
+        // Critical root-level files 
         { from: '404.html', to: '404.html' },
+        { from: 'favicon.ico', to: 'favicon.ico' },
+        { from: 'icon.png', to: 'icon.png' },
+        { from: 'icon.svg', to: 'icon.svg' },
+        { from: 'robots.txt', to: 'robots.txt' },
         { from: 'site.webmanifest', to: 'site.webmanifest' },
       ],
     }),

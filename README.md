@@ -118,26 +118,35 @@ Each topic is organized by folder. Start with `/fundamentals/01_html` and progre
 
 ```bash
 web_basics/
-├── .github/                 # Contribution guidelines
+├── .github/                        # Contribution guidelines
+│   ├── issue_template/
+│   │   ├── bug_report.md
+│   │   └── feature_request.md
+│   ├── CODE_OF_CONDUCT.md
+│   ├── CONTRIBUTING.md
+│   └── PULL_REQUEST_TEMPLATE.md
 ├── assets/
-├── backend_supabase/        # Server-side technologies
-│   ├── 01_postgresql/       # Database fundamentals
-│   ├── 02_supabase_auth/    # Supabase Auth
-│   ├── 03_supabase_crud/    # Supabase APIs
-│   └── 04_realtime/         # Supabase Realtime
-├── fundamentals/            # Core web technologies
-│   ├── 01_html/             # Semantic markup examples
-│   ├── 02_css/              # Layouts, animations, responsive
-│   ├── 03_js/               # Modern JS patterns
-│   ├── 04_json/             # JavaScript Object Notation
-│   ├── 05_bootstrap/        # Component-based prototyping
-│   └── 06_tailwind/         # Utility-first CSS workflows
-├── notes/
-├── vue_tutorials/           # Vue.js ecosystem
-│   ├── 01_intro/            # Core concepts
-│   ├── 02_components/       # Reusable patterns
+│   ├── css/
+│   ├── img/
+│   └── js/
+├── backend/                        # Server-side technologies
+│   ├── 01_postgresql/              # Database fundamentals
+│   └── 02_supabase/                # Supabase fundamentals
+│       ├── 01_auth/                # Supabase Auth
+│       ├── 02_crud/                # Supabase APIs
+│       └── 03_realtime/            # Supabase Realtime
+├── fundamentals/                   # Core web technologies
+│   ├── 01_html/                    # Semantic markup examples
+│   ├── 02_css/                     # Layouts, animations, responsive
+│   ├── 03_js/                      # Modern JS patterns
+│   ├── 04_json/                    # JavaScript Object Notation
+│   ├── 05_bootstrap/               # Component-based prototyping
+│   └── 06_tailwind/                # Utility-first CSS workflows
+├── vue_tutorials/                  # Vue.js ecosystem
+│   ├── 01_intro/                   # Core concepts
+│   ├── 02_components/              # Reusable patterns
 │   ├── 03_reactivity/
-│   └── 04_project_todo/     # Practical application
+│   └── 04_project_todo/            # Practical application
 ├── .codacy.yaml
 ├── .editorconfig
 ├── .gitattributes
@@ -150,6 +159,8 @@ web_basics/
 ├── icon.png
 ├── icon.svg
 ├── index.html
+├── package.json
+├── package-lock.json
 ├── robots.txt
 ├── site.webmanifest
 ├── webpack.common.js
