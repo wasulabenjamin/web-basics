@@ -1,3 +1,5 @@
+<!--
+-->
 <!DOCTYPE html> 
 
 <html class="no-js" lang="en">
@@ -24,142 +26,392 @@
 <body>
   <h1>HTML Introduction</h1>
   <!--
+    HTML stands for HyperText Markup Language. 
+    It is not a programming language, but a markup language used to create the structure and content of a webpage.
+    HyperText: Refers to the "links" that connect web pages, allowing you to navigate the internet.
+    Markup Language: Refers to the use of "tags" (like <h1> or <p>) to define the layout and elements of your content.
+    HTML is the skeleton of the page that gives every website its shape.
 
-  --><br>
+    HTML Elements (Tags)
+    Elements are the building blocks of HTML. Here are the most common ones you'll use every day.
 
-  <h1>Home</h1>
+      <!DOCTYPE html>
+      This defines the document type as HTML5.
+      
+      <html>
+      This is a root element for an HTML document. All elements are placed inside this element.
+      
+      <head>
+      The head tag may contain scripts and styles that are useful page functionalities. 
+      Meta tags are also placed inside this tag.
+      
+      <title>
+      This defines the webpage's title.
+      
+      <body>
+      This defines the body of the webpage.
+      All elements that are used to display content on the browser placed inside the body tag.
+      
+      Headings: <h1> to <h6>
+      HTML provides six levels of headings. 
+      <h1> is the most important (the main title of your content), while <h6> is the least.
+
+      Paragraphs: <p>
+      The <p> tag defines a paragraph of text. Browsers automatically add space before and after each paragraph.
+
+      Links: <a>
+      The <a> (or anchor) tag creates a hyperlink. The href attribute specifies the URL to which the link points.
+
+    Semantic HTML
+    As you advance, use semantic elements like <header>, <footer>, <nav>, and <article> to add meaning to your content 
+    when designing or developing a web page. This improves both accessibility and SEO.
+
+  -->
+
+  <h1>Heading 1</h1>
+  <h2>Heading 2</h2>
+  <h3>Heading 3</h3>
+  <h4>Heading 4</h4>
+  <h5>Heading 5</h5>
+  <h6>Heading 6</h6>
+  <br>
+  
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore 
+  magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <br>
+  
+  <p>Click <a href="https://github.com/wasulabenjamin/web_basics">here</a> to go to Web Basics on GitHub</p>
+  <br>
+
+  <h1>Tags Vs. Elements Vs. Attributes</h1>
   <!--
+    HTML tags 
+    HTML tags are the fundamental elements of HTML used for defining the structure of the document.
+    These are letters or words enclosed by angle brackets (< and >).
+    Usually, most of the HTML tags contain an opening and a closing tag. 
+    Examples include: 
+      - Heading Tags: <h1>, <h2>, <h3>, <h4>, <h5>, <h6>
+      - Paragraph Tag: <p>
+      - Line Break Tag: <br>
+      - Center Tag: <center>
 
-  --><br>
+    HTML elements
+    HTML elements are the basic building blocks to create a web page
+    A HTML element is created with a start tag, a content, and an end tag.
+    Some of the examples of HTML elements are as follows:
+      <p>This is paragraph content.</p>
+      <h1>This is heading content.</h1>
+      <div>This is division content.</div>
 
-  <h1>Roadmap</h1>
-  <!--
+      Nested Elements
+      HTML allows nesting of elements created by placing one or more HTML elements inside an HTML element.
+      Where the container element can be considered as a parent element and others are as child elements.
+      We can have multiple levels of nesting; however, it requires some guidelines to follow:
+        - Every opening tag must have a corresponding closing tag.
+        - The closing tag of the parent element must come after the closing tag of the child element.
+        - The nested elements must be valid HTML elements.
 
-  --><br>
+      Special Case: Empty (Void) Elements
+      HTML void elements are those elements that don't require closing tags. 
+      These tags don't have any content model and even don't allow nesting of elements.
+      The void elements are also known as empty or self-closing elements.
+      Some of the void elements are: <img>, <hr>, and <br> elements.
+      
+      Note: You might see these tags written with a / at the end, like <br />. 
+            This is an older syntax and is not needed in modern HTML5.
 
-  <h1>Introduction</h1>
-  <!--
+    HTML attributes
+    HTML attributes provide additional information about HTML elements; in order to define or change their behavior. 
+    Attributes are used with an opening tag. Below is the syntax of an element HTML having attribute:
+      <tag_name attribute="Value">...</tag_name>
 
-  --><br>
+    The following are the rules and characteristics of HTML attributes;
+    you should follow while using attributes with HTML elements:
+      - Attributes are optional; you can use them to provide additional information about an HTML element.
+      - Attributes have name and value pairs, but some of the attributes do not require any value; 
+        those are known as Boolean attributes.
+      - An HTML element can have multiple attributes, and they should be separated by spaces.
+      - Attributes should always be written with the opening tag.
+      - All HTML elements can have attributes except a few like <head>, <title>, <script>, etc.
+      - W3C recommends using attributes in lowercase and keeping the value in quotes.
 
-  <h1>History & Evolution</h1>
-  <!--
+    The four core attributes that can be used on the majority of HTML elements (although not all) are:
+      The id Attribute
+      The id attribute of an HTML tag can be used to uniquely identify any element within an HTML page.
+      There are two primary reasons that you might want to use an id attribute on an element:
+        − If an element carries an id attribute as a unique identifier, 
+          it is possible to identify just that element and its content.
+        - If you have two elements of the same name within a Web page (or style sheet),
+          you can use the id attribute to distinguish between elements that have the same name.
 
-  --><br>
+      The title Attribute
+      The title attribute gives a suggested title for the element. 
+      The syntax for the title attribute is similar as explained for id attribute
+      The behavior of this attribute will depend upon the element that carries it, although it is often displayed as a 
+      tooltip when the cursor comes over the element or while the element is loading.
 
-  <h1>Editors</h1>
-  <!--
+      The class Attribute
+      The class attribute specifies one or more CSS classes for an HTML element. 
+      Multiple classes can be used on a single element with this attribute. 
+      The value of this attribute is a space-separated list of class names if you are specifying multiple classes.
+      Example: class="className1 className2 className3"
 
-  --><br>
+      The style Attribute
+      The style attribute allows you to write inline CSS rules for an element.
 
-  <h1>Basic Tags</h1>
-  <!--
+Internationalization (i18n) Attributes
+There are three internationalization attributes, which are available for most (although not all) XHTML elements.
 
-  --><br>
+The dir Attribute
+The dir attribute allows you to indicate to the browser about the direction in which the text should flow.
+The dir attribute can take one of two values, as you can see in the table that follows
+  ltr - Left to right (the default value)
+  rtl - Right to left (for languages such as Hebrew or Arabic that are read right to left)
 
-  <h1>Elements</h1>
-  <!--
+Example
+Open Compiler
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+   <title>Display Directions</title>
+</head>
+<body>
+   This is how IE 5 renders right-to-left directed text.
+</body>
+</html>
+If you click on Edit & Run, you can observe the text aligned to right.
 
-  --><br>
+When dir attribute is used within the <html> tag, it determines how text will be presented within the entire document. When used within another tag, it controls the text's direction for just the content of that tag.
 
-  <h1>Attributes</h1>
-  <!--
+The lang Attribute
+The lang attribute allows you to indicate the main language used in a document, but this attribute was kept in HTML only for backwards compatibility with earlier versions of HTML. This attribute has been replaced by the xml:lang attribute in new XHTML documents.
 
-  --><br>
+The values of the lang attribute are ISO-639 standard two-character language codes. Check HTML Language Codes: ISO 639 for a complete list of language codes.
 
+Example
+Open Compiler
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>English Language Page</title>
+</head>
+<body>
+   This page is using English Language
+</body>
+</html>
+Boolean Attributes
+Boolean attributes represent true and false values and do not require any value with the attribute name. To set the true value, you need to write the attribute's name, and to set it false, the attribute should be omitted altogether.
+
+Here are some Boolean attributes –
+
+disabled
+readonly
+required
+inert
+autocomplete
+Example
+Here is an example of an HTML Boolean attribute (required) −
+
+Open Compiler
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Example of "required" attribute</h1>
+
+<form>
+  <label for="user_name">Input User Name:</label>
+  <input type="text" id="user_name" name="user_name" required>
+  <input type="submit">
+</form>
+
+</body>
+</html>
+The xml:lang Attribute
+The xml:lang attribute is the XHTML replacement for the lang attribute. The value of the xml:lang attribute should be an ISO-639 country code, as mentioned in the previous section.
+
+Generic Attributes
+Here's a table of some other attributes that are readily usable with many of the HTML tags.
+
+Attribute Options Function
+align right, left, center Horizontally aligns tags
+valign  top, middle, bottom Vertically aligns tags within an HTML element.
+bgcolor numeric, hexidecimal, RGB values  Places a background color behind an element
+background  URL Places a background image behind an element
+id  User Defined  Names an element for use with Cascading Style Sheets.
+class User Defined  Classifies an element for use with Cascading Style Sheets.
+width Numeric Value Specifies the width of tables, images, or table cells.
+height  Numeric Value Specifies the height of tables, images, or table cells.
+title User Defined  "Pop-up" title of the elements.
+href  User Defined  Specifies the destination URL for a link or reference.
+src User Defined  Specifies the source file for media elements like <img>, <audio>, or <iframe>.
+We will see related examples as we proceed to study other HTML tags. For a complete list of HTML tags and related attributes, visit: HTML Tags Reference and HTML Attributes Reference.
+
+Best Practices for Using HTML Attributes
+There are certain practices you should follow to use attributes on any element, please check the below-mentioned ways to do so:
+
+1. Write Values in Quotes
+You should always write the attribute values in single or double quotes.
+
+<!-- Good Practice --
+<a href="https://www.tutorialspoint.com/html/html_overview.htm">
+   HTML Introduction
+<a>
+
+<!-- Bad Practice --
+<a href=https://www.tutorialspoint.com/html/html_overview.htm>
+   HTML Introduction
+<a>
+2. Use Lowercase
+HTML is case-insensitive, but the good practice is to write the HTML attribute in lowercase.
+
+<input type="text">
+3. Use of Single and Double Quotes Together
+When you need to provide any string in quotes as the value of an attribute, you can use the combination of single and double quotes.
+
+<!-- Can use single and double Quotes --
+<p title="We are known for 'Simple Easy Learning'">
+    Tutorialspoint
+</p>
+<p title='We are known for "Simple Easy Learning"'>
+    Tutorialspoint
+</p>
+
+
+--------------------------------------------------
+    HTML Tags and Elements Case Sensitivity
+    HTML tags and Elements are not case-sensitive. They can be written in uppercase or in lowercase. 
+    But the World Wide Web Consortium (W3C) recommends using lowercase tags starting from HTML 4.
+  -->
+
+  <p>This is a parent element <u>- and this is a nested child element</u></p>
+  <img src="https://img.icons8.com/?size=100&id=WHHVgMtAZAIn&format=png&color=000000" alt="Void Element Example">
+  <br>
+
+  <p id="html">This para explains what is HTML</p>
+  <p id="css">This para explains what is Cascading Style Sheet</p>
+  <br>
+
+  <h3 title="Hello HTML!">Titled Heading Tag Example</h3>
+  <br>
+  
+  <p style="font-family:arial; color:#FF0000;">Welcome to Tutorialspoint...</p>
+  <br>
+  
   <h1>Headings</h1>
   <!--
 
-  --><br>
+  -->
+  <br>
 
   <h1>Paragraphs</h1>
   <!--
 
-  --><br>
+  -->
+  <br>
 
   <h1>Fonts</h1>
   <!--
 
-  --><br>
+  -->
+  <br>
 
   <h1>Blocks</h1>
   <!--
 
-  --><br>
+  -->
+  <br>
 
   <h1>Style Sheet</h1>
   <!--
 
-  --><br>
+  -->
+  <br>
 
   <h1>Formatting</h1>
   <!--
 
-  --><br>
+  -->
+  <br>
 
   <h1>Quotations</h1>
   <!--
 
-  --><br>
+  -->
+  <br>
 
   <h1>Comments</h1>
   <!--
 
-  --><br>
+  -->
+  <br>
 
   <h1>Colors</h1>
   <!--
 
-  --><br>
+  -->
+  <br>
 
   <h1>Images</h1>
   <!--
 
-  --><br>
+  -->
+  <br>
 
   <h1>Image Map</h1>
   <!--
 
-  --><br>
+  -->
+  <br>
 
   <h1>Frames</h1>
   <!--
 
-  --><br>
+  -->
+  <br>
 
   <h1>Iframes</h1>
   <!--
 
-  --><br>
+  -->
+  <br>
 
   <h1>Phrase Elements</h1>
   <!--
 
-  --><br>
+  -->
+  <br>
 
   <h1>Code Elements</h1>
   <!--
 
-  --><br>
+  -->
+  <br>
 
   <h1>Meta Tags</h1>
   <!--
 
-  --><br>
+  -->
+  <br>
 
   <h1>Classes</h1>
   <!--
 
-  --><br>
+  -->
+  <br>
 
   <h1>IDs</h1>
   <!--
 
-  --><br>
+  -->
+  <br>
 
   <h1>Backgrounds</h1>
   <!--
 
-  --><br>
+  -->
+  <br>
 </body>
 </html>

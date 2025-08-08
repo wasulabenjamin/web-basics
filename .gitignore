@@ -40,7 +40,6 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 dist/
-build/
 
 # ------------------------------
 # Java / JavaFX
@@ -96,7 +95,6 @@ libs/
 nbproject/private/
 nbbuild/
 nbdist/
-dist/
 .nb-gradle/
 
 # ------------------------------

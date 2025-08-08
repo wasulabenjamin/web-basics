@@ -1,3 +1,4 @@
+<!--suppress ALL -->
 <p align="center">
 	<a href="https://github.com/wasulabenjamin/web_basics.git">
 		<img src="https://img.icons8.com/?size=120&id=114334&format=png&color=000000" alt="logo">
@@ -9,15 +10,15 @@
 <p align="center">
     Getting started with Web Basics.
     <br> <br>
-    <a href="https://github.com/wasulabenjamin/web_basics.git">View Demo</a> . 
-    <a href="https://github.com/wasulabenjamin/web_basics/issues/new?template=bug_report.md">Report Bug</a> . 
+    <a href="https://github.com/wasulabenjamin/web_basics.git">View Demo</a> .
+    <a href="https://github.com/wasulabenjamin/web_basics/issues/new?template=bug_report.md">Report Bug</a> .
     <a href="https://github.com/wasulabenjamin/web_basics/issues/new?template=feature_request.md">Request Feature</a>
 </p>
 
 <p align="center">
 	<br> <br>
 	<a href="https://app.codacy.com/gh/wasulabenjamin/web_basics/dashboard">
-		<img src="https://app.codacy.com/project/badge/Grade/0a0cf227762141d699edcfcdd5b5caa7"/>
+		<img src="https://app.codacy.com/project/badge/Grade/0a0cf227762141d699edcfcdd5b5caa7" alt="Codacy Badge"/>
 	</a>
     &nbsp;
 	<a href="https://github.com/wasulabenjamin/web_basics/graphs/contributors">
@@ -43,23 +44,23 @@
 
 # 📘 Introduction
 
-This is a curated step-by-step learning path covering everything from **basic web development** to **modern fullstack 
-apps** using tools like **Vue.js**, **Supabase**, and **PostgreSQL**. The goal: build real skills, not just follow 
+This is a curated step-by-step learning path covering everything from **basic web development** to **modern fullstack
+apps** using tools like **Vue.js**, **Supabase**, and **PostgreSQL**. The goal: build real skills, not just follow
 tutorials.
 
-Whether you're reviewing fundamentals or pushing into real-time apps, this repo captures one developer’s personal 
+Whether you're reviewing fundamentals or pushing into real-time apps, this repo captures one developer’s personal
 journey—openly shared, continually evolving.
 
 ### Audience
 
-This tutorial has been prepared for: 
+This tutorial has been prepared for:
 - Beginners looking for a clean, modern intro to web development.
 - Developers revisiting fundamentals with a focus on real-world workflows.
 - Anyone curious about integrating Vue.js with Supabase and PostgreSQL.
 
 ### Prerequisites
 
-Before you start practicing various types of examples given in this reference, we assume that you are already aware 
+Before you start practicing various types of examples given in this reference, we assume that you are already aware
 about GitHub and the Git Version Control System.
 
 # 🧭 Learning Roadmap
@@ -74,7 +75,7 @@ These are the core web building blocks:
 - **Bootstrap**: UI framework for rapid prototyping
 - **Tailwind CSS**: Utility-first CSS framework for custom UIs
 
-Explore inside: `fundamentals/` 📂 
+Explore inside: `fundamentals/` 📂
 
 ### Phase 2: Frontend Framework – Vue JS
 
@@ -86,7 +87,7 @@ Lightweight, reactive, component-driven frontend framework
 - Todo App as capstone
 - **Capstone Project**: Task manager with local storage
 
-Explore inside: `vue_tutorials/` 📂 
+Explore inside: `vue_tutorials/` 📂
 
 ### Phase 3: Backend & Databases
 
@@ -99,7 +100,7 @@ Here we focus on backend learning without getting lost in boilerplate
   - Row-level security
   - **Capstone Project**: Fullstack app with auth and CRUD
 
-Explore inside: `backend/` 📂 
+Explore inside: `backend/` 📂
 
 # 🚀 Getting Started
 
@@ -171,24 +172,24 @@ web_basics/
 ### Usage
 
 - Fork repository and clone it locally
-- Explore learning paths by customizing the content inside `fundamentals/`, `vue_tutorials/` and `backend/` as per your 
+- Explore learning paths by customizing the content inside `fundamentals/`, `vue_tutorials/` and `backend/` as per your
 requirements or intention
 
 > Please share the goodness & don't forget leaving a :star: on the repository.
 
 # 🧩 Contributing
 
-This is an open source example template, therefore developers are encouraged to contribute and help maintain the project 
+This is an open source example template, therefore developers are encouraged to contribute and help maintain the project
 throughout its life cycle. Any contributions will be highly appreciated.
 
 Looking to contribute something to this template?
 
-Please read through the [contributing guidelines][contributing_guidelines], included are directions for opening issues, 
+Please read through the [contributing guidelines][contributing_guidelines], included are directions for opening issues,
 coding standards, and notes on development.
 
 # 🐛 Bugs and Feature Requests
 
-Have a bug or a feature request? **Here is to how you can help:** 
+Have a bug or a feature request? **Here is to how you can help:**
 * Having problems with the tutorial? [Please report a bug][report_bug]
 * Is your problem or idea you would wish implemented not addressed yet? [Please request a feature][request_feature]
 

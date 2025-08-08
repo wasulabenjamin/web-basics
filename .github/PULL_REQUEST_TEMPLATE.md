@@ -1,18 +1,18 @@
 # IMPORTANT
 
-This project only accepts pull requests related to open issues. If suggesting a new feature or change, please discuss 
+This project only accepts pull requests related to open issues. If suggesting a new feature or change, please discuss
 it in an issue first. If fixing a bug, please provide steps to reproduce the behavior.
 
 ## Checklist
 
 - [ ] My code follows the style guidelines of this project
 - [ ] I have performed a self-review of my code
-- [ ] I have commented my code, particularly in hard-to-understand areas
+- [ ] I have commented on my code, particularly in hard-to-understand areas
 - [ ] I have added tests that prove my fix is effective or that my feature works
 
 ## Related Issue
 
-<!--- Please insert link to the issue here: -->
+<!--- Please insert a link to the issue here: -->
 
 ## Additional context
 
