@@ -384,87 +384,270 @@
   <br>
 
   <p>The book <cite>War and Peace </cite> is a classic novel.</p>
-  <br>
-  <br>
-  <br>
-  <br>
   <br><hr>
 
-  <h1>Fonts</h1>
+  <h1>Block and Inline Elements</h1>
   <!--
-
+    All the HTML elements can be categorized into two categories:
+    - Block-level Elements
+      HTML block elements are used to create the logical and semantic layout of a web page. 
+      They help to organize the content into meaningful sections and make it easier for browsers, search engines, and 
+      site visitors to understand the structure and meaning of different parts of the web page. 
+      Block-level elements start on a new line, and anything that follows them appears on the next line. 
+      These elements may contain margins to add some space before and after. 
+      These elements take up the full width of their parent elements by default; you may set their width by using the 
+      CSS width property.
+      
+      HTML Block-level Elements include: 
+        <address>    <article>    <aside>      <blockquote> <canvas>     <dd>         <div>        <dl>
+        <dt>         <fieldset>   <figcaption> <figure>     <footer>     <form>       <h1 - h6>    <header>
+        <hr>         <li>         <main>       <nav>        <noscript>   <ol>         <p>          <pre>
+        <section>    <table>      <tfoot>      <ul>         <video>
+    
+    - HTML Inline Elements
+      Inline elements are used to make useful block elements, like adding anchor links.
+      Inline elements can appear within the same line and do not start a new line on their own.
+      
+      HTML Inline Elements Include:
+        <a>          <abbr>       <acronym>    <b>          <bdo>        <big>        <br>         <button>
+        <cite>       <code>       <dfn>        <em>         <i>          <img>        <input>      <kbd>
+        <label>      <map>        <object>     <output>     <q>          <samp>       <script>     <select>
+        <small>      <span>       <strong>     <sub>        <sup>        <textarea>   <time>       <tt>
+        <var>
   -->
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br><hr>
 
-  <h1>Blocks</h1>
-  <!--
+  <h2>HTML Block Level Elements</h2>
+  <p>Paragraph 1. Appears after the topic - HTML Bolck Level Elements</p>
+  <article>Article 1. Appears after Paragraph 1</article>
+  <br>
 
-  -->
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
+  <h2>HTML Inline Level Elements</h2>
+  <p>
+    This paragraph conatins inline level elements -
+    <a href="">Link to our website</a>
+    <span>span here</span>
+  </p>
   <br><hr>
 
   <h1>Style Sheet</h1>
   <!--
+    CSS, or Cascading Style Sheets, is a tool that defines how web documents look on screens or in print. 
+    Since its introduction in 1994, the W3C has encouraged the use of style sheets for web design. 
+    CSS lets you control the presentation of your content, whether it's on a screen, in print, or for accessibility, 
+    making web design more flexible and efficient.
 
+    CSS provide easy and effective alternatives to specify various attributes for the HTML tags.
+    Using CSS, you can specify a number of style properties for a given HTML element.
+
+    Each property has a name and a value, separated by a colon (:). 
+    Each property declaration is separated by a semicolon (;).
+
+    NOTE: 
+    Cascading means that a style applied to a parent element will also apply to all children elements within the parent. 
+    So when you are applying any style to an element, you have to be careful about child elements. 
+    You can apply different styles to children also.
+
+    There are three ways to include CSS in your HTML document:
+    - External CSS: 
+      Define CSS rules in a separate .css file and then include that file in your HTML document using HTML <link> tag.
+    - Internal CSS: 
+      Define style sheet rules in the header section of the HTML document using <style> tag.
+    - Inline CSS: 
+      Define style sheet rules directly along-with the HTML elements using style attribute.
   -->
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
+  <p>We won't delve deep into this now - To be covered in CSS tutorial</p>
   <br><hr>
 
   <h1>Formatting</h1>
   <!--
+    HTML formatting defines the way of content representation on the webpage to improve the readability, to give the 
+    semantic meaning, and to improve visual styling.
 
+    HTML formatting is done by using HTML physical and logical tags. 
+    In this chapter, we will learn about the text appearance with HTML formatting.
+
+    Let's understand what are physical and logical tags:
+    - Physical Tags:
+      These tags are used to give the visual appearance to the textual content.
+    - Logical Tags: 
+      These tags are used to give logical and semantic meaning to the textual content. 
+      There are a few logical tags that are used for screen readers, but the impact of those tags is visible on the 
+      browsers.
+
+    Without formatting, nothing looks good or soothing to our eyes. 
+    But HTML formatting is not only for soothing the eye or making textual content attractive. 
+    There are few reasons to do the HTML formatting, this include:
+      - The appearance of any text provides a clear view of the content intent, such as highlighting the keywords, putting 
+        meaningful information in the quotations, underlining the main sentence, etc.
+      - Formatting helps search engines understand the content structure and is also helpful for search engine optimization.
+      - Formatting improves the visual layout and improves the readability of the content.
+
+    The following table has a list of common HTML formatting tags that are used for text formatting:
+    * Physical Tags
+      <b>........ This tag is used to make the text bold.
+      <i>........ This tag is used to make the text italic.
+      <small>.... This tag is used to make the text smaller.
+      <u>........ This tag is used to underline text.
+
+    * Logical Tags
+      <strong>... This tag is used to bold text and give it semantic importance.
+      <em>....... This tag is used to italicize text and give it semantic emphasis.
+
+    * Other Tags
+      <sup>...... This tag is used to make superscript text (slightly above the normal line).
+      <sub>...... This tag is used to make subscript text (slightly below the normal line).
+      <ins>...... This tag is used to indicate that content has been added (typically underlined).
+      <del>...... This tag is used to indicate that content has been deleted (typically struck through).
+      <mark>..... This tag is used to highlight text with a yellow background.
   -->
+
+  <h2>Physical Tags</h2>
+  <p>The <b>b tag</b> is used to make the text bold.</p>
+  <p>The <i>i tag</i> is used to make the text italic.</p>
+  <p>The <small>small tag</small> is used to make the text smaller.</p>
+  <p>The <u>u tag</u> is used to underline text.</p>
   <br>
+
+  <h2>Logical Tags</h2>
+  <p>The <strong>strong tag</strong> is used to bold text and give it semantic importance.</p>
+  <p>The <em>em tag</em> is used to italicize text and give it semantic emphasis.</p>
   <br>
-  <br>
-  <br>
-  <br>
+
+  <h2>Other Tags</h2>
+  <p>The <sup>sup tag</sup> is used to make superscript text (slightly above the normal line).</p>
+  <p>The <sub>sub tag</sub> is used to make subscript text (slightly below the normal line).</p>
+  <p>The <ins>ins tag</ins> is used to indicate that content has been added (typically underlined).</p>
+  <p>The <del>del tag</del> is used to indicate that content has been deleted (typically struck through).</p>
+  <p>The <mark>mark tag</mark> is used to highlight text with a yellow background.</p>
   <br><hr>
 
   <h1>Quotations</h1>
   <!--
+HTML Quotations
+HTML quotations allow you to include and format quoted text within your web content. 
+These quotation tags help maintain proper formatting and semantics, enhancing the presentation and meaning of quoted content on web pages. Incorporating quotes is essential for conveying information accurately and providing a well-organized reading experience for users.
+
+The following are the quotation elements that are used to insert and display quotations on the webpage:
+  - <q>........... Defines a short inline quotation.
+  - <blockquote>.. Defines a block-level indented quotation.
+  - <cite>........ Specifies a reference to the title of a creative work, such as books or articles.
+  - <address>..... Defines contact information.
+  - <bdo>......... Overrides text direction.
+  - <abbr>........ Defines an abbreviation or acronym.
 
   -->
+  <h2>Short Quotation with q tag</h2>
+  <p>DLF stands for <q>Delhi Land and Finance</q></p>
+  <p>Delhi Land and Finance is one of the largest commercial real estate developer in India.</p>
   <br>
+
+  <h2>Block-level Quotation with blockquote tag</h2>
+  <p>Here is a quotation from Wasula Benjamin himself</p>
+  <blockquote cite="https://github.com/wasulabenjamin/web_basics">Adapt, Improvise, Overcome</blockquote>
   <br>
+  
+  <h2>Cite a Quote with cite tag</h2>
+  <p>The information is sourced from <cite>The Elements of Style</cite> by Strunk and White.</p>
   <br>
+  
+  <h2>Contact Information with address tag</h2>
+  <address>Contact me at: <a href="mailto:wasulabenjamin@gmail.com">wasulabenjamin@gmail.com</a><br>
+   Visit us at: 123 Main Street, Cityville
+  </address>
   <br>
+  
+  <h2>Bi-Directional Override with bdo tag</h2>
+  <p>This text will go left to right.</p>
+  <p><bdo dir="rtl">This text will go right to left.</bdo></p>
   <br>
+  
+  <h2>Abbreviations with abbr tag</h2>
+  <p>Tim Berners-Lee, a British scientist, invented the <abbr title="World Wide Web">WWW</abbr> 
   <br><hr>
 
   <h1>Comments</h1>
   <!--
+    HTML comments are non-executable lines of code that do not display on the webpage and are used to add notes or 
+    explanations. It is a good practice to add comments into your HTML code, especially in complex documents, to 
+    indicate sections of a document and any other notes to anyone looking at the code.
 
+    HTML comments are completely ignored by web browsers, so they don't affect how your page looks or works.
+    HTML comments help you and others understand your code and increase code readability 
+
+    Comments in HTML have certain rules that you need to follow. Below is the list of rules −
+    - Comments do not support nesting, which means a comment cannot be put inside another comment.
+    - You can't have the sequence "--" within a comment, except to close it.
+    - You must also make sure that there are no spaces in the start-of-comment string.
+    
+    Commenting Style Sheets
+    To comment a CSS script within a <style> tag, we need to use:
+    /* symbol as a starting point and the */ symbol as an ending.
   -->
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
+  <!--   This is valid comment, why you may ask? It does not appear on browser -->
+  < !--   This is not a valid comment, why you may ask? It appears on browser -->
   <br><hr>
 
   <h1>Colors</h1>
   <!--
+    HTML Colors
+    HTML colors are a way of specifying the appearance of web elements.
+    They are very important aspects of web design, as they not only enhance the visual appeal but also influence user 
+    behavior. They are also used to evoke emotions and highlight important content.
 
+    In HTML, colors are generally defined for backgrounds, borders, and texts. 
+    To specify the colors, the style attribute of HTML elements is used.
+
+    HTML Color Coding Methods
+      - Color names; Here we can specify color names directly, like green, blue, or red.
+      - Hex codes; Here six-digit code representing the amount of red, green, and blue that makes up the color.
+      - Color decimal or percentage values;  Here a value is specified using the rgb() property.
+
+    HTML Color Names
+    We can specify a direct color name to set text or background color. 
+    W3C has listed 16 basic color names that will validate with an HTML validator, but there are over 200 different 
+    color names supported by major browsers.
+    The following are the W3C standard color names that are supported by all browsers:
+      .        .        .        .        .        .        .        .        .        .        .        
+      Black    Gray     Silver   White    Yellow   Lime     Aqua     Fuchsia  Red      Green    Blue
+      Purple   Maroon   Olive    Navy     Teal
+    
+    Browser Safe Colors
+    Colors can also be specified using the web-safe colors, which are formed by the combination of red, green, and blue 
+    (RGB) hex values. These colors range from the hexadecimal code #000000 (black) to #FFFFFF (white) and are supported 
+    by all computers using a 256-color palette.
+
+    Setting Text Color
+    To set the text color in HTML, we specify the color value of text inside the color property of style attribute. 
+    The value of color can be specified using any of the above discussed methods.
+
+    Setting Background Color
+    To set the background color for any HTML element, we specify the color value inside the background-color property of 
+    the style attribute. The value of color can be specified using any of the above-discussed methods.
+
+    Setting Border Color
+    To set the border color for any HTML element, we specify the color value inside the border property of the style 
+    attribute. The value of color can be specified using any of the above-discussed methods.
   -->
+  <h2 style="color: Fuchsia;">Setting Text Color in HTML</h2>
+  <p style="color: Teal;">This line is created using paragraph tag and its color is <b>Teal</b>. </p>
+  <p style="color: SlateBlue;">
+    This is another line created using paragraph tag and its color is <b>SlateBlue</b>
+  </p>
   <br>
+
+  <h2 style="background-color: Fuchsia;">Setting Background Color in HTML</h2>
+  <p style="background-color: Teal;"></p>
+    This line is created using paragraph tag and its background color is <b>Teal</b>
+  <p style="background-color: SlateBlue;">
+    This is another line created using paragraph tag and its background color is <b>SlateBlue</b>
+  </p>
   <br>
-  <br>
-  <br>
-  <br>
+
+  <h2 style="border: 2.5px solid Fuchsia;">Setting Border Color in HTML</h2>
+  <p style="border: 2.5px dotted Teal;">This line is created using paragraph tag and its border color is <b>Teal</b></p>
+  <p style="border: 2.5px dashed SlateBlue;">
+    This is another line created using paragraph tag and its border color is <b>SlateBlue</b>
+  </p>
   <br><hr>
 
   <h1>Images</h1>
