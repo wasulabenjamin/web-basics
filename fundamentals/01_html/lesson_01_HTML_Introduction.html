@@ -93,7 +93,6 @@
     Semantic HTML
     As you advance, use semantic elements like <header>, <footer>, <nav>, and <article> to add meaning to your content
     when designing or developing a web page. This improves both accessibility and SEO.
-
   -->
 
   <h1>Heading 1</h1>
@@ -523,18 +522,17 @@
 
   <h1>Quotations</h1>
   <!--
-HTML Quotations
-HTML quotations allow you to include and format quoted text within your web content. 
-These quotation tags help maintain proper formatting and semantics, enhancing the presentation and meaning of quoted content on web pages. Incorporating quotes is essential for conveying information accurately and providing a well-organized reading experience for users.
+    HTML Quotations
+    HTML quotations allow you to include and format quoted text within your web content. 
+    These quotation tags help maintain proper formatting and semantics, enhancing the presentation and meaning of quoted content on web pages. Incorporating quotes is essential for conveying information accurately and providing a well-organized reading experience for users.
 
-The following are the quotation elements that are used to insert and display quotations on the webpage:
-  - <q>........... Defines a short inline quotation.
-  - <blockquote>.. Defines a block-level indented quotation.
-  - <cite>........ Specifies a reference to the title of a creative work, such as books or articles.
-  - <address>..... Defines contact information.
-  - <bdo>......... Overrides text direction.
-  - <abbr>........ Defines an abbreviation or acronym.
-
+    The following are the quotation elements that are used to insert and display quotations on the webpage:
+      - <q>........... Defines a short inline quotation.
+      - <blockquote>.. Defines a block-level indented quotation.
+      - <cite>........ Specifies a reference to the title of a creative work, such as books or articles.
+      - <address>..... Defines contact information.
+      - <bdo>......... Overrides text direction.
+      - <abbr>........ Defines an abbreviation or acronym.
   -->
   <h2>Short Quotation with q tag</h2>
   <p>DLF stands for <q>Delhi Land and Finance</q></p>
@@ -652,35 +650,189 @@ The following are the quotation elements that are used to insert and display quo
 
   <h1>Images</h1>
   <!--
+    HTML - Images
+    HTML images provide visual content for web pages, enhancing user experiences and conveying information. 
+    They can be photographs, graphics, icons, or illustrations.
+
+    HTML offers various elements for embedding, manipulating, and controlling images, contributing to the aesthetics and 
+    functionality of websites. Understanding image tags, attributes, and responsive design principles is essential for 
+    effective web development.
+
+    Below is the basic syntax for HTML images:
+    <img src="image_path" alt="Alternate text for the image" width="200px" height="150px" />
+    
+      src............... Defines the path of the image (image URL).
+      alt............... Defines the alternate text; 
+                         If there is a broken link to the image path, the alternate text displays on the webpage.
+      width and height.. Define the height and width for the image.
+
+    You can use PNG, JPEG, or GIF image files based on your comfort, but make sure you specify the correct image file 
+    name in the src attribute. The image name is always case-sensitive.
+    
+    The alt attribute is an optional attribute but recommended as it specifies an alternate text for an image if the 
+    image cannot be displayed.
+
+    Set Image Location
+    Image location (path) must be clearly defined in the src attribute.
+    You can follow the absolute path, which starts with root directory (/), then directory name (if any), and then image 
+    name with its extension. 
+    For example, if we have an image named "test.png" and it is stored in the "images" folder, which is in the "html" 
+    folder on the root directory. You can simply use an image path like "/html/images/test.png".
+
+    Set Image Width and Height
+    You can set image width and height based on your requirements using width and height attributes. 
+    You can specify the width and height of the image in terms of either pixels or a percentage of its actual size.
+
+    Bordered Image
+    You can specify the border and its thickness in terms of pixels using the border attribute. 
+    A thickness of 0 means there is no border around the picture.
+
+    Image Alignment
+    By default, the image will align at the left side of the page, but you can use the align attribute to set it in the 
+    center or right.
+
+    Animated Images
+    You can also use animated images (having .gif extensions) on the webpages. 
+    There is no specific attribute required to show animated images; you can simply set the path of the animated image 
+    (.gif) in the src attribute.
+
+    Responsive Images
+    You can also make the images responsive, which will automatically adjust their size based on the devices screen size 
+    and resolution. The following are the methods to make images responsive:
+
+    - Using CSS: Using CSS, you can set the width of the image to 100%.
+      This allows the image to scale proportionally to its parent container.
+      <img src="/html/images/test.png" alt="Responsive Image" style="width: 100%; height: auto;"/>
+    - Using the <picture> Tag: You can also display different images in different sizes or resolutions by using the 
+      <picture> tag, which is useful when you want to display different images based on the device.
+      <picture>
+        <source media="(min-width: 800px)" srcset="image_path_1">
+        <source media="(max-width: 799px)" srcset="image_path_2">
+        <img src="default_image_path.jpg" alt="Responsive Image">
+      </picture>
+
+    The following table shows the supported image formats in the HTML <img> tag:
+      - .jpeg/.jpg..... Joint Photographic Experts Group..... Transparency Support? No..... Animation Support? No 
+      - .bmp........... Bitmap Image File.................... Transparency Support? No..... Animation Support? No 
+      - .png........... Portable Network Graphics............ Transparency Support? Yes.... Animation Support? No 
+      - .svg........... Scalable Vector Graphics............. Transparency Support? Yes.... Animation Support? No 
+      - .ico........... Icon File............................ Transparency Support? Yes.... Animation Support? No 
+      - .gif........... Graphics Interchange Format.......... Transparency Support? Yes.... Animation Support? Yes
+      - .webp.......... Web Picture format................... Transparency Support? Yes.... Animation Support? Yes
 
   -->
+  <h2>Using an image in HTML</h2>
+  <img src="../../assets/img/social_media.png" alt="social_media.png" >
   <br>
+
+  <h2>Setting image Width and Height</h2>
+  <img src="../../assets/img/social_media.png" alt="social_media.png" width="628" height="628"/>
   <br>
+  
+  <h2>Setting image Border</h2>
+  <img src="../../assets/img/social_media.png" alt="social_media.png" width="628" height="628" border="3"/>
   <br>
+
+  <h2>Setting image Alignment</h2>
+  <p>Below is a right aligned image</p>
+  <img src="../../assets/img/social_media.png" alt="social_media.png" 
+    width="628" height="628" border="3" align="right"/><br>
+  
+  <p>Below is a left aligned image</p>
+  <img src="../../assets/img/social_media.png" alt="social_media.png" 
+    width="628" height="628" border="3" align="left"/><br>
+  
+  <p>Below is a center aligned image</p>
+  <img src="../../assets/img/social_media.png" alt="social_media.png" 
+    width="628" height="628" border="3" align="center"/><br>
   <br>
+
+  <h2>Using an animated image in HTML</h2>
+  <img src="https://www.tutorialspoint.com/html/images/animated_image.gif" alt="social_media.png" border="3"/>
   <br>
+
+  <h2>Responsive Image Example</h2>
+  <img src="../../assets/img/social_media.png" alt="social_media.png" 
+    width="628" height="628" border="3" style="width: 100%; height: auto;" />
   <br><hr>
 
   <h1>Image Map</h1>
   <!--
+    Image Maps
+    HTML image maps are defined by the <map> tag. An image map enables specific areas of an image to be clickable, 
+    acting as links to different destinations. 
+    This technique is useful for creating complex navigation systems or interactive graphics on a webpage.
 
+    By defining various shapes (rectangles, circles, and polygons) within an image, each with its own associated link, 
+    developers can create dynamic and interactive visual content that enhances user engagement and navigation.
+
+    Image maps are useful for creating complex navigation, interactive diagrams, or engaging visual experiences, 
+    enhancing user engagement and interactivity on web pages.
+
+    It is useful to create interactive graphics by defining clickable regions within an image. 
+    This allows users to interact with different image parts, triggering specific actions or links.
+
+    The <map> tag is used to create a client-side image map, turning specific regions of an image into interactive 
+    elements. The <map> element serves as a container for <area> elements, each defining a clickable region with 
+    specific attributes.
+
+    When used in conjunction with the <img> tag, the <map> tag establishes a connection between the image and its 
+    associated map. This enables web developers to create dynamic and interactive content by defining distinct clickable 
+    zones within an image.
+
+    The <area> tag is used within the <map> tag to define clickable regions on an image. 
+    It specifies the shape, coordinates, and associated actions for each clickable area.
+
+    - Rectangular Area: You can define a rectangular shape by assigning the rect value to the shape attribute. 
+      The rectangular shape requires coordinates for the top-left and bottom-right corners that you can define in 
+      coords attribute.
+      Syntax:   <area shape="rect" coords="x1,y1,x2,y2" href="url" alt="Description">
+                where..... xy1,xy2,xy3,xy4 − define coordinates of the top-left-bottom-right corners respectively.
+
+    - Circular Area: You can define a circular shape by assigning the circle value to the shape attribute. 
+      The circular shape requires center coordinates (x, y) and radius (r) that you can define in coords attribute.
+      Syntax:   <area shape="circle" coords="x,y,r" href="url" alt="Description">
+                where..... x,y − define coordinates of the circle's center.
+                           r − define coordinates of the radius of the circle.
+
+    - Polygon Area: You can define a polygon shape by assigning the poly value to the shape attribute. 
+      The polygon shape requires a series of coordinates to form the shape that you can define in coords attribute.
+      This can be used to create any shape, whether it be a mango or apple.
+      Syntax:   <area shape="poly" coords="x1,y1,x2,y2,...,xn,yn" href="url" alt="Description">
+                where..... xy1,xy2,..., xn,yn coordinates form the polygon.
+
+    To create an image map in HTML, follow these steps with a code example −
+    - Prepare Your Image: Begin with the image you want to use as an image map. 
+      For this example, we'll use an image file named kenya_major_towns.png.
+      Use the usemap attribute in the <img> tag to link the image to the <map> tag by keeping its value to the name 
+      attribute of the <map>:
+      Syntax:   <img src="../../assets/img/kenya_major_towns.png" usemap="#image_map">
+
+    - Define the Image Map: Use the <map> tag to define the image map and give it a unique name with the name attribute.
+      Syntax:   <map name="image_map"></map>
+    
+    - Define Clickable Areas: Within the <map> element, define clickable areas using <area> tags. 
+      Specify the shape (rect, circle, or poly), coordinates, and the URL to link to.
+      <map name="image_map">
+        <area shape="circle" coords="45,32,49" href="index.htm" alt="tutorialspoint">
+        <area shape="rect" coords="245,50,85,9" href="/tutorialslibrary.htm" alt="tutorials_library">
+      </map>
+    
+    - Repeat defining clickable areas for each area you want to create within the image.
   -->
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br><hr>
-
-  <h1>Frames</h1>
-  <!--
-
-  -->
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
+  <img src="../../assets/img/kenya_major_towns.png" alt="social_media.png" 
+    width="500" height="595" usemap="#image_map"/>
+  <map name="image_map">
+    <area shape="circle" coords="204,369,5" href="http://www.nairobi.go.ke/"/>
+    <area shape="circle" coords="351,503,5" href="https://www.mombasa.go.ke/"/>
+    <area shape="circle" coords="354,320,5" href="https://garissa.go.ke/"/>
+    <area shape="circle" coords="263,176,5" href="http://marsabit.go.ke/"/>
+    <area shape="circle" coords="237,326,5" href="http://www.embu.go.ke/"/>
+    <area shape="circle" coords="210,320,5" href="http://www.nyeri.go.ke/"/>
+    <area shape="circle" coords="161,314,5" href="http://www.nakuru.go.ke/"/>
+    <area shape="circle" coords="93,303,5" href="http://kisumu.go.ke/"/>
+    <area shape="circle" coords="93,284,5" href="http://www.kakamega.go.ke/"/>
+  </map>
   <br><hr>
 
   <h1>Iframes</h1>

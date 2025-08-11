@@ -1,13 +1,13 @@
 {
-  "name": " ",
-  "version": "0.0.1",
-  "description": "",
+  "name": "web_basics",
+  "version": "2025.08",
+  "description": "A Curated Web Development Learning Repo",
   "private": true,
   "keywords": [
-    ""
+    "html, html5, css, javascript, json, bootstrap, tailwindcss, vuejs, postgresql, supabase, fullstack"
   ],
-  "license": "",
-  "author": "",
+  "license": "MIT",
+  "author": "Wasula Benjamin <wasulabenjamin@gmail.com>",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --open --config webpack.config.dev.js",

@@ -14,7 +14,6 @@ module.exports = merge(common, {
     new CopyPlugin({
       patterns: [
         { from: 'assets', to: 'assets' },
-        { from: 'backend', to: 'backend' },
         { from: 'fundamentals', to: 'fundamentals' },
         { from: 'vue_tutorials', to: 'vue_tutorials' },
 
