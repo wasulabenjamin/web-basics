@@ -1,0 +1,113 @@
+/***********************************************************************************************************************
+LESSON 01. INTRODUCTION
+***********************************************************************************************************************/
+.highlight,
+#highlight {
+  background-color: yellow;
+  color: black;
+  font-weight: bold;
+}
+
+.heading {
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+}
+
+.content, .hidden_content,
+#hidden_content {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.interactive-button,
+#interactive-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+/***********************************************************************************************************************
+LESSON 02. HTML TABLES
+***********************************************************************************************************************/
+
+table {
+	width: 80%;
+	height: 100%;
+	border-collapse: collapse;
+	margin-bottom: 20px;
+
+	/*background-color: #f0f0f0;*/
+	/*background-image: url('../img/bg_01.jpg');*/
+}
+
+th, td {
+	border: 1px solid #ddd;
+	padding: 8px;
+	text-align: left;
+}
+
+th {
+	background-color: #f2f2f2;
+}
+
+.collapsed_border_table {
+	border-collapse: collapse;
+}
+
+.uncollapsed_border_table {
+	border-collapse: separate;
+}
+
+.horizontal_zebra_striped_table tr:nth-child(even) {
+	background-color: rgba(150, 212, 212, 0.4);
+}
+
+.text_alignment_in_table_cells th,
+.text_alignment_in_table_cells td {
+	text-align: center;
+	vertical-align: middle;
+}
+
+.vertical_zebra_striped_table th:nth-child(even),
+.vertical_zebra_striped_table td:nth-child(even) {
+	background-color: rgba(212, 150, 192, 0.4);
+}
+
+.table_with_horizontal_dividers tr {
+	border-bottom: 5px solid #ddd;
+}
+
+.hoverable_table_rows tr:hover {
+	background-color: #D6EEEE;
+}
+
+/***********************************************************************************************************************
+LESSON 03. HTML LISTS
+LESSON 04. HTML LINKS
+LESSON 05. HTML COLOR NAMES & VALUES
+LESSON 06. HTML FORMS
+LESSON 07. HTML MEDIA
+LESSON 08. HTML HEADER
+LESSON 09. HTML LAYOUTS
+LESSON 10. HTML GRAPHICS
+LESSON 11. HTML APIs
+LESSON 12. HTML MISCELLANEOUS
+LESSON 13. HTML DEMO
+LESSON 14. HTML TOOLS
+LESSON 15. HTML REFERENCES
+LESSON 16. HTML RESOURCES
+LESSON 17. HTML5 INTRODUCTION
+LESSON 18. HTML5 USEFUL REFERENCES
+***********************************************************************************************************************/

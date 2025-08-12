@@ -1,54 +1,320 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 
 <html class="no-js" lang="en">
 <head>
+  <!-- CHARACTER ENCODING & VIEWPORT FIRST -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- PRIMARY METADATA -->
   <title>HTML Tables</title>
-  <link rel="stylesheet" href="../../assets/css/style.css">
-  <meta name="description" content="">
+  <meta name="description" content="An Introduction to HTML for Complete Beginners">
+  <meta name="author" content="Wasula Benjamin">
 
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-  <meta property="og:image:alt" content="">
+  <!-- SEO AND INDEXING -->
+  <meta name="robots" content="index, follow">
+  <meta name="keywords" content="web development basics, html, introduction">
 
-  <link rel="icon" href="../../favicon.ico" sizes="any">
+  <!-- OPEN GRAPH/SOCIAL METADATA (SHOULD COME BEFORE ICONS)  -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://github.com/wasulabenjamin/web_basics">
+  <meta property="og:title" content="HTML Tables">
+  <meta property="og:description" content="An Introduction to HTML for Complete Beginners">
+  <meta property="og:image"
+    content="https://raw.githubusercontent.com/wasulabenjamin/web_basics/main/assets/img/social_media.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="628">
+  <meta property="og:image:alt" content="HTML Tables">
+  <meta property="og:site_name" content="Wasula Benjamin">
+
+  <!-- TWITTER CARD TAGS -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="HTML Tables">
+  <meta name="twitter:description" content="Master HTML development with curated projects in html and html5">
+  <meta name="twitter:image"
+    content="https://raw.githubusercontent.com/wasulabenjamin/web_basics/main/assets/img/social_media.png">
+  <meta name="twitter:image:alt" content="HTML Tables Infographic">
+  <meta name="twitter:site" content="@wasulabenjamin">
+  <meta name="twitter:creator" content="@wasulabenjamin">
+  <meta name="twitter:domain" content="github.com/wasulabenjamin/web_basics">
+
+  <!-- PWA SUPPORT AND BROWSER UI ENHANCEMENTS -->
+  <meta name="theme-color" content="#fafafa">
+  <link rel="manifest" href="../../site.webmanifest">
+
+  <!-- ICONS (ORDER MATTERS FOR FALLBACK) -->
   <link rel="icon" href="../../icon.svg" type="image/svg+xml">
+  <link rel="icon" href="../../icon.png" type="image/png">
+  <link rel="icon" href="../../favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="../../icon.png">
 
-  <link rel="manifest" href="../../site.webmanifest">
-  <meta name="theme-color" content="#fafafa">
+  <!-- STYLESHEETS: LOCAL FIRST  -->
+  <link rel="stylesheet" href="../../assets/css/learn_html.css">
 </head>
 <body>
   <h1>HTML Tables</h1>
   <!--
+    HTML - Tables
+    HTML tables represent data, such as text, images, etc. in a structured format with rows and columns. These offers a 
+    visual structure that aids in clarity and comprehension, making them a fundamental element in web development.
 
+    HTML tables are used for various reasons, primarily centered around organizing and presenting data effectively. 
+    Some key purposes include:
+    − Structuring Data: 
+      Tables provide a coherent structure for organizing and displaying data, 
+      making it easier for users to interpret information.
+    - Comparative Presentation: 
+      When there is a need to compare different sets of data side by side like difference between two concepts, 
+      tables offer a clear and visually accessible format.
+    - Tabular Data Representation:
+      Information that naturally fits into rows and columns, such as schedules, statistics, or pricing tables, 
+      can be well-represented using HTML tables.
+    
+    You can create a table in HTML by using the <table> tag along with several tags that define the structure and 
+    content inside the table. 
+
+    The primary tags that are used in creating a table in HTML are:
+    - <table>... This tag is used to create the table that wrap the rows and columns within it.
+    - <tr>...... Stands for "table row" and is used to create a row within the table.
+    - <th>...... Represents "table header" and is used to create header cells within a row.
+    - <td>...... Represents "table data" and is used to create standard cells within a row.
+    
+    HTML Table Structure - Rows and Columns:
+    - Rows: Each row in an HTML table is defined using the `<tr>` tag. 
+      It contains a set of table cells (`<td>` or `<th>`), representing the individual elements within that row.
+    - Columns: The actual data or header information is contained within the table cells. 
+      Cells in the same position in different rows form a column.
+    - A table in HTML consists of table cells inside rows and columns of the table.
+    - Table heading is defined by the <th>...</th>. Data inside the <th> are the headings of the column of a table.
+    - Each table cell is defined by a <td>...</td> tag. 
+      Data inside the <td> tag are the content of the table rows and columns.
+    - Each table row starts with a <tr> ....</tr> tag.
+    - We use style sheet to create border for the table.
+
+    Styling HTML Tables
+    You can also style an HTML table using CSS properties to give it a custom appearance. Either you can create classes 
+    to apply styles on a table, or you can simply write internal CSS properties to style the table.
+    It is recommended that you should use CSS to style an HTML table. 
+    The background-color and background-image properties are used to set background color and image respectively.
+
+      Table Width and Height
+      The table's width and height can be set using either attributes or CSS properties.
+      These values can be defined in pixels or percentages.
+      The following attributes can set the width and height of a table:
+      - width: It defines the width of the table.
+      - height: It defines the height of the table.
+      
+      The following CSS properties can set the width and height of a table:
+        table { width: 80%; height: 400px; }
+
+    HTML Nested Tables
+    Nested HTML tables refer to create tables inside a table. 
+    You can create tables inside a table by using the <table> tab inside any <td> tag, 
+    it creates another table in the main table's cell.
+
+    Table-related Tags Reference
+    The following are the table-related tags.
+    - <table>...... It is used to create HTML table.  
+    - <th>......... This tag defines the header of the table. 
+    - <tr>......... This tag defines a table row. 
+    - <td>......... This tag is used to store table data of each cell.  
+    - <caption>.... This tag specifies the caption for the table. 
+    - <colgroup>... This tag describes the collection of one or more columns in a table for formatting.  
+    - <col>........ This tag is used to offer information about columns.  
+    - <thead>...... This tag is used to define table header section.  
+    - <tbody>...... This tag is used to define table body section.  
+    - <tfoot>...... This tag is used to define the table footer section. 
   -->
+  <h2>Creating an HTML Table</h2>
+  <table>
+    <tr>
+      <th>Product</th>
+      <th>Category</th>
+      <th>Price</th>
+    </tr>
+    <tr>
+      <td>Laptop</td>
+      <td>Electronics</td>
+      <td>KSh. 135,000</td>
+    </tr>
+    <tr>
+      <td>Ergonomic Chair</td>
+      <td>Furniture</td>
+      <td>KSh. 12,000</td>
+    </tr>
+  </table>
   <br>
+  
+  <h2>HTML Nested Tables</h2>
+  <table>
+    <tr>
+      <th>Column 01 Header</th>
+      <th>Column 02 Header</th>
+      <th>Column 03 Header</th>
+      <th>Column 04 Header</th>
+    </tr>
+    <tr>
+      <td>Row 01, Column 01</td>
+      <td>Row 01, Column 02</td>
+      <td>Row 01, Column 03</td>
+      <td>Row 01, Column 04</td>
+    </tr>
+    <tr>
+      <td>Row 02, Column 01</td>
+      <td>Row 02, Column 02</td>
+      <td>Row 02, Column 03</td>
+      <td>Row 02, Column 04</td>
+    </tr>
+    <tr>
+      <td>
+        <table>
+          <tr><td>Inner Table Row 1 inside Row 03, Column 01</td></tr>
+          <tr><td>Inner Table Row 2 inside Row 03, Column 01</td></tr>
+        </table>
+      </td>
+      <td>Row 03, Column 02</td>
+      <td>Row 03, Column 03</td>
+      <td>Row 03, Column 04</td>
+    </tr>
+    <tr>
+      <td>Row 04, Column 01</td>
+      <td>Row 04, Column 02</td>
+      <td>Row 04, Column 03</td>
+      <td>Row 04, Column 04</td>
+    </tr>
+  </table>
   <br>
-  <br>
-  <br>
-  <br>
-  <br><hr>
 
-  <h1>Tables</h1>
-  <!--
-
-  -->
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
+  <h2>HTML Table Tags</h2>
+  <table>
+    <caption>Urban Technologies 2025 Sales Report</caption>
+    <colgroup>
+      <!-- <col style="background-color: red;"> -->
+      <!-- <col style="background-color: green;"> -->
+      <!-- <col style="background-color: blue;"> -->
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Month</th>
+        <th>Sales</th>
+        <th>Profit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>January</td>
+        <td>KSh. 432,505</td>
+        <td>KSh. 54,747</td>
+      </tr>
+      <tr>
+        <td>February</td>
+        <td>KSh. 488,467</td>
+        <td>KSh. 48,480</td>
+      </tr>
+      <tr>
+        <td>March</td>
+        <td>KSh. 647,060</td>
+        <td>KSh. 63,812</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td>Totals</td>
+        <td>KSh. 1,568,032</td>
+        <td>KSh. 167,039</td>
+      </tr>
+    </tfoot>
+  </table>
   <br><hr>
 
   <h1>Table Headers & Captions</h1>
   <!--
+    HTML Table Headers and Captions
+    Headers and captions are used inside tables to organize and present data in a structured format.
 
+    The table heading is an essential part of a table, providing labels for columns. 
+    The <th> (table header) element is used to define table headings.
+
+    Captions are used in the tables to provide a title or explanation for the table. 
+    The <caption> element is placed immediately after the opening table tag.
+
+    The following is the syntax to create a header and caption for an HTML table:
+        <table>
+          <caption>Description of table</caption>
+          <tr>
+             <th>heading 1</th>
+             <th>heading 2</th>
+             <th>heading 3</th>
+          </tr>
+        </table>
+    
+    Define a Header Row for a Table
+    The <th> tag is used to represent table headings, and it is typically used within the <tr> (table row) element. 
+    Unlike the <td> (table data) tag used for regular cells, <th> is reserved for headers. 
+    In most cases, the first row of a table is designated as the header row.
+
+    Styling Table Headings
+    Styling table headings can enhance the visual appeal of a table. 
+    CSS can be applied to <th> elements to customize their appearance.
+
+    Using Header Cells in Any Row
+    While it's common to use <th> in the first row of a table, you can utilize it in any row based on your requirements. 
+    This flexibility allows for the creation of complex tables with multiple header rows or headers interspersed within 
+    the table.
+
+    Table Header Using <thead> Element
+    The <thead> tag is used to group table header cells so that a combined CSS style can be applied to header cells.
+
+    The <thead> tag is typically placed within the <table> element and contains one or more <tr> elements, each of which, in turn, contains <th> elements representing column headers.
+
+    Defining Multiple Header Rows
+    You can include multiple <tr> elements within <thead> to create multiple header rows. This is useful when your table structure requires a more complex hierarchy of headers.
+
+    Using '<colgroup>' Inside '<thead>'
+    The <colgroup> tag can be used within <thead> to group together a set of column and apply CSS styling or attributes to entire columns.
+     
+    Combining with '<tfoot>' and '<tbody>'
+    The <thead> tag is often combined with <tfoot> (table footer) and <tbody> (table body) to create a comprehensive table structure.
+
+    Difference between <thead> and <th>
+    Following are the points that highlight the differences between <thead> and <th> −
+
+    The <thead> tag is a structural element used to group header content, while <th> is a cell-level element defining a header cell.
+    It's common to use <th> within <thead>, but <th> can also be used outside <thead> to define headers in regular rows.
+    Including <thead> is optional; however, using it improves the semantic structure of the table.
+    Adding Caption to a HTML Table
+    The caption tag will serve as a title or explanation for the table, and it shows up at the top of the table.
+
+    Table Header, Body, and Footer
+    Tables can be divided into three portions: a header, a body, and a foot. The head and foot are rather similar to headers and footers in a word-processed document that remain the same for every page, while the body is the main content holder of the table.
+
+    The three elements for separating the head, body, and foot of a table are −
+
+    The <thead> tag to create a separate table header.
+    The <tbody> tag to indicate the main body of the table.
+    The <tfoot> tag to create a separate table footer.
+    
+    A table may contain several <tbody> elements to indicate different pages or groups of data. 
+    But it is notable that <thead> and <tfoot> tags should appear before <tbody>
+      - <thead> contains column headings → screen readers can use them to label data cells in <tbody>.
+      - <tfoot> contains summary data or totals → having it defined early helps assistive technologies know what to 
+        expect before reading through all <tbody> rows.
+
+    Multiple <tbody> groups still use the same <thead> and <tfoot>, so defining them first makes structural sense.
   -->
+  <h2>Defining a Header Row for a Table</h2>
+  <table>
+    <tr>
+      <th>Month</th>
+      <th>Salary</th>
+    </tr>
+    <tr>
+      <td>Keziah Njeri</td>
+      <td>KSh. 5,000</td>
+    </tr>
+  </table>
   <br>
+
   <br>
   <br>
   <br>
@@ -57,18 +323,502 @@
 
   <h1>Table Styling</h1>
   <!--
+    HTML - Table Styling
+    You can style HTML tables by using the CSS. Table styling helps you to customize the normal appearance of the 
+    elements like borders, cell padding, text alignment, background colors, and more to create a well-formatted table on 
+    a webpage.
 
+    Collapsed Border Table
+    You have the flexibility to manage the space between table borders by manipulating the 'border-collapse' property. 
+    This property determines how adjacent table cell borders interact, and adjusting it allows you to control the 
+    spacing or gap between the borders within your table.
+    By setting 'border-collapse' to "collapse", borders will merge, eliminating any spacing, 
+    while "separate" allows you to control the spacing using the 'border-spacing' property, 
+    providing a more customized appearance to your table layout.
+
+    Horizontal Zebra Striped Table
+    The Zebra Stripes - Horizontal technique involves styling table rows with alternating colors, 
+    enhancing the visual appeal and readability of the table.
+    The :nth-child(even) selector targets every even row, and a background color is applied to create a striped effect.
+
+    Text Alignment in Table Cells
+    You can align the text within your table cells horizontally and vertically using the text-align and vertical-align 
+    properties.
+
+    Vertical Zebra Striped Table
+    The Zebra Stripes - Vertical technique enhances table readability by applying alternating styles to every other 
+    column. This is achieved using the :nth-child(even) selector for both (td) and (th) elements.
+
+    Table with Combined Vertical & Horizontal Zebra Stripes
+    You can achieve a captivating visual effect by combining both horizontal and vertical zebra stripe patterns on your 
+    table. This involves applying alternating styles to both rows and columns.
+    To enhance this effect, consider adjusting the color transparency using the rgba() function, 
+    creating an engaging and aesthetically pleasing overlap of stripes for a unique and visually interesting outcome.
+
+    Table with Horizontal Dividers
+    You can enhance the visual structure of your table by incorporating horizontal dividers. Achieve this effect by styling each '<tr>' element with a bottom border.
+
+    Hoverable Table Rows
+    You can improve user interaction by employing the ':hover' selector, which highlights table rows when users hover 
+    over them. This enhances the visual feedback, making the table more interactive and user-friendly.
   -->
+  <p>Collapsed Border Table</p>
+  <table class="collapsed_border_table">
+    <thead>
+      <th>Month</th>
+      <th>Name</th>
+      <th>Salary</th>
+    </thead>
+    <tfoot>
+      <tr>
+        <td colspan="2">Totals</td>
+        <td>KSh. 15,000</td>
+      </tr>
+    </tfoot>
+    <tbody>
+      <tr>
+        <td>January</td>
+        <td>Reagan Matolo</td>
+        <td>KSh. 5,000</td>
+      </tr>
+      <tr>
+        <td>February</td>
+        <td>Reagan Matolo</td>
+        <td>KSh. 5,000</td>
+      </tr>
+      <tr>
+        <td>March</td>
+        <td>Reagan Matolo</td>
+        <td>KSh. 5,000</td>
+      </tr>
+      <tr>
+        <td>April</td>
+        <td>Reagan Matolo</td>
+        <td>KSh. 5,000</td>
+      </tr>
+      <tr>
+        <td>May</td>
+        <td>Reagan Matolo</td>
+        <td>KSh. 5,000</td>
+      </tr>
+      <tr>
+        <td>June</td>
+        <td>Reagan Matolo</td>
+        <td>KSh. 5,000</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Reagan Matolo</td>
+        <td>KSh. 5,000</td>
+      </tr>
+    </tbody>
+  </table>
   <br>
+
+  <p>Horizontal Zebra Striped Table</p>
+  <table class="horizontal_zebra_striped_table">
+    <thead>
+      <th>Month</th>
+      <th>Name</th>
+      <th>Salary</th>
+    </thead>
+    <tfoot>
+      <tr>
+        <td colspan="2">Totals</td>
+        <td>KSh. 15,000</td>
+      </tr>
+    </tfoot>
+    <tbody>
+      <tr>
+        <td>January</td>
+        <td>Reagan Matolo</td>
+        <td>KSh. 5,000</td>
+      </tr>
+      <tr>
+        <td>February</td>
+        <td>Reagan Matolo</td>
+        <td>KSh. 5,000</td>
+      </tr>
+      <tr>
+        <td>March</td>
+        <td>Reagan Matolo</td>
+        <td>KSh. 5,000</td>
+      </tr>
+      <tr>
+        <td>April</td>
+        <td>Reagan Matolo</td>
+        <td>KSh. 5,000</td>
+      </tr>
+      <tr>
+        <td>May</td>
+        <td>Reagan Matolo</td>
+        <td>KSh. 5,000</td>
+      </tr>
+      <tr>
+        <td>June</td>
+        <td>Reagan Matolo</td>
+        <td>KSh. 5,000</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Reagan Matolo</td>
+        <td>KSh. 5,000</td>
+      </tr>
+    </tbody>
+  </table>
   <br>
+
+  <p>Text Alignment in Table Cells</p>
+  <table class="text_alignment_in_table_cells">
+    <thead>
+      <th>Month</th>
+      <th>Name</th>
+      <th>Salary</th>
+    </thead>
+    <tfoot>
+      <tr>
+        <td colspan="2">Totals</td>
+        <td>KSh. 15,000</td>
+      </tr>
+    </tfoot>
+    <tbody>
+      <tr>
+        <td>January</td>
+        <td>Reagan Matolo</td>
+        <td>KSh. 5,000</td>
+      </tr>
+      <tr>
+        <td>February</td>
+        <td>Reagan Matolo</td>
+        <td>KSh. 5,000</td>
+      </tr>
+      <tr>
+        <td>March</td>
+        <td>Reagan Matolo</td>
+        <td>KSh. 5,000</td>
+      </tr>
+      <tr>
+        <td>April</td>
+        <td>Reagan Matolo</td>
+        <td>KSh. 5,000</td>
+      </tr>
+      <tr>
+        <td>May</td>
+        <td>Reagan Matolo</td>
+        <td>KSh. 5,000</td>
+      </tr>
+      <tr>
+        <td>June</td>
+        <td>Reagan Matolo</td>
+        <td>KSh. 5,000</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Reagan Matolo</td>
+        <td>KSh. 5,000</td>
+      </tr>
+    </tbody>
+  </table>
   <br>
+
+  <p>Vertical Zebra Striped Table</p>
+  <table class="vertical_zebra_striped_table">
+    <thead>
+      <th>Month</th>
+      <th>Name</th>
+      <th>Salary</th>
+    </thead>
+    <tfoot>
+      <tr>
+        <td colspan="2">Totals</td>
+        <td>KSh. 15,000</td>
+      </tr>
+    </tfoot>
+    <tbody>
+      <tr>
+        <td>January</td>
+        <td>Reagan Matolo</td>
+        <td>KSh. 5,000</td>
+      </tr>
+      <tr>
+        <td>February</td>
+        <td>Reagan Matolo</td>
+        <td>KSh. 5,000</td>
+      </tr>
+      <tr>
+        <td>March</td>
+        <td>Reagan Matolo</td>
+        <td>KSh. 5,000</td>
+      </tr>
+      <tr>
+        <td>April</td>
+        <td>Reagan Matolo</td>
+        <td>KSh. 5,000</td>
+      </tr>
+      <tr>
+        <td>May</td>
+        <td>Reagan Matolo</td>
+        <td>KSh. 5,000</td>
+      </tr>
+      <tr>
+        <td>June</td>
+        <td>Reagan Matolo</td>
+        <td>KSh. 5,000</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Reagan Matolo</td>
+        <td>KSh. 5,000</td>
+      </tr>
+    </tbody>
+  </table>
   <br>
+
+  <p>Table with Combined Vertical and Horizontal Zebra Stripes</p>
+  <table class="horizontal_zebra_striped_table vertical_zebra_striped_table">
+    <thead>
+      <th>Month</th>
+      <th>Name</th>
+      <th>Salary</th>
+    </thead>
+    <tfoot>
+      <tr>
+        <td colspan="2">Totals</td>
+        <td>KSh. 15,000</td>
+      </tr>
+    </tfoot>
+    <tbody>
+      <tr>
+        <td>January</td>
+        <td>Reagan Matolo</td>
+        <td>KSh. 5,000</td>
+      </tr>
+      <tr>
+        <td>February</td>
+        <td>Reagan Matolo</td>
+        <td>KSh. 5,000</td>
+      </tr>
+      <tr>
+        <td>March</td>
+        <td>Reagan Matolo</td>
+        <td>KSh. 5,000</td>
+      </tr>
+      <tr>
+        <td>April</td>
+        <td>Reagan Matolo</td>
+        <td>KSh. 5,000</td>
+      </tr>
+      <tr>
+        <td>May</td>
+        <td>Reagan Matolo</td>
+        <td>KSh. 5,000</td>
+      </tr>
+      <tr>
+        <td>June</td>
+        <td>Reagan Matolo</td>
+        <td>KSh. 5,000</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Reagan Matolo</td>
+        <td>KSh. 5,000</td>
+      </tr>
+    </tbody>
+  </table>
   <br>
+
+  <p>Table with Horizontal Dividers</p>
+  <table class="table_with_horizontal_dividers">
+    <thead>
+      <th>Month</th>
+      <th>Name</th>
+      <th>Salary</th>
+    </thead>
+    <tfoot>
+      <tr>
+        <td colspan="2">Totals</td>
+        <td>KSh. 15,000</td>
+      </tr>
+    </tfoot>
+    <tbody>
+      <tr>
+        <td>January</td>
+        <td>Reagan Matolo</td>
+        <td>KSh. 5,000</td>
+      </tr>
+      <tr>
+        <td>February</td>
+        <td>Reagan Matolo</td>
+        <td>KSh. 5,000</td>
+      </tr>
+      <tr>
+        <td>March</td>
+        <td>Reagan Matolo</td>
+        <td>KSh. 5,000</td>
+      </tr>
+      <tr>
+        <td>April</td>
+        <td>Reagan Matolo</td>
+        <td>KSh. 5,000</td>
+      </tr>
+      <tr>
+        <td>May</td>
+        <td>Reagan Matolo</td>
+        <td>KSh. 5,000</td>
+      </tr>
+      <tr>
+        <td>June</td>
+        <td>Reagan Matolo</td>
+        <td>KSh. 5,000</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Reagan Matolo</td>
+        <td>KSh. 5,000</td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+
+  <p>Hoverable Table Rows</p>
+  <table class="hoverable_table_rows">
+    <thead>
+      <th>Month</th>
+      <th>Name</th>
+      <th>Salary</th>
+    </thead>
+    <tfoot>
+      <tr>
+        <td colspan="2">Totals</td>
+        <td>KSh. 15,000</td>
+      </tr>
+    </tfoot>
+    <tbody>
+      <tr>
+        <td>January</td>
+        <td>Reagan Matolo</td>
+        <td>KSh. 5,000</td>
+      </tr>
+      <tr>
+        <td>February</td>
+        <td>Reagan Matolo</td>
+        <td>KSh. 5,000</td>
+      </tr>
+      <tr>
+        <td>March</td>
+        <td>Reagan Matolo</td>
+        <td>KSh. 5,000</td>
+      </tr>
+      <tr>
+        <td>April</td>
+        <td>Reagan Matolo</td>
+        <td>KSh. 5,000</td>
+      </tr>
+      <tr>
+        <td>May</td>
+        <td>Reagan Matolo</td>
+        <td>KSh. 5,000</td>
+      </tr>
+      <tr>
+        <td>June</td>
+        <td>Reagan Matolo</td>
+        <td>KSh. 5,000</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Reagan Matolo</td>
+        <td>KSh. 5,000</td>
+      </tr>
+    </tbody>
+  </table>
   <br><hr>
 
   <h1>Table Colgroup</h1>
   <!--
+    HTML Table Colgroup
+    In HTML, the <colgroup> element is used to define a group of columns in a table. It allows you to apply properties to multiple columns simultaneously, providing a more efficient way to style or format columns.
 
+    HTML Table Colgroup
+    Advertisement
+    The <colgroup> Tag
+    The <colgroup> is often used in conjunction with the <col> element, where each <col> tag represents an individual column within the group. This grouping enhances readability and simplifies the application of styles or attributes to specific columns in a table.
+
+    Syntax
+    Following is the syntax to use <colgroup> with <table> tag:
+
+    <table>
+      <colgroup>
+        <col span="value" style="width: ...;">
+        <col style="...">
+      </colgroup>
+    </table>
+    Using <colgroup> Tag in HTML Table
+    Using <colgroup> in HTML involves the following steps −
+
+    1. Insert <colgroup> Tag
+    Place the <colgroup> tag within the <table> element, usually inside the <thead> (table head) or <tbody> (table body) section.
+
+    <table>
+      <colgroup>
+      </colgroup>
+      <thead>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+    2. Define Columns
+    Inside the <colgroup> tag, use one or more <col> tags to represent each column. Specify attributes or styles for the columns within these <col> tags.
+
+    <table>
+      <colgroup>
+        <col>
+        <col>
+        <col>
+      </colgroup>
+    </table>
+    3. Apply Attributes or Styles
+    Define attributes or styles for the columns by adding attributes such as span, width, style, or class to the <col> tags.
+
+    Open Compiler
+    <table>
+      <colgroup>
+        <col style="background-color: lightgrey;" span="2">
+        <col style="background-color: lightblue;">
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Column 1</th>
+          <th>Column 2</th>
+          <th>Column 3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Data 1</td>
+          <td>Data 2</td>
+          <td>Data 3</td>
+        </tr>
+      </tbody>
+    </table>
+
+    CSS Properties for <colgroup> Tag
+    In HTML, the <colgroup> element allows some specific CSS properties to enhance the presentation of table columns. The legal CSS properties that can be used within a <colgroup> are as follows −
+
+    width Property − This property sets the width of the columns within the <colgroup>. It allows you to define the relative or absolute width of each column.
+
+    visibility Property − The visibility property can be used to control the visibility of columns within the <colgroup>. You can set it to "hidden" to make a column invisible.
+
+    Background Properties − Background properties, such as background-color, can be applied to add background styling to the columns. This can enhance the visual appeal of the table.
+
+    Border Properties − Border properties, like border-color and border-width, enable the customization of borders around the columns. This is useful for creating well-defined visual boundaries.
+
+    Attempting to apply other CSS properties will have no impact on the styling of the table columns. Therefore, when styling tables with <colgroup>, focus on the available properties to achieve the desired layout and appearance.
+
+    Multiple Col Elements
+    Certainly! The <colgroup> element in HTML allows you to group a set of columns in a table and apply styles to them collectively. Within <colgroup>, you can use multiple <col> elements to define different styles for individual columns.
+
+    Empty Column groups
+    In HTML, a <colgroup> element can be used to define a group of columns in a table. An empty <colgroup> can be employed to provide a structural placeholder for potential styling or later use. While it doesn't contain explicit <col> elements, it can still influence the overall structure of the table.
   -->
   <br>
   <br>
@@ -79,7 +829,77 @@
 
   <h1>Nested Tables</h1>
   <!--
+    Nested Tables
+    HTML nested tables refer to the table where one or more tables are placed inside it; the inner tables are placed inside the <td> tag. The nested tables involve the utilization of one table within another, providing a versatile way to structure complex data layouts. Various elements, including other HTML tags, can be incorporated within table cells (<td>).
 
+    Not only can tables be nested, but various HTML tags can also be used within the <td> (table data) tag for arranging contents in a structured manner.
+
+    Advertisement
+    Basic Structure of Nested Tables
+    Nested tables refer to the practice of embedding an entire table structure within a cell of another table. This technique allows for the creation of more complex and structured layouts in HTML.
+
+    See this image of how a nested table looks like i.e., this image demonstartes a structure of nested tables:
+
+    HTML Nested Tables
+    How To Create a Nested Table?
+    You can create a nested table in HTML by creating one or more tables in different table cells. The following are the steps to create an HTML nested table:
+
+    Step 1: Create Outer Table
+    Begin by creating the outer table, which serves as the container.
+
+    <table border="1">
+    </table>
+    Step 2: Define Rows and Columns
+    Within the outer table, define the necessary rows and columns.
+
+    <tr>
+       <td>
+       </td>
+    </tr>
+    Step 3: Embed Inner Table
+    Inside the cell, embed a new table structure using the <table> tags.
+
+    <td>
+       <table border="1">
+       </table>
+    </td>
+    Step 4: Define Inner Table Content
+    Within the inner table, define rows and columns as needed.
+
+    <tr>
+      <td>Inner Content</td>
+    </tr>
+    Step 5 - Close Tags
+    Ensure proper closure of all HTML tags.
+
+    </table>
+
+    Tables Within Cells
+    Tables can be nested within table cells, allowing for complex structures.
+
+    Example
+    The following example creates a table with two columns (Name and Salary). Inside the first column, there's a nested table displaying employee details with the same columns.
+    The outer table's header and data rows are defined, and the inner table showcases two employees, Ramesh Raman, and Shabbir Hussein, with corresponding salaries.
+
+    Styling Nested Tables
+    You can apply styles to nested tables just like regular tables to enhance visual appearance. To write CSS styles for nested tables, you can simply apply the CSS rules on the 'table' selector to style the outer table and use the 'table table' selector to style the inner tables.
+
+    Example
+    The following code includes a main table styled with CSS properties. The `border-collapse` ensures seamless borders, and 'width: 100%' makes it responsive. Cells (<td>, <th>) have padding, border, and text alignment.
+
+    Additionally, nested tables within cells inherit a distinctive style, including a colored background and borders. The main table's data cell contains a nested table with a blue border, 80% width, and centered using 'margin: 10px auto'.
+
+    Images in Nested Tables
+    Embedding images within nested tables enhances visual presentation. Use the <img> tag inside table cells to seamlessly integrate images into complex layouts like nested tables.
+
+    Benefits of Nested Tables
+    Following are the advantages of the nested tables −
+
+    Organized Layouts − Nested tables enable the creation of organized and structured layouts, enhancing the presentation of complex data.
+
+    Cell Customization − Each cell in a nested table can contain diverse content, including text, images, or even additional nested tables.
+
+    Complex Designs − Achieve intricate design patterns by nesting tables within cells, providing flexibility in webpage design.
   -->
   <br>
   <br>
