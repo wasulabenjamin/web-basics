@@ -47,9 +47,6 @@
   <link rel="icon" href="../../icon.png" type="image/png">
   <link rel="icon" href="../../favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="../../icon.png">
-
-  <!-- STYLESHEETS: LOCAL FIRST  -->
-  <link rel="stylesheet" href="../../assets/css/style.css" media="print" onload="this.media='all'">
 </head>
 <body>
   <h1>HTML Introduction</h1>
@@ -103,10 +100,12 @@
   <h6>Heading 6</h6>
   <br>
 
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-  magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
   <br>
 
   <p>Click <a href="https://github.com/wasulabenjamin/web_basics">here</a> to go to Web Basics on GitHub</p>
@@ -389,24 +388,24 @@
   <!--
     All the HTML elements can be categorized into two categories:
     - Block-level Elements
-      HTML block elements are used to create the logical and semantic layout of a web page. 
-      They help to organize the content into meaningful sections and make it easier for browsers, search engines, and 
-      site visitors to understand the structure and meaning of different parts of the web page. 
-      Block-level elements start on a new line, and anything that follows them appears on the next line. 
-      These elements may contain margins to add some space before and after. 
-      These elements take up the full width of their parent elements by default; you may set their width by using the 
+      HTML block elements are used to create the logical and semantic layout of a web page.
+      They help to organize the content into meaningful sections and make it easier for browsers, search engines, and
+      site visitors to understand the structure and meaning of different parts of the web page.
+      Block-level elements start on a new line, and anything that follows them appears on the next line.
+      These elements may contain margins to add some space before and after.
+      These elements take up the full width of their parent elements by default; you may set their width by using the
       CSS width property.
-      
-      HTML Block-level Elements include: 
+
+      HTML Block-level Elements include:
         <address>    <article>    <aside>      <blockquote> <canvas>     <dd>         <div>        <dl>
         <dt>         <fieldset>   <figcaption> <figure>     <footer>     <form>       <h1 - h6>    <header>
         <hr>         <li>         <main>       <nav>        <noscript>   <ol>         <p>          <pre>
         <section>    <table>      <tfoot>      <ul>         <video>
-    
+
     - HTML Inline Elements
       Inline elements are used to make useful block elements, like adding anchor links.
       Inline elements can appear within the same line and do not start a new line on their own.
-      
+
       HTML Inline Elements Include:
         <a>          <abbr>       <acronym>    <b>          <bdo>        <big>        <br>         <button>
         <cite>       <code>       <dfn>        <em>         <i>          <img>        <input>      <kbd>
@@ -421,37 +420,33 @@
   <br>
 
   <h2>HTML Inline Level Elements</h2>
-  <p>
-    This paragraph conatins inline level elements -
-    <a href="">Link to our website</a>
-    <span>span here</span>
-  </p>
+  <p>This paragraph contains inline level elements -<a href="">Link to our website</a><span>span here</span></p>
   <br><hr>
 
   <h1>Style Sheet</h1>
   <!--
-    CSS, or Cascading Style Sheets, is a tool that defines how web documents look on screens or in print. 
-    Since its introduction in 1994, the W3C has encouraged the use of style sheets for web design. 
-    CSS lets you control the presentation of your content, whether it's on a screen, in print, or for accessibility, 
+    CSS, or Cascading Style Sheets, is a tool that defines how web documents look on screens or in print.
+    Since its introduction in 1994, the W3C has encouraged the use of style sheets for web design.
+    CSS lets you control the presentation of your content, whether it's on a screen, in print, or for accessibility,
     making web design more flexible and efficient.
 
     CSS provide easy and effective alternatives to specify various attributes for the HTML tags.
     Using CSS, you can specify a number of style properties for a given HTML element.
 
-    Each property has a name and a value, separated by a colon (:). 
+    Each property has a name and a value, separated by a colon (:).
     Each property declaration is separated by a semicolon (;).
 
-    NOTE: 
-    Cascading means that a style applied to a parent element will also apply to all children elements within the parent. 
-    So when you are applying any style to an element, you have to be careful about child elements. 
+    NOTE:
+    Cascading means that a style applied to a parent element will also apply to all children elements within the parent.
+    So when you are applying any style to an element, you have to be careful about child elements.
     You can apply different styles to children also.
 
     There are three ways to include CSS in your HTML document:
-    - External CSS: 
+    - External CSS:
       Define CSS rules in a separate .css file and then include that file in your HTML document using HTML <link> tag.
-    - Internal CSS: 
+    - Internal CSS:
       Define style sheet rules in the header section of the HTML document using <style> tag.
-    - Inline CSS: 
+    - Inline CSS:
       Define style sheet rules directly along-with the HTML elements using style attribute.
   -->
   <p>We won't delve deep into this now - To be covered in CSS tutorial</p>
@@ -459,24 +454,24 @@
 
   <h1>Formatting</h1>
   <!--
-    HTML formatting defines the way of content representation on the webpage to improve the readability, to give the 
+    HTML formatting defines the way of content representation on the webpage to improve the readability, to give the
     semantic meaning, and to improve visual styling.
 
-    HTML formatting is done by using HTML physical and logical tags. 
+    HTML formatting is done by using HTML physical and logical tags.
     In this chapter, we will learn about the text appearance with HTML formatting.
 
     Let's understand what are physical and logical tags:
     - Physical Tags:
       These tags are used to give the visual appearance to the textual content.
-    - Logical Tags: 
-      These tags are used to give logical and semantic meaning to the textual content. 
-      There are a few logical tags that are used for screen readers, but the impact of those tags is visible on the 
+    - Logical Tags:
+      These tags are used to give logical and semantic meaning to the textual content.
+      There are a few logical tags that are used for screen readers, but the impact of those tags is visible on the
       browsers.
 
-    Without formatting, nothing looks good or soothing to our eyes. 
-    But HTML formatting is not only for soothing the eye or making textual content attractive. 
+    Without formatting, nothing looks good or soothing to our eyes.
+    But HTML formatting is not only for soothing the eye or making textual content attractive.
     There are few reasons to do the HTML formatting, this include:
-      - The appearance of any text provides a clear view of the content intent, such as highlighting the keywords, putting 
+      - The appearance of any text provides a clear view of the content intent, such as highlighting the keywords, putting
         meaningful information in the quotations, underlining the main sentence, etc.
       - Formatting helps search engines understand the content structure and is also helpful for search engine optimization.
       - Formatting improves the visual layout and improves the readability of the content.
@@ -523,7 +518,7 @@
   <h1>Quotations</h1>
   <!--
     HTML Quotations
-    HTML quotations allow you to include and format quoted text within your web content. 
+    HTML quotations allow you to include and format quoted text within your web content.
     These quotation tags help maintain proper formatting and semantics, enhancing the presentation and meaning of quoted content on web pages. Incorporating quotes is essential for conveying information accurately and providing a well-organized reading experience for users.
 
     The following are the quotation elements that are used to insert and display quotations on the webpage:
@@ -543,40 +538,41 @@
   <p>Here is a quotation from Wasula Benjamin himself</p>
   <blockquote cite="https://github.com/wasulabenjamin/web_basics">Adapt, Improvise, Overcome</blockquote>
   <br>
-  
+
   <h2>Cite a Quote with cite tag</h2>
   <p>The information is sourced from <cite>The Elements of Style</cite> by Strunk and White.</p>
   <br>
-  
+
   <h2>Contact Information with address tag</h2>
-  <address>Contact me at: <a href="mailto:wasulabenjamin@gmail.com">wasulabenjamin@gmail.com</a><br>
-   Visit us at: 123 Main Street, Cityville
+  <address>
+    Contact me at: <a href="mailto:wasulabenjamin@gmail.com">wasulabenjamin@gmail.com</a><br>
+    Visit us at: 123 Main Street, Cityville
   </address>
   <br>
-  
+
   <h2>Bi-Directional Override with bdo tag</h2>
   <p>This text will go left to right.</p>
   <p><bdo dir="rtl">This text will go right to left.</bdo></p>
   <br>
-  
+
   <h2>Abbreviations with abbr tag</h2>
-  <p>Tim Berners-Lee, a British scientist, invented the <abbr title="World Wide Web">WWW</abbr> 
+  <p>Tim Berners-Lee, a British scientist, invented the <abbr title="World Wide Web">WWW</abbr>
   <br><hr>
 
   <h1>Comments</h1>
   <!--
-    HTML comments are non-executable lines of code that do not display on the webpage and are used to add notes or 
-    explanations. It is a good practice to add comments into your HTML code, especially in complex documents, to 
+    HTML comments are non-executable lines of code that do not display on the webpage and are used to add notes or
+    explanations. It is a good practice to add comments into your HTML code, especially in complex documents, to
     indicate sections of a document and any other notes to anyone looking at the code.
 
     HTML comments are completely ignored by web browsers, so they don't affect how your page looks or works.
-    HTML comments help you and others understand your code and increase code readability 
+    HTML comments help you and others understand your code and increase code readability
 
     Comments in HTML have certain rules that you need to follow. Below is the list of rules −
     - Comments do not support nesting, which means a comment cannot be put inside another comment.
     - You can't have the sequence "--" within a comment, except to close it.
     - You must also make sure that there are no spaces in the start-of-comment string.
-    
+
     Commenting Style Sheets
     To comment a CSS script within a <style> tag, we need to use:
     /* symbol as a starting point and the */ symbol as an ending.
@@ -589,10 +585,10 @@
   <!--
     HTML Colors
     HTML colors are a way of specifying the appearance of web elements.
-    They are very important aspects of web design, as they not only enhance the visual appeal but also influence user 
+    They are very important aspects of web design, as they not only enhance the visual appeal but also influence user
     behavior. They are also used to evoke emotions and highlight important content.
 
-    In HTML, colors are generally defined for backgrounds, borders, and texts. 
+    In HTML, colors are generally defined for backgrounds, borders, and texts.
     To specify the colors, the style attribute of HTML elements is used.
 
     HTML Color Coding Methods
@@ -601,29 +597,29 @@
       - Color decimal or percentage values;  Here a value is specified using the rgb() property.
 
     HTML Color Names
-    We can specify a direct color name to set text or background color. 
-    W3C has listed 16 basic color names that will validate with an HTML validator, but there are over 200 different 
+    We can specify a direct color name to set text or background color.
+    W3C has listed 16 basic color names that will validate with an HTML validator, but there are over 200 different
     color names supported by major browsers.
     The following are the W3C standard color names that are supported by all browsers:
-      .        .        .        .        .        .        .        .        .        .        .        
+      .        .        .        .        .        .        .        .        .        .        .
       Black    Gray     Silver   White    Yellow   Lime     Aqua     Fuchsia  Red      Green    Blue
       Purple   Maroon   Olive    Navy     Teal
-    
+
     Browser Safe Colors
-    Colors can also be specified using the web-safe colors, which are formed by the combination of red, green, and blue 
-    (RGB) hex values. These colors range from the hexadecimal code #000000 (black) to #FFFFFF (white) and are supported 
+    Colors can also be specified using the web-safe colors, which are formed by the combination of red, green, and blue
+    (RGB) hex values. These colors range from the hexadecimal code #000000 (black) to #FFFFFF (white) and are supported
     by all computers using a 256-color palette.
 
     Setting Text Color
-    To set the text color in HTML, we specify the color value of text inside the color property of style attribute. 
+    To set the text color in HTML, we specify the color value of text inside the color property of style attribute.
     The value of color can be specified using any of the above discussed methods.
 
     Setting Background Color
-    To set the background color for any HTML element, we specify the color value inside the background-color property of 
+    To set the background color for any HTML element, we specify the color value inside the background-color property of
     the style attribute. The value of color can be specified using any of the above-discussed methods.
 
     Setting Border Color
-    To set the border color for any HTML element, we specify the color value inside the border property of the style 
+    To set the border color for any HTML element, we specify the color value inside the border property of the style
     attribute. The value of color can be specified using any of the above-discussed methods.
   -->
   <h2 style="color: Fuchsia;">Setting Text Color in HTML</h2>
@@ -641,9 +637,9 @@
   </p>
   <br>
 
-  <h2 style="border: 2.5px solid Fuchsia;">Setting Border Color in HTML</h2>
-  <p style="border: 2.5px dotted Teal;">This line is created using paragraph tag and its border color is <b>Teal</b></p>
-  <p style="border: 2.5px dashed SlateBlue;">
+  <h2 style="border: 3px solid Fuchsia;">Setting Border Color in HTML</h2>
+  <p style="border: 3px dotted Teal;">This line is created using paragraph tag and its border color is <b>Teal</b></p>
+  <p style="border: 3px dashed SlateBlue;">
     This is another line created using paragraph tag and its border color is <b>SlateBlue</b>
   </p>
   <br><hr>
@@ -651,59 +647,59 @@
   <h1>Images</h1>
   <!--
     HTML - Images
-    HTML images provide visual content for web pages, enhancing user experiences and conveying information. 
+    HTML images provide visual content for web pages, enhancing user experiences and conveying information.
     They can be photographs, graphics, icons, or illustrations.
 
-    HTML offers various elements for embedding, manipulating, and controlling images, contributing to the aesthetics and 
-    functionality of websites. Understanding image tags, attributes, and responsive design principles is essential for 
+    HTML offers various elements for embedding, manipulating, and controlling images, contributing to the aesthetics and
+    functionality of websites. Understanding image tags, attributes, and responsive design principles is essential for
     effective web development.
 
     Below is the basic syntax for HTML images:
     <img src="image_path" alt="Alternate text for the image" width="200px" height="150px" />
-    
+
       src............... Defines the path of the image (image URL).
-      alt............... Defines the alternate text; 
+      alt............... Defines the alternate text;
                          If there is a broken link to the image path, the alternate text displays on the webpage.
       width and height.. Define the height and width for the image.
 
-    You can use PNG, JPEG, or GIF image files based on your comfort, but make sure you specify the correct image file 
+    You can use PNG, JPEG, or GIF image files based on your comfort, but make sure you specify the correct image file
     name in the src attribute. The image name is always case-sensitive.
-    
-    The alt attribute is an optional attribute but recommended as it specifies an alternate text for an image if the 
+
+    The alt attribute is an optional attribute but recommended as it specifies an alternate text for an image if the
     image cannot be displayed.
 
     Set Image Location
     Image location (path) must be clearly defined in the src attribute.
-    You can follow the absolute path, which starts with root directory (/), then directory name (if any), and then image 
-    name with its extension. 
-    For example, if we have an image named "test.png" and it is stored in the "images" folder, which is in the "html" 
+    You can follow the absolute path, which starts with root directory (/), then directory name (if any), and then image
+    name with its extension.
+    For example, if we have an image named "test.png" and it is stored in the "images" folder, which is in the "html"
     folder on the root directory. You can simply use an image path like "/html/images/test.png".
 
     Set Image Width and Height
-    You can set image width and height based on your requirements using width and height attributes. 
+    You can set image width and height based on your requirements using width and height attributes.
     You can specify the width and height of the image in terms of either pixels or a percentage of its actual size.
 
     Bordered Image
-    You can specify the border and its thickness in terms of pixels using the border attribute. 
+    You can specify the border and its thickness in terms of pixels using the border attribute.
     A thickness of 0 means there is no border around the picture.
 
     Image Alignment
-    By default, the image will align at the left side of the page, but you can use the align attribute to set it in the 
+    By default, the image will align at the left side of the page, but you can use the align attribute to set it in the
     center or right.
 
     Animated Images
-    You can also use animated images (having .gif extensions) on the webpages. 
-    There is no specific attribute required to show animated images; you can simply set the path of the animated image 
+    You can also use animated images (having .gif extensions) on the webpages.
+    There is no specific attribute required to show animated images; you can simply set the path of the animated image
     (.gif) in the src attribute.
 
     Responsive Images
-    You can also make the images responsive, which will automatically adjust their size based on the devices screen size 
+    You can also make the images responsive, which will automatically adjust their size based on the devices screen size
     and resolution. The following are the methods to make images responsive:
 
     - Using CSS: Using CSS, you can set the width of the image to 100%.
       This allows the image to scale proportionally to its parent container.
       <img src="/html/images/test.png" alt="Responsive Image" style="width: 100%; height: auto;"/>
-    - Using the <picture> Tag: You can also display different images in different sizes or resolutions by using the 
+    - Using the <picture> Tag: You can also display different images in different sizes or resolutions by using the
       <picture> tag, which is useful when you want to display different images based on the device.
       <picture>
         <source media="(min-width: 800px)" srcset="image_path_1">
@@ -712,11 +708,11 @@
       </picture>
 
     The following table shows the supported image formats in the HTML <img> tag:
-      - .jpeg/.jpg..... Joint Photographic Experts Group..... Transparency Support? No..... Animation Support? No 
-      - .bmp........... Bitmap Image File.................... Transparency Support? No..... Animation Support? No 
-      - .png........... Portable Network Graphics............ Transparency Support? Yes.... Animation Support? No 
-      - .svg........... Scalable Vector Graphics............. Transparency Support? Yes.... Animation Support? No 
-      - .ico........... Icon File............................ Transparency Support? Yes.... Animation Support? No 
+      - .jpeg/.jpg..... Joint Photographic Experts Group..... Transparency Support? No..... Animation Support? No
+      - .bmp........... Bitmap Image File.................... Transparency Support? No..... Animation Support? No
+      - .png........... Portable Network Graphics............ Transparency Support? Yes.... Animation Support? No
+      - .svg........... Scalable Vector Graphics............. Transparency Support? Yes.... Animation Support? No
+      - .ico........... Icon File............................ Transparency Support? Yes.... Animation Support? No
       - .gif........... Graphics Interchange Format.......... Transparency Support? Yes.... Animation Support? Yes
       - .webp.......... Web Picture format................... Transparency Support? Yes.... Animation Support? Yes
 
@@ -728,188 +724,571 @@
   <h2>Setting image Width and Height</h2>
   <img src="../../assets/img/social_media.png" alt="social_media.png" width="628" height="628"/>
   <br>
-  
+
   <h2>Setting image Border</h2>
-  <img src="../../assets/img/social_media.png" alt="social_media.png" width="628" height="628" border="3"/>
+  <img src="../../assets/img/social_media.png" alt="social_media.png" width="628" height="628" style="border: 3px;"/>
   <br>
 
   <h2>Setting image Alignment</h2>
   <p>Below is a right aligned image</p>
-  <img src="../../assets/img/social_media.png" alt="social_media.png" 
-    width="628" height="628" border="3" align="right"/><br>
-  
+  <img src="../../assets/img/social_media.png" alt="social_media.png"
+    width="628" height="628" style="border: 3px; float: right;"/><br>
+
   <p>Below is a left aligned image</p>
-  <img src="../../assets/img/social_media.png" alt="social_media.png" 
-    width="628" height="628" border="3" align="left"/><br>
-  
+  <img src="../../assets/img/social_media.png" alt="social_media.png"
+    width="628" height="628" style="border: 3px; float: left;"/><br>
+
   <p>Below is a center aligned image</p>
-  <img src="../../assets/img/social_media.png" alt="social_media.png" 
-    width="628" height="628" border="3" align="center"/><br>
+  <img src="../../assets/img/social_media.png" alt="social_media.png"
+    width="628" height="628" style="border: 3px; margin: auto;"/><br>
   <br>
 
   <h2>Using an animated image in HTML</h2>
-  <img src="https://www.tutorialspoint.com/html/images/animated_image.gif" alt="social_media.png" border="3"/>
+  <img src="https://www.tutorialspoint.com/html/images/animated_image.gif" alt="social_media.png" style="border: 3px;"/>
   <br>
 
   <h2>Responsive Image Example</h2>
-  <img src="../../assets/img/social_media.png" alt="social_media.png" 
-    width="628" height="628" border="3" style="width: 100%; height: auto;" />
+  <img src="../../assets/img/social_media.png" alt="social_media.png"
+    width="628" height="628" style="border: 3px; width: 100%; height: auto;" />
   <br><hr>
 
   <h1>Image Map</h1>
   <!--
     Image Maps
-    HTML image maps are defined by the <map> tag. An image map enables specific areas of an image to be clickable, 
-    acting as links to different destinations. 
+    HTML image maps are defined by the <map> tag. An image map enables specific areas of an image to be clickable,
+    acting as links to different destinations.
     This technique is useful for creating complex navigation systems or interactive graphics on a webpage.
 
-    By defining various shapes (rectangles, circles, and polygons) within an image, each with its own associated link, 
+    By defining various shapes (rectangles, circles, and polygons) within an image, each with its own associated link,
     developers can create dynamic and interactive visual content that enhances user engagement and navigation.
 
-    Image maps are useful for creating complex navigation, interactive diagrams, or engaging visual experiences, 
+    Image maps are useful for creating complex navigation, interactive diagrams, or engaging visual experiences,
     enhancing user engagement and interactivity on web pages.
 
-    It is useful to create interactive graphics by defining clickable regions within an image. 
+    It is useful to create interactive graphics by defining clickable regions within an image.
     This allows users to interact with different image parts, triggering specific actions or links.
 
-    The <map> tag is used to create a client-side image map, turning specific regions of an image into interactive 
-    elements. The <map> element serves as a container for <area> elements, each defining a clickable region with 
+    The <map> tag is used to create a client-side image map, turning specific regions of an image into interactive
+    elements. The <map> element serves as a container for <area> elements, each defining a clickable region with
     specific attributes.
 
-    When used in conjunction with the <img> tag, the <map> tag establishes a connection between the image and its 
-    associated map. This enables web developers to create dynamic and interactive content by defining distinct clickable 
+    When used in conjunction with the <img> tag, the <map> tag establishes a connection between the image and its
+    associated map. This enables web developers to create dynamic and interactive content by defining distinct clickable
     zones within an image.
 
-    The <area> tag is used within the <map> tag to define clickable regions on an image. 
+    The <area> tag is used within the <map> tag to define clickable regions on an image.
     It specifies the shape, coordinates, and associated actions for each clickable area.
 
-    - Rectangular Area: You can define a rectangular shape by assigning the rect value to the shape attribute. 
-      The rectangular shape requires coordinates for the top-left and bottom-right corners that you can define in 
+    - Rectangular Area: You can define a rectangular shape by assigning the rect value to the shape attribute.
+      The rectangular shape requires coordinates for the top-left and bottom-right corners that you can define in
       coords attribute.
       Syntax:   <area shape="rect" coords="x1,y1,x2,y2" href="url" alt="Description">
                 where..... xy1,xy2,xy3,xy4 − define coordinates of the top-left-bottom-right corners respectively.
 
-    - Circular Area: You can define a circular shape by assigning the circle value to the shape attribute. 
+    - Circular Area: You can define a circular shape by assigning the circle value to the shape attribute.
       The circular shape requires center coordinates (x, y) and radius (r) that you can define in coords attribute.
       Syntax:   <area shape="circle" coords="x,y,r" href="url" alt="Description">
                 where..... x,y − define coordinates of the circle's center.
                            r − define coordinates of the radius of the circle.
 
-    - Polygon Area: You can define a polygon shape by assigning the poly value to the shape attribute. 
+    - Polygon Area: You can define a polygon shape by assigning the poly value to the shape attribute.
       The polygon shape requires a series of coordinates to form the shape that you can define in coords attribute.
       This can be used to create any shape, whether it be a mango or apple.
       Syntax:   <area shape="poly" coords="x1,y1,x2,y2,...,xn,yn" href="url" alt="Description">
                 where..... xy1,xy2,..., xn,yn coordinates form the polygon.
 
     To create an image map in HTML, follow these steps with a code example −
-    - Prepare Your Image: Begin with the image you want to use as an image map. 
+    - Prepare Your Image: Begin with the image you want to use as an image map.
       For this example, we'll use an image file named kenya_major_towns.png.
-      Use the usemap attribute in the <img> tag to link the image to the <map> tag by keeping its value to the name 
+      Use the usemap attribute in the <img> tag to link the image to the <map> tag by keeping its value to the name
       attribute of the <map>:
       Syntax:   <img src="../../assets/img/kenya_major_towns.png" usemap="#image_map">
 
     - Define the Image Map: Use the <map> tag to define the image map and give it a unique name with the name attribute.
       Syntax:   <map name="image_map"></map>
-    
-    - Define Clickable Areas: Within the <map> element, define clickable areas using <area> tags. 
+
+    - Define Clickable Areas: Within the <map> element, define clickable areas using <area> tags.
       Specify the shape (rect, circle, or poly), coordinates, and the URL to link to.
       <map name="image_map">
         <area shape="circle" coords="45,32,49" href="index.htm" alt="tutorialspoint">
         <area shape="rect" coords="245,50,85,9" href="/tutorialslibrary.htm" alt="tutorials_library">
       </map>
-    
+
     - Repeat defining clickable areas for each area you want to create within the image.
   -->
-  <img src="../../assets/img/kenya_major_towns.png" alt="social_media.png" 
+  <p>
+    The below image is a map showing major towns in Kenya.
+    Here the towns pins are clickable demonstrating how imagemap works
+  </p>
+  <img src="../../assets/img/kenya_major_towns.png" alt="social_media.png"
     width="500" height="595" usemap="#image_map"/>
   <map name="image_map">
-    <area shape="circle" coords="204,369,5" href="http://www.nairobi.go.ke/"/>
-    <area shape="circle" coords="351,503,5" href="https://www.mombasa.go.ke/"/>
-    <area shape="circle" coords="354,320,5" href="https://garissa.go.ke/"/>
-    <area shape="circle" coords="263,176,5" href="http://marsabit.go.ke/"/>
-    <area shape="circle" coords="237,326,5" href="http://www.embu.go.ke/"/>
-    <area shape="circle" coords="210,320,5" href="http://www.nyeri.go.ke/"/>
-    <area shape="circle" coords="161,314,5" href="http://www.nakuru.go.ke/"/>
-    <area shape="circle" coords="93,303,5" href="http://kisumu.go.ke/"/>
-    <area shape="circle" coords="93,284,5" href="http://www.kakamega.go.ke/"/>
+    <area shape="circle" coords="204,369,5" href="https://www.nairobi.go.ke/" alt="nairobi town"/>
+    <area shape="circle" coords="351,503,5" href="https://www.mombasa.go.ke/" alt="mombasa town"/>
+    <area shape="circle" coords="354,320,5" href="https://www.garissa.go.ke/" alt="garissa town"/>
+    <area shape="circle" coords="263,176,5" href="https://www.marsabit.go.ke/" alt="marsabit town"/>
+    <area shape="circle" coords="237,326,5" href="https://www.embu.go.ke/" alt="embu town"/>
+    <area shape="circle" coords="210,320,5" href="https://www.nyeri.go.ke/" alt="nyeri town"/>
+    <area shape="circle" coords="161,314,5" href="https://www.nakuru.go.ke/" alt="nakuru town"/>
+    <area shape="circle" coords="093,303,5" href="https://www.kisumu.go.ke/" alt="kisumu town"/>
+    <area shape="circle" coords="093,284,5" href="https://www.kakamega.go.ke/" alt="kakamega town"/>
   </map>
   <br><hr>
 
   <h1>Iframes</h1>
   <!--
+    HTML Iframes
+    HTML iframe is an inline frame that allows you to embed another document within the current HTML document.
+    Whenever you want to display another webpage within the webpage, you can use an iframe.
 
+    In HTML, the inline frame is defined with the <iframe> tag.
+    This tag creates a rectangular region at a specified place within the HTML document in which the browser can display
+    an external document such as a map or another web page.
+
+    The following is the syntax to create an inline frame (iframe) in HTML:
+    Syntax:   <iframe src="url" title="description"></iframe>
+
+    The following table describe the attributes used with the <iframe> tag:
+      - src: defines the URL or path of the external document. If the content of the iframe exceeds the specified
+          rectangular region, HTML automatically includes the scrollbars.
+          HTML allows any number of iframes, but it may affect the performance of the website.
+      - name: allows to give a name to a specific frame. It is used to indicate which frame a document should be loaded
+          into. This is important when you want to create links in one frame that load pages into an another frame, in
+          which case the second frame needs a name to identify itself as the target of the link.
+      - height: This attribute specifies the height of <iframe>. By default it is 150 pixels.
+      - width: This attribute specifies the width of <iframe>. By default it is 300 pixels.
+      - allow: Used to specify the permission policies to access features like microphone and camera.
+      - loading: specifies the time to load a given iframe.
+
+    Setting Height and Width of Iframes
+    You can set the height and width of an HTML iframe by using the height and width attributes of the <iframe> tag.
+
+    Styling an iframe
+    You can also use the style or class attributes to apply the CSS rules on an iframe.
+
+    Multiple Iframes
+    You can embed multiple documents (webpages) within a webpage.
+    HTML allows you to use multiple <iframe> tags in an HTML document.
   -->
+  <iframe src="https://wasulabenjamin.github.io">Sorry your browser does not support inline frames.</iframe>
   <br>
+
+  <h2>Setting Height and Width of Iframes</h2>
+  <iframe src="https://wasulabenjamin.github.io" height="500px" width="100%">
+    Sorry your browser does not support inline frames.
+  </iframe>
   <br>
-  <br>
-  <br>
-  <br>
+
+  <h2>Styling an iframe</h2>
+  <iframe src="https://wasulabenjamin.github.io"
+    style="width: 90%; height: 500px; border: 2px solid #f40; padding: 8px;">
+    Sorry your browser does not support inline frames.
+  </iframe>
   <br><hr>
 
   <h1>Phrase Elements</h1>
   <!--
+    HTML - Phrase Tags
+    HTML phrase tags have been designed for specific purposes, though they are displayed in a similar way as other basic
+    tags like <b>, <i>, <pre>, and <tt>.
+    Following is the list of phrase tags, some of them are discussed in HTML formatting and quotations.
+    - em.......... Emphasized Text
+      Content that is enclosed within this tag is displayed as emphasized text.
+      The <em> element typically renders text in italics, indicating emphasis.
 
+    - mark........ Marked Text
+      Anything that is enclosed within this tag is displayed as marked with yellow ink.
+
+    - strong...... Strong Text
+      Content that is enclosed within this tag is displayed as important text.
+      This tag typically displays text in a bold font, indicating strong importance.
+
+    - abbr........ Abbreviation Text
+      You can abbreviate a text by putting it inside opening <abbr> and closing </abbr> tags.
+      If present, the title attribute must contain this full description and nothing else.
+
+    - bdo......... Directed Text
+      This tag is used to override the current text direction.
+
+    - dfn......... Special Terms
+      This tag allows you to specify that you are introducing a special term.
+      Its usage is similar to italic words in the midst of a paragraph.
+      Typically, you would use the <dfn> element the first time you introduce a key term.
+      Most recent browsers render the content of a <dfn> element in an italic font.
+
+    - q........... Short Quoting Text
+      This tag is used when you want to add a double quote within a sentence.
+      By using this tag, you ensure that the enclosed text is presented as a direct quotation, enhancing readability and
+      maintaining proper punctuation in your HTML document.
+
+    - blockquote.. Long Quoting Text
+      When you want to quote a passage from another source, you put it in between <blockquote>...</blockquote> tags.
+      Text inside a <blockquote> element is usually indented from the left and right edges of the surrounding text and
+      sometimes uses an italicized font.
+
+    - cite ....... Citations Text
+      If you are citing a text, you can indicate the source by placing it between an opening <cite>...</cite> tag.
+      As you would expect in a print publication, the content of this tag is rendered in italicized text by default.
+
+    - code........ Computer Code Text
+      Any programming code to appear on a Web page should be placed inside <code>...</code> tags.
+      The content of the <code> element is presented in a monospaced font, just like code in most programming books.
+
+    - kbd ........ Keyboard Text
+      If you want to tell a reader to enter some text, you can use the <kbd>...</kbd> element to indicate what should be
+      typed in, as in this example.
+
+    - pre......... Programming Variables
+      The <var> element is usually used in conjunction with the <pre> and <code> elements to indicate that the content
+      of that element is a variable.
+
+    - samp........ Program Output
+      This tag indicates sample output from a program, and script, etc.
+      Again, it is mainly used when documenting programming or coding concepts.
+
+    - address..... Address Text
+      This tag is used to contain any address.
   -->
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
+  <p>The <em>em tag</em> is used to show Emphasized Text</p>
+  <p>The <mark>mark tag</mark> is used to show Marked Text</p>
+  <p>The <strong>strong tag</strong> is used to show Strong Text</p>
+  <p>The <abbr title="Abbreviation Tag">abbr tag</abbr> is used to show Abbreviation Text</p>
+  <p>The <bdo dir="rtl">bdo tag</bdo> is used to show Directed Text</p>
+  <p>The <dfn>dfn tag</dfn> is used to show Special Terms</p>
+  <p>The <q>q tag</q> is used to show Short Quoting Text</p>
+  <p>The <blockquote>blockquote tag</blockquote> is used to show Long Quoting Text</p>
+  <p>The <cite>cite tag</cite> is used to show Citations Text</p>
+  <p>The <code>code tag</code> is used to show Computer Code Text</p>
+  <p><code>document.write("<var>user_name</var>") </code></p>
+  <p>The <kbd>kbd tag</kbd> is used to show Keyboard Text</p>
+  <p>The <pre>pre tag</pre> is used to show Programming Variables</p>
+  <p>The <samp>samp tag</samp> is used to show Program Output</p>
+  <p>The <address>address tag</address> is used to show Address Text</p>
   <br><hr>
 
   <h1>Code Elements</h1>
   <!--
+    HTML computer code elements (tags) provide unique formatting and text styles for different types of code-related
+    messages, such as keyboard input, preformatted text, code snippets, variables, and sample outputs.
 
+    The computer code elements are listed as follows: <kbd>    <pre>    <code>    <var>    <samp>
   -->
+  <h2>Example of kbd Tag</h2>
+  <p>Use the following shortcut keys:</p>
+  <p>To Cut use:  <kbd>CTRL</kbd>+<kbd>X</kbd></p>
+  <p>To Copy use:  <kbd>CTRL</kbd>+<kbd>C</kbd></p>
+  <p>To Paste use:  <kbd>CTRL</kbd>+<kbd>V</kbd></p>
+  <p>To Undo use:  <kbd>CTRL</kbd>+<kbd>Z</kbd></p>
   <br>
+
+  <h2>Example of pre Tag</h2>
+  <pre>
+  This is a demo text
+  and will appear
+  in the same format as
+  it
+  is visible
+  here. The pre tag displays
+  the text in a fixed-width
+  font. It preserves
+  both spaces and
+  line breaks as you can see
+  here.
+  </pre>
   <br>
+
+  <h2>Example of code Tag</h2>
+  <h3>C++</h3>
+  <code>
+     #include <iostream/>
+  </code>
+  <h3>C</h3>
+  <code>
+     #include <stdio.h/>
+  </code>
   <br>
+
+  <h2>Example of var Tag</h2>
+  <p>Sample equation:  <var>2x</var> - <var>2z</var> = <var>3y</var> + 9</p>
   <br>
-  <br>
+
+  <h2>samp example</h2>
+  <p><s>Result would be announced on 6th June.</s></p>
+  <samp>New date for results is 7th June.</samp>
   <br><hr>
 
   <h1>Meta Tags</h1>
   <!--
+    HTML - Meta Tags
+    This tag lets us specify metadata, which is additional important information about a document, in a variety of ways.
+    The META elements can be used to include name and content pairs describing properties of the HTML document, such as
+    author, expiry date, a list of keywords, document author, etc.
 
+    HTML <meta> tag can be used to provide extra information. It's a self-closing element, meaning it doesn't require a
+    closing tag but carries information within its attributes. You can include one or more meta tags in your document
+    based on what information you want to keep in your document, but in general, meta tags do not impact the physical
+    appearance of the document, so from the appearance point of view, it does not matter if you include them or not.
+
+    You can add metadata to your web pages by placing <meta> tags inside the header of the document, which is
+    represented by the <head> tag.
+
+    The following metadata can be added using the <meta> tag:
+
+    - Specifying Keywords
+      You can use the <meta> tag to specify important keywords related to the document, and later these keywords are
+      used by the search engines while indexing your webpage for searching purposes.
+        Syntax:   <meta name="keywords" content="HTML, Meta Tags, Metadata"/>
+
+    - Document Description
+      You can use the <meta> tag to give a short description about the document.
+      This again can be used by various search engines while indexing your webpage for searching purposes.
+        Syntax:   <meta name="description" content="Learning about Meta Tags."/>
+
+    - Document Revision Date
+      You can use the <meta> tag to give information about the last time the document was updated.
+      This information can be used by various web browsers while refreshing your webpage.
+        Syntax:   <meta name="revised" content="web_basics, 11/08/2025"/>
+
+    - Document Refreshing
+      The <meta> tag can be used to specify a duration after which your web page will keep refreshing automatically.
+        Syntax:   <meta http-equiv="refresh" content="5"/>
+
+    - Page Redirection
+      You can use the <meta> tag to redirect your page to any other webpage.
+      You can also specify a duration if you want to redirect the page after a certain number of seconds.
+        Syntax: <meta http-equiv="refresh" content="5; url=https://github.com/wasulabenjamin/web_basics"/>
+
+    - Setting Author Name
+      You can set an author name on a web page using a <meta> tag.
+      Author name be specified by assigning the "author" value to the "name" attribute.
+        Syntax:   <meta name="author" content="Mahnaz Mohtashim" />
+
+    - Setting Cookies
+      Cookies are data stored in small text files on your computer, and it is exchanged between a web browser and a web
+      server to keep track of various information based on your web application needs.
+      You can use the <meta> tag to store cookies on the client side, and later this information can be used by the Web
+      server to track a site visitor. If you do not include the expiration date and time, the cookie is considered a
+      session cookie and will be deleted when the user exits the browser.
+        Syntax:   <meta http-equiv="cookie" content="userid=xyz; expires=Wednesday, 08-Aug-15 23:59:59 GMT;"/>
+
+    - Specify Character Set
+      You can use the <meta> tag to specify the character set used within the webpage.
+      By default, Web servers and Web browsers use ISO-8859-1 (Latin1) encoding to process Web pages.
+        Syntax:   <meta charset="utf-8">
   -->
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
   <br><hr>
 
-  <h1>Classes</h1>
+  <h1>Classes & IDs</h1>
   <!--
+  HTML - Classes
+    The class is an important keyword in HTML. Its an attribute that can be applied to one or more elements and is used
+    to style and categorize elements based on common characteristics or purpose.
+    Classes allows multiple elements to share the same styling rules.
+    By assigning the same class to multiple elements, you can apply CSS styles or JavaScript functionality to all of
+    them simultaneously. This promotes consistency in design and layout, making it easier to manage and update a website.
 
+    HTML class attribute is defined in the HTML code using the "class" keyword, and the styling is determined in CSS.
+    This separation of content and style is a key principle in web design, facilitating the creation of visually
+    appealing and organized web pages.
+
+    To create a CSS rule for HTML elements using class attribute in CSS write a (.) followed by the class name mentioned
+    in HTML element, the we can define the CSS properties with curly braces in key: value; format like color: yellow;.
+
+    HTML classes are essential for styling and formatting web page elements consistently.
+    They allow you to apply the same styles to multiple elements without repeating code, promoting maintainability and a
+    cohesive design. The class attribute can be used on any HTML Elements(Except elements placed in head element).
+
+    We can apply multiple classes to a single element by separating class names with a space.
+
+    The most important feature of classes is their re-usability.
+    You can apply the same class to multiple elements to maintain a consistent look throughout your website.
+
+    HTML classes are versatile and serve various purposes beyond styling. The classes are frequently used to identify
+    elements for JavaScript functions. For example, you can use a class to target specific elements, like buttons, and
+    make them interactive through JavaScript.
+
+    Things to Remember about Class
+    - More than 1 class can be defined on any HTML element.
+    - Class are used by CSS and JavaScript both to select the element.
+    - The class is case sensitive so be careful when you are using to select the element.
+    - Multiple elements can have the same class as well.
+    - In CSS we use .className and in JavaScript getElementsByClassName() method to select the class
+
+  HTML - id
+    The id is an important keyword in HTML. HTML "id" is an attribute used to uniquely identify an element within a web
+    page. It serves as a label for that element and enables JavaScript and CSS to target it specifically.
+
+    HTML id attribute is defined in the HTML code using the "id" keyword, and the styling is determined in CSS.
+    This identification helps in applying custom styles, making interactive features, and navigating within the webpage
+    with precision. The "id" values must be unique within the document.
+
+    NOTE: We highly recommend you to use classes to style any element through CSS.
+
+    In CSS, you can target the id attribute by using a hash symbol (#) followed by the id name in HTML element.
+    Avoid use id in CSS rather you can use class attribute. Ids are specially created to execute through JavaScript.
+
+    HTML ids are essential for managing events, and changing the structure of documents.
+    In order to create interactive and dynamic web pages, it gives developers the ability to target particular parts and
+    provide them specialized behavior and appearance. Rarely it is used to do the styling in CSS.
+
+    Using id Attribute through JavaScript
+    The ids are frequently used to identify elements for JavaScript functions.
+    For example, you can use a id to target specific elements, like paragraph, and make them interactive through Js.
+
+    Difference between id and class in HTML
+    In HTML, the id attribute uniquely identifies a single element on a page, making it useful for targeting with CSS
+    and JavaScript, and it must be unique within the document.
+    The class attribute, on the other hand, can be applied to multiple elements, allowing for the grouping of elements
+    that share common styles or behaviors.
+
+    Things to Remember about id
+    - The id attribute should contain at least one character should be there, the starting letter should be a character
+      (a-z) or (A-Z), and the rest of the letters of any type can written even special characters.
+    - The id attribute does not contain any spaces.
+    - Within the document every id must be unique.
   -->
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br><hr>
+  <style>
+    .highlight,
+    #highlight {
+      background-color: yellow;
+      color: black;
+      font-weight: bold;
+    }
+    .heading {
+      font-size: 24px;
+      color: #333;
+      text-align: center;
+    }
 
-  <h1>IDs</h1>
-  <!--
+    .content, .hidden_content,
+    #hidden_content {
+      font-size: 16px;
+      color: #666;
+      line-height: 1.5;
+    }
+    .button {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+    .interactive-button,
+    #interactive-button {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
 
-  -->
+  <h2 class="header">Using HTML Class Attribute</h2>
+  <p class="highlight">This text is highlighted using .highlight class</p>
   <br>
+
+  <h2 class="heading content">Using Multiple classes</h2>
+  <p class="content">We make Tutorials - Simply Easy Learning</p>
+  <button class="button">Click Me</button>
   <br>
+
+  <h2>Same class on Multiple Elements</h2>
+  <p class="highlight">
+    To create a class, you need to define it within your HTML document or link to an external CSS file that contains
+    class definitions. Classes are defined using the "class" attribute.
+  </p>
+  <p class="highlight">
+    HTML classes are essential for styling and formatting web page elements consistently. They allow you to apply the
+    same styles to multiple elements without repeating code, promoting maintainability and a cohesive design.
+  </p>
   <br>
+
+  <h2>Using class Attribute through JavaScript</h2>
+  <button class="interactive-button" onclick="showClasssContent()">Click To Show</button>
+  <p class="hidden_content" style="display: none;">This content can be seen after clicking the button.</p>
+  <script>
+    function showClasssContent() {
+      const element = document.getElementsByClassName('hidden_content')[0];
+      element.style.display = element.style.display === 'none' ? 'block' : 'none';
+    }
+  </script>
   <br>
+
+  <h2 id="header">Using HTML id Attribute</h2>
+  <p id="highlight">This text is highlighted using #highlight class</p>
   <br>
+
+  <h2>Using id Attribute through JavaScript</h2>
+  <button id="interactive-button" onclick="showIDContent()">Click To Show</button>
+  <p id="hidden_content" style="display: none;">This content can be seen after clicking the button.</p>
+  <script>
+    function showIDContent() {
+      const element = document.getElementById('hidden_content');
+      element.style.display = element.style.display === 'none' ? 'block' : 'none';
+    }
+  </script>
   <br><hr>
 
   <h1>Backgrounds</h1>
   <!--
+    HTML - Backgrounds
+    The background of a webpage is a layer behind its content, which includes text, images, colors, and various other
+    elements. It is an essential part of web design that improves the overall look of a web page as well as the user
+    experience.
 
+    HTML offers multiple attributes and properties for manipulating the background of elements within a document.
+
+    By default, our webpage background is white in color. We may not like it, but no worries.
+    HTML provides the following two good ways to decorate our webpage background:
+    - HTML Background with Colors
+    - HTML Background with Images
+
+    The following are the syntaxes for HTML backgrounds:
+      <body background = value>
+      <body style="background-color: value;">
+
+    The value can be an English name of color, an RGB value of color, or a hexadecimal value of color.
+    Following are some example codes that show how to set different styles of background for an HTML document.
+    - Setting Color for Background:
+      An elementary method to modify the background is by altering its color.
+      The background-color property facilitates the specification of a color for an element's background.
+
+    - Setting Image as Background:
+      HTML allows us to specify an image as the background of our HTML web page or table.
+      The background and background-image can be used to control the background image of an HTML element, specifically
+      page body and table backgrounds. We simply need to pass the path of an image as a value to both properties.
+
+    - Background Repeat and Position:
+      Although you can set an image as the background using just HTML, in order to control it's behavior, like repeating
+      and positioning, we need to use CSS.
+      CSS offers options for controlling how background images repeat and their positioning. The background-repeat
+      property specifies whether an image should repeat horizontally, vertically, both, or neither.
+      Furthermore, the background-position property empowers developers to determine where the background image should
+      be positioned within the element.
+
+    - Setting Patterned Backgrounds:
+      You might have seen many patterns or transparent backgrounds on various websites.
+      This can simply be achieved by using a patterned image or transparent image in the background.
+      NOTE: It is suggested that while creating patterns or transparent GIF or PNG images,
+            use the smallest dimensions possible, even as small as 1x1 to avoid slow loading.
   -->
+
+  <div style="width: 90%; height: 200px; background-color: orange;">
+    <h2>Setting Color for Background</h2>
+    <p>This is an example of a styled div with a background color.</p>
+  </div>
   <br>
+
+  <div style="width: 90%; height: 200px; background-image: url('../../icon.svg');">
+    <h2>Setting Image as Background</h2>
+    <p>This is an example of a styled div with a background image.</p>
+  </div>
   <br>
-  <br>
-  <br>
-  <br>
+
+  <div style="width: 90%; height: 200px; background-image: url('../../icon.svg'); background-repeat: no-repeat;">
+    <h2>Background Repeat and Position</h2>
+    <p>This is an example of a styled div with a background image not repeating.</p>
+  </div>
   <br><hr>
 </body>
 </html>
