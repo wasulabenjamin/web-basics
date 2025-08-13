@@ -1,6 +1,7 @@
 /***********************************************************************************************************************
 LESSON 01. INTRODUCTION
 ***********************************************************************************************************************/
+
 .highlight,
 #highlight {
   background-color: yellow;
@@ -59,7 +60,7 @@ th, td {
 }
 
 th {
-	background-color: #f2f2f2;
+	/*background-color: #f2f2f2;*/
 }
 
 .collapsed_border_table {
@@ -93,8 +94,49 @@ th {
 	background-color: #D6EEEE;
 }
 
+.colgroup_example colgroup:nth-child(2) {
+	visibility: hidden;
+}
+
 /***********************************************************************************************************************
 LESSON 03. HTML LISTS
+***********************************************************************************************************************/
+
+.unordered_lists li {
+	list-style-type: square;
+}
+
+.definition_lists {
+	font-size: 26px;
+}
+
+ul.unordered_lists_styling{
+	list-style-type: square;
+	padding: 0;
+}
+
+ul.unordered_lists_styling li,
+ol.ordered_lists_styling li {
+	margin-bottom: 8px;
+	background-color: #f0f0f0;
+	border: 1px solid #ccc;
+	padding: 8px;
+	transition: background-color 1s; /* Smooth transition effect */
+}
+
+ul.unordered_lists_styling li:hover,
+ol.ordered_lists_styling li:hover {
+	background-color: yellow; /*change background on hover */
+}
+
+dl.definition_list_styling {
+	display: block;
+	padding: 1em 1em 1em 1em; /* padding: top -> right -> bottom -> left */
+	margin: 1em 1em 1em 1em;   /* margin: top -> right -> bottom -> left */
+	background-color: #f0f0f0;
+}
+
+/***********************************************************************************************************************
 LESSON 04. HTML LINKS
 LESSON 05. HTML COLOR NAMES & VALUES
 LESSON 06. HTML FORMS

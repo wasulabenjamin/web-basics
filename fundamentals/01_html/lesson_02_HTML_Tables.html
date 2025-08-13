@@ -13,7 +13,7 @@
 
   <!-- SEO AND INDEXING -->
   <meta name="robots" content="index, follow">
-  <meta name="keywords" content="web development basics, html, introduction">
+  <meta name="keywords" content="web development basics, html, tables">
 
   <!-- OPEN GRAPH/SOCIAL METADATA (SHOULD COME BEFORE ICONS)  -->
   <meta property="og:type" content="website">
@@ -265,28 +265,35 @@
     Table Header Using <thead> Element
     The <thead> tag is used to group table header cells so that a combined CSS style can be applied to header cells.
 
-    The <thead> tag is typically placed within the <table> element and contains one or more <tr> elements, each of which, in turn, contains <th> elements representing column headers.
+    The <thead> tag is typically placed within the <table> element and contains one or more <tr> elements, each of 
+    which, in turn, contains <th> elements representing column headers.
 
     Defining Multiple Header Rows
-    You can include multiple <tr> elements within <thead> to create multiple header rows. This is useful when your table structure requires a more complex hierarchy of headers.
+    You can include multiple <tr> elements within <thead> to create multiple header rows. This is useful when your table 
+    structure requires a more complex hierarchy of headers.
 
     Using '<colgroup>' Inside '<thead>'
-    The <colgroup> tag can be used within <thead> to group together a set of column and apply CSS styling or attributes to entire columns.
+    The <colgroup> tag can be used within <thead> to group together a set of column and apply CSS styling or attributes 
+    to entire columns.
      
     Combining with '<tfoot>' and '<tbody>'
-    The <thead> tag is often combined with <tfoot> (table footer) and <tbody> (table body) to create a comprehensive table structure.
+    The <thead> tag is often combined with <tfoot> (table footer) and <tbody> (table body) to create a comprehensive 
+    table structure.
 
     Difference between <thead> and <th>
     Following are the points that highlight the differences between <thead> and <th> −
 
-    The <thead> tag is a structural element used to group header content, while <th> is a cell-level element defining a header cell.
+    The <thead> tag is a structural element used to group header content, while <th> is a cell-level element defining a 
+    header cell.
     It's common to use <th> within <thead>, but <th> can also be used outside <thead> to define headers in regular rows.
     Including <thead> is optional; however, using it improves the semantic structure of the table.
     Adding Caption to a HTML Table
     The caption tag will serve as a title or explanation for the table, and it shows up at the top of the table.
 
     Table Header, Body, and Footer
-    Tables can be divided into three portions: a header, a body, and a foot. The head and foot are rather similar to headers and footers in a word-processed document that remain the same for every page, while the body is the main content holder of the table.
+    Tables can be divided into three portions: a header, a body, and a foot. The head and foot are rather similar to 
+    headers and footers in a word-processed document that remain the same for every page, while the body is the main 
+    content holder of the table.
 
     The three elements for separating the head, body, and foot of a table are −
 
@@ -356,7 +363,8 @@
     creating an engaging and aesthetically pleasing overlap of stripes for a unique and visually interesting outcome.
 
     Table with Horizontal Dividers
-    You can enhance the visual structure of your table by incorporating horizontal dividers. Achieve this effect by styling each '<tr>' element with a bottom border.
+    You can enhance the visual structure of your table by incorporating horizontal dividers. Achieve this effect by 
+    styling each '<tr>' element with a bottom border.
 
     Hoverable Table Rows
     You can improve user interaction by employing the ':hover' selector, which highlights table rows when users hover 
@@ -365,9 +373,11 @@
   <p>Collapsed Border Table</p>
   <table class="collapsed_border_table">
     <thead>
-      <th>Month</th>
-      <th>Name</th>
-      <th>Salary</th>
+      <tr>
+        <th>Month</th>
+        <th>Name</th>
+        <th>Salary</th>
+      </tr>
     </thead>
     <tfoot>
       <tr>
@@ -418,9 +428,11 @@
   <p>Horizontal Zebra Striped Table</p>
   <table class="horizontal_zebra_striped_table">
     <thead>
-      <th>Month</th>
-      <th>Name</th>
-      <th>Salary</th>
+      <tr>
+        <th>Month</th>
+        <th>Name</th>
+        <th>Salary</th>
+      </tr>
     </thead>
     <tfoot>
       <tr>
@@ -471,9 +483,11 @@
   <p>Text Alignment in Table Cells</p>
   <table class="text_alignment_in_table_cells">
     <thead>
-      <th>Month</th>
-      <th>Name</th>
-      <th>Salary</th>
+      <tr>
+        <th>Month</th>
+        <th>Name</th>
+        <th>Salary</th>
+      </tr>
     </thead>
     <tfoot>
       <tr>
@@ -524,9 +538,11 @@
   <p>Vertical Zebra Striped Table</p>
   <table class="vertical_zebra_striped_table">
     <thead>
-      <th>Month</th>
-      <th>Name</th>
-      <th>Salary</th>
+      <tr>
+        <th>Month</th>
+        <th>Name</th>
+        <th>Salary</th>
+      </tr>
     </thead>
     <tfoot>
       <tr>
@@ -577,9 +593,11 @@
   <p>Table with Combined Vertical and Horizontal Zebra Stripes</p>
   <table class="horizontal_zebra_striped_table vertical_zebra_striped_table">
     <thead>
-      <th>Month</th>
-      <th>Name</th>
-      <th>Salary</th>
+      <tr>
+        <th>Month</th>
+        <th>Name</th>
+        <th>Salary</th>
+      </tr>
     </thead>
     <tfoot>
       <tr>
@@ -630,9 +648,11 @@
   <p>Table with Horizontal Dividers</p>
   <table class="table_with_horizontal_dividers">
     <thead>
-      <th>Month</th>
-      <th>Name</th>
-      <th>Salary</th>
+      <tr>
+        <th>Month</th>
+        <th>Name</th>
+        <th>Salary</th>
+      </tr>
     </thead>
     <tfoot>
       <tr>
@@ -683,9 +703,11 @@
   <p>Hoverable Table Rows</p>
   <table class="hoverable_table_rows">
     <thead>
-      <th>Month</th>
-      <th>Name</th>
-      <th>Salary</th>
+      <tr>
+        <th>Month</th>
+        <th>Name</th>
+        <th>Salary</th>
+      </tr>
     </thead>
     <tfoot>
       <tr>
@@ -736,176 +758,131 @@
   <h1>Table Colgroup</h1>
   <!--
     HTML Table Colgroup
-    In HTML, the <colgroup> element is used to define a group of columns in a table. It allows you to apply properties to multiple columns simultaneously, providing a more efficient way to style or format columns.
+    In HTML, the <colgroup> element is used to define a group of columns in a table. It allows you to apply properties 
+    to multiple columns simultaneously, providing a more efficient way to style or format columns.
 
-    HTML Table Colgroup
-    Advertisement
     The <colgroup> Tag
-    The <colgroup> is often used in conjunction with the <col> element, where each <col> tag represents an individual column within the group. This grouping enhances readability and simplifies the application of styles or attributes to specific columns in a table.
-
-    Syntax
-    Following is the syntax to use <colgroup> with <table> tag:
-
-    <table>
-      <colgroup>
-        <col span="value" style="width: ...;">
-        <col style="...">
-      </colgroup>
-    </table>
-    Using <colgroup> Tag in HTML Table
-    Using <colgroup> in HTML involves the following steps −
-
-    1. Insert <colgroup> Tag
-    Place the <colgroup> tag within the <table> element, usually inside the <thead> (table head) or <tbody> (table body) section.
-
-    <table>
-      <colgroup>
-      </colgroup>
-      <thead>
-      </thead>
-      <tbody>
-      </tbody>
-    </table>
-    2. Define Columns
-    Inside the <colgroup> tag, use one or more <col> tags to represent each column. Specify attributes or styles for the columns within these <col> tags.
-
-    <table>
-      <colgroup>
-        <col>
-        <col>
-        <col>
-      </colgroup>
-    </table>
-    3. Apply Attributes or Styles
-    Define attributes or styles for the columns by adding attributes such as span, width, style, or class to the <col> tags.
-
-    Open Compiler
-    <table>
-      <colgroup>
-        <col style="background-color: lightgrey;" span="2">
-        <col style="background-color: lightblue;">
-      </colgroup>
-      <thead>
-        <tr>
-          <th>Column 1</th>
-          <th>Column 2</th>
-          <th>Column 3</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Data 1</td>
-          <td>Data 2</td>
-          <td>Data 3</td>
-        </tr>
-      </tbody>
-    </table>
+    The <colgroup> is often used in conjunction with the <col> element, where each <col> tag represents an individual 
+    column within the group. This grouping enhances readability and simplifies the application of styles or attributes 
+    to specific columns in a table.
 
     CSS Properties for <colgroup> Tag
-    In HTML, the <colgroup> element allows some specific CSS properties to enhance the presentation of table columns. The legal CSS properties that can be used within a <colgroup> are as follows −
+    In HTML, the <colgroup> element allows some specific CSS properties to enhance the presentation of table columns. 
+    The legal CSS properties that can be used within a <colgroup> are as follows:
+    - width Property: This property sets the width of the columns within the <colgroup>. 
+      It allows you to define the relative or absolute width of each column.
+    - visibility Property: Used to control the visibility of columns within the <colgroup>. 
+      You can set it to "hidden" to make a column invisible.
+    - Background Properties: Background properties, such as background-color, can be applied to add background styling 
+      to the columns. This can enhance the visual appeal of the table.
+    - Border Properties: Border properties, like border-color and border-width, enable the customization of borders 
+      around the columns. This is useful for creating well-defined visual boundaries.
 
-    width Property − This property sets the width of the columns within the <colgroup>. It allows you to define the relative or absolute width of each column.
-
-    visibility Property − The visibility property can be used to control the visibility of columns within the <colgroup>. You can set it to "hidden" to make a column invisible.
-
-    Background Properties − Background properties, such as background-color, can be applied to add background styling to the columns. This can enhance the visual appeal of the table.
-
-    Border Properties − Border properties, like border-color and border-width, enable the customization of borders around the columns. This is useful for creating well-defined visual boundaries.
-
-    Attempting to apply other CSS properties will have no impact on the styling of the table columns. Therefore, when styling tables with <colgroup>, focus on the available properties to achieve the desired layout and appearance.
+    Attempting to apply other CSS properties will have no impact on the styling of the table columns. 
+    Therefore, when styling tables with <colgroup>, focus on the available properties to achieve the desired layout and 
+    appearance.
 
     Multiple Col Elements
-    Certainly! The <colgroup> element in HTML allows you to group a set of columns in a table and apply styles to them collectively. Within <colgroup>, you can use multiple <col> elements to define different styles for individual columns.
+    The <colgroup> element allows you to group a set of columns in a table and apply styles to them collectively. 
+    Within <colgroup>, you can use multiple <col> elements to define different styles for individual columns.
 
     Empty Column groups
-    In HTML, a <colgroup> element can be used to define a group of columns in a table. An empty <colgroup> can be employed to provide a structural placeholder for potential styling or later use. While it doesn't contain explicit <col> elements, it can still influence the overall structure of the table.
+    In HTML, a <colgroup> element can be used to define a group of columns in a table. 
+    An empty <colgroup> can be employed to provide a structural placeholder for potential styling or later use
+    While it doesn't contain explicit <col> elements, it can still influence the overall structure of the table.
   -->
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
+  <h2>Example of HTML Table Colgroup</h2>
+  <table class="colgroup_example">
+    <caption>HTML Table colgroup</caption>
+    <colgroup>
+      <col style="width: 10%;">
+      <col style="width: 30%;">
+      <col style="width: 15%; visibility: hidden;">
+      <col style="width: 25%;">
+      <col style="width: 20%;">
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Column 1</th>
+        <th>Column 2</th>
+        <th>Column 3</th>
+        <th>Column 4</th>
+        <th>Column 5</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Row 1, Column 1</td>
+        <td>Row 1, Column 2</td>
+        <td>Row 1, Column 3</td>
+        <td>Row 1, Column 4</td>
+        <td>Row 1, Column 5</td>
+      </tr>
+      <tr>
+        <td>Row 2, Column 1</td>
+        <td>Row 2, Column 2</td>
+        <td>Row 2, Column 3</td>
+        <td>Row 2, Column 4</td>
+        <td>Row 2, Column 5</td>
+      </tr>
+      <tr>
+        <td>Row 3, Column 1</td>
+        <td>Row 3, Column 2</td>
+        <td>Row 3, Column 3</td>
+        <td>Row 3, Column 4</td>
+        <td>Row 3, Column 5</td>
+      </tr>
+      <tr>
+        <td>Row 4, Column 1</td>
+        <td>Row 4, Column 2</td>
+        <td>Row 4, Column 3</td>
+        <td>Row 4, Column 4</td>
+        <td>Row 4, Column 5</td>
+      </tr>
+      <tr>
+        <td>Row 5, Column 1</td>
+        <td>Row 5, Column 2</td>
+        <td>Row 5, Column 3</td>
+        <td>Row 5, Column 4</td>
+        <td>Row 5, Column 5</td>
+      </tr>
+    </tbody>
+  </table>
   <br><hr>
 
   <h1>Nested Tables</h1>
   <!--
     Nested Tables
-    HTML nested tables refer to the table where one or more tables are placed inside it; the inner tables are placed inside the <td> tag. The nested tables involve the utilization of one table within another, providing a versatile way to structure complex data layouts. Various elements, including other HTML tags, can be incorporated within table cells (<td>).
+    HTML nested tables refer to the table where one or more tables are placed inside it; the inner tables are placed 
+    inside the <td> tag. The nested tables involve the utilization of one table within another, providing a versatile 
+    way to structure complex data layouts. 
+    Various elements, including other HTML tags, can be incorporated within table cells (<td>).
 
-    Not only can tables be nested, but various HTML tags can also be used within the <td> (table data) tag for arranging contents in a structured manner.
-
-    Advertisement
-    Basic Structure of Nested Tables
-    Nested tables refer to the practice of embedding an entire table structure within a cell of another table. This technique allows for the creation of more complex and structured layouts in HTML.
-
-    See this image of how a nested table looks like i.e., this image demonstartes a structure of nested tables:
-
-    HTML Nested Tables
-    How To Create a Nested Table?
-    You can create a nested table in HTML by creating one or more tables in different table cells. The following are the steps to create an HTML nested table:
-
-    Step 1: Create Outer Table
-    Begin by creating the outer table, which serves as the container.
-
-    <table border="1">
-    </table>
-    Step 2: Define Rows and Columns
-    Within the outer table, define the necessary rows and columns.
-
-    <tr>
-       <td>
-       </td>
-    </tr>
-    Step 3: Embed Inner Table
-    Inside the cell, embed a new table structure using the <table> tags.
-
-    <td>
-       <table border="1">
-       </table>
-    </td>
-    Step 4: Define Inner Table Content
-    Within the inner table, define rows and columns as needed.
-
-    <tr>
-      <td>Inner Content</td>
-    </tr>
-    Step 5 - Close Tags
-    Ensure proper closure of all HTML tags.
-
-    </table>
+    Not only can tables be nested, but various HTML tags can also be used within the <td> (table data) tag for arranging 
+    content in a structured manner.
 
     Tables Within Cells
     Tables can be nested within table cells, allowing for complex structures.
 
-    Example
-    The following example creates a table with two columns (Name and Salary). Inside the first column, there's a nested table displaying employee details with the same columns.
-    The outer table's header and data rows are defined, and the inner table showcases two employees, Ramesh Raman, and Shabbir Hussein, with corresponding salaries.
-
     Styling Nested Tables
-    You can apply styles to nested tables just like regular tables to enhance visual appearance. To write CSS styles for nested tables, you can simply apply the CSS rules on the 'table' selector to style the outer table and use the 'table table' selector to style the inner tables.
+    You can apply styles to nested tables just like regular tables to enhance visual appearance. 
+    To write CSS styles for nested tables, you can simply apply the CSS rules on the 'table' selector to style the outer 
+    table and use the 'table table' selector to style the inner tables.
 
-    Example
-    The following code includes a main table styled with CSS properties. The `border-collapse` ensures seamless borders, and 'width: 100%' makes it responsive. Cells (<td>, <th>) have padding, border, and text alignment.
-
-    Additionally, nested tables within cells inherit a distinctive style, including a colored background and borders. The main table's data cell contains a nested table with a blue border, 80% width, and centered using 'margin: 10px auto'.
+    Additionally, nested tables within cells inherit a distinctive style, including a colored background and borders. 
 
     Images in Nested Tables
-    Embedding images within nested tables enhances visual presentation. Use the <img> tag inside table cells to seamlessly integrate images into complex layouts like nested tables.
+    Embedding images within nested tables enhances visual presentation. 
+    Use the <img> tag inside table cells to seamlessly integrate images into complex layouts like nested tables.
 
-    Benefits of Nested Tables
     Following are the advantages of the nested tables −
-
-    Organized Layouts − Nested tables enable the creation of organized and structured layouts, enhancing the presentation of complex data.
-
-    Cell Customization − Each cell in a nested table can contain diverse content, including text, images, or even additional nested tables.
-
-    Complex Designs − Achieve intricate design patterns by nesting tables within cells, providing flexibility in webpage design.
+    - Organized Layouts:
+      Nested tables enable the creation of organized and structured layouts, enhancing the presentation of complex data.
+    - Cell Customization:
+      Each cell in a nested table can contain diverse content, including text, images, or even additional nested tables.
+    - Complex Designs:
+      Achieve intricate design patterns by nesting tables within cells, providing flexibility in webpage design.
   -->
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
   <br><hr>
 </body>
 </html>
