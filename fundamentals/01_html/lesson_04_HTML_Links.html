@@ -8,7 +8,7 @@
 
   <!-- PRIMARY METADATA -->
   <title>HTML Links</title>
-  <meta name="description" content="An Introduction to HTML for Complete Beginners">
+  <meta name="description" content="An Introduction to HTML Links for Complete Beginners">
   <meta name="author" content="Wasula Benjamin">
 
   <!-- SEO AND INDEXING -->
@@ -19,9 +19,9 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://github.com/wasulabenjamin/web_basics">
   <meta property="og:title" content="HTML Links">
-  <meta property="og:description" content="An Introduction to HTML for Complete Beginners">
+  <meta property="og:description" content="An Introduction to HTML Links for Complete Beginners">
   <meta property="og:image"
-    content="https://raw.githubusercontent.com/wasulabenjamin/web_basics/main/assets/img/social_media.png">
+    content="https://raw.githubusercontent.com/wasulabenjamin/web_basics/main/assets/img/social-media.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="628">
   <meta property="og:image:alt" content="HTML Links">
@@ -30,9 +30,9 @@
   <!-- TWITTER CARD TAGS -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="HTML Links">
-  <meta name="twitter:description" content="Master HTML development with curated projects in html and html5">
+  <meta name="twitter:description" content="Master HTML Links with curated examples in html and html5">
   <meta name="twitter:image"
-    content="https://raw.githubusercontent.com/wasulabenjamin/web_basics/main/assets/img/social_media.png">
+    content="https://raw.githubusercontent.com/wasulabenjamin/web_basics/main/assets/img/social-media.png">
   <meta name="twitter:image:alt" content="HTML Links Infographic">
   <meta name="twitter:site" content="@wasulabenjamin">
   <meta name="twitter:creator" content="@wasulabenjamin">
@@ -49,34 +49,34 @@
   <link rel="apple-touch-icon" href="../../icon.png">
 
   <!-- STYLESHEETS: LOCAL FIRST  -->
-  <link rel="stylesheet" href="../../assets/css/learn_html.css">
+  <link rel="stylesheet" href="../../assets/css/learn-html.css">
 </head>
-<body link="blue" alink="orange" vlink="red">
+<body>
   <h1>Text Links</h1>
   <!--
     HTML - Text Links
-    HTML Links (Hyperlinks) are words or buttons having a link to another page that take the user to that linked page 
+    HTML Links (Hyperlinks) are words or buttons having a link to another page that take the user to that linked page
     when clicked.
 
     HTML Hyperlinks
-    A hyperlink is a specific type of link that allows users to navigate from one web page or resource to another by 
-    clicking on it. You can create hyperlinks using text or images available on a webpage. 
+    A hyperlink is a specific type of link that allows users to navigate from one web page or resource to another by
+    clicking on it. You can create hyperlinks using text or images available on a webpage.
     A hyperlink is created using the HTML Anchor Tag (</a>).
 
     The Anchor (<a>) Tag
-    An anchor tag, or <a> tag, is a basic element that creates hyperlinks between two pages. 
-    Anything written between the opening <a> and the closing </a> tags become clickable and when someone clicks on it, 
+    An anchor tag, or <a> tag, is a basic element that creates hyperlinks between two pages.
+    Anything written between the opening <a> and the closing </a> tags become clickable and when someone clicks on it,
     the linked page will be opened.
     Syntax: <a href="URL" target="_target_type">Link Text</a>
 
     Creating Hyperlinks (Linking Webpages/Documents)
     You can link other webpages or documents by creating the hyperlinking to specific words, images or any HTML element.
-    As discussed above, you can create hyperlinks by using the HTML <a> tag with the href attribute. 
+    As discussed above, you can create hyperlinks by using the HTML <a> tag with the href attribute.
     The href attribute specifies the page/document to be linked.
     Syntax: <a href="URL" ... attributes-list>Link Text</a>
 
     The "target" Attribute
-    The target attribute specifies the location where linked document is opened. 
+    The target attribute specifies the location where linked document is opened.
     The following are the possible values of target attribute:
          _blank: Opens the linked document in a new window or tab.
          _self: Opens the linked document in the same frame.
@@ -85,28 +85,28 @@
          targetframe: Opens the linked document in a named targetframe.
 
     Use of Base Path in Hyperlinks
-    When you link HTML documents related to the same website, it is not required to give a complete URL for every link. 
-    You can get rid of it if you use <base> tag in your HTML document header. 
-    This tag is used to give a base path for all the links. 
+    When you link HTML documents related to the same website, it is not required to give a complete URL for every link.
+    You can get rid of it if you use <base> tag in your HTML document header.
+    This tag is used to give a base path for all the links.
     So your browser will concatenate given relative path to this base path and will make a complete URL.
 
     Linking to a Page Section
-    Linking to a section on the same page allows users to navigate directly to that section. 
-    You can create a link in the same to a specific section by using the href attribute with a #id value, 
+    Linking to a section on the same page allows users to navigate directly to that section.
+    You can create a link in the same to a specific section by using the href attribute with a #id value,
     where the #id targets an element on the page with a corresponding id attribute.
 
     Styling Hyperlinks (Setting Link Color)
     You can set colors of your links, active and visited links using link, alink and vlink attributes of <body> tag.
 
     Downloadable Links
-    You can create downloadable links where you can create links to make your PDF, DOC, or ZIP files downloadable. 
-    To create any link downloadable, you can use the download attribute with the <a> tag and specify the downloadable 
+    You can create downloadable links where you can create links to make your PDF, DOC, or ZIP files downloadable.
+    To create any link downloadable, you can use the download attribute with the <a> tag and specify the downloadable
     file path in the href attribute.
 
-    You can also specify the filename for the downloaded file. 
+    You can also specify the filename for the downloaded file.
     To give a custom filename the file, you need to provide it to the download attribute.
 
-    You can also allow HTML to open a file download dialog box before starting the download so that the user can select 
+    You can also allow HTML to open a file download dialog box before starting the download so that the user can select
     the location to download the file. You can do it by using an HTTP header in your HTTP response.
   -->
   <h2>The "target" Attribute</h2>
@@ -132,56 +132,56 @@
   <br>
 
   <h2>Linking to a Page Section</h2>
-  <a href="#linking_page_sections_pg1" target="">Paragraph 1</a>
-  <a href="#linking_page_sections_pg2" target="">Paragraph 2</a>
-  <a href="#linking_page_sections_pg3" target="">Paragraph 3</a>
-  <a href="#linking_page_sections_pg4" target="">Paragraph 4</a>
-  <a href="#linking_page_sections_pg5" target="">Paragraph 5</a>
-  <div id="linking_page_sections_pg1" class="linking_page_sections">
+  <a href="#linking-page-sections-pg1" target="">Paragraph 1</a>
+  <a href="#linking-page-sections-pg2" target="">Paragraph 2</a>
+  <a href="#linking-page-sections-pg3" target="">Paragraph 3</a>
+  <a href="#linking-page-sections-pg4" target="">Paragraph 4</a>
+  <a href="#linking-page-sections-pg5" target="">Paragraph 5</a>
+  <div id="linking-page-sections-pg1" class="linking-page-sections">
     <h3>Paragraph 1</h3>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore 
-      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
       Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
   </div>
-  <div id="linking_page_sections_pg2" class="linking_page_sections">
+  <div id="linking-page-sections-pg2" class="linking-page-sections">
     <h3>Paragraph 2</h3>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore 
-      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
       Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
 
   </div>
-  <div id="linking_page_sections_pg3" class="linking_page_sections">
+  <div id="linking-page-sections-pg3" class="linking-page-sections">
     <h3>Paragraph 3</h3>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore 
-      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
       Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
 
   </div>
-  <div id="linking_page_sections_pg4" class="linking_page_sections">
+  <div id="linking-page-sections-pg4" class="linking-page-sections">
     <h3>Paragraph 4</h3>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore 
-      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
       Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
 
   </div>
-  <div id="linking_page_sections_pg5" class="linking_page_sections">
+  <div id="linking-page-sections-pg5" class="linking-page-sections">
     <h3>Paragraph 5</h3>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore 
-      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
       Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
 
@@ -195,103 +195,103 @@
   <h1>Image Links</h1>
   <!--
     HTML - Image Links
-    Images can also be used as links in HTML, which means by clicking the images we can navigate to other web pages or 
-    resources. HTML image links are very useful in creating websites like photo galleries, portfolios, online stores, 
-    and so on. 
+    Images can also be used as links in HTML, which means by clicking the images we can navigate to other web pages or
+    resources. HTML image links are very useful in creating websites like photo galleries, portfolios, online stores,
+    and so on.
 
     Creating Image Links
-    To create an HTML image link, we need an <img> tag and an anchor element. 
-    The image element is used to display the image on the web page, and the anchor element is used to specify the 
+    To create an HTML image link, we need an <img> tag and an anchor element.
+    The image element is used to display the image on the web page, and the anchor element is used to specify the
     destination URL of the link.
 
-    Here, the href attribute of <a> element contains the destination link 
+    Here, the href attribute of <a> element contains the destination link
     and src attribute of <img> tag contains the path of image.
 
     Syntax:    <a href=" destination URL"><img src="image URL" alt="alternative text"></a>
-    
+
     Mouse-Sensitive Images
-    The HTML and XHTML standards provide a feature that lets us embed several different links inside a single image. 
+    The HTML and XHTML standards provide a feature that lets us embed several different links inside a single image.
     We can create different links on the single image based on different coordinates available on the image.
 
-    Once links are attached to coordinates, clicking on different parts of the image redirects us to target documents. 
+    Once links are attached to coordinates, clicking on different parts of the image redirects us to target documents.
     Such mouse-sensitive images are known as image maps.
 
     There are two ways to create image maps:
-      - Server-side image maps: 
-        This is enabled by the ismap attribute of the <img> tag and requires access to a server and related image-map 
+      - Server-side image maps:
+        This is enabled by the ismap attribute of the <img> tag and requires access to a server and related image-map
         processing applications.
-    
-      - Client-side image maps: 
+
+      - Client-side image maps:
         This is created with the usemap attribute of the <img> tag, along with corresponding <map> and <area> tags.
-    
+
     Server-Side Image Maps
-    In the server-side image maps, we simply put the image inside a hyperlink and use the ismap attribute, which makes 
-    it a special image, and when the user clicks some place within the image, the browser passes the coordinates of the 
-    mouse pointer along with the URL specified in the <a> tag to the web server. 
+    In the server-side image maps, we simply put the image inside a hyperlink and use the ismap attribute, which makes
+    it a special image, and when the user clicks some place within the image, the browser passes the coordinates of the
+    mouse pointer along with the URL specified in the <a> tag to the web server.
     The server uses the mouse pointer coordinates to determine which document to deliver back to the browser.
-    
-    When ismap is used, the href attribute of the containing <a> tag must contain the URL of a server application like a 
+
+    When ismap is used, the href attribute of the containing <a> tag must contain the URL of a server application like a
     CGI or PHP script to process the incoming request based on the passed coordinates.
-    
-    The coordinates of the mouse position are screen pixels counted from the upper-left corner of the image, 
+
+    The coordinates of the mouse position are screen pixels counted from the upper-left corner of the image,
     beginning with (0,0). The coordinates, preceded by a question mark, are added to the end of the URL.
 
-    This way we can assign distinct links to different coordinates of the image, and when those coordinates are clicked, 
-    we will be redirected to the linked documents. 
+    This way we can assign distinct links to different coordinates of the image, and when those coordinates are clicked,
+    we will be redirected to the linked documents.
 
     To learn more about the ismap attribute, check HTML ismap Attribute
 
     Client-Side Image Maps
-    Client-side image maps are enabled by the usemap attribute of the <img /> tag and defined by special <map> and 
-    <area> extension tags. The <map> along with <area> tags define all the image coordinates and corresponding links. 
+    Client-side image maps are enabled by the usemap attribute of the <img /> tag and defined by special <map> and
+    <area> extension tags. The <map> along with <area> tags define all the image coordinates and corresponding links.
 
-    The <area> tag inside the map tag specifies the shape and the coordinates to define the boundaries of each clickable 
+    The <area> tag inside the map tag specifies the shape and the coordinates to define the boundaries of each clickable
     hotspot available on the image.
 
-    The image that is going to form the map is inserted into the page using the <img /> tag as a normal image, 
+    The image that is going to form the map is inserted into the page using the <img /> tag as a normal image,
     except it carries an extra attribute called usemap.
 
     To know how the value of the coords attribute is calculated, you can visit the explanation of coords attribute.
 
     Coordinate System in HTML Images
-    The actual value of coordinates is totally dependent on the shape of the clickable area. 
-    All coordinates are relative to the upper-left corner of the image (0,0). 
+    The actual value of coordinates is totally dependent on the shape of the clickable area.
+    All coordinates are relative to the upper-left corner of the image (0,0).
     Each shape has a related URL. You can use any image software to know the coordinates of different positions.
 
-    - Rectangle:..  x1, y1, x2, y2 
-                    x1 and y1 are the coordinates of the upper left corner of the rectangle; 
+    - Rectangle:..  x1, y1, x2, y2
+                    x1 and y1 are the coordinates of the upper left corner of the rectangle;
                     x2 and y2 are the coordinates of the lower right corner.
     - Circle:.....  x, y, r
-                    x and y are the coordinates of the center of the circle, and r is the circle's radius. 
+                    x and y are the coordinates of the center of the circle, and r is the circle's radius.
                     A circle centred at 200,50 with a radius of 25 would have the attribute coords="200,50,25".
-    - Polygon:....  x1, y1, x2, y2, x3, y3, ..., xn, yn 
-                    The various x-y pairs define vertices (points) of the polygon, 
+    - Polygon:....  x1, y1, x2, y2, x3, y3, ..., xn, yn
+                    The various x-y pairs define vertices (points) of the polygon,
                     with a "line" being drawn from one point to the next point.
 
-                    A diamond-shaped polygon with its top point at 20,20 and 40 pixels across at its widest points 
+                    A diamond-shaped polygon with its top point at 20,20 and 40 pixels across at its widest points
                     would have the attribute coords="20,20,40,40,20,60,0,40".
   -->
   <h2>Create Hyperlink for an Image</h2>
   <a href="https://github.com/wasulabenjamin/web_basics" target="_blank">
-    <img src="../../assets/img/social_media.png" alt="social_media.png">
+    <img src="../../assets/img/social-media.png" alt="social-media.png">
   </a>
   <br>
 
   <h2>Image Link with Tooltip</h2>
   <a href="https://github.com/wasulabenjamin/web_basics" target="_blank" title="web_basics on github">
-    <img src="../../assets/img/social_media.png" alt="social_media.png">
+    <img src="../../assets/img/social-media.png" alt="social-media.png">
   </a>
   <br>
 
   <h2>Server-Side Image Maps</h2>
-  <a href="#linking_page_sections_pg2" target="_self">
-    <img src="../../assets/img/social_media.png" alt="social_media.png" ismap>
+  <a href="#linking-page-sections-pg2" target="_self">
+    <img src="../../assets/img/social-media.png" alt="social-media.png" ismap>
   </a>
   <br>
 
   <h2>Client-Side Image Maps</h2>
-  <img src="../../assets/img/kenya_major_towns.png" alt="social_media.png"
-    width="500" height="595" usemap="#image_map" title="kenya_major_towns" />
+  <img src="../../assets/img/kenya-major-towns.png" alt="social-media.png"
+       width="500" height="595" usemap="#image_map" title="kenya_major_towns" />
   <map name="image_map">
     <area shape="circle" coords="204,369,5" href="https://www.nairobi.go.ke/" alt="nairobi town" target="_blank" />
     <area shape="circle" coords="351,503,5" href="https://www.mombasa.go.ke/" alt="mombasa town" target="_blank" />
@@ -308,33 +308,33 @@
   <h1>Email Links</h1>
   <!--
     HTML - Email Links
-    HTML email links allow users to click on a link and automatically open their default email client with a new message 
+    HTML email links allow users to click on a link and automatically open their default email client with a new message
     composed to the specified email address.
 
     This is done using the mailto: protocol in the href attribute of an <a> (anchor) tag.
 
-    You can also predefine the subject and body of the email using the mailto: protocol. 
-    This is done by appending ?subject= and &body= to the email address. 
-    Spaces and special characters in the subject and body should be URL-encoded. 
+    You can also predefine the subject and body of the email using the mailto: protocol.
+    This is done by appending ?subject= and &body= to the email address.
+    Spaces and special characters in the subject and body should be URL-encoded.
     For example, spaces are encoded as %20.
 
     Define cc and bcc in Email Link
     We can also use the cc and bcc parameters to add carbon copy and blind carbon copy recipients
 
     Security Concerns
-    Adding an HTML email link to your webpage is straightforward, but it can expose your email address to spam. 
-    Automated programs, known as email harvesters, can scan web pages for email addresses and add them to spam lists. 
+    Adding an HTML email link to your webpage is straightforward, but it can expose your email address to spam.
+    Automated programs, known as email harvesters, can scan web pages for email addresses and add them to spam lists.
     This can result in a significant increase in unwanted emails.
   -->
   <h2>Create Email link using href</h2>
-  <a href="mailto:benjamin@gmail.com"> 
+  <a href="mailto:benjamin@gmail.com">
     Click to send mail to Benjamin
-  </a> 
+  </a>
   <br>
 
   <h2>Define Subject and Body in Email Link</h2>
   <a href="
-    mailto:benjamin@gmail.com 
+    mailto:benjamin@gmail.com
     ?subject=Inquiry%20from%20Your%20Website
     &body=Hello%20Benjamin,
           %0A%0AI%20came%20across%20your%20website%20and%20wanted%20to%20reach%20out.
@@ -342,27 +342,27 @@
           %0A[Your%20Name]
   ">
     Click to send mail to Benjamin
-  </a> 
+  </a>
   <br>
 
   <h2>Define cc and bcc in Email Link</h2>
   <a href="
-    mailto:benjamin@gmail.com 
+    mailto:benjamin@gmail.com
     ?cc=cc@example.com
     &bcc=bcc@example.com
-    &subject=Inquiry%20from%20Your%20Website 
+    &subject=Inquiry%20from%20Your%20Website
     &body=Hello%20Benjamin,
           %0A%0AI%20came%20across%20your%20website%20and%20wanted%20to%20reach%20out.
           %0A%0ABest%20regards,
           %0A[Your%20Name]
   ">
     Click to send mail to Benjamin
-  </a> 
+  </a>
   <br>
 
   <h2>Email Links for Multiple Recipients</h2>
   <a href="
-    mailto:benjamin@gmail.com, brian@gmail.com, samuel@gmail.com 
+    mailto:benjamin@gmail.com, brian@gmail.com, samuel@gmail.com
     ?cc=cc@example.com
     &bcc=bcc@example.com
     &subject=Inquiry%20from%20Your%20Website
@@ -372,7 +372,7 @@
           %0A[Your%20Name]
   ">
     Click to send mail to Benjamin and Friends
-  </a> 
+  </a>
   <br><hr>
 </body>
 </html>
