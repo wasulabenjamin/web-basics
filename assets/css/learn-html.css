@@ -193,14 +193,16 @@ form.form-elements-action-styling {
 	margin-bottom: 10px;
 }
 
-.form-elements-action-styling label {
+.form-elements-action-styling label,
+.form-controls label {
 	display: block;
 	margin-bottom: 5px;
 	font-size: 0.9rem;
 }
 
 .form-elements-action-styling input,
-.form-elements-action-styling textarea {
+.form-elements-action-styling textarea,
+.form-attributes input {
 	width: 100%;
 	padding: 8px;
 	margin-bottom: 15px;
@@ -226,6 +228,29 @@ form.form-elements-action-styling {
 
 .form-elements-action-styling button[type="submit"]:hover {
 	background-color: #039325;
+}
+
+.form-attributes input {
+	display: block;
+  width: 250px; /* or any specific width you prefer */
+}
+
+.form-controls input,
+.form-controls textarea {
+	display: block;
+	padding: 8px;
+	margin-bottom: 15px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+.width-300px {
+	width: 300px;
+}
+
+.form-controls .display-inline {
+	display: inline;
 }
 
 /***********************************************************************************************************************
