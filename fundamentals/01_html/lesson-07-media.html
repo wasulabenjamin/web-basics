@@ -1,69 +1,254 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 
 <html class="no-js" lang="en">
 <head>
+  <!-- CHARACTER ENCODING & VIEWPORT FIRST -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- PRIMARY METADATA -->
   <title>HTML Media</title>
-  <link rel="stylesheet" href="../../assets/css/style.css">
-  <meta name="description" content="">
+  <meta name="description" content="An Introduction to HTML Media for Complete Beginners">
+  <meta name="author" content="Wasula Benjamin">
 
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-  <meta property="og:image:alt" content="">
+  <!-- SEO AND INDEXING -->
+  <meta name="robots" content="index, follow">
+  <meta name="keywords" content="web development basics, html, media">
 
-  <link rel="icon" href="../../favicon.ico" sizes="any">
+  <!-- OPEN GRAPH/SOCIAL METADATA (SHOULD COME BEFORE ICONS)  -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://github.com/wasulabenjamin/web_basics">
+  <meta property="og:title" content="HTML Media">
+  <meta property="og:description" content="An Introduction to HTML Media for Complete Beginners">
+  <meta property="og:image"
+    content="https://raw.githubusercontent.com/wasulabenjamin/web_basics/main/assets/img/social-media.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="628">
+  <meta property="og:image:alt" content="HTML Media">
+  <meta property="og:site_name" content="Wasula Benjamin">
+
+  <!-- TWITTER CARD TAGS -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="HTML Media">
+  <meta name="twitter:description" content="Master HTML Media with curated examples in html and html5">
+  <meta name="twitter:image"
+    content="https://raw.githubusercontent.com/wasulabenjamin/web_basics/main/assets/img/social-media.png">
+  <meta name="twitter:image:alt" content="HTML Media Infographic">
+  <meta name="twitter:site" content="@wasulabenjamin">
+  <meta name="twitter:creator" content="@wasulabenjamin">
+  <meta name="twitter:domain" content="github.com/wasulabenjamin/web_basics">
+
+  <!-- PWA SUPPORT AND BROWSER UI ENHANCEMENTS -->
+  <meta name="theme-color" content="#fafafa">
+  <link rel="manifest" href="../../site.webmanifest">
+
+  <!-- ICONS (ORDER MATTERS FOR FALLBACK) -->
   <link rel="icon" href="../../icon.svg" type="image/svg+xml">
+  <link rel="icon" href="../../icon.png" type="image/png">
+  <link rel="icon" href="../../favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="../../icon.png">
 
-  <link rel="manifest" href="../../site.webmanifest">
-  <meta name="theme-color" content="#fafafa">
+  <!-- STYLESHEETS: LOCAL FIRST  -->
+  <link rel="stylesheet" href="../../assets/css/learn-html.css">
 </head>
 <body>
-  <h1>HTML Media</h1>
-  <!--
-
-  -->
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br><hr>
-
   <h1>Video Element</h1>
   <!--
+    HTML Video
+    The HTML <video> element embeds and shows a video on the webpage.
+    You can embed any type of video content on the webpage by using the <video> element.
 
+    HTML <video> Element
+    The <video> element is used to enable video playback support within a web page.
+    It works very similarly to the <img> element, as it also requires adding the path or URL of the video within
+    the src attribute. HTML supports MP4, WebM, and Ogg video formats widely.
+
+    The <video> element also supports audio; however, the <audio> element is more suitable for that purpose.
+
+    Embedding Videos in HTML
+    To embed a video inside a web page, you need to set the src attribute inside the <video> tag that specifies the path
+    or URL for the video. A web page serves content to a wide variety of users with various types of browsers.
+    Each browser supports different video formats (MP4, WebM, and Ogg) as mentioned earlier.
+    Therefore, we can supply all the formats that HTML supports by including multiple <source> tags.
+    Let the browser decide which format is more suitable for video playback.
+
+    The controls Attribute
+    You can also enable the built-in controls for controlling audio and video playback for the users (if needed) with
+    the help of the controls attribute. It provides an interface that enables users to manage video playback functions
+    such as volume adjustment, video navigation (forward and backward), and play or pause operations.
+
+    Customizing Video Display Size
+    To set (adjust) the dimensions of the video display area, also known as the viewport,
+    you can use the height and width attributes of the <video> element.
+    These attributes define the height and width of the video viewport in pixels.
+
+    Note that the video will adjust its aspect ratio (e.g., 4:3 and 16:9) to align with the specified height and width.
+    Therefore, it is advisable to match the dimensions of the viewport for a better user experience.
+
+    HTML Video autoplay and loop Attributes
+    You can configure the video to play automatically in a loop by using the autoplay and loop attributes.
+    Remember, a few browsers like Chrome 70.0 do not support the autoplay feature unless the muted attribute is used.
+    Therefore, it is recommended to use autoplay and muted attributes together.
+
+    Setting a Video Thumbnail
+    You can pass a URL of an image that works as a thumbnail for the video within the poster attribute of the <video>
+    element. It will display the specified image until the video starts playing.
   -->
+  <h2>Embedding Videos in HTML</h2>
+  <video width="" height="" controls>
+    <source src="../../assets/video/sample-video.mp4" type="video/mp4">
+    <source src="../../assets/video/sample-video.webm" type="video/webm">
+    <source src="../../assets/video/sample-video.ogg" type="video/ogg"> <!-- Least Supported -->
+    Your browser does not support the video tag.
+  </video>
   <br>
+
+  <h2>HTML Video autoplay and loop Attributes</h2>
+  <video width="" height="" controls autoplay muted loop>
+    <source src="../../assets/video/sample-video.mp4" type="video/mp4">
+    <source src="../../assets/video/sample-video.webm" type="video/webm">
+    <source src="../../assets/video/sample-video.ogg" type="video/ogg"> <!-- Least Supported -->
+    Your browser does not support the video tag.
+  </video>
   <br>
-  <br>
-  <br>
-  <br>
+
+  <h2>Setting a Video Thumbnail</h2>
+  <video width="640" height="360" controls poster="../../assets/img/social-media.png">
+    <source src="../../assets/video/sample-video.mp4" type="video/mp4">
+    <source src="../../assets/video/sample-video.webm" type="video/webm">
+    <source src="../../assets/video/sample-video.ogg" type="video/ogg"> <!-- Least Supported -->
+    Your browser does not support the video tag.
+  </video>
   <br><hr>
 
   <h1>Audio Element</h1>
   <!--
+    HTML Audio
+    The HTML <audio> element embeds an audio file to the webpage.
+    You can add an audio player inside a webpage using the <audio> element.
 
+    HTML <audio> Element
+    The <audio> element is used to enable the support of audio files within a web page.
+    We can include multiple sources of audio; however, the browser will choose the most appropriate file automatically.
+    Most of the attributes of <video> element is also compatible with the <audio> element.
+    The most frequently used attributes of the HTML audio element are controls, autoplay, loop, muted, and src.
+
+    The following are the attributes used with the <audio> tag:
+      - controls.... This attribute adds built-in audio controls for play, pause, and volume.
+      - autoplay.... This attribute allows playing the audio automatically when the page is loaded.
+      - loop........ This attribute allows looping of the audio.
+      - muted....... This attribute mutes the audio by default when the page is loaded.
+      - preload..... This attribute specifies how the audio should be preloaded by the browser.
+      - src......... This attribute specifies the path to the audio file.  File URL
+
+    Embedding an Audio in HTML
+    You can embed an audio player using the <audio> tag by specifying the audio file path.
+    The audio file path can be defined either by setting the src attribute or by including the <source> tag.
+
+    The current HTML5 draft specification does not specify which audio formats browsers should support in the audio tag.
+    But the most commonly used audio formats are ogg, mp3, and wav.
+    Therefore, it is possible to supply all these formats by using multiple <source> tags within the <audio> element.
+    Let the browser decide which format is more suitable for audio playback.
+
+    It is necessary to use the controls attribute so that users can manage audio playback functions such as volume
+    adjustment, forward or backward navigation, and play or pause operations.
+
+    Using autoplay, muted, and loop Attributes in Audio Player
+    We can also configure the audio to play automatically in a loop by using the autoplay and loop attributes.
+    Remember, the Chrome browser does not support the autoplay feature unless the muted attribute is used.
+    Therefore, it is recommended to use autoplay and muted attributes together.
+    The autoplay is a Boolean attribute that is used to play the audio automatically once the page is loaded.
+    If the loop attribute is present on the <audio> element, the audio sound will automatically rewind to the beginning once the end of the audio is reached.
   -->
+  <h2>Embedding Audio in HTML</h2>
+  <audio controls>
+    <source src="../../assets/audio/sample-audio.mp3" type="audio/mp3">
+    <source src="../../assets/audio/sample-audio.wav" type="audio/wav">
+    <source src="../../assets/audio/sample-audio.ogg" type="audio/ogg"> <!-- Least Supported -->
+    Your browser does not support the audio element.
+  </audio>
   <br>
-  <br>
-  <br>
-  <br>
-  <br>
+
+  <h2>HTML Audio autoplay and loop Attributes</h2>
+  <audio controls autoplay loop>
+    <source src="../../assets/audio/sample-audio.mp3" type="audio/mp3">
+    <source src="../../assets/audio/sample-audio.wav" type="audio/wav">
+    <source src="../../assets/audio/sample-audio.ogg" type="audio/ogg"> <!-- Least Supported -->
+    Your browser does not support the audio element.
+  </audio>
   <br><hr>
 
   <h1>Embed Multimedia</h1>
   <!--
+    HTML - Embed Multimedia
+    In the previous chapters, we have used the <audio> and <video> elements to add music and videos into our web page. 
+    There are other alternative ways to add videos, sounds, images, or any other external content to the website by 
+    using HTML tags <embed>and<object>. 
 
+    These tags cause the browser itself to include controls for the multimedia automatically:
+
+    HTML <embed> tag
+    Uused to embed external content such as images, videos, and web applications. 
+    It is often used for embedding content like Flash movies or audio/video players.
+    
+    SYNTAX:    <embed src = "url_of_resource">
+
+    The following are the attributes used with the <embed> tag:
+       - width.... Width attribute is used describe width of the embedded file in pixels.
+       - height .. Height of the embedded file in pixels.
+       - title.... It is used to label the content. The title should describe the content.
+       - src...... URL of the file to be embedded.
+       - type .... It indicates the type of input like mp4 and mp3.
+       
+    HTML <object> tag
+    Used to embed various types of external resources, including images, videos, PDFs, and other web resources. 
+    It can render multiple types of files.
+    
+    SYNTAX:    <object data="url_of_resource" type="typeOfResource">
+
+    The following are the attributes used with the <object> tag:
+       - data..... The location or path of the resource is passed into data attribute.
+       - type..... It indicates the type of resource.
+       - height... It signifies the height of the resource display area.
+       - width.... It signifies the width of the resource display area.
+       - form..... Its value is the id of a form. The form attribute shows which object is associated with the form.
+       - name..... It specify a unique name for the object.
+       - usemap... Specifies a URL of a client-side image map to be used with the object.
+
+    Comparison between <object> and <embed> Tags
+    - Usage:             object.... Embeds multimedia like audio, video, Java applets, ActiveX, PDF, and Flash. 
+                         embed..... Primarily used to embed multimedia content
+    - Attributes:        object.... Supports attributes like data, type, width, and height. 
+                         embed..... Supports attributes like src, type, width, and height.
+    - HTML5:             both embed and object are supported
+    - Fallback Content:  object.... Can include fallback content within the tag 
+                         embed..... Cannot include fallback content within the tag
+
+    The object tag supports fallback content, which means if a version of a browser does not support the object tag, 
+    then the content written inside the object tag is displayed instead of the object tag.
   -->
+  <h2>Embedding a Video Using embed Element</h2>
+  <embed src="../../assets/video/sample-video.mp4" type="video/mp4" width="640" height="360">
   <br>
+
+  <h2>Embedding an Audio Using embed Element</h2>
+  <embed src="../../assets/audio/sample-audio.mp3" type="audio/mp3" width="640" height="100">
   <br>
+
+  <h2>Render a PDF Using embed Element</h2>
+  <embed src="../../assets/file/sample-file.pdf" type="application/pdf" width="640" height="360">
   <br>
+
+  <h2>Render a PDF Using object Element</h2>
+  <object data="../../assets/file/sample-file.pdf" type="application/pdf" width="640" height="360">
+    sample-file.pdf
+  </object>
   <br>
-  <br>
+
+  <h2>Render an HTML Document Inside Webpage</h2>
+  <object data="lesson-06-forms.html" type="text/html" width="640" height="360">
+    lesson-06-forms.html
+  </object>
   <br><hr>
 </body>
 </html>
