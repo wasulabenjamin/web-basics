@@ -1,6 +1,6 @@
 <!--suppress ALL -->
 <p align="center">
-	<a href="https://github.com/wasulabenjamin/web_basics.git">
+	<a href="https://github.com/wasulabenjamin/web-basics.git">
 		<img src="https://img.icons8.com/?size=120&id=114334&format=png&color=000000" alt="logo">
 	</a>
 </p>
@@ -10,35 +10,35 @@
 <p align="center">
     Getting started with Web Basics.
     <br> <br>
-    <a href="https://github.com/wasulabenjamin/web_basics.git">View Demo</a> .
-    <a href="https://github.com/wasulabenjamin/web_basics/issues/new?template=bug_report.md">Report Bug</a> .
-    <a href="https://github.com/wasulabenjamin/web_basics/issues/new?template=feature_request.md">Request Feature</a>
+    <a href="https://github.com/wasulabenjamin/web-basics.git">View Demo</a> .
+    <a href="https://github.com/wasulabenjamin/web-basics/issues/new?template=bug_report.md">Report Bug</a> .
+    <a href="https://github.com/wasulabenjamin/web-basics/issues/new?template=feature_request.md">Request Feature</a>
 </p>
 
 <p align="center">
 	<br> <br>
-	<a href="https://app.codacy.com/gh/wasulabenjamin/web_basics/dashboard">
+	<a href="https://app.codacy.com/gh/wasulabenjamin/web-basics/dashboard">
 		<img src="https://app.codacy.com/project/badge/Grade/0a0cf227762141d699edcfcdd5b5caa7" alt="Codacy Badge"/>
 	</a>
     &nbsp;
-	<a href="https://github.com/wasulabenjamin/web_basics/graphs/contributors">
-    	<img src="https://img.shields.io/github/contributors/wasulabenjamin/web_basics" alt="Contributors"/>
+	<a href="https://github.com/wasulabenjamin/web-basics/graphs/contributors">
+    	<img src="https://img.shields.io/github/contributors/wasulabenjamin/web-basics" alt="Contributors"/>
 	</a>
     &nbsp;
-    <a href="https://github.com/wasulabenjamin/web_basics/network/members">
-		<img src="https://img.shields.io/github/forks/wasulabenjamin/web_basics" alt="Forks"/>
+    <a href="https://github.com/wasulabenjamin/web-basics/network/members">
+		<img src="https://img.shields.io/github/forks/wasulabenjamin/web-basics" alt="Forks"/>
     </a>
 	&nbsp;
-	<a href="https://github.com/wasulabenjamin/web_basics/stargazers">
-		<img src="https://img.shields.io/github/stars/wasulabenjamin/web_basics" alt="Stars"/>
+	<a href="https://github.com/wasulabenjamin/web-basics/stargazers">
+		<img src="https://img.shields.io/github/stars/wasulabenjamin/web-basics" alt="Stars"/>
 	</a>
 	&nbsp;
-	<a href="https://github.com/wasulabenjamin/web_basics/issues">
-		<img src="https://img.shields.io/github/issues/wasulabenjamin/web_basics" alt="Issues"/>
+	<a href="https://github.com/wasulabenjamin/web-basics/issues">
+		<img src="https://img.shields.io/github/issues/wasulabenjamin/web-basics" alt="Issues"/>
 	</a>
 	&nbsp;
-	<a href="https://github.com/wasulabenjamin/web_basics/blob/master/LICENSE">
-		<img src="https://img.shields.io/github/license/wasulabenjamin/web_basics" alt="License"/>
+	<a href="https://github.com/wasulabenjamin/web-basics/blob/master/LICENSE">
+		<img src="https://img.shields.io/github/license/wasulabenjamin/web-basics" alt="License"/>
 	</a>
 </p>
 
@@ -118,7 +118,7 @@ Before diving in, ensure you have:
 Each topic is organized by folder. Start with `/fundamentals/01_html` and progress through the folders in order.
 
 ```bash
-web_basics/
+web-basics/
 ├── .github/                        # Contribution guidelines
 │   ├── issue_template/
 │   │   ├── bug_report.md
@@ -206,7 +206,7 @@ Have a bug or a feature request? **Here is to how you can help:**
 	Reference links are enclosed in brackets [] instead of parentheses ().
 	https://www.markdownguide.org/basic-syntax/
 -->
-[view_demo]: https://github.com/wasulabenjamin/web_basics
-[report_bug]: https://github.com/wasulabenjamin/web_basics/issues/new?template=bug_report.md
-[request_feature]: https://github.com/wasulabenjamin/web_basics/issues/new?template=feature_request.md
-[contributing_guidelines]: https://github.com/wasulabenjamin/web_basics/blob/main/.github/CONTRIBUTING.md
+[view_demo]: https://github.com/wasulabenjamin/web-basics
+[report_bug]: https://github.com/wasulabenjamin/web-basics/issues/new?template=bug_report.md
+[request_feature]: https://github.com/wasulabenjamin/web-basics/issues/new?template=feature_request.md
+[contributing_guidelines]: https://github.com/wasulabenjamin/web-basics/blob/main/.github/CONTRIBUTING.md

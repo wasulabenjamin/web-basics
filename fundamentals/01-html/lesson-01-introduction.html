@@ -5,7 +5,7 @@
 <head>
   <!-- CHARACTER ENCODING & VIEWPORT FIRST -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- PRIMARY METADATA -->
   <title>HTML Basics</title>
@@ -18,29 +18,30 @@
 
   <!-- OPEN GRAPH/SOCIAL METADATA (SHOULD COME BEFORE ICONS)  -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://github.com/wasulabenjamin/web_basics">
+  <meta property="og:url" content="https://github.com/wasulabenjamin/web-basics">
   <meta property="og:title" content="HTML Basics">
   <meta property="og:description" content="An Introduction to HTML Basics for Complete Beginners">
-  <meta property="og:image"
-    content="https://raw.githubusercontent.com/wasulabenjamin/web_basics/main/assets/img/social-media.png">
+  <meta property="og:image" content="../../assets/img/social-media.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="628">
-  <meta property="og:image:alt" content="HTML Basics">
+  <meta property="og:image:alt" content="HTML Basics Infographic">
   <meta property="og:site_name" content="Wasula Benjamin">
 
   <!-- TWITTER CARD TAGS -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="HTML Basics">
-  <meta name="twitter:description" content="Master HTML Basics with curated examples in html and html5">
-  <meta name="twitter:image"
-    content="https://raw.githubusercontent.com/wasulabenjamin/web_basics/main/assets/img/social-media.png">
+  <meta name="twitter:description" content="An Introduction to HTML Basics for Complete Beginners">
+  <meta name="twitter:image" content="../../assets/img/social-media.png">
   <meta name="twitter:image:alt" content="HTML Basics Infographic">
   <meta name="twitter:site" content="@wasulabenjamin">
   <meta name="twitter:creator" content="@wasulabenjamin">
-  <meta name="twitter:domain" content="github.com/wasulabenjamin/web_basics">
+  <meta name="twitter:domain" content="github.com/wasulabenjamin/web-basics">
 
   <!-- PWA SUPPORT AND BROWSER UI ENHANCEMENTS -->
-  <meta name="theme-color" content="#fafafa">
+  <meta name="theme-color" content="#fafafa"> <!-- fallback default for older browsers -->
+  <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
   <link rel="manifest" href="../../site.webmanifest">
 
   <!-- ICONS (ORDER MATTERS FOR FALLBACK) -->
@@ -112,7 +113,7 @@
   </p>
   <br>
 
-  <p>Click <a href="https://github.com/wasulabenjamin/web_basics">here</a> to go to Web Basics on GitHub</p>
+  <p>Click <a href="https://github.com/wasulabenjamin/web-basics">here</a> to go to Web Basics on GitHub</p>
   <br><hr>
 
   <h1>Tags Vs. Elements Vs. Attributes</h1>
@@ -301,8 +302,8 @@
   <h2>This is a <span style="color: blue;">blue</span> word.</h2>
   <br>
 
-  <h1><a href="https://github.com/wasulabenjamin/web_basics">Visit our tutorial website</a></h1>
-  <a href="https://github.com/wasulabenjamin/web_basics"><h1>Visit our tutorial website</h1></a>
+  <h1><a href="https://github.com/wasulabenjamin/web-basics">Visit our tutorial website</a></h1>
+  <a href="https://github.com/wasulabenjamin/web-basics"><h1>Visit our tutorial website</h1></a>
   <br>
 
   <h3>Here is an <em>emphasized</em> and <strong>important</strong> text.</h3>
@@ -378,8 +379,8 @@
   <p>This is a paragraph with an <em>emphasized</em> and <strong>important</strong> text.</p>
   <br>
 
-  <p><a href="https://github.com/wasulabenjamin/web_basics">Visit our tutorial website</a></p>
-  <a href="https://github.com/wasulabenjamin/web_basics"><p>Visit our tutorial website</p></a>
+  <p><a href="https://github.com/wasulabenjamin/web-basics">Visit our tutorial website</a></p>
+  <a href="https://github.com/wasulabenjamin/web-basics"><p>Visit our tutorial website</p></a>
   <br>
 
   <p>This is a <span style="color: blue;">blue</span> text within a paragraph.</p>
@@ -546,7 +547,7 @@
 
   <h2>Block-level Quotation with blockquote tag</h2>
   <p>Here is a quotation from Wasula Benjamin himself</p>
-  <blockquote cite="https://github.com/wasulabenjamin/web_basics">Adapt, Improvise, Overcome</blockquote>
+  <blockquote cite="https://github.com/wasulabenjamin/web-basics">Adapt, Improvise, Overcome</blockquote>
   <br>
 
   <h2>Cite a Quote with cite tag</h2>
@@ -1066,7 +1067,7 @@
     - Page Redirection
       You can use the <meta> tag to redirect your page to any other webpage.
       You can also specify a duration if you want to redirect the page after a certain number of seconds.
-        Syntax: <meta http-equiv="refresh" content="5; url=https://github.com/wasulabenjamin/web_basics"/>
+        Syntax: <meta http-equiv="refresh" content="5; url=https://github.com/wasulabenjamin/web-basics"/>
 
     - Setting Author Name
       You can set an author name on a web page using a <meta> tag.

@@ -1,3 +1,18 @@
+:root {
+  color-scheme: light dark; /* Reinforces meta tag */
+}
+
+@media (prefers-color-scheme: dark) {
+  /* Add dark mode styles */
+  body { background: #121212; color: white; }
+}
+
+@media (prefers-color-scheme: light) {
+  /* Add light mode styles */
+}
+
+
+
 /***********************************************************************************************************************
 BASE / ROOT ELEMENTS
 ***********************************************************************************************************************/

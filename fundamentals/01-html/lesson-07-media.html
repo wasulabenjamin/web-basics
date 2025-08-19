@@ -4,7 +4,7 @@
 <head>
   <!-- CHARACTER ENCODING & VIEWPORT FIRST -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- PRIMARY METADATA -->
   <title>HTML Media</title>
@@ -17,29 +17,30 @@
 
   <!-- OPEN GRAPH/SOCIAL METADATA (SHOULD COME BEFORE ICONS)  -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://github.com/wasulabenjamin/web_basics">
+  <meta property="og:url" content="https://github.com/wasulabenjamin/web-basics">
   <meta property="og:title" content="HTML Media">
   <meta property="og:description" content="An Introduction to HTML Media for Complete Beginners">
-  <meta property="og:image"
-    content="https://raw.githubusercontent.com/wasulabenjamin/web_basics/main/assets/img/social-media.png">
+  <meta property="og:image" content="../../assets/img/social-media.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="628">
-  <meta property="og:image:alt" content="HTML Media">
+  <meta property="og:image:alt" content="HTML Media Infographic">
   <meta property="og:site_name" content="Wasula Benjamin">
 
   <!-- TWITTER CARD TAGS -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="HTML Media">
-  <meta name="twitter:description" content="Master HTML Media with curated examples in html and html5">
-  <meta name="twitter:image"
-    content="https://raw.githubusercontent.com/wasulabenjamin/web_basics/main/assets/img/social-media.png">
+  <meta name="twitter:description" content="An Introduction to HTML Media for Complete Beginners">
+  <meta name="twitter:image" content="../../assets/img/social-media.png">
   <meta name="twitter:image:alt" content="HTML Media Infographic">
   <meta name="twitter:site" content="@wasulabenjamin">
   <meta name="twitter:creator" content="@wasulabenjamin">
-  <meta name="twitter:domain" content="github.com/wasulabenjamin/web_basics">
+  <meta name="twitter:domain" content="github.com/wasulabenjamin/web-basics">
 
   <!-- PWA SUPPORT AND BROWSER UI ENHANCEMENTS -->
-  <meta name="theme-color" content="#fafafa">
+  <meta name="theme-color" content="#fafafa"> <!-- fallback default for older browsers -->
+  <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
   <link rel="manifest" href="../../site.webmanifest">
 
   <!-- ICONS (ORDER MATTERS FOR FALLBACK) -->
@@ -157,7 +158,7 @@
     We can also configure the audio to play automatically in a loop by using the autoplay and loop attributes.
     Remember, the Chrome browser does not support the autoplay feature unless the muted attribute is used.
     Therefore, it is recommended to use autoplay and muted attributes together.
-    The autoplay is a Boolean attribute that is used to play the audio automatically once the page is loaded.
+    The autoplay is a Boolean attribute used to play the audio automatically once the page is loaded.
     If the loop attribute is present on the <audio> element, the audio sound will automatically rewind to the beginning once the end of the audio is reached.
   -->
   <h2>Embedding Audio in HTML</h2>
@@ -181,16 +182,16 @@
   <h1>Embed Multimedia</h1>
   <!--
     HTML - Embed Multimedia
-    In the previous chapters, we have used the <audio> and <video> elements to add music and videos into our web page. 
-    There are other alternative ways to add videos, sounds, images, or any other external content to the website by 
-    using HTML tags <embed>and<object>. 
+    In the previous chapters, we have used the <audio> and <video> elements to add music and videos into our web page.
+    There are other alternative ways to add videos, sounds, images, or any other external content to the website by
+    using HTML tags <embed>and<object>.
 
     These tags cause the browser itself to include controls for the multimedia automatically:
 
     HTML <embed> tag
-    Uused to embed external content such as images, videos, and web applications. 
+    Uused to embed external content such as images, videos, and web applications.
     It is often used for embedding content like Flash movies or audio/video players.
-    
+
     SYNTAX:    <embed src = "url_of_resource">
 
     The following are the attributes used with the <embed> tag:
@@ -199,11 +200,11 @@
        - title.... It is used to label the content. The title should describe the content.
        - src...... URL of the file to be embedded.
        - type .... It indicates the type of input like mp4 and mp3.
-       
+
     HTML <object> tag
-    Used to embed various types of external resources, including images, videos, PDFs, and other web resources. 
+    Used to embed various types of external resources, including images, videos, PDFs, and other web resources.
     It can render multiple types of files.
-    
+
     SYNTAX:    <object data="url_of_resource" type="typeOfResource">
 
     The following are the attributes used with the <object> tag:
@@ -216,15 +217,15 @@
        - usemap... Specifies a URL of a client-side image map to be used with the object.
 
     Comparison between <object> and <embed> Tags
-    - Usage:             object.... Embeds multimedia like audio, video, Java applets, ActiveX, PDF, and Flash. 
+    - Usage:             object.... Embeds multimedia like audio, video, Java applets, ActiveX, PDF, and Flash.
                          embed..... Primarily used to embed multimedia content
-    - Attributes:        object.... Supports attributes like data, type, width, and height. 
+    - Attributes:        object.... Supports attributes like data, type, width, and height.
                          embed..... Supports attributes like src, type, width, and height.
     - HTML5:             both embed and object are supported
-    - Fallback Content:  object.... Can include fallback content within the tag 
+    - Fallback Content:  object.... Can include fallback content within the tag
                          embed..... Cannot include fallback content within the tag
 
-    The object tag supports fallback content, which means if a version of a browser does not support the object tag, 
+    The object tag supports fallback content, which means if a version of a browser does not support the object tag,
     then the content written inside the object tag is displayed instead of the object tag.
   -->
   <h2>Embedding a Video Using embed Element</h2>

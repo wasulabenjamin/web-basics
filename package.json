@@ -1,10 +1,12 @@
 {
-  "name": "web_basics",
+  "name": "web-basics",
   "version": "2025.08",
-  "description": "A Curated Web Development Learning Repo",
+  "description": "A curated step-by-step web-development learning path",
   "private": true,
   "keywords": [
-    "html, html5, css, javascript, json, bootstrap, tailwindcss, vuejs, postgresql, supabase, fullstack"
+    "html", "html5", "css", "javascript", "typescript", "json",
+    "bootstrap", "tailwindcss", "vuejs",
+    "postgresql", "supabase", "nodejs", "expressjs"
   ],
   "license": "MIT",
   "author": "Wasula Benjamin <wasulabenjamin@gmail.com>",

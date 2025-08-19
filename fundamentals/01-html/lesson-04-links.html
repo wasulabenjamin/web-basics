@@ -4,7 +4,7 @@
 <head>
   <!-- CHARACTER ENCODING & VIEWPORT FIRST -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- PRIMARY METADATA -->
   <title>HTML Links</title>
@@ -17,29 +17,30 @@
 
   <!-- OPEN GRAPH/SOCIAL METADATA (SHOULD COME BEFORE ICONS)  -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://github.com/wasulabenjamin/web_basics">
+  <meta property="og:url" content="https://github.com/wasulabenjamin/web-basics">
   <meta property="og:title" content="HTML Links">
   <meta property="og:description" content="An Introduction to HTML Links for Complete Beginners">
-  <meta property="og:image"
-    content="https://raw.githubusercontent.com/wasulabenjamin/web_basics/main/assets/img/social-media.png">
+  <meta property="og:image" content="../../assets/img/social-media.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="628">
-  <meta property="og:image:alt" content="HTML Links">
+  <meta property="og:image:alt" content="HTML Links Infographic">
   <meta property="og:site_name" content="Wasula Benjamin">
 
   <!-- TWITTER CARD TAGS -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="HTML Links">
-  <meta name="twitter:description" content="Master HTML Links with curated examples in html and html5">
-  <meta name="twitter:image"
-    content="https://raw.githubusercontent.com/wasulabenjamin/web_basics/main/assets/img/social-media.png">
+  <meta name="twitter:description" content="An Introduction to HTML Links for Complete Beginners">
+  <meta name="twitter:image" content="../../assets/img/social-media.png">
   <meta name="twitter:image:alt" content="HTML Links Infographic">
   <meta name="twitter:site" content="@wasulabenjamin">
   <meta name="twitter:creator" content="@wasulabenjamin">
-  <meta name="twitter:domain" content="github.com/wasulabenjamin/web_basics">
+  <meta name="twitter:domain" content="github.com/wasulabenjamin/web-basics">
 
   <!-- PWA SUPPORT AND BROWSER UI ENHANCEMENTS -->
-  <meta name="theme-color" content="#fafafa">
+  <meta name="theme-color" content="#fafafa"> <!-- fallback default for older browsers -->
+  <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
   <link rel="manifest" href="../../site.webmanifest">
 
   <!-- ICONS (ORDER MATTERS FOR FALLBACK) -->
@@ -110,23 +111,23 @@
     the location to download the file. You can do it by using an HTTP header in your HTTP response.
   -->
   <h2>The "target" Attribute</h2>
-  <a href="https://github.com/wasulabenjamin/web_basics" target="_blank">
+  <a href="https://github.com/wasulabenjamin/web-basics" target="_blank">
     _blank: target to out GitHub Repo: web_basics
   </a>
   <br>
 
-  <a href="https://github.com/wasulabenjamin/web_basics" target="_self">_self: target to out GitHub Repo: web_basics</a>
+  <a href="https://github.com/wasulabenjamin/web-basics" target="_self">_self: target to out GitHub Repo: web_basics</a>
   <br>
 
-  <a href="https://github.com/wasulabenjamin/web_basics" target="_parent">
+  <a href="https://github.com/wasulabenjamin/web-basics" target="_parent">
     _parent: target to out GitHub Repo: web_basics
   </a>
   <br>
 
-  <a href="https://github.com/wasulabenjamin/web_basics" target="_top">_top: target to out GitHub Repo: web_basics</a>
+  <a href="https://github.com/wasulabenjamin/web-basics" target="_top">_top: target to out GitHub Repo: web_basics</a>
   <br>
 
-  <a href="https://github.com/wasulabenjamin/web_basics" target="targetframe">
+  <a href="https://github.com/wasulabenjamin/web-basics" target="targetframe">
     targetframe: target to out GitHub Repo: web_basics
   </a>
   <br>
@@ -272,13 +273,13 @@
                     would have the attribute coords="20,20,40,40,20,60,0,40".
   -->
   <h2>Create Hyperlink for an Image</h2>
-  <a href="https://github.com/wasulabenjamin/web_basics" target="_blank">
+  <a href="https://github.com/wasulabenjamin/web-basics" target="_blank">
     <img src="../../assets/img/social-media.png" alt="social-media.png">
   </a>
   <br>
 
   <h2>Image Link with Tooltip</h2>
-  <a href="https://github.com/wasulabenjamin/web_basics" target="_blank" title="web_basics on github">
+  <a href="https://github.com/wasulabenjamin/web-basics" target="_blank" title="web_basics on github">
     <img src="../../assets/img/social-media.png" alt="social-media.png">
   </a>
   <br>

@@ -4,7 +4,7 @@
 <head>
   <!-- CHARACTER ENCODING & VIEWPORT FIRST -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- PRIMARY METADATA -->
   <title>HTML Forms</title>
@@ -17,29 +17,30 @@
 
   <!-- OPEN GRAPH/SOCIAL METADATA (SHOULD COME BEFORE ICONS)  -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://github.com/wasulabenjamin/web_basics">
+  <meta property="og:url" content="https://github.com/wasulabenjamin/web-basics">
   <meta property="og:title" content="HTML Forms">
   <meta property="og:description" content="An Introduction to HTML Forms for Complete Beginners">
-  <meta property="og:image"
-    content="https://raw.githubusercontent.com/wasulabenjamin/web_basics/main/assets/img/social-media.png">
+  <meta property="og:image" content="../../assets/img/social-media.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="628">
-  <meta property="og:image:alt" content="HTML Forms">
+  <meta property="og:image:alt" content="HTML Forms Infographic">
   <meta property="og:site_name" content="Wasula Benjamin">
 
   <!-- TWITTER CARD TAGS -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="HTML Forms">
-  <meta name="twitter:description" content="Master HTML Forms with curated examples in html and html5">
-  <meta name="twitter:image"
-    content="https://raw.githubusercontent.com/wasulabenjamin/web_basics/main/assets/img/social-media.png">
+  <meta name="twitter:description" content="An Introduction to HTML Forms for Complete Beginners">
+  <meta name="twitter:image" content="../../assets/img/social-media.png">
   <meta name="twitter:image:alt" content="HTML Forms Infographic">
   <meta name="twitter:site" content="@wasulabenjamin">
   <meta name="twitter:creator" content="@wasulabenjamin">
-  <meta name="twitter:domain" content="github.com/wasulabenjamin/web_basics">
+  <meta name="twitter:domain" content="github.com/wasulabenjamin/web-basics">
 
   <!-- PWA SUPPORT AND BROWSER UI ENHANCEMENTS -->
-  <meta name="theme-color" content="#fafafa">
+  <meta name="theme-color" content="#fafafa"> <!-- fallback default for older browsers -->
+  <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
   <link rel="manifest" href="../../site.webmanifest">
 
   <!-- ICONS (ORDER MATTERS FOR FALLBACK) -->
@@ -145,7 +146,7 @@
     make it more appealing.
   -->
   <h2>Creating an HTML Form</h2>
-  <form action="https://github.com/wasulabenjamin/web_basics" method="post">
+  <form action="https://github.com/wasulabenjamin/web-basics" method="post">
     <!-- Text, Email, and Password inputs -->
     <label for="user-name">Name:</label>
     <input type="text"     name="name" id="user-name" placeholder="Enter your name"       required>
@@ -184,7 +185,7 @@
   <br>
 
   <h2>Form Elements + Actions + Styling</h2>
-  <form action="https://github.com/wasulabenjamin/web_basics" method="post" class="form-elements-action-styling">
+  <form action="https://github.com/wasulabenjamin/web-basics" method="post" class="form-elements-action-styling">
     <fieldset>
       <legend> Sign Up</legend>
       <label for="fname">First Name:</label>
@@ -308,42 +309,42 @@
         It only encodes the spaces into + symbol.
   -->
   <h2> The action attributes</h2>
-  <form class="form-attributes" action="https://github.com/wasulabenjamin/web_basics">
+  <form class="form-attributes" action="https://github.com/wasulabenjamin/web-basics">
     <input type="text"  name="u-name" id="u-name" placeholder="John Karis Doe" required>
     <input type="email" name="u-mail" id="u-mail" placeholder="jkdoe@mail.com" required>
     <input type="submit">
   </form>
   <br>
   <h2> The method attributes</h2>
-  <form class="form-attributes" action="https://github.com/wasulabenjamin/web_basics" method="post">
+  <form class="form-attributes" action="https://github.com/wasulabenjamin/web-basics" method="post">
     <input type="text"  name="v-name" id=v-name" placeholder="John Karis Doe" required>
     <input type="email" name="v-mail" id=v-mail" placeholder="jkdoe@mail.com" required>
     <input type="submit">
   </form>
   <br>
   <h2> The target attributes</h2>
-  <form class="form-attributes" action="https://github.com/wasulabenjamin/web_basics" target="_blank">
+  <form class="form-attributes" action="https://github.com/wasulabenjamin/web-basics" target="_blank">
     <input type="text"  name="w-name" id="w-name" placeholder="John Karis Doe" required>
     <input type="email" name="w-mail" id="w-mail" placeholder="jkdoe@mail.com" required>
     <input type="submit">
   </form>
   <br>
   <h2> The autocomplete attributes</h2>
-  <form class="form-attributes" action="https://github.com/wasulabenjamin/web_basics" autocomplete="on">
+  <form class="form-attributes" action="https://github.com/wasulabenjamin/web-basics" autocomplete="on">
     <input type="text"  name="x-name" id="x-name" placeholder="John Karis Doe" required>
     <input type="email" name="x-mail" id="x-mail" placeholder="jkdoe@mail.com" required>
     <input type="submit">
   </form>
   <br>
   <h2> The enctype attributes</h2>
-  <form class="form-attributes" action="https://github.com/wasulabenjamin/web_basics" enctype="text/plain">
+  <form class="form-attributes" action="https://github.com/wasulabenjamin/web-basics" enctype="text/plain">
     <input type="text"  name="y-name" id="y-name" placeholder="John Karis Doe" required>
     <input type="email" name="y-mail" id="y-mail" placeholder="jkdoe@mail.com" required>
     <input type="submit">
   </form>
   <br>
   <h2> The novalidate attributes</h2>
-  <form class="form-attributes" action="https://github.com/wasulabenjamin/web_basics" novalidate>
+  <form class="form-attributes" action="https://github.com/wasulabenjamin/web-basics" novalidate>
     <input type="text"  name="z-name" id="z-name" placeholder="John Karis Doe" required>
     <input type="email" name="z-mail" id="z-mail" placeholder="jkdoe@mail.com" required>
     <input type="submit">

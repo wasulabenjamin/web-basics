@@ -1,6 +1,6 @@
 # Contributing
 
-Looking to contribute something to **web_basics?**
+Looking to contribute something to **web-basics?**
 
 **Here's to how you can help.**
 
@@ -30,7 +30,7 @@ them:
 - `question` - Further information is requested
 - `wontfix` - This will not be worked on
 
-For a complete look at our labels, see the [web_basics labels page][gh_templates_labels]
+For a complete look at our labels, see the [web-basics labels page][gh_templates_labels]
 
 ## Bug reports
 
@@ -86,13 +86,13 @@ Adhering to the following process is the best way to get your work included in t
 
    ```bash
    # Clones your fork of the repo into the current directory
-   git clone https://github.com/wasulabenjamin/web_basics.git
+   git clone https://github.com/wasulabenjamin/web-basics.git
 
    # Navigates to the newly cloned directory
-   cd web_basics
+   cd web-basics
 
    # Assign the original repo to a remote called "upstream"
-   git remote add upstream https://github.com/wasulabenjamin/web_basics.git
+   git remote add upstream https://github.com/wasulabenjamin/web-basics.git
    ```
 2. If you cloned a while ago, get the latest changes from `main`:
 
@@ -131,11 +131,11 @@ By contributing your code, you agree to license your contribution under the [MIT
    Reference links are enclosed in brackets [] instead of parentheses ().
    https://www.markdownguide.org/basic-syntax/
 -->
-[issue_tracker]: https://github.com/wasulabenjamin/web_basics/issues
-[report_bug]: https://github.com/wasulabenjamin/web_basics/issues/new?template=bug_report.md
-[request_feature]: https://github.com/wasulabenjamin/web_basics/issues/new?template=feature_request.md
-[gh_templates_labels]: https://github.com/wasulabenjamin/web_basics/labels
+[issue_tracker]: https://github.com/wasulabenjamin/web-basics/issues
+[report_bug]: https://github.com/wasulabenjamin/web-basics/issues/new?template=bug_report.md
+[request_feature]: https://github.com/wasulabenjamin/web-basics/issues/new?template=feature_request.md
+[gh_templates_labels]: https://github.com/wasulabenjamin/web-basics/labels
 [commit_message_guides]: https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html
 [interactive_rebase]: https://help.github.com/articles/about-git-rebase/
 [pull_request]: https://help.github.com/articles/about-pull-requests/
-[license_mit]: https://github.com/wasulabenjamin/web_basics/blob/main/LICENSE
+[license_mit]: https://github.com/wasulabenjamin/web-basics/blob/main/LICENSE
