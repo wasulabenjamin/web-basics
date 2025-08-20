@@ -1,113 +1,455 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 
 <html class="no-js" lang="en">
 <head>
+  <!-- CHARACTER ENCODING & VIEWPORT FIRST -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- PRIMARY METADATA -->
   <title>HTML Layouts</title>
-  <link rel="stylesheet" href="../../assets/css/style.css">
-  <meta name="description" content="">
+  <meta name="description" content="An Introduction to HTML Layouts for Complete Beginners">
+  <meta name="author" content="Wasula Benjamin">
 
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-  <meta property="og:image:alt" content="">
+  <!-- SEO AND INDEXING -->
+  <meta name="robots" content="index, follow">
+  <meta name="keywords" content="web development basics, html, layouts">
 
-  <link rel="icon" href="../../favicon.ico" sizes="any">
+  <!-- OPEN GRAPH/SOCIAL METADATA (SHOULD COME BEFORE ICONS)  -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://github.com/wasulabenjamin/web-basics">
+  <meta property="og:title" content="HTML Layouts">
+  <meta property="og:description" content="An Introduction to HTML Layouts for Complete Beginners">
+  <meta property="og:image" content="../../assets/img/social-media.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="628">
+  <meta property="og:image:alt" content="HTML Layouts Infographic">
+  <meta property="og:site_name" content="Wasula Benjamin">
+
+  <!-- TWITTER CARD TAGS -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="HTML Layouts">
+  <meta name="twitter:description" content="An Introduction to HTML Layouts for Complete Beginners">
+  <meta name="twitter:image" content="../../assets/img/social-media.png">
+  <meta name="twitter:image:alt" content="HTML Layouts Infographic">
+  <meta name="twitter:site" content="@wasulabenjamin">
+  <meta name="twitter:creator" content="@wasulabenjamin">
+  <meta name="twitter:domain" content="github.com/wasulabenjamin/web-basics">
+
+  <!-- PWA SUPPORT AND BROWSER UI ENHANCEMENTS -->
+  <meta name="theme-color" content="#fafafa"> <!-- fallback default for older browsers -->
+  <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <link rel="manifest" href="../../site.webmanifest">
+
+  <!-- ICONS (ORDER MATTERS FOR FALLBACK) -->
   <link rel="icon" href="../../icon.svg" type="image/svg+xml">
+  <link rel="icon" href="../../icon.png" type="image/png">
+  <link rel="icon" href="../../favicon.ico" type="image/x-icon" sizes="any">
   <link rel="apple-touch-icon" href="../../icon.png">
 
-  <link rel="manifest" href="../../site.webmanifest">
-  <meta name="theme-color" content="#fafafa">
+  <!-- STYLESHEETS: LOCAL FIRST  -->
+  <link rel="stylesheet" href="../../assets/css/learn-html.css">
 </head>
 <body>
-  <h1>HTML Layouts</h1>
   <!--
+    HTML - Layouts
+    HTML Layouts specifies the arrangement of components on an HTML web page.
+    A good layout structure of the webpage is important to provide a user-friendly experience on our website.
+    It takes considerable time to design a website's layout with a great look and feel.
 
-  -->
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br><hr>
+    The below-listed elements are used to create the HTML layout's structure:
+      - header..... Used to add a header main-section in an HTML web page.
+                    All the content inside this tag will be on top of the webpage.
+      - nav........ Represents a main-section of a page within the webpage,
+                    where it has hyperlinks to other pages or parts within the page (just like the menu bar).
+      - main-section.... It defines a major part of the web page where all the important content will be displayed.
+      - footer..... The footer tag defines the footer main-section of the webpage.
+                    This main-section typically contains copyright information and other important details.
+                    It will always be at the bottom of the webpage.
+      - article.... Specifies independent self-containing content such as a forum post, magazine, blog post, and so on.
+      - aside...... Specifies content that is directly or indirectly related to the main content (like a sidebar).
+      - details.... Specifies a tag for additional information. It requires the <summary> element.
+      - summary.... Specifies a caption for the <details> element.
 
-  <h1>Layouts</h1>
-  <!--
+    Different Techniques to Create HTML Layouts
+    There are four different techniques (ways) to create and design HTML layouts;
+    you can create simple and multicolumn layouts using these techniques:
 
-  -->
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br><hr>
+      - CSS Float Property....  A classic way to control position and formatting on a webpage.
+      - CSS Flexbox Property..  Used for dynamic layout and to position elements in different screen sizes.
+      - CSS Grid Property.....  Create a complex grid-like layout
+      - CSS frameworks........  The framework, like Bootstrap, allows to create dynamic HTML layouts.
 
-  <h1>Layout Elements</h1>
-  <!--
+    ---
 
-  -->
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br><hr>
+    HTML - Layout Elements
+    HTML layout elements are special semantic elements that are used to define the structure and layout of a web page.
+    These layout elements are useful to arrange (divide) the content into logical sections that improve the readability
+    and accessibility of the webpage for readers.
 
-  <h1>Layout using CSS</h1>
-  <!--
+    A typical HTML webpage layout has a title section, a nav bar, an index section, a content section, and a footer
+    section, which can be defined using <header>, <nav>, <section>, <article>, and <footer> elements, respectively.
 
-  -->
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br><hr>
+    Each layout element has a specific meaning and function and can be customized with attributes and styles.
+    They describe the content they contain, not just the appearance of a web page. They are as follows:
 
-  <h1>Responsiveness</h1>
-  <!--
+    HTML <header> Element
+    The <header> element is used to add a header section in an HTML web page.
+    It serves as a container for the introductory and navigational part of a page.
+    All the content inside this tag will be on top of the webpage.
+    Providing a header section helps search engines to understand your contents easily and rank the page accordingly.
 
-  -->
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br><hr>
+    HTML <nav> Element
+    The <nav> element represents a section of a page within the webpage, where it has hyperlinks to other pages or parts
+    within the page (just like the menu bar). It is usually included inside a <header> element or <section> element.
 
-  <h1>Symbols</h1>
-  <!--
+    HTML <section> Element
+    The <section> element defines a major part of the web page where all the important content will be displayed.
+    There can be multiple sections in a single page
 
-  -->
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br><hr>
+    HTML <footer> Element
+    The <footer> element defines the footer section of the webpage.
+    This section contains copyright information, social media links, and other important details.
+    It will always be at the bottom of the webpage.
 
-  <h1>Emojis</h1>
-  <!--
+    HTML <article> Element
+    Specifies independent, self-contained content such as a forum post, magazine, blog post, and so on.
+    When an HTML article element is nested, the inner element represents the article related to the outer element.
+    For example, comments on social media posts can be an article element nested in the article representing the
+    social media post.
+    It is mostly used for forum posts, magazine or newspaper articles, blog entries, product cards, etc.
 
-  -->
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br><hr>
+    HTML <aside> Element
+    The <aside> element example specifies a section of content that is directly or indirectly related to the main
+    content (like a sidebar). If you remove aside content from a web page, the main content will not be impacted because
+    aside content is a separate, optional component of the page. This tag is often used for advertisements.
 
-  <h1>Style Guide</h1>
-  <!--
+    ---
 
-  -->
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br><hr>
+    HTML Layout Using CSS
+    HTML layout using CSS involves creating the structural content of a webpage and styling it with CSS properties.
+    By using the CSS properties, you can create responsive and attractive webpages.
+
+    HTML Layout Using CSS float Property
+    The float property of CSS allows you to control the positioning of the web page components.
+    When an element is floated, it is taken out of the normal flow of the document and shifted to the specified
+    position, such as left or right.
+
+    HTML Layout Using CSS display:flex Property
+    The CSS flexbox (also known as Flexible Box Layout) is a more efficient way of designing a layout.
+    It allows developers to arrange and distribute spaces among multiple components of a web page.
+    To use the features of Flexbox, we need to set the display property to flex or inline-flex.
+
+    HTML Layout Using CSS display:grid Property
+    Defines a grid of rows and columns.
+    It also provides abilities to control the sizing as well as the positioning of web page contents.
+
+    ---
+
+    HTML Responsive Web Design
+    Responsive web design means creating HTML webpages that work well on different devices and browsers.
+    The pages automatically adjust to fit various screen sizes and viewports.
+
+    Responsive web design is an approach that allows the creation of the webpages compatible with different screen
+    sizes, resolutions, and devices, such as desktops, laptops, tablets, and smartphones.
+    It helps in improving the user experience, accessibility, and performance of a website.
+
+    When a responsive website, such as TutorialsPoint.com, is accessed on any device of different dimensions, the
+    content is displayed optimally without any overflow or overlap with other elements.
+    The content remains consistent across devices, but its arrangement adapts to ensure readability.
+
+    Best Practices for Making Webpages Responsive
+    There are several ways by which we can make our webpage responsive.
+    A general practice is to make use of inbuilt CSS or bootstrap frameworks that provide pre-designed components and
+    grid systems. Here are some general steps to ensure the responsiveness of a webpage.
+
+      - Use Responsive Grid Layouts
+        Always design your layout with a flexible grid structure,
+        so when the size of the screen increases, the grid will extend accordingly.
+      - Use Responsive Images and Media
+        Ensure that the images on the webpage are properly scaled within their containers.
+        You can use CSS properties like "max-width: 100%;" and "height: auto.".
+      - Use Media Queries
+        You can use CSS media queries to apply different styles for different screen sizes.
+        This allows you to adjust the layout, font sizes, and other design elements based on the device's width.
+      - Use a Meta Tag with Viewport
+        The viewport meta tag inside the HTML <head> tag ensures proper scaling and rendering on mobile devices.
+      - Use Relative Units
+        Use relative units like em, rem, or percentages for font sizes, padding, and margins
+        to ensure that text scales appropriately.
+
+    Using the Viewport for Responsive Design
+    The viewport represents the visible area of a user's device.
+    The content that is outside of the viewport can be seen if scrolled.
+    It helps web pages render well on different devices by controlling the width and scale of the page.
+
+    To control the viewport, add the following <meta> tag in the <head> section −
+    <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
+
+    The above tag tells the browser to match the page width to the screen's width and set the initial zoom
+    level when the page is first loaded by the user.
+
+    We can adjust viewport settings for width, initial-scale, maximum-scale, minimum-scale, and user-scalable.
+    These adjustments can make our website more accessible and user-friendly.
+
+    Attributes of the Meta Viewport Tag for Responsiveness
+    The following attributes of the <meta> viewport tag are used for responsiveness −
+      - width................. It controls the width of the virtual viewport.
+      - height................ It controls the height of the virtual viewport.
+      - initial-scale......... It specifies the initial zoom level of the viewport when a web page is first loaded.
+      - minimum-scale......... It specifies the minimum zoom level to which the user can zoom the page.
+      - maximum-scale......... It defines the maximum zoom level to which the user can zoom the page.
+      - user-scalable......... It specifies whether the user can zoom in or out.
+      - interactive-widget.... It defines how the interactive UI widgets affect the viewport.
+
+    Creating Responsive Text
+    In HTML, to make responsive text that adjusts its font size automatically based on the viewport,
+    we need to use the font-size property of CSS along with the "vw" length unit.
+    The vw is an abbreviation that stands for view width or viewport width, which is a relative length unit of CSS.
+
+    The relative length units are always calculated with respect to another element's size.
+    Note that 1vw is equal to 1% of the width of the viewport.
+
+    Creating Responsive Images
+    In HTML, we can create images that are responsive, meaning they can adjust their size to fit the viewport.
+    To do so, we can either set the image's width property to 100% or the max-width property to 100%.
+    The width property can scale the image larger than its original size,
+    on the other hand, the max-width property ensures the image does not scale beyond its original size.
+
+    Responsive Design Using Media Queries
+    The CSS media query serves as a filter that enables us to style the web page selectively for different devices.
+    A single web page can have multiple media queries, each for a specific screen size.
+    To define these screen sizes, we use the media query breakpoints and style the HTML elements accordingly.
+
+    ---
+
+    HTML - Symbols
+    You can embed the symbols and special characters that are not available on the keyboard using the HTML entities.
+
+    HTML symbols are some characters that hold a special meaning and are difficult to type directly on the keyboard.
+    They are often termed as "symbols." For example, other than the dollar symbol, we can’t find any currency symbols
+    like rupees and euros on normal keyboards. However, HTML provides other ways to insert these symbols into webpages.
+
+    Inserting Symbols in HTML Document
+    To insert symbols into an HTML document, we use entities.
+    If no entity name exists, then we can use the entity number, which is a decimal or a hexadecimal reference.
+    An HTML entity is a piece of text that begins with an ampersand (&) and ends with a semicolon (;).
+    They are used to represent characters and symbols that are either reserved in HTML or not directly available on
+    keyboards for use on the web page.
+
+    There are two types of HTML entities: named entities and numeric entities.
+    - Named entities use a descriptive name to refer to a character or symbol, such as &copy; for the copyright symbol.
+    - Numeric entities use a number to refer to a character or symbol, such as &#169; for the same symbol.
+
+    ---
+
+    HTML - Emojis
+    Emojis are allowed to include in our webpages to represent emotions in plain text.
+    Emojis are widely used in social media, messaging apps, and web pages to add some humour and feelings to the text.
+    For example, 😈, 😁, 😉
+
+    What are Emojis?
+    Emojis are small graphical symbols or icons that represent emotions, objects, animals, flags, nature, food items and
+    many more related entities.
+    Although emojis look like graphical symbols, they are actually characters of the UTF-8 character set.
+
+    How to add Emojis to HTML document?
+    To add emojis into an HTML document, our first step should be defining the character encoding for the web page.
+    For this purpose, we use the charset attribute of <meta> tag. Note that <meta> tag is used within the <head> tag.
+    The charset attribute is UTF-8 as it covers over a million characters including emojis.
+
+    There are two ways of adding emojis to the HTML document:
+
+      - Using Decimal Code:
+        We can add emojis into the HTML document using their corresponding decimal codes.
+        These codes start with &#, ends with ";" and in-between they contain numerics.
+      - Using Hexadecimal Code:
+        We can also specify emojis using their respective hexadecimal codes.
+        The hexadecimal codes for emojis start with &#x and end with ";" and in-between they contain numerics.
+
+    ---
+
+    HTML - Style Guide
+    In HTML, the style guide is a set of rules and conventions that define how to write and format code.
+    It helps to ensure that the written code is readable, understandable and easy to modify.
+    A style guide helps avoid common errors and bugs that can affect the functionality and appearance of a web page.
+
+    - Start with HTML5 Doctype
+      Always start all HTML and XHTML documents with <!DOCTYPE html> declaration.
+      It's required to enforce the full standard mode to provide more consistent rendering of web pages.
+      It is the latest web standard described by W3C and used by the layout engines of modern web browsers.
+
+    - Specify document language
+      Always specify the document language with the help of lang attribute.
+      This attribute is defined within the opening <html> tag, which is the root of HTML document.
+      Specifying language will help in accessibility, speech analysis, translation and other functionalities.
+
+    - Define Charset
+      The W3C always recommend developers to declare the charset or character encoding explicitly.
+      It can be done by using the charset attribute of <meta> tag.
+      UTF-8 is the most commonly used character encoding and provides over a million characters.
+
+    - Use Lowercase for elements and attributes
+      Dont capitalize the element names, attribute names and values of attributes.
+      In other programming languages like Java, C and C++, developers often use the camel case or snake case for
+      declaring the variable names. However, for writing HTML code, W3C recommends the use of lowercase letters.
+      Doing so will enhance the clarity and readability of our HTML code.
+
+    - Quote the attribute values
+      According to W3C recommendations, it is better to enclose attribute values in double quotes.
+      This is important for values containing spaces, as HTML may not parse them correctly without the quotes.
+      The use of double quotes is more common than single quotes. However, we can use single quotes as well.
+
+    - Use proper Indentation
+      The use of proper indentation shows the structure and hierarchy of our HTML code.
+      Use spaces instead of tabs for indentation, and use a consistent number of spaces (usually 2 or 3) per level.
+      Also, we can use the blank lines to separate large code blocks.
+
+    - Set the viewport
+      Setting the viewport helps web pages render well on different devices.
+      It is achieved by controlling the width and scale of the page.
+      It is used for ensuring the responsiveness of a particular web page.
+
+    - Add Comments
+      We use comments to explain the purpose or functionalities of the particular HTML code.
+      Avoid using comments for styling or scripting purposes.
+   -->
+  <header class="header">
+    <h1>HTML Layouts, Elements, CSS, Responsiveness </h1>
+  </header>
+  <nav class="nav">
+    <a href="lesson-01-introduction.html">Introduction</a>
+    <a href="lesson-02-tables.html">Tables</a>
+    <a href="lesson-03-lists.html">Forms</a>
+    <a href="lesson-04-links.html">Links</a>
+    <a href="lesson-05-colors.html">Images</a>
+    <a href="lesson-06-forms.html">Lists</a>
+    <a href="lesson-07-media.html">Colors</a>
+    <a href="lesson-08-headers.html">Typography</a>
+    <a href="lesson-09-layouts.html">Layouts</a>
+  </nav>
+  <div class="container">
+    <section class="sidebar">
+      <p>HTML Layouts</p>
+      <p>HTML Layout Elements</p>
+      <p>HTML Layout using CSS</p>
+      <p>HTML Responsiveness</p>
+      <p>HTML Symbols</p>
+      <p>HTML Emojis</p>
+      <p>HTML Style Guide</p>
+    </section>
+    <main class="main-section">
+      <h2>Introduction</h2>
+      <p>
+        HTML layouts are used to structure and format content on a webpage.
+        They are essential for creating visually appealing and user-friendly websites.
+      </p>
+      <br><br>
+
+      <article>
+        <h3>Understanding the HTML Article Tag</h3>
+        <p>Posted on <time datetime="2024-06-20">Aug 19, 2025</time> by Sir. Benjamin</p>
+        <p>The article tag is commonly used for content such as blog posts, news articles, and user comments.</p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetuer acing elit. Aenean commodo ligula eget dolor. Aenean massa.
+          Cum sociis natoque penatibmagnis dis parturient montes, nascetmus. Donec quam felis, ultric
+        </p>
+      </article>
+      <br><br>
+
+      <h2>Using the Viewport for Responsive Design</h2>
+      <div class="viewport-responsive-design">
+        <div class="col">Column 1</div>
+        <div class="col">Column 2</div>
+      </div>
+      <br><br>
+
+      <h1 style="font-size:6vw;">Example of Responsive Typography</h1>
+      <h2 style="font-size:5vw;">Responsive text by Using the vw length unit.</h2>
+      <p style="font-size:3vw;"> The text will adapt the font size according to the device's width. </p>
+      <br><br>
+
+      <h2>Setting the width property to 100%</h2>
+      <img src="https://www.tutorialspoint.com/images/logo.png" alt="logo" style="width:100%; ">
+      <h2> Creating the responsive image by setting the max-width property to 100% </h2>
+      <img src="https://www.tutorialspoint.com/images/logo.png" alt="logo" style="max-width:100%; height:auto; ">
+      <br><br>
+
+      <h2>Responsive Design Using Media Queries</h2>
+      <div id="viewport-width"></div>
+      <script>
+        // Function to get the viewport width
+        function getViewportWidth() {
+          const viewportWidth = document.documentElement.clientWidth; // Get the viewport width
+          document.getElementById('viewport-width').textContent = `Viewport Width: ${viewportWidth}px`;
+        }
+        // Add an event listener to the window object to detect changes in the viewport width
+        window.addEventListener('resize', getViewportWidth);
+        // Call the function initially to set the initial viewport width
+        getViewportWidth();
+      </script>
+      <p class="responsive-text">Some responsive text here:</p>
+      <p class="responsive-text">changes font-size to 1rem for Smaller devices (potrait phones, 575px and below)</p>
+      <p class="responsive-text">changes font-size to 2rem for Small devices (landscape phones, 576px and up)</p>
+      <p class="responsive-text">changes font-size to 3rem for Medium devices (tablets, 768px and up)</p>
+      <p class="responsive-text">changes font-size to 4rem for Large devices (desktops, 992px and up)</p>
+      <p class="responsive-text">changes font-size to 5rem for Extra large devices (large desktops, 1200px and up)</p>
+      <br><br>
+
+      <h2>Common HTML Symbols</h2>
+      <p>Registered trademark Symbol : &reg; </p>
+      <p>Trademark Symbol : &trade; </p>
+      <p>Copyright Symbol : &copy; </p>
+      <p>Left Arrow Symbol : &larr; </p>
+      <br><br>
+
+      <h2>Common HTML Symbols</h2>
+      <p>For all symbol...... &forall; or &#8704;</p>
+      <p>Empty sets symbol... &empty;  or &#8709;</p>
+      <p>Nabla symbol........ &nabla;  or &#8711;</p>
+      <p>Summation symbol.... &sum;    or &#8721;</p>
+      <p>Element of symbol... &isin;   or &#8712;</p>
+      <br><br>
+
+      <h2>HTML Arrow Symbols</h2>
+      <p>Left Arrow Symbol.........: &larr; or &#8592;</p>
+      <p>Up Arrow Symbol...........: &uarr; or &#8593;</p>
+      <p>Right Arrow Symbol........: &rarr; or &#8594;</p>
+      <p>Down Arrow Symbol.........: &darr; or &#8595;</p>
+      <p>Left-Right Arrow Symbol...: &harr; or &#8596;</p>
+      <br><br>
+
+      <h2>HTML Arrow Symbols</h2>
+      <p>Copyright symbol...............: &copy;  or &#169;</p>
+      <p>Registered Trademark symbol....: &reg;   or &#174;</p>
+      <p>Trademark symbol...............: &trade; or &#8482;</p>
+      <p>Section symbol.................: &sect;  or &#167;</p>
+      <p>Paragraph symbol...............: &para;  or &#182;</p>
+      <br><br>
+
+      <h2>HTML UTF-8 Emojis</h2>
+      <p>&#x1F608; or use: &#128520;</p>
+      <p>&#x1F602; or use: &#128514;</p>
+      <p>&#x1F44D; or use: &#128077;</p>
+      <p>&#x1F601; or use: &#128513;</p>
+      <p>&#x1F603; or use: &#128515;</p>
+      <p>&#x1F607; or use: &#128519;</p>
+      <p>&#x1F609; or use: &#128521;</p>
+      <p>&#x1F60D; or use: &#128525;</p>
+      <p>&#x1F62D; or use: &#128557;</p>
+      <p>&#x1F618; or use: &#128536;</p>
+      <p>&#x1F622; or use: &#128546;</p>
+      <p>&#x1F642; or use: &#128578;</p>
+      <p>&#x1F62A; or use: &#128554;</p>
+      <p>&#x1F637; or use: &#128567;</p>
+      <br><br>
+    </main>
+  </div>
+  <footer class="footer">
+    <p>Wasula Benjamin &copy; 2025</p>
+    <p>All rights reserved.</p>
+  </footer>
 </body>
 </html>

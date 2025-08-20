@@ -254,14 +254,98 @@ form.form-elements-action-styling {
 }
 
 /***********************************************************************************************************************
-LESSON 08. HTML HEADER
-***********************************************************************************************************************/
-
-
-/***********************************************************************************************************************
 LESSON 09. HTML LAYOUTS
 ***********************************************************************************************************************/
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header,
+.footer,
+.nav {
+  background-color: #b3e0f2;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+}
+
+.header {
+  font-weight: bold;
+}
+
+.container {
+  display: flex;
+}
+
+.sidebar {
+  width: 20%;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.nav {
+  background-color: rgb(0, 233, 255);
+}
+
+.nav a {
+  margin-left: 50px;
+  text-decoration: none;
+}
+
+.main-section {
+  padding: 20px;
+}
+
+.viewport-responsive-design {
+	background-color: #f1f1f1;
+	display: flex;
+	flex-direction: row;
+	padding: 1%;
+}
+
+.viewport-responsive-design .col {
+  background-color: #4caf50;
+  margin: auto 1%;
+  width: 48%;
+  color: white;
+  text-align: center;
+  line-height: 100px;
+}
+
+/* Extra small devices (portrait phones, less than 576px)*/
+.responsive-text {
+  font-size: 1rem;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+	.responsive-text {
+		font-size: 1.2rem;
+	}
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+	.responsive-text {
+		font-size: 1.44rem;
+	}
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+	.responsive-text {
+		font-size: 1.728rem;
+	}
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+	.responsive-text {
+		font-size: 2.074rem;
+	}
+}
 
 /***********************************************************************************************************************
 LESSON 10. HTML GRAPHICS

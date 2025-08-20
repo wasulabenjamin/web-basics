@@ -46,55 +46,157 @@
   <!-- ICONS (ORDER MATTERS FOR FALLBACK) -->
   <link rel="icon" href="../../icon.svg" type="image/svg+xml">
   <link rel="icon" href="../../icon.png" type="image/png">
-  <link rel="icon" href="../../favicon.ico" sizes="any">
+  <link rel="icon" href="../../favicon.ico" type="image/x-icon" sizes="any">
   <link rel="apple-touch-icon" href="../../icon.png">
 
   <!-- STYLESHEETS: LOCAL FIRST  -->
   <link rel="stylesheet" href="../../assets/css/learn-html.css">
 </head>
 <body>
-  <h1>HTML Header</h1>
-  <!--
-
-  -->
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br><hr>
-
-  <h1>Head Element</h1>
-  <!--
-
-  -->
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br><hr>
-
-  <h1>Adding Favicon</h1>
-  <!--
-
-  -->
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br><hr>
-
   <h1>Javascript</h1>
   <!--
+    HTML - Head Elements
+    HTML head elements define metadata like the title, character set, links to external stylesheets, and other details. 
+    This information does not display on the webpage but is helpful for the search engines and browsers. 
+    The head elements are placed inside the <head> tag.
 
+    HTML <title> Element
+    The HTML <title> tag is used for specifying the title of the HTML document. 
+    The title must describe the content of the web page, and its format should be text only. 
+    It appears in the title bar of the browser's tab.
+
+    HTML <meta> Element
+    The HTML <meta> tag is used to provide metadata about an HTML document. 
+    Metadata is additional information about the web page, including page expiry, page author, list of keywords, page 
+    description, and so forth. This information is further used for the purpose of search engine optimization. 
+    Remember, the metadata specified by the <meta> tag is not displayed on the web page, but it is machine-readable. 
+    Its most commonly used attributes are name, content, charset, and http-equiv.
+
+    HTML <base> Element
+    The HTML <base> tag is used for specifying the base URL for all relative URLs in a page, which means all the other 
+    URLs will be concatenated into the base URL while locating the given item. 
+    We are allowed to use only one base element in our HTML document.
+
+    HTML <link> Element
+    Used to specify relationships between the current webpage and another external resource. 
+    The source of external resources is placed inside the href attribute. 
+    The other attributes of the tag are rel, type, and media. 
+    Its most common use is to embed stylesheets into the HTML document.
+
+    HTML <style> Element
+    The HTML <style> tag is used to specify styles either for the whole HTML document or for a particular element. 
+    Its most common attributes are title and media.
+
+    HTML <script> Element
+    Used to include either an external script file or to define an internal script for the HTML document. 
+    The script is an executable code that performs some action.
+
+------------------------------------------------------------------------------------------------------------------------
+
+    HTML - Favicon
+    HTML favicon stands for "favorite icon". 
+    It is a small-sized image that displays in the browser's tab just before the page title. 
+    Favicon is defined by using the <link> tag with the "rel=icon" attribute.
+
+    A favicon is a small image that represents your website and helps users identify it among multiple tabs, bookmarks, 
+    and search results. It can be in various formats, such as ICO, PNG, GIF, JPEG, or SVG, but ICO is the most widely 
+    supported format. If you have ever visited a website and noticed a small icon next to the page title in your 
+    browser's tab, you have seen a favicon.
+
+    You can add a favicon to a webpage by using the <link> tag with the rel attribute set to "icon". 
+    The <link> tag is a head element, so it must be placed within the <head> tag.
+
+    To add a favicon, we need to follow these simple steps mentioned below:
+      − Create or choose an image for your favicon. Its common size could be 16x16 pixels or 32x32 pixels. 
+        There are a few online tools available that help us in creating a favicon, such as "Favicon.io" and "ionos.com".
+      − Save and upload the favicon image to the website directory. 
+        Make sure the image is in a format that browsers can recognize, such as PNG, GIF, or ICO.
+      − Now use the <link> element, which tells the browser where to find the favicon image. 
+        Remember, the <link> tag comes inside the header part, i.e., <head> tag of the HTML document.
+
+    Different Favicons for Different Pages on a Website?
+    Yes, different favicons can be added for different pages on a website. 
+    You need to define the favicon images for different pages using the <link> tag (as discussed above) inside the head.
+
+------------------------------------------------------------------------------------------------------------------------
+
+    HTML - JavaScript
+    JavaScript allows you to create dynamic and interactive HTML pages. 
+    JavaScript is a high-level programming language and core technology behind web developments.
+
+    A script is a small piece of program that add interactivity to our websites. For example, a script could generate a 
+    pop-up alert box message or provide a dropdown menu based on certain conditions, such as a user clicking a button. 
+    This script could be written using JavaScript.
+
+    Adding JavaScript in HTML
+    There are multiple ways of adding scripts (JavaScript) to the HTML document. 
+    We can keep JavaScript code in a separate file and then include it wherever it's needed, 
+    or it is also possible to define functionality inside the HTML document itself.
+
+    You can add JavaScript in an HTML document by using the <script> tag. 
+    The following are the different ways to add JavaScript into an HTML page:
+
+    Inline JavaScript
+    Internal JavaScript
+    External JavaScript
+    Let's see both cases one by one with suitable examples.
+
+    
+    Inline JavaScript
+    You can directly add JavaScript code to an HTML element on the various attributes, 
+    such as onclick, onload, or any other.
+
+    Internal JavaScript
+    You can write the JavaScript code directly into our HTML document. 
+    Usually, we keep script code in the header of the document inside the <script> tag; however, there is no restriction. 
+    You are allowed to put the script code anywhere in the document but inside the <script> tag.
+
+    External JavaScript
+    If developers are going to define a functionality that will be used in various HTML documents, then it's better to 
+    keep that functionality in a separate JavaScript file and then include that file in the HTML documents. 
+    A external JavaScript file will have an extension of .js which is then imported (added) using the <script> tag by 
+    providing the path to the file in the src attribute. 
+    You should also define the type attribute with the "text/javascript" value.
+
+    Event Handlers
+    Event handlers are nothing but simply defined functions that can be called against any mouse or keyboard event. 
+    We can define any kind of business logic inside our event handler, 
+    which can vary from a single to thousands of lines of code.
+
+    Hide Scripts from Older Browsers
+    Although most browsers these days support JavaScript, some older browsers don't. 
+    If a browser doesn't support JavaScript, instead of running your script, it would display the code to the user. 
+    To prevent this, we can simply place HTML comments around the script as shown below.
+
+    The <noscript> Element
+    For users whose browsers do not support scripts, or for those who have disabled scripts in their browsers, 
+    we can embed scripts into the web page using the <noscript> tag as illustrated in the below example.
+
+    Default Scripting Language
+    There may be a situation when we are required to include multiple script files and ultimately use multiple <script> 
+    tags. We can specify a default scripting language for all the script tags at once. 
+    This saves us from specifying the language every time we use a script tag within the page.
   -->
+  <h2>Inline JavaScript</h2>
+  <button onclick="alert('Hi there!')">Click Me</button>
   <br>
+
+  <h2>Internal JavaScript</h2>
+  <script type="text/javascript">
+    function helloWorld() {
+      alert('Hello Learner!');
+    }
+  </script>
+  <button onclick="helloWorld()">Click Me</button>
   <br>
-  <br>
-  <br>
-  <br>
+
+  <h2>Event Handler</h2>
+  <script type="text/javascript">
+    function mouseOver() {
+      alert('Some cursor passed over me hoss!');
+    }
+  </script>
+  <p onmouseover="mouseOver()">Hover over me!</p>
   <br><hr>
 </body>
 </html>
