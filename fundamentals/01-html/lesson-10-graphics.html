@@ -1,57 +1,644 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 
 <html class="no-js" lang="en">
 <head>
+  <!-- CHARACTER ENCODING & VIEWPORT FIRST -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- PRIMARY METADATA -->
   <title>HTML Graphics</title>
-  <link rel="stylesheet" href="../../assets/css/style.css">
-  <meta name="description" content="">
+  <meta name="description" content="An Introduction to HTML Graphics for Complete Beginners">
+  <meta name="author" content="Wasula Benjamin">
 
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-  <meta property="og:image:alt" content="">
+  <!-- SEO AND INDEXING -->
+  <meta name="robots" content="index, follow">
+  <meta name="keywords" content="web development basics, html, graphics">
 
-  <link rel="icon" href="../../favicon.ico" sizes="any">
+  <!-- OPEN GRAPH/SOCIAL METADATA (SHOULD COME BEFORE ICONS)  -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://github.com/wasulabenjamin/web-basics">
+  <meta property="og:title" content="HTML Graphics">
+  <meta property="og:description" content="An Introduction to HTML Graphics for Complete Beginners">
+  <meta property="og:image" content="../../assets/img/social-media.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="628">
+  <meta property="og:image:alt" content="HTML Graphics Infographic">
+  <meta property="og:site_name" content="Wasula Benjamin">
+
+  <!-- TWITTER CARD TAGS -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="HTML Graphics">
+  <meta name="twitter:description" content="An Introduction to HTML Graphics for Complete Beginners">
+  <meta name="twitter:image" content="../../assets/img/social-media.png">
+  <meta name="twitter:image:alt" content="HTML Graphics Infographic">
+  <meta name="twitter:site" content="@wasulabenjamin">
+  <meta name="twitter:creator" content="@wasulabenjamin">
+  <meta name="twitter:domain" content="github.com/wasulabenjamin/web-basics">
+
+  <!-- PWA SUPPORT AND BROWSER UI ENHANCEMENTS -->
+  <meta name="theme-color" content="#fafafa"> <!-- fallback default for older browsers -->
+<!--  <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">-->
+<!--  <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">-->
+<!--  <meta name="color-scheme" content="light dark">-->
+  <link rel="manifest" href="../../site.webmanifest">
+
+  <!-- ICONS (ORDER MATTERS FOR FALLBACK) -->
   <link rel="icon" href="../../icon.svg" type="image/svg+xml">
+  <link rel="icon" href="../../icon.png" type="image/png">
+  <link rel="icon" href="../../favicon.ico" type="image/x-icon" sizes="any">
   <link rel="apple-touch-icon" href="../../icon.png">
 
-  <link rel="manifest" href="../../site.webmanifest">
-  <meta name="theme-color" content="#fafafa">
+  <!-- STYLESHEETS: LOCAL FIRST  -->
+  <link rel="stylesheet" href="../../assets/css/learn-html.css">
 </head>
 <body>
-  <h1>HTML Graphics</h1>
-  <!--
-
-  -->
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br><hr>
-
   <h1>SVG</h1>
   <!--
+    HTML - SVG
+    HTML SVG (Scalable Vector Graphics) is used to define vector graphics in XML that can be embedded into HTML pages.
+    SVG is different from normal images because it retains its quality even when zoomed in.
 
+    XML is an abbreviation that stands for Extensible Markup Language, and it is a data description language.
+    It does not have any predefined tags; hence, the users are required to define their own tags depending on the need.
+
+    SVG stands for Scalable Vector Graphics. SVG helps us to draw any type of images using XML coding.
+    Zooming an XML vector does not lose its quality.
+    It is mostly useful for vector-type diagrams like pie charts and 2-dimensional graphs in an X, Y coordinate system.
+    SVG became a W3C Recommendation on 14 January 2003.
+
+    Bitmap vs. Scalable Vector Graphics
+    The PNG, GIF, and JPG files are bitmap graphics and SVG files are vector graphics.
+    The main difference between these two is that bitmap graphics are made up of a grid of tiny pixels but,
+    vector graphics are defined by coding hence vector graphics does not lose quality after zooming.
+
+    Embedding SVG in HTML Using <img> Tag
+    You can embed an SVG file in the HTML document using the <img> tag by specifying the file name along with the path
+    in the src attribute. You can also define a direct URL to the SVG image.
+    Example: <img src = "svg_file_name.svg" alt="Alternate Text" />
+
+    Embedding SVG in HTML Using <svg> Tag
+    HTML allows embedding SVG directly by using the <svg>...</svg> tag, which has the following syntax:
+
+    There are some predefined SVG elements that are used to draw various shapes. They are as follows:
+      - <rect>....... Used to define a rectangle in vector graphics for a given width and height as attributes.
+      - <circle>..... Used to define a circle for given coordinates of the top-left corner and radius as an attribute.
+      - <ellipse>.... Used to define an ellipse for given coordinates of the top-left corner,
+                      the length of the major axis, and the length of the minor axis as attributes.
+      - <line>....... Used to draw a line for the given two coordinates as an attribute.
+      - <polyline>... Used to define a polyline for given coordinates of a series of connected points.
+      - <polygon> Used to define a polygon for given coordinates that joins in a straight line.
+
+    The following table contains a list of attributes of SVG elements:
+      - X.......... The top-left x-axis coordinate.
+      - Y.......... The top-left y-axis coordinate.
+      - width...... The width of the rectangle figure.
+      - height..... The height of the rectangle figure.
+      - rx......... The x-axis' roundness of the ellipse.
+      - ry......... The y-axis' roundness of the ellipse.
+      - style...... Indicate an inline style.
   -->
+
+  <!--
+   Here, cx represents the x-coordinate of the top-left corner of the circle
+         cy represents the y-coordinate of the top-right corner of the circle.
+   -->
+  <h2>Draw a Circle in SVG Using circle tag</h2>
+  <svg><circle r="50" cx="50" cy="50" fill="red"></circle></svg>
   <br>
+
+  <h2>Draw a Rectangle in SVG Using rect tag</h2>
+  <svg><rect width="100" height="50" fill="orange"></rect></svg>
   <br>
+
+  <h2>Draw a Line in SVG Using line tag</h2>
+  <svg height="200"><line x1="0" y1="0" x2="100" y2="100" style="stroke: yellowgreen; stroke-width: 2;"></line></svg>
   <br>
+
+  <!--
+    Here, cx and cy represent the coordinates of the center of the ellipse,
+          rx and ry define the radii along the x-axis and y-axis, respectively.
+   -->
+  <h2>Draw an Ellipse in SVG Using ellipse tag</h2>
+  <svg><ellipse cx="50" cy="50" rx="50" ry="25" fill="green"></ellipse></svg>
   <br>
+
+  <!-- The coordinates of the connected points are provided in the points attribute of the <polygon> tag -->
+  <h2>Draw a Polygon in SVG Using polygon tag</h2>
+  <svg><polygon points="20,10 300,30 170,50 130,70" fill="blue"></polygon></svg>
   <br>
+
+  <!-- The coordinates of the connected points are provided in the points attribute of the <polyline> tag -->
+  <h2>Draw a Polyline in SVG Using polyline tag</h2>
+  <!-- filling the polyline results to the shape being implicitly closed looking like a polygon. -->
+  <svg><polyline points="0,0 0,30 30,30 30,60 60,60" fill="indigo"></polyline></svg>
+  <!-- not filling the polyline results to the shape being open looking like a line. -->
+  <svg><polyline points="0,0 0,30 30,30 30,60 60,60" stroke="indigo" stroke-width="2" fill="none"></polyline></svg>
+  <br>
+
+  <h2>Apply Fill Color Gradient to Shapes in SVG</h2>
+  <svg height="250">
+    <defs>
+      <radialGradient id="gradient">
+        <stop offset="0%" stop-color="red"></stop>
+        <stop offset="100%" stop-color="blue"></stop>
+      </radialGradient>
+    </defs>
+    <!-- Apply gradient to the rectangle -->
+    <rect width="100" height="50" fill="url(#gradient)"></rect>
+    <!-- Apply gradient to the circle -->
+    <circle r="50" cx="150" cy="150" fill="url(#gradient)"></circle>
+  </svg>
+  <br>
+
+  <!--
+   It's a common misconception that a star shape requires 10 points (5 outer and 5 inner).
+   However, a star shape can be created with just 5 points.
+   The points are ordered to trace the star path in one continuous line:
+    - From the top tip (100, 5) to the bottom left tip (40, 180).
+    - Then to the right inner point (190, 60).
+    - Then to the left inner point (10, 60).
+    - Then to the bottom right tip (160, 180).
+    - Finally, back to the top tip (100, 5) (automatically closed by fill="purple").
+   -->
+  <h2>Draw a Star in SVG Using polygon tag</h2>
+  <svg height="200"><polygon points="100,5 40,180 190,60 10,60 160,180" fill="purple"></polygon></svg>
   <br><hr>
 
   <h1>Canvas</h1>
   <!--
+    HTML - Canvas
+    HTML element <canvas> gives you an easy and powerful way to draw graphics using JavaScript. 
+    It can be used to draw graphs, make photo compositions or do simple (and not so simple) animations.
 
+    The Rendering Context
+    The <canvas> is initially blank, and to display something, a script first needs to access the rendering context. 
+    The canvas element has a DOM method called getContext, which is used to obtain the rendering context and its drawing 
+    functions. This function takes one parameter, the type of context 2d.
+
+    Drawing Rectangles
+    There are three methods that draw rectangles on the canvas:
+      - fillRect(x,y,width,height)............... Draws a filled rectangle.
+      - strokeRect(x,y,width,height)............. Draws a rectangular outline.
+      - clearRect(x,y,width,height).............. Clears the specified area and makes it fully transparent
+
+      Here x and y specify the position on the canvas (relative to the origin) of the top-left corner of the rectangle 
+      and width and height are width and height of the rectangle.
+
+    HTML Canvas - Drawing Paths
+    We require the following methods to draw paths on the canvas:
+      - beginPath().... Resets the current path.
+      - moveTo(x, y)... Creates a new subpath with the given point.
+      - closePath().... Marks the current subpath as closed, 
+                        then starts a new subpath with a point the same as the start and end of the newly closed subpath.
+      - fill()......... Fills the subpaths with the current fill style.
+      - stroke()....... Strokes the subpaths with the current stroke style.
+      - arc(x, y, radius, startAngle, endAngle, anticlockwise)
+                        Adds points to the subpath such that the arc described by the circumference of the circle 
+                        described by the arguments, starting at the given start angle and ending at the given end angle, 
+                        going in the given direction, is added to the path, connected to the previous point by a 
+                        straight line.
+
+    Drawing Lines
+    We require the following methods to draw lines on the canvas:
+      - beginPath().... Resets the current path.
+      - moveTo(x, y)... Creates a new subpath with the given point.
+      - closePath().... Marks the current subpath as closed, 
+                        thene starts new subpath with a point the same as the start and end of the newly closed subpath.
+      - fill()......... Fills the subpaths with the current fill style.
+      - stroke()....... Strokes the subpaths with the current stroke style.
+      - lineTo(x, y)... Adds the given point to the current subpath, connected to the previous one by a straight line.
+
+    Drawing Bezier Curves
+    We need the following methods to draw Bezier curves on the canvas:
+      - beginPath().... Resets the current path.
+      - moveTo(x, y)... Creates a new subpath with the given point.
+      - closePath().... Marks the current subpath as closed, and starts a new subpath with a point the same as the start 
+                        and end of the newly closed subpath.
+      - fill()......... Fills the subpaths with the current fill style.
+      - stroke()....... Strokes the subpaths with the current stroke style.
+      - bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y)........... Adds the given point to the current path, 
+                        connected to the previous one by a cubic Bezier curve with the given control points.
+
+      The x and y parameters in bezierCurveTo() method are the coordinates of the end point. 
+      cp1x and cp1y are the coordinates of the first control point, 
+      and cp2x and cp2y are the coordinates of the second control point.
+
+    Drawing Quadratic Curves
+    We require the following methods to draw quadratic curves on the canvas:
+      - beginPath().... Resets the current path.
+      - moveTo(x, y)... Creates a new subpath with the given point.
+      - closePath().... Marks the current subpath as closed, and starts a new subpath with a point the same as the start 
+                        and end of the newly closed subpath.
+      - fill()......... Fills the subpaths with the current fill style.
+      - stroke()....... Strokes the subpaths with the current stroke style.
+      - quadraticCurveTo(cpx, cpy, x, y)........... Adds the given point to the current path, 
+                        connected to the previous one by a quadratic Bezier curve with the given control point.
+
+      The x and y parameters in quadraticCurveTo() method are the coordinates of the end point. 
+      The cpx and cpy are the coordinates of the control point.
+
+    Using Images
+    You can import an external image into a canvas and then draw on that image by using following methods:
+      - beginPath().... Resets the current path.
+      - moveTo(x, y)... Creates a new subpath with the given point.
+      - closePath().... Marks the current subpath as closed,
+                        Then starts a new subpath with a point the same as the start and end of the newly closed subpath.
+      - fill()......... Fills the subpaths with the current fill style.
+      - stroke()....... Strokes the subpaths with the current stroke style.
+      - drawImage(image, dx, dy)... Draws the given image onto the canvas. Here image is a reference to an image or 
+                        canvas object. x and y form the coordinate on the target canvas where our image should be placed.
+
+    Create Gradients
+    HTML canvas allows us to fill and stroke shapes using linear and radial gradients using the following methods:
+      - addColorStop(offset, color)
+        Adds a color stop with the given color to the gradient at the given offset. 
+        Here 0.0 is the offset at one end of the gradient, 1.0 is the offset at the other end.
+      - createLinearGradient(x0, y0, x1, y1)
+        Returns a CanvasGradient object that represents a linear gradient that paints along the line given by the 
+        coordinates represented by the arguments. 
+        The four arguments represent the starting point (x1,y1) and end point (x2,y2) of the gradient.
+      - createRadialGradient(x0, y0, r0, x1, y1, r1)
+        Returns a CanvasGradient object that represents a radial gradient that paints along the cone given by the 
+        circles represented by the arguments. The first three arguments define a circle with coordinates (x1,y1) and 
+        radius r1 and the second a circle with coordinates (x2,y2) and radius r2.
+
+    Styles and Colors
+    HTML canvas provides the following two important properties to apply colors to a shape:
+
+      - fillStyle..... This attribute represents the color or style to use inside the shapes.
+      - strokeStyle... This attribute represents the color or style to use for the lines around shapes
+
+      By default, the stroke and fill color are set to black which is CSS color value #000000.
+
+    Text and Fonts
+    HTML canvas provides capabilities to create text using different font and text properties listed below:
+      - font [ = value ]........................ Returns the current font settings and can be set, to change the font.
+      - textAlign [ = value ]................... Returns the current text alignment settings and can be set, to change 
+          the alignment. The possible values are start, end, left, right, andcenter.
+      - textBaseline [ = value ]................ Returns the current baseline alignment settings and can be set, to 
+          change the baseline alignment. Possible values are top, hanging, middle, alphabetic, ideographic and bottom
+      - fillText(text, x, y [, maxWidth ] )..... Fills the given text at the given position indicated by the given 
+          coordinates x and y.
+      - strokeText(text, x, y [, maxWidth ] )... Strokes the given text at the given position indicated by the given 
+          coordinates x and y.
+
+    Pattern and Shadow
+    There is following method required to create a pattern on the canvas:
+      - createPattern(image, repetition)... This method will use image to create the pattern. The second argument could 
+          be a string with one of the following values: repeat, repeat-x, repeat-y, and no-repeat. If the empty string 
+          or null is specified, repeat will. be assumed
+
+    Create Shadows
+    HTML canvas provides capabilities to create nice shadows around the drawings. 
+    All drawing operations are affected by the four global shadow attributes.
+      - shadowColor[= value]..... Returns current shadow color and can be set, to change the shadow color.
+      - shadowOffsetX[= value]... Returns current shadow offset X and can be set, to change the shadow offset X.
+      - shadowOffsetY[= value]... Returns current shadow offset Y and can be set, change the shadow offset Y.
+      - shadowBlur[= value]...... Returns current level of blur applied to shadows and can be set, to change blur level.
+
+    Save and Restore States
+    HTML canvas provides two important methods to save and restore the canvas states. 
+    The canvas drawing state is basically a snapshot of all the styles and transformations that have
+    been applied and consists of the followings:
+      - The transformations such as translate, rotate and scale etc.
+      - The current clipping region.
+      - The current values of the following attributes − strokeStyle, fillStyle, globalAlpha, lineWidth, lineCap, 
+        lineJoin, miterLimit, shadowOffsetX, shadowOffsetY, shadowBlur, shadowColor, globalCompositeOperation, font, 
+        textAlign, textBaseline.
+
+    Canvas states are stored on a stack every time the save method is called, and the last saved state is returned from 
+    the stack every time the restore method is called.
+      - save()........... This method pushes the current state onto the stack..
+      - restore()........ This method pops the top state on the stack, restoring the context to that state.
+
+    Translation
+    HTML canvas provides translate(x, y) method which is used to move the canvas and its origin to a different point in 
+    the grid. Here x is the amount the canvas is moved to the left or right, and y is the amount it's moved up or down
+
+    Rotation
+    HTML canvas provides rotate(angle) method which is used to rotate the canvas around the current origin.
+    This method only takes one parameter and that's the angle the canvas is rotated by. 
+    This is a clockwise rotation measured in radians.
+
+    Scaling
+    HTML canvas provides scale(x, y) method which is used to increase or decrease the units in our canvas grid. 
+    This can be used to draw scaled down or enlarged shapes and bitmaps.
+    This method takes two parameters where x is the scale factor in the horizontal direction and y is the scale factor 
+    in the vertical direction. Both parameters must be positive numbers. 
+    Values smaller than 1.0 reduce the unit size and values larger than 1.0 increase the unit size. 
+    Setting the scaling factor to precisely 1.0 doesn't affect the unit size.
+
+    Transforms
+    HTML canvas provides methods which allow modifications directly to the transformation matrix. 
+    The transformation matrix must initially be the identity transform. 
+    It may then be adjusted using the transformation methods.
+      - transform(m11, m12, m21, m22, dx, dy)
+        This method changes the transformation matrix to apply the matrix given by the arguments.
+      - setTransform(m11, m12, m21, m22, dx, dy)
+        This method changes the transformation matrix to the matrix given by the arguments .
+
+    The transform (m11, m12, m21, m22, dx, dy) method must multiply the current transformation matrix with the matrix 
+    described by:
+            m11     m21     dx
+            m12     m22     dy
+            0       0       1
+
+    The setTransform(m11, m12, m21, m22, dx, dy) method must reset the current transform to the identity matrix, and 
+    then invoke the transform(m11, m12, m21, m22, dx, dy) method with the same arguments.
+
+    Composition
+    HTML canvas provides compositing attribute globalCompositeOperation which affect all the drawing operations.
+    We can draw new shapes behind existing shapes and mask off certain areas, clear sections from the canvas using
+    globalCompositeOperation. There are following values which can be set for globalCompositeOperation:
+      - source-over....... This is the default setting and draws new shapes on top of the existing canvas content.
+      - source-in......... The new shape is drawn only where both the new shape and the destination canvas overlap. 
+                           Everything else is made transparent.
+      - source-out........ The new shape is drawn where it doesn't overlap the existing canvas content.
+      - source-atop....... The new shape is only drawn where it overlaps the existing canvas content.
+      - lighter........... Where both shapes overlap the color is determined by adding color values.
+      - xor............... Shapes are made transparent where both overlap and drawn normal everywhere else.
+      - destination-over.. New shapes are drawn behind the existing canvas content.
+      - destination-in.... The existing canvas content is kept where both the new shape and existing canvas content 
+                           overlap. Everything else is made transparent.
+      - destination-out... The existing content is kept where it doesn't overlap the new shape.
+      - destination-atop.. The existing canvas is only kept where it overlaps the new shape. 
+                           The new shape is drawn behind the canvas content.
+      - darker............ Where both shapes overlap the color is determined by subtracting color values.
+
+    Animations
+    HTML canvas provides necessary methods to draw an image and erase it completely. 
+    We can take Javascript help to simulate good animation over a HTML canvas.
+    Following are the two important Javascript methods which would be used to animate an image on a canvas:
+      - setInterval(callback, time)...... Repeatedly executes the supplied code after a given timemilliseconds.
+      - setTimeout(callback, time)....... Executes the supplied code only once after a given time milliseconds.
   -->
+  <h2>Drawing Rectangles</h2>
+  <canvas id="drawing-rectangles" class="html-canvas"></canvas>
+  <script>
+    var canvas = document.getElementById("drawing-rectangles");
+    if (canvas.getContext) {
+      var ctx = canvas.getContext("2d");
+
+      ctx.fillRect(0,0,100,100);    // fills the rectangle with a solid color
+      ctx.clearRect(25,25,50,50);   // clears the rectangle
+      ctx.strokeRect(30,30,40,40);  // draws a rectangle with a border
+    } else {
+      alert("Sorry, your browser does not support the HTML5 canvas element.");
+    }
+  </script>
   <br>
+
+  <h2>Drawing Rectangles</h2>
+  <canvas id="drawing-paths" class="html-canvas"></canvas>
+  <script>
+    var canvas = document.getElementById("drawing-paths");
+    if (canvas.getContext) {
+      var ctx = canvas.getContext("2d");
+
+      ctx.beginPath(); // starts a new path
+      ctx.arc(75,75,50,0,Math.PI*2,true); // draws the outer circle
+      ctx.moveTo(110,75); // moves the pen to the top-left corner of the inner circle
+      ctx.arc(75,75,35,0,Math.PI,false); // draws the inner circle (the mouth)
+      ctx.moveTo(65,65); // moves the pen to the top-left corner of the eye
+      ctx.arc(60,65,5,0,Math.PI*2,true); // draws the left eye
+      ctx.moveTo(95,65); // moves the pen to the top-left corner of the eye
+      ctx.arc(90,65,5,0,Math.PI*2,true); // draws the right eye
+      ctx.stroke(); // draws the path
+    } else {
+      alert("Sorry, your browser does not support the HTML5 canvas element.");
+    }
+  </script>
   <br>
+
+  <h2>Drawing Lines</h2>
+  <canvas id="drawing-lines" class="html-canvas"></canvas>
+  <script>
+    var canvas = document.getElementById("drawing-lines");
+    if (canvas.getContext) {
+      var ctx = canvas.getContext("2d");
+
+      // Filled triangle
+      ctx.beginPath(); // starts a new path
+      ctx.moveTo(25,25); // moves the pen to the top-left corner of the triangle
+      ctx.lineTo(105,25); // draws a line to the top-right corner of the triangle
+      ctx.lineTo(25,105); // draws a line to the bottom-left corner of the triangle
+      ctx.fill(); // fills the path
+
+      // Stroked triangle
+      ctx.beginPath(); // starts a new path
+      ctx.moveTo(125,125); // moves the pen to the top-left corner of the triangle
+      ctx.lineTo(125,45); // draws a line to the top-right corner of the triangle
+      ctx.lineTo(45,125); //
+      ctx.closePath(); // closes the path
+      ctx.stroke();
+    } else {
+      alert("Sorry, your browser does not support the HTML5 canvas element.");
+    }
+  </script>
   <br>
+
+  <h2>Drawing Bezier Curves</h2>
+  <canvas id="drawing-bezier-curves" class="html-canvas"></canvas>
+  <script>
+    var canvas = document.getElementById("drawing-bezier-curves");
+    if (canvas.getContext) {
+      var ctx = canvas.getContext("2d");
+
+      ctx.beginPath();
+      ctx.moveTo(75,40);
+      ctx.bezierCurveTo(75,37,70,25,50,25);
+      ctx.bezierCurveTo(20,25,20,62.5,20,62.5);
+      ctx.bezierCurveTo(20,80,40,102,75,120);
+      ctx.bezierCurveTo(110,102,130,80,130,62.5);
+      ctx.bezierCurveTo(130,62.5,130,25,100,25);
+      ctx.bezierCurveTo(85,25,75,37,75,40);
+      ctx.fill();
+    } else {
+      alert("Sorry, your browser does not support the HTML5 canvas element.");
+    }
+  </script>
   <br>
+
+  <h2>Drawing Quadratic Curves</h2>
+  <canvas id="drawing-quadratic-curves" class="html-canvas"></canvas>
+  <script>
+    var canvas = document.getElementById("drawing-quadratic-curves");
+    if (canvas.getContext) {
+      var ctx = canvas.getContext("2d");
+
+      ctx.beginPath();
+      ctx.moveTo(75,25);
+      ctx.quadraticCurveTo(25,25,25,62.5);
+      ctx.quadraticCurveTo(25,100,50,100);
+      ctx.quadraticCurveTo(50,120,30,125);
+      ctx.quadraticCurveTo(60,120,65,100);
+      ctx.quadraticCurveTo(125,100,125,62.5);
+      ctx.quadraticCurveTo(125,25,75,25);
+      ctx.stroke();
+    } else {
+      alert("Sorry, your browser does not support the HTML5 canvas element.");
+    }
+  </script>
+  <br>
+
+  <h2>Using Images</h2>
+  <canvas id="using-images" class="html-canvas"></canvas>
+  <script>
+    var canvas = document.getElementById("using-images");
+    if (canvas.getContext) {
+      var ctx = canvas.getContext("2d");
+      var img = new Image();
+
+      img.src = "https://img.icons8.com/?size=200&id=80902&format=png&color=000000";
+      img.onload = function() {
+        ctx.drawImage(img,0,0);
+        ctx.beginPath();
+
+        ctx.moveTo(30,96);
+        ctx.lineTo(70,66);
+
+        ctx.lineTo(103,76);
+        ctx.lineTo(170,15);
+
+        ctx.stroke();
+      }
+    } else {
+      alert("Sorry, your browser does not support the HTML5 canvas element.");
+    }
+  </script>
+  <br>
+
+  <h2>Create Gradients</h2>
+  <canvas id="creating-gradients" class="html-canvas"></canvas>
+  <script>
+    var canvas = document.getElementById("creating-gradients");
+    if (canvas.getContext) {
+      var ctx = canvas.getContext("2d");
+
+      // Create Linear Gradients
+      var lingrad = ctx.createLinearGradient(0,0,0,150);
+      lingrad.addColorStop(0, '#00ABEB');
+      lingrad.addColorStop(0.5, '#fff');
+      lingrad.addColorStop(0.5, '#66CC00');
+      lingrad.addColorStop(1, '#fff');
+
+      var lingrad2 = ctx.createLinearGradient(0,50,0,95);
+      lingrad2.addColorStop(0.5, '#000');
+      lingrad2.addColorStop(1, 'rgba(0,0,0,0)');
+
+      // assign gradients to fill and stroke styles
+      ctx.fillStyle = lingrad;
+      ctx.strokeStyle = lingrad2;
+
+      // draw shapes
+      ctx.fillRect(10,10,130,130);
+      ctx.strokeRect(50,50,50,50);
+    } else {
+      alert("Sorry, your browser does not support the HTML5 canvas element.");
+    }
+  </script>
+  <br>
+
+  <h2>Radial Gradients</h2>
+  <canvas id="radial-gradients" class="html-canvas"></canvas>
+  <script>
+    var canvas = document.getElementById("radial-gradients");
+    if (canvas.getContext) {
+      var ctx = canvas.getContext("2d");
+
+      // Create gradients
+      var radgrad = ctx.createRadialGradient(45, 45, 10, 52, 50, 30);
+      radgrad.addColorStop(0, '#A7D30C');
+      radgrad.addColorStop(0.9, '#019F62');
+      radgrad.addColorStop(1, 'rgba(1,159,98,0)');
+
+      var radgrad2 = ctx.createRadialGradient(105, 105, 20, 112, 120, 50);
+      radgrad2.addColorStop(0, '#FF5F98');
+      radgrad2.addColorStop(0.75, '#FF0188');
+      radgrad2.addColorStop(1, 'rgba(255,1,136,0)');
+
+      var radgrad3 = ctx.createRadialGradient(95, 15, 15, 102, 20, 40);
+      radgrad3.addColorStop(0, '#00C9FF');
+      radgrad3.addColorStop(0.8, '#00B5E2');
+      radgrad3.addColorStop(1, 'rgba(0,201,255,0)');
+
+      var radgrad4 = ctx.createRadialGradient(0, 150, 50, 0, 140, 90);
+      radgrad4.addColorStop(0, '#F4F201');
+      radgrad4.addColorStop(0.8, '#E4C700');
+      radgrad4.addColorStop(1, 'rgba(228,199,0,0)');
+
+      // draw shapes
+      ctx.fillStyle = radgrad4;
+      ctx.fillRect(0, 0, 150, 150);
+
+      ctx.fillStyle = radgrad3;
+      ctx.fillRect(0, 0, 150, 150);
+
+      ctx.fillStyle = radgrad2;
+      ctx.fillRect(0, 0, 150, 150);
+      ctx.fillStyle = radgrad;
+      ctx.fillRect(0, 0, 150, 150);
+    } else {
+      alert("Sorry, your browser does not support the HTML5 canvas element.");
+    }
+  </script>
+  <br>
+
+  <h2>Using Images</h2>
+  <canvas id="using-images3" class="html-canvas"></canvas>
+  <script>
+    var canvas = document.getElementById("using-images3");
+    if (canvas.getContext) {
+      var ctx = canvas.getContext("2d");
+
+      // Create a pattern
+      for (var i=0;i<7;i++){
+        for (var j=0;j<7;j++){
+          ctx.fillStyle='rgb(' + Math.floor(255-20.5*i)+ ','+ Math.floor(255 - 42.5*j) + ',255)';
+          ctx.fillRect( j*25, i* 25, 55, 55 );
+        }
+      }
+    } else {
+      alert("Sorry, your browser does not support the HTML5 canvas element.");
+    }
+  </script>
+  <br>
+
+  <h2>Styles and Colors</h2>
+  <canvas id="styles-colors" class="html-canvas"></canvas>
+  <script>
+    var canvas = document.getElementById("styles-colors");
+    if (canvas.getContext) {
+      var ctx = canvas.getContext("2d");
+    } else {
+      alert("Sorry, your browser does not support the HTML5 canvas element.");
+    }
+  </script>
+  <br>
+
+  <h2>Using Images</h2>
+  <canvas id="using-images5" class="html-canvas"></canvas>
+  <script>
+    var canvas = document.getElementById("using-images5");
+    if (canvas.getContext) {
+      var ctx = canvas.getContext("2d");
+    } else {
+      alert("Sorry, your browser does not support the HTML5 canvas element.");
+    }
+  </script>
+  <br>
+
+  <h2>Using Images</h2>
+  <canvas id="using-images6" class="html-canvas"></canvas>
+  <script>
+    var canvas = document.getElementById("using-images6");
+    if (canvas.getContext) {
+      var ctx = canvas.getContext("2d");
+    } else {
+      alert("Sorry, your browser does not support the HTML5 canvas element.");
+    }
+  </script>
   <br>
   <br><hr>
 </body>
