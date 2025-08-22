@@ -1,102 +1,370 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 
 <html class="no-js" lang="en">
 <head>
+  <!-- CHARACTER ENCODING & VIEWPORT FIRST -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>HTML APIs</title>
-  <link rel="stylesheet" href="../../assets/css/style.css">
-  <meta name="description" content="">
 
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-  <meta property="og:image:alt" content="">
+  <!-- PRIMARY METADATA -->
+  <title>HTML Graphics</title>
+  <meta name="description" content="An Introduction to HTML Graphics for Complete Beginners">
+  <meta name="author" content="Wasula Benjamin">
 
-  <link rel="icon" href="../../favicon.ico" sizes="any">
+  <!-- SEO AND INDEXING -->
+  <meta name="robots" content="index, follow">
+  <meta name="keywords" content="web development basics, html, graphics">
+
+  <!-- OPEN GRAPH/SOCIAL METADATA (SHOULD COME BEFORE ICONS)  -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://github.com/wasulabenjamin/web-basics">
+  <meta property="og:title" content="HTML Graphics">
+  <meta property="og:description" content="An Introduction to HTML Graphics for Complete Beginners">
+  <meta property="og:image" content="../../assets/img/social-media.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="628">
+  <meta property="og:image:alt" content="HTML Graphics Infographic">
+  <meta property="og:site_name" content="Wasula Benjamin">
+
+  <!-- TWITTER CARD TAGS -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="HTML Graphics">
+  <meta name="twitter:description" content="An Introduction to HTML Graphics for Complete Beginners">
+  <meta name="twitter:image" content="../../assets/img/social-media.png">
+  <meta name="twitter:image:alt" content="HTML Graphics Infographic">
+  <meta name="twitter:site" content="@wasulabenjamin">
+  <meta name="twitter:creator" content="@wasulabenjamin">
+  <meta name="twitter:domain" content="github.com/wasulabenjamin/web-basics">
+
+  <!-- PWA SUPPORT AND BROWSER UI ENHANCEMENTS -->
+  <meta name="theme-color" content="#fafafa"> <!-- fallback default for older browsers -->
+  <link rel="manifest" href="../../site.webmanifest">
+
+  <!-- ICONS (ORDER MATTERS FOR FALLBACK) -->
   <link rel="icon" href="../../icon.svg" type="image/svg+xml">
+  <link rel="icon" href="../../icon.png" type="image/png">
+  <link rel="icon" href="../../favicon.ico" type="image/x-icon" sizes="any">
   <link rel="apple-touch-icon" href="../../icon.png">
 
-  <link rel="manifest" href="../../site.webmanifest">
-  <meta name="theme-color" content="#fafafa">
+  <!-- STYLESHEETS: LOCAL FIRST  -->
+  <link rel="stylesheet" href="../../assets/css/learn-html.css">
 </head>
 <body>
-  <h1>HTML APIs</h1>
-  <!--
-
-  -->
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br><hr>
-
   <h1>Geolocation API</h1>
   <!--
+    HTML - Geolocation API
+    HTML Geolocation API is used by web applications to access the geographical location of the user.
+    Most modern browsers and mobile devices support the Geolocation API.
 
+    JavaScript can capture your latitude and longitude and can be sent to a backend web server and do fancy
+    location-aware things like finding local businesses or showing your location on a map.
+
+    The Geolocation API provides the following methods:
+      - getCurrentPosition()... Retrieves the current geographic location of the user.
+      - watchPosition()........ Retrieves periodic updates about the current geographic location of the device.
+      - clearWatch()........... Cancels an ongoing watchPosition call.
+
+    Location Properties
+    Geolocation methods getCurrentPosition() and getPositionUsingMethodName() specify the callback method that retrieves
+    the location information. These methods are called asynchronously with an object Position which stores the complete
+    location information.
+
+    The Position object specifies the current geographic location of the device.
+    The location is expressed as a set of geographic coordinates together with information about heading and speed.
+
+    The following table describes the properties of the Position object.
+    For the optional properties, if the system cannot provide a value, the value of the property is set to null.
+
+    Property  Type  Description
+    coords____________________ object__ Specifies the geographic location of the device.
+        The location is expressed as a set of geographic coordinates together with information about heading and speed.
+    coords.latitude___________ Number__ Specifies the latitude estimate in decimal degrees.
+                                        The value range is [-90.00, +90.00].
+    coords.longitude__________ Number__ Specifies the longitude estimate in decimal degrees.
+                                        The value range is [-180.00, +180.00].
+    coords.accuracy___________ Number__ Specifies the accuracy of the latitude and longitude estimates in meters.
+    coords.altitude___________ Number__ Specifies the altitude estimate in meters above the WGS 84 ellipsoid.
+    coords.altitudeAccuracy___ Number__ Specifies the accuracy of the altitude estimate in meters.
+    coords.heading____________ Number__ Specifies the device's current direction of movement in degrees counting
+                                        clockwise relative to true north.
+    coords.speed______________ Number__ Specifies the device's current ground speed in meters per second.
+    timestamp_________________date_____ Specifies the time when the location information was retrieved and the Position
+                                        object was created.
+
+    Handling Errors
+    Geolocation is complicated, and it is very much required to catch any error and handle it gracefully.
+    The geolocation methods getCurrentPosition() and watchPosition() make use of an error handler callback method that
+    gives a PositionError object. This object has the following two properties: -
+      - code...... Number... Contains a numeric code for the error.
+      - message... String... Contains a human-readable description of the error.
+
+    The below describes the possible error codes returned in the PositionError object:
+      - UNKNOWN_ERROR.......... CODE 0, Method failed to retrieve the location of the device due to an unknown error.
+      - PERMISSION_DENIED...... CODE 1, Method failed to retrieve the location of the device because the application
+                                does not have permission to use the Location Service.
+      - POSITION_UNAVAILABLE... CODE 2, Location of the device could not be determined.
+      - TIMEOUT................ CODE 3, Method was unable to retrieve the location information within the specified
+                                maximum timeout interval.
+
+    Position Options
+    Following is the actual syntax of the getCurrentPosition() method:
+    SYNTAX:   getCurrentPosition(callback, ErrorCallback, options)
+
+    Here, the third argument is the PositionOptions object, which specifies a set of options for retrieving the
+    geographic location of the device.
+
+    Following are the options that can be specified as a third argument:
+      - enableHighAccuracy... Boolean Value, Specifies whether the widget wants to receive the most accurate location
+                              estimate possible. By default, this is false.
+      - timeout.............. Number Value, The timeout property is the number of milliseconds your web application is
+                              willing to wait for a position.
+      - maximumAge........... Number Value, Specifies the expiry time in milliseconds for cached location information.
   -->
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
+  <p id="gelocationapi">Click the button to get your current coordinates: </p>
+  <button onclick="getLocation()">Show Location</button>
+  <script>
+    var x = document.getElementById("gelocationapi");
+
+    function showPosition(position) {
+      x.innerHTML = "coords            : " + position.coords + "<br>" +
+                    "latitude          : " + position.coords.latitude + "<br>" +
+                    "longitude         : " + position.coords.longitude + "<br>" +
+                    "accuracy          : " + position.coords.accuracy + "<br>" +
+                    "altitude          : " + position.coords.altitude + "<br>" +
+                    "altitudeAccuracy  : " + position.coords.altitudeAccuracy + "<br>" +
+                    "heading           : " + position.coords.heading + "<br>" +
+                    "speed             : " + position.coords.speed + "<br>" +
+                    "timestamp         : " + position.timestamp;
+    }
+
+    function showError(error) {
+      switch(error.code) {
+        case error.PERMISSION_DENIED:
+          x.innerHTML = "User denied the request for Geolocation."
+          break;
+        case error.POSITION_UNAVAILABLE:
+          x.innerHTML = "Location information is unavailable."
+          break;
+        case error.TIMEOUT:
+          x.innerHTML = "The request to get user location timed out."
+          break;
+        default:
+          x.innerHTML = "An unknown error occurred."
+          break;
+      }
+    }
+
+    function getLocation() {
+      var userLocation = navigator.geolocation;
+
+      // Check if geolocation is supported by the browser.
+      userLocation
+        ? userLocation.getCurrentPosition(showPosition, showError) // If supported, call getCurrentPosition()
+        : x.innerHTML = "Geolocation is not supported by this browser."; // If not supported, display a message.
+
+      // Watch the location for changes.
+      var watchId = userLocation.watchPosition(showPosition, showError, {
+        enableHighAccuracy: true,
+        timeout: 10000,
+        maximumAge: 0
+      });
+
+      userLocation.clearWatch(watchId); // Stop watching the location.
+    }
+  </script>
   <br><hr>
 
   <h1>Drag & Drop API</h1>
   <!--
+    Drag and Drop API
+    Drag and Drop (DnD) is a powerful user interface concept that makes it easy to copy, reorder, and delete items with
+    the help of mouse clicks and movements. This allows the user to click and hold the mouse button down over an
+    element, drag it to another location, and release the mouse button to drop the element there.
 
+    To achieve drag-and-drop functionality with traditional HTML4, developers either have to use complex JavaScript
+    programming or other JavaScript frameworks like jQuery, etc.
+
+    Now, HTML5 came up with a Drag and Drop (DnD) API that brings native DnD support to the browser, making it much
+    easier to code up. It is supported by all the major browsers, like Chrome, Firefox 3.5, Safari 4, etc.
+
+    Creating an HTML Element Draggable
+    You can create an HTML element draggable by using the draggable attribute with that specific element.
+    Set the "true" value to the draggable attribute to make any HTML element drag-enabled.
+
+      SYNTAX: <div draggable="true">
+
+    There are a number of events that are fired during various stages of the drag-and-drop operation.
+    These events are listed below:
+      - dragstart.... Fires when the user starts dragging of the object.
+      - dragenter.... Fired when the mouse is first moved over the target element while a drag is occurring.
+                      A listener for this event should indicate whether a drop is allowed over this location.
+                      If there are no listeners, or the listeners perform no operations, then a drop is not allowed by
+                      default.
+      - dragover..... Fired as the mouse is moved over an element when a drag is occurring.
+                      Much of the time, the operation that occurs during a listener will be the same as the dragenter
+                      event.
+      - dragleave.... Fired when the mouse leaves an element while a drag is occurring.
+                      Listeners should remove any highlighting or insertion markers used for drop feedback.
+      - drag......... Fires every time the mouse is moved while the object is being dragged.
+      - drop......... Fired on the element where the drop was occurred at the end of the drag operation.
+                      A listener would be responsible for retrieving the data being dragged and inserting it at the drop
+                      location.
+      - dragend...... Fires when the user releases the mouse button while dragging an object.
+
+    NOTE: only drag events are fired; mouse events such as mousemove are not fired during a drag operation.
+
+    The DataTransfer Object
+    The event listener methods for all the drag-and-drop events accept the Event object, which has a readonly attribute
+    called dataTransfer.
+
+    The event.dataTransfer returns the DataTransfer object associated with the event as follows:
+        function EnterHandler(event) {DataTransfer dt = event.dataTransfer;}
+
+    The DataTransfer object holds data about the drag and drop operation.
+    This data can be retrieved and set in terms of various attributes associated with the DataTransfer object,
+    as explained below:
+      - dataTransfer.dropEffect [ = value ]
+            Returns the kind of operation that is currently selected.
+            This attribute can be set, to change the selected operation.
+            The possible values are none, copy, link, and move.
+      - dataTransfer.effectAllowed [ = value ]
+            Returns the kinds of operations that are to be allowed.
+            This attribute can be set, to change the allowed operations.
+            The possible values are none, copy, copyLink, copyMove, link, linkMove, move, all and uninitialized.
+      - dataTransfer.types
+            Returns a DOMStringList listing the formats that were set in the dragstart event.
+            In addition, if any files are being dragged, then one of the types will be the string "Files".
+      - dataTransfer.clearData ( [ format ] )
+            Removes the data of the specified formats. Removes all data if the argument is omitted.
+      - dataTransfer.setData(format, data)
+            Adds the specified data.
+      - data = dataTransfer.getData(format)
+            Returns the specified data. If there is no such data, returns the empty string.
+      - dataTransfer.files
+            Returns a FileList of the files being dragged, if any.
+      - dataTransfer.setDragImage(element, x, y)
+            Uses the given element to update the drag feedback, replacing any previously specified feedback.
+      - dataTransfer.addElement(element)
+            Adds the given element to the list of elements used to render the drag feedback.
+
+    Drag and Drop Process
+    Step 1: Making an Object Draggable
+      - If you want to drag an element, you need to set the draggable attribute to true for that element.
+      - Set an event listener for dragstart that stores the data being dragged.
+      - The event listener dragstart will set the allowed effects (copy, move, link, or some combination).
+
+    Step 2: Dropping the Object
+      - To accept a drop, the drop target has to listen to at least three events.
+      - The dragenter event, which is used to determine whether or not the drop target is to accept the drop.
+        If the drop is to be accepted, then this event has to be canceled.
+      - The dragover event, which is used to determine what feedback is to be shown to the user.
+        If the event is canceled, then the feedback (typically the cursor) is updated based on the dropEffect
+        attribute's value.
+      - Finally, the drop event, which allows the actual drop to be performed.
   -->
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
+  <p>Try to move the purple box into the pink box.</p>
+  <div id="box-a" class="box-a" draggable="true"><p>Drag me!</p></div>
+  <div id="box-b" class="box-b"><p>Trash</p></div>
+  <script>
+    document.getElementById("box-a").addEventListener("dragstart", dragStart);
+
+    var boxB = document.getElementById("box-b");
+    boxB.addEventListener("dragenter", dragEnter);
+    boxB.addEventListener("dragover", dragOver);
+    boxB.addEventListener("drop", dragDrop);
+
+    function dragStart(event) {
+      event.dataTransfer.effectAllowed = "move";
+      event.dataTransfer.setData("text/plain", event.target.id);
+      return true;
+    }
+
+    function dragEnter(event) {
+      event.preventDefault(); // To prevent the default action.
+      return true; // To allow drop.
+    }
+
+    function dragOver(event) {
+      return event.preventDefault(); // To allow drop.
+    }
+
+    function dragDrop(event) {
+      event.target.appendChild(document.getElementById(event.dataTransfer.getData("text")));
+      event.stopPropagation();
+      return false;
+    }
+  </script>
   <br><hr>
 
   <h1>Web Workers API</h1>
   <!--
+		HTML - Web Workers API
+		The HTML Web Workers API is a JavaScript feature that is used to run computationally intensive tasks in background
+		in a separate thread without interrupting the user interface.
 
+		What Are Web Workers?
+		Web workers allows long tasks to be executed without yielding to keep the page unresponsive.
+		Web workers are background scripts, and they are relatively heavy-weight and are not intended to be used in large
+		numbers. For example, it would be inappropriate to launch one worker for each pixel of a four-megapixel image. When
+		a script is executing inside a Web worker, it cannot access the web page's window object (window.document).
+		Web workers don't have direct access to the web page and the DOM API. Although Web workers cannot block the browser
+		UI, they can still consume CPU cycles and make the system less responsive.
+
+		Need of Web Workers
+		JavaScript was designed to run in a single-threaded environment, meaning multiple scripts cannot run at the same
+		time. Consider a situation where you need to handle UI events, query and process large amounts of API data, and
+		manipulate the DOM. JavaScript will hang your browser in situations where CPU utilization is high.
+
+		How Web Workers Work?
+		Web Workers are initialized with the URL of a JavaScript file, which contains the code the worker will execute.
+		This code sets event listeners and communicates with the script that spawned it from the main page.
+
+			SYNTAX:	var worker = new Worker('bigLoop.js');
+
+		If the specified JavaScript file exists, the browser will spawn a new worker thread, which is downloaded
+		asynchronously. If the path to our worker returns a 404 error, the worker will fail silently.
+
+		If our application has multiple supporting JavaScript files, we can import them using the importScripts() method,
+		which takes file name(s) as argument separated by comma as follows:
+			SYNTAX:	importScripts("helper.js", "anotherHelper.js");
+
+		Once the Web Worker is spawned, communication between the web worker and its parent page is done using the
+		postMessage() method. Depending on the browser/version, the postMessage() method can accept either a string or
+		JSON object as its single argument.
+
+		Stopping Web Workers
+		Web Workers don't stop by themselves, but the page that started them can stop them by calling the terminate() method.
+
+			SYNTAX: worker.terminate();
+
+		A terminated Web Worker will no longer respond to messages or perform any additional computations.
+		We cannot restart a worker; instead, we need to create a new worker using the same URL.
+
+		Handling Web Workers Errors
+		You can handle errors that occur in the Web Worker from the main thread by using the worker.onerror() method.
   -->
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br><hr>
+  <input type="button" value="Start Worker" onclick="startWorker()">
+  <script>
+    let worker = new Worker("../../bigLoop.js");
 
-  <h1>WebSocket</h1>
-  <!--
+    function startWorker() {
+      if (window.Worker) {
+        alert("You have web workers support.");
 
-  -->
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br><hr>
+        worker.onmessage = function(event) {
+          console.log("Worker finished:", event.data);
+          alert("Completed " + event.data + " iterations");
+        };
 
-  <h1>Web Storage</h1>
-  <!--
-
-  -->
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br><hr>
-
-  <h1>Server Sent Events</h1>
-  <!--
-
-  -->
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
+        worker.onerror = function(event) {
+          console.error(event.message, event);
+          alert("Error occurred in the web worker.");
+        };
+      } else {
+        alert("Your browser does not support Web Workers.");
+      }
+    }
+  </script>
   <br><hr>
 </body>
 </html>
