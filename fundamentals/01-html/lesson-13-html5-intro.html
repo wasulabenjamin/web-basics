@@ -1,88 +1,233 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 
 <html class="no-js" lang="en">
 <head>
+  <!-- CHARACTER ENCODING & VIEWPORT FIRST -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>HTML5 Introduction</title>
-  <link rel="stylesheet" href="../../assets/css/style.css">
-  <meta name="description" content="">
 
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-  <meta property="og:image:alt" content="">
+  <!-- PRIMARY METADATA -->
+  <title>HTML5</title>
+  <meta name="description" content="An Introduction to HTML5 for Complete Beginners">
+  <meta name="author" content="Wasula Benjamin">
 
-  <link rel="icon" href="../../favicon.ico" sizes="any">
+  <!-- SEO AND INDEXING -->
+  <meta name="robots" content="index, follow">
+  <meta name="keywords" content="web development basics, html, html5">
+
+  <!-- OPEN GRAPH/SOCIAL METADATA (SHOULD COME BEFORE ICONS)  -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://github.com/wasulabenjamin/web-basics">
+  <meta property="og:title" content="HTML5">
+  <meta property="og:description" content="An Introduction to HTML5 for Complete Beginners">
+  <meta property="og:image" content="../../assets/img/social-media.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="628">
+  <meta property="og:image:alt" content="HTML5 Infographic">
+  <meta property="og:site_name" content="Wasula Benjamin">
+
+  <!-- TWITTER CARD TAGS -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="HTML5">
+  <meta name="twitter:description" content="An Introduction to HTML5 for Complete Beginners">
+  <meta name="twitter:image" content="../../assets/img/social-media.png">
+  <meta name="twitter:image:alt" content="HTML5 Infographic">
+  <meta name="twitter:site" content="@wasulabenjamin">
+  <meta name="twitter:creator" content="@wasulabenjamin">
+  <meta name="twitter:domain" content="github.com/wasulabenjamin/web-basics">
+
+  <!-- PWA SUPPORT AND BROWSER UI ENHANCEMENTS -->
+  <meta name="theme-color" content="#fafafa"> <!-- fallback default for older browsers -->
+  <link rel="manifest" href="../../site.webmanifest">
+
+  <!-- ICONS (ORDER MATTERS FOR FALLBACK) -->
   <link rel="icon" href="../../icon.svg" type="image/svg+xml">
+  <link rel="icon" href="../../icon.png" type="image/png">
+  <link rel="icon" href="../../favicon.ico" type="image/x-icon" sizes="any">
   <link rel="apple-touch-icon" href="../../icon.png">
 
-  <link rel="manifest" href="../../site.webmanifest">
-  <meta name="theme-color" content="#fafafa">
+  <!-- STYLESHEETS: LOCAL FIRST  -->
+  <link rel="stylesheet" href="../../assets/css/learn-html.css">
 </head>
 <body>
-  <h1>HTML5 Introduction</h1>
   <!--
+    HTML5 - Overview
+    HTML5 is the next major revision of the HTML standard superseding HTML 4.01, XHTML 1.0, and XHTML 1.1.
+    HTML5 is a standard for structuring and presenting content on the World Wide Web.
+    HTML5 is a cooperation between the World Wide Web Consortium (W3C) and the Web Hypertext Application Technology
+    Working Group (WHATWG).
 
+    The new standard incorporates features like video playback and drag-and-drop that have been previously dependent on
+    third-party browser plug-ins such as Adobe Flash, Microsoft Silverlight, and Google Gears.
+
+    Browser Support
+    The latest versions of Apple Safari, Google Chrome, Mozilla Firefox, and Opera all support many HTML5 features and
+    Internet Explorer 9.0 will also have support for some HTML5 functionality.
+
+    Mobile browsers that come pre-installed on iPhones, iPads, and Android phones all have excellent support for HTML5.
+
+    New Features
+    HTML5 introduces a number of new elements and attributes that can help you in building modern websites.
+    Here is a set of some of the most prominent features introduced in HTML5:
+      - New Semantic Elements: These are like <header>, <footer>, and <section>.
+      - Forms 2.0: Improvements to HTML web forms where new attributes have been introduced for <input> tag.
+      - Persistent Local Storage: To achieve without resorting to third-party plugins.
+      - WebSocket: A next-generation bidirectional communication technology for web applications.
+      - Server-Sent Events: Introduces events which flow from web server to the web browsers, Server-Sent Events (SSEs).
+      - Canvas: This supports a two-dimensional drawing surface that you can program with JavaScript.
+      - Audio & Video: You can embed audio or video on your webpages without resorting to third-party plugins.
+      - Geolocation: Now visitors can choose to share their physical location with your web application.
+      - Microdata: Lets you create your own vocabularies beyond HTML5 and extend your web pages with custom semantics.
+      - Drag and drop: Drag and drop the items from one location to another location on the same webpage.
+
+    Backward Compatibility
+    HTML5 is designed, as much as possible, to be backward compatible with existing web browsers.
+    Its new features have been built on existing features and allow you to provide fallback content for older browsers.
+
+    It is suggested to detect support for individual HTML5 features using a few lines of JavaScript.
+
+    ---
+
+    HTML5 - Syntax
+    HTML 5 language has a "custom" HTML syntax that is compatible with HTML 4 and XHTML1 documents published on the Web,
+    but is not compatible with the more esoteric SGML features of HTML 4.
+
+    HTML 5 does not have the same syntax rules as XHTML where we needed lower case tag names, quoting our attributes,
+    an attribute had to have a value and to close all empty elements.
+
+    HTML5 comes with a lot of flexibility and it supports the following features:
+      - Uppercase tag names.
+      - Quotes are optional for attributes.
+      - Attribute values are optional.
+      - Closing empty elements are optional.
+
+    The DOCTYPE
+    DOCTYPEs in older versions of HTML were longer because the HTML language was SGML based and therefore required a
+    reference to a DTD. HTML 5 authors would use simple syntax to specify DOCTYPE as follows −
+      <!DOCTYPE html>
+
+    Character Encoding
+    HTML 5 authors can use simple syntax to specify Character Encoding as follows:
+      <meta charset="UTF-8">
+
+    The <script> and <link> tag
+    It's common practice to add a type attribute with a value of "text/javascript" to script elements and "text/css" to
+    css elements. HTML 5 removes extra information required and you can use simply following syntax:
+      <script src="scriptfile.js"></script>
+      <link rel="stylesheet" href="stylefile.css">
+
+    HTML5 Elements
+    HTML5 elements are marked up using start tags and end tags.
+    Tags are delimited using angle brackets with the tag name in between.
+    The difference between start tags and end tags is that the latter includes a slash before the tag name.
+
+    HTML5 tag names are case insensitive and may be written in all uppercase or mixed case,
+    although the most common convention is to stick with lowercase.
+
+    Most of the elements contain some content like <p>...</p> contains a paragraph.
+    Some elements, however, are forbidden from containing any content at all,
+    and these are known as void elements. For example, br, hr, link, meta, etc.
+
+    HTML5 Attributes
+    Elements may contain attributes that are used to set various properties of an element.
+    Some attributes are defined globally and can be used on any element, while others are defined for specific elements
+    only. All attributes have a name and a value and look like as shown below in the example.
+
+    Attributes may only be specified within start tags and must never be used in end tags.
+    HTML5 attributes are case insensitive and may be written in all uppercase or mixed case,
+    although the most common convention is to stick with lowercase.
+
+    HTML5 Document
+    The following tags have been introduced for better structure:
+      - section... Represents a generic document or application section.
+                   It can be used together with h1-h6 to indicate the document structure.
+      - article... Represents an independent piece of content of a document,such as a blog entry or newspaper article.
+      - aside..... Represents a piece of content that is only slightly related to the rest of the page.
+      - header.... Represents the header of a section.
+      - footer.... Represents a footer for a section and can contain information about the author, copyright, e.t.c
+      - nav....... Represents a section of the document intended for navigation.
+      - dialog.... Can be used to mark up a conversation.
+      - figure.... Can be used to associate a caption together with some embedded content, such as a graphic or video.
   -->
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br><hr>
-
-  <h1>Overview</h1>
-  <!--
-
-  -->
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br><hr>
-
-  <h1>Syntax</h1>
-  <!--
-
-  -->
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br><hr>
 
   <h1>Web Forms 2.0</h1>
   <!--
+    HTML5 - Web Forms 2.0
+    Web Forms 2.0 is an extension to the forms features found in HTML4. 
+    Form elements and attributes in HTML5 provide a greater degree of semantic mark-up than HTML4 and free us from a 
+    great deal of tedious scripting and styling that was required in HTML4.
 
+    The <input> element in HTML5
+    HTML4 input elements use the type attribute to specify the data type.
+    HTML4 provides following types:
+      - text....... A free-form text field, nominally free of line breaks.
+      - password... A free-form text field for sensitive information, nominally free of line breaks.
+      - checkbox... A set of zero or more values from a predefined list.
+      - radio...... An enumerated value.
+      - submit..... A free form of button initiates form submission.
+      - file....... An arbitrary file with a MIME type and optionally a file name.
+      - image...... A coordinate, relative to a particular image's size, with the extra semantic that it must be the 
+                    last value selected and initiates form submission.
+      - hidden..... An arbitrary string that is not normally displayed to the user.
+      - select..... An enumerated value, much like the radio type.
+      - textarea... A free-form text field, nominally with no line break restrictions.
+      - button..... A free form of button which can initiates any event related to button.
+
+    The <input> element in HTML5
+    Apart from the above attributes, HTML5 input elements introduced several new values for the type attribute. 
+    HTML5 provides following types:
+    
+    Sr.No.  Type & Description
+    - date............. A date (year, month, day) encoded according to ISO 8601.
+    - datetime......... A date and time (year, month, day, hour, minute, second, fractions of a second) encoded 
+                        according to ISO 8601 with the time zone set to UTC.
+    - datetime-local... A date and time (year, month, day, hour, minute, second, fractions of a second) encoded 
+                        according to ISO 8601, with no time zone information.
+    - time............. A time (hour, minute, seconds, fractional seconds) encoded according to ISO 8601.
+    - month............ A date consisting of a year and a month encoded according to ISO 8601.
+    - week............. A date consisting of a year and a week number encoded according to ISO 8601.
+    - number........... It accepts only numerical value. The step attribute specifies the precision, defaulting to 1.
+    - range............ The range type is used for input fields that should contain a value from a range of numbers.
+    - email............ It accepts only email value in the format email@example.com only and declines anything else.
+    - url.............. It accepts only URL value in http://www.example.com format or in http://example.com format only.
+
+    The <output> element in HTML5
+    HTML5 introduced a new element <output> which is used to represent the result of different types of output, 
+    such as output written by a script.
+
+    You can use the for attribute to specify a relationship between the output element and other elements in the 
+    document that affected the calculation (for example, as inputs or parameters). 
+    The value of the for attribute is a space-separated list of IDs of other elements.
+
+    The placeholder attribute in HTML5
+    HTML5 introduced a new attribute called placeholder. 
+    This attribute on <input> and <textarea> elements provide a hint to the user of what can be entered in the field. 
+    The placeholder text must not contain carriage returns or line-feeds.
+
+    The autofocus attribute in HTML5
+    This is a simple one-step pattern, easily programmed in JavaScript at the time of document load, 
+    automatically focus one particular form field.
+
+    The required attribute in HTML5
+    Now you do not need to have JavaScript for client-side validations like empty text box would never be submitted 
+    because HTML5 introduced a new attribute called required which would insist to have a value
   -->
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br><hr>
+  <h2>The input element in HTML4</h2>
+  <form action="https://github.com/wasulabenjamin/web-basics" method="post">
+    <label for="firstname">first name: </label>
+    <input type="text" id="firstname"><br />
 
-  <h1>SVG Generator</h1>
-  <!--
+    <label for="lastname">last name: </label>
+    <input type="text" id="lastname"><br />
 
-  -->
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br><hr>
+    <label for="email">email: </label>
+    <input type="text" id="email"><br>
 
-  <h1>Validator</h1>
-  <!--
-
-  -->
-  <br>
-  <br>
+    <input type="radio" name="sex" value="male"> Male<br>
+    <input type="radio" name="sex" value="female"> Female<br>
+    <input type="submit" value="send">
+    <input type="reset">
+  </form>
   <br><hr>
 </body>
 </html>
