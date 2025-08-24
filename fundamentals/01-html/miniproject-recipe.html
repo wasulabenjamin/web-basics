@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <!-- CHARACTER ENCODING & VIEWPORT FIRST -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- PRIMARY METADATA -->
+  <title>Chapati Recipe</title>
+  <meta name="description" content="A simple, semantic HTML-only recipe for making soft Kenyan chapati.">
+  <meta name="author" content="Wasula Benjamin">
+
+  <!-- SEO AND INDEXING -->
+  <meta name="robots" content="index, follow">
+  <meta name="keywords" content="recipe, chapati, chapo, roti, flatbread, indian bread">
+
+  <!-- OPEN GRAPH/SOCIAL METADATA (SHOULD COME BEFORE ICONS)  -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://github.com/wasulabenjamin/web-basics">
+  <meta property="og:title" content="Chapati Recipe">
+  <meta property="og:description" content="A simple, semantic HTML-only recipe for making soft Kenyan chapati.">
+  <meta property="og:image" content="../..//img/social-media.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="628">
+  <meta property="og:image:alt" content="Chapati Recipe Infographic">
+  <meta property="og:site_name" content="web-basics">
+
+  <!-- TWITTER CARD TAGS -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Chapati Recipe">
+  <meta name="twitter:description" content="A simple, semantic HTML-only recipe for making soft Kenyan chapati.">
+  <meta name="twitter:image" content="../../assets/img/social-media.png">
+  <meta name="twitter:image:alt" content="Chapati Recipe Infographic">
+  <meta name="twitter:site" content="@wasulabenjamin">
+  <meta name="twitter:creator" content="@wasulabenjamin">
+  <meta name="twitter:domain" content="github.com/wasulabenjamin/web-basics">
+
+  <!-- PWA SUPPORT AND BROWSER UI ENHANCEMENTS -->
+  <meta name="theme-color" content="#fafafa"> <!-- fallback default for older browsers -->
+  <link rel="manifest" href="../../site.webmanifest">
+
+  <!-- ICONS (ORDER MATTERS FOR FALLBACK) -->
+  <link rel="icon" href="../../icon.svg" type="image/svg+xml">
+  <link rel="icon" href="../../icon.png" type="image/png">
+  <link rel="icon" href="../../favicon.ico" type="image/x-icon" sizes="any">
+  <link rel="apple-touch-icon" href="../../icon.png">
+
+  <!-- STYLESHEETS: LOCAL FIRST  -->
+  <link rel="stylesheet" href="../../assets/css/learn-html.css">
+</head>
+<body>
+  <header>
+    <h1>Chapati Recipe</h1>
+    <p>A simple, semantic HTML-only recipe for making soft Kenyan chapati.</p>
+    <nav>
+      <ul>
+        <li><a href="#ingredients">Ingredients</a></li>
+        <li><a href="#instructions">Instructions</a></li>
+        <li><a href="#video-demo">Video Demonstration</a></li>
+        <li><a href="#audio-instructions">Audio Instructions</a></li>
+        <li><a href="#nutritional-info">Nutritional Info</a></li>
+        <li><a href="#expert-tips">Expert Tips</a></li>
+        <li><a href="#related-recipes">Related Recipes</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="ingredients">
+      <h2>Ingredients</h2>
+      <form>
+        <fieldset>
+          <legend>Must Have</legend>
+          <input type="checkbox" name="ingredient" value="flour" id="ingredient-flour">
+          <label for="ingredient-flour">2 cups whole wheat flour</label><br>
+          <input type="checkbox" name="ingredient" value="water" id="ingredient-water">
+          <label for="ingredient-water">¾ cup warm water</label><br>
+          <input type="checkbox" name="ingredient" value="salt" id="ingredient-salt">
+          <label for="ingredient-salt">½ teaspoon salt</label><br>
+          <input type="checkbox" name="ingredient" value="oil" id="ingredient-oil">
+          <label for="ingredient-oil">1 teaspoon oil</label><br>
+        </fieldset>
+        <fieldset>
+          <legend>Optionals</legend>
+          <input type="checkbox" name="ingredient" value="ghee" id="ingredient-ghee">
+          <label for="ingredient-ghee">Ghee or butter for brushing</label><br>
+        </fieldset>
+      </form>
+    </section>
+
+    <section id="instructions">
+      <h2>Instructions</h2>
+      <ol>
+        <li>
+          <h3>Prepare the Dough</h3>
+          <p>In a large bowl, mix the whole wheat flour and salt. Gradually add warm water and knead into a soft, pliable dough. Add oil and knead for another 2-3 minutes until the dough is smooth. Cover with a damp cloth and let it rest for 15-20 minutes.</p>
+        </li>
+        <li>
+          <h3>Divide the Dough</h3>
+          <p>After resting, divide the dough into 8 equal portions and shape them into smooth balls.</p>
+        </li>
+        <li>
+          <h3>Roll Out the Chapatis</h3>
+          <p>Take one dough ball and dust it with flour. Using a rolling pin, roll it out into a thin, round circle about 6-7 inches in diameter.</p>
+        </li>
+        <li>
+          <h3>Cook the Chapati</h3>
+          <p>Heat a tawa or flat griddle over medium heat. Place the rolled chapati on the hot tawa. Cook for about 30 seconds until bubbles start to form, then flip it over.</p>
+        </li>
+        <li>
+          <h3>Puff Up the Chapati</h3>
+          <p>Cook the second side for another 30 seconds, then flip again. Using a clean cloth or spatula, gently press around the edges to help the chapati puff up.</p>
+        </li>
+        <li>
+          <h3>Finish Cooking</h3>
+          <p>Cook until both sides have golden brown spots. If desired, brush with ghee or butter before serving.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section id="video-demo">
+      <h2>Video Demonstration</h2>
+      <video width="640" height="360" controls>
+        <source src="../../assets/video/sample-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <section id="audio-instructions">
+      <h2>Audio Instructions</h2>
+      <audio controls>
+        <source src="../../assets/audio/sample-audio.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+      </audio>
+    </section>
+
+    <section id="nutritional-info">
+      <h2>Nutritional Info</h2>
+      <table>
+        <caption>Nutrition facts per serving (1 chapati)</caption>
+        <tr>
+          <th>Nutrient</th>
+          <th>Amount</th>
+        </tr>
+        <tr>
+          <td>Calories</td>
+          <td>120</td>
+        </tr>
+        <tr>
+          <td>Carbohydrates</td>
+          <td>22g</td>
+        </tr>
+        <tr>
+          <td>Protein</td>
+          <td>4g</td>
+        </tr>
+        <tr>
+          <td>Fat</td>
+          <td>2g</td>
+        </tr>
+        <tr>
+          <td>Fiber</td>
+          <td>4g</td>
+        </tr>
+      </table>
+    </section>
+
+    <section id="expert-tips">
+      <h2>Expert Tips</h2>
+      <ul>
+        <li>Ensure the water is warm, not hot, to achieve the right dough consistency</li>
+        <li>Letting the dough rest is crucial for soft chapatis</li>
+        <li>Roll the chapatis evenly to ensure they cook uniformly</li>
+        <li>If the dough sticks while rolling, dust with a little more flour</li>
+      </ul>
+    </section>
+
+    <section id="related-recipes">
+      <h2>Related Recipes</h2>
+      <ul>
+        <li><a href="#">Paratha Recipe (Layered Flatbread)</a></li>
+        <li><a href="#">Naan Recipe (Tandoori Bread)</a></li>
+        <li><a href="#">Puri Recipe (Deep Fried Bread)</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    Contact us at <a href="mailto:recipes@example.com">recipes@example.com</a>
+    </address>
+    <p>&copy; 2025 Traditional Recipes. All rights reserved.</p>
+    <p>This recipe has been passed down through generations.</p>
+  </footer>
+</body>
+</html>
