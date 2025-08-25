@@ -1,498 +1,117 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- CHARACTER ENCODING & VIEWPORT FIRST -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- PRIMARY METADATA -->
   <title>CSS Basics</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <meta name="description" content="">
+  <meta name="description" content="An Introduction to CSS Basics for Complete Beginners">
+  <meta name="author" content="Wasula Benjamin">
 
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-  <meta property="og:image:alt" content="">
+  <!-- SEO AND INDEXING -->
+  <meta name="robots" content="index, follow">
+  <meta name="keywords" content="web development basics, css, css3, introduction, basics">
 
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" href="/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="icon.png">
+  <!-- OPEN GRAPH/SOCIAL METADATA (SHOULD COME BEFORE ICONS)  -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://github.com/wasulabenjamin/web-basics">
+  <meta property="og:title" content="CSS Basics">
+  <meta property="og:description" content="An Introduction to CSS Basics for Complete Beginners">
+  <meta property="og:image" content="../../assets/img/social-media.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="628">
+  <meta property="og:image:alt" content="CSS Basics Infographic">
+  <meta property="og:site_name" content="Wasula Benjamin">
 
-  <link rel="manifest" href="site.webmanifest">
-  <meta name="theme-color" content="#fafafa">
+  <!-- TWITTER CARD TAGS -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CSS Basics">
+  <meta name="twitter:description" content="An Introduction to CSS Basics for Complete Beginners">
+  <meta name="twitter:image" content="../../assets/img/social-media.png">
+  <meta name="twitter:image:alt" content="CSS Basics Infographic">
+  <meta name="twitter:site" content="@wasulabenjamin">
+  <meta name="twitter:creator" content="@wasulabenjamin">
+  <meta name="twitter:domain" content="github.com/wasulabenjamin/web-basics">
+
+  <!-- PWA SUPPORT AND BROWSER UI ENHANCEMENTS -->
+  <meta name="theme-color" content="#fafafa"> <!-- fallback default for older browsers -->
+  <link rel="manifest" href="../../site.webmanifest">
+
+  <!-- ICONS (ORDER MATTERS FOR FALLBACK) -->
+  <link rel="icon" href="../../icon.svg" type="image/svg+xml">
+  <link rel="icon" href="../../icon.png" type="image/png">
+  <link rel="icon" href="../../favicon.ico" type="image/x-icon" sizes="any">
+  <link rel="apple-touch-icon" href="../../icon.png">
+
+  <!-- STYLESHEETS: LOCAL FIRST  -->
+  <link rel="stylesheet" href="../../assets/css/learn-css.css">
 </head>
 <body>
-
-	<header>
-		<h1>lesson-01-beginner</h1>
-	</header>
-
-	<main>
-		<section>
-			<h1>Home</h1>
-		</section>
-		<section>
-			<h1>Roadmap</h1>
-		</section>
-		<section>
-			<h1>Introduction</h1>
-		</section>
-		<section>
-			<h1>Syntax</h1>
-		</section>
-		<section>
-			<h1>Inclusion</h1>
-		</section>
-		<section>
-			<h1>Types</h1>
-		</section>
-		<section>
-			<h1>Measurement Units</h1>
-		</section>
-		<section>
-			<h1>Selectors</h1>
-		</section>
-		<section>
-			<h1>Universal Selectors</h1>
-		</section>
-		<section>
-			<h1>Element Selectors</h1>
-		</section>
-		<section>
-			<h1>Class Selectors</h1>
-		</section>
-		<section>
-			<h1>ID Selectors</h1>
-		</section>
-		<section>
-			<h1>Group Selectors</h1>
-		</section>
-		<section>
-			<h1>Child Selectors</h1>
-		</section>
-		<section>
-			<h1>Descendant Selectors</h1>
-		</section>
-		<section>
-			<h1>Adjacent Sibling Selectors</h1>
-		</section>
-		<section>
-			<h1>General Sibling Selectors</h1>
-		</section>
-		<section>
-			<h1>Colors</h1>
-		</section>
-		<section>
-			<h1>Color</h1>
-		</section>
-		<section>
-			<h1>Backgrounds</h1>
-		</section>
-		<section>
-			<h1>Fonts</h1>
-		</section>
-		<section>
-			<h1>Text</h1>
-		</section>
-		<section>
-			<h1>Text</h1>
-		</section>
-		<section>
-			<h1>Images</h1>
-		</section>
-		<section>
-			<h1>Image Gallery</h1>
-		</section>
-		<section>
-			<h1>Icons</h1>
-		</section>
-		<section>
-			<h1>Links</h1>
-		</section>
-		<section>
-			<h1>Tables</h1>
-		</section>
-		<section>
-			<h1>Lists</h1>
-		</section>
-		<section>
-			<h1>Borders</h1>
-		</section>
-		<section>
-			<h1>Rounded Corner</h1>
-		</section>
-		<section>
-			<h1>Padding</h1>
-		</section>
-		<section>
-			<h1>Margins</h1>
-		</section>
-		<section>
-			<h1>Box Model</h1>
-		</section>
-		<section>
-			<h1>Display</h1>
-		</section>
-		<section>
-			<h1>Inline Block</h1>
-		</section>
-		<section>
-			<h1>Cursor</h1>
-		</section>
-		<section>
-			<h1>Outlines</h1>
-		</section>
-		<section>
-			<h1>Comments</h1>
-		</section>
-		<section>
-			<h1>Data Types</h1>
-		</section>
-		<section>
-			<h1>All</h1>
-		</section>
-		<section>
-			<h1>Root</h1>
-		</section>
-	</main>
-
-	<header>
-		<h1># lesson-02-intermediate</h1>
-	</header>
-
-	<main>
-		<section>
-			<h1>Box Sizing</h1>
-		</section>
-		<section>
-			<h1>Width</h1>
-		</section>
-		<section>
-			<h1>Height</h1>
-		</section>
-		<section>
-			<h1>Dimension</h1>
-		</section>
-		<section>
-			<h1>Max Inline Size</h1>
-		</section>
-		<section>
-			<h1>Min Inline Size</h1>
-		</section>
-		<section>
-			<h1>Max Block Size</h1>
-		</section>
-		<section>
-			<h1>Min Block Size</h1>
-		</section>
-		<section>
-			<h1>Overflow</h1>
-		</section>
-		<section>
-			<h1>Visibility</h1>
-		</section>
-		<section>
-			<h1>Scrollbars</h1>
-		</section>
-		<section>
-			<h1>Zndex</h1>
-		</section>
-		<section>
-			<h1>Position</h1>
-		</section>
-		<section>
-			<h1>Positioning</h1>
-		</section>
-		<section>
-			<h1>Bottom</h1>
-		</section>
-		<section>
-			<h1>Float</h1>
-		</section>
-		<section>
-			<h1>Clearfix</h1>
-		</section>
-		<section>
-			<h1>Dropdowns</h1>
-		</section>
-		<section>
-			<h1>Navbar</h1>
-		</section>
-		<section>
-			<h1>Overlay</h1>
-		</section>
-		<section>
-			<h1>Forms</h1>
-		</section>
-		<section>
-			<h1>Align</h1>
-		</section>
-		<section>
-			<h1>Buttons</h1>
-		</section>
-		<section>
-			<h1>Image Sprites</h1>
-		</section>
-		<section>
-			<h1>Multi Background</h1>
-		</section>
-		<section>
-			<h1>Gradients</h1>
-		</section>
-		<section>
-			<h1>Box Shadow</h1>
-		</section>
-		<section>
-			<h1>Box Decoration Break</h1>
-		</section>
-		<section>
-			<h1>Border Images</h1>
-		</section>
-		<section>
-			<h1>Border Block</h1>
-		</section>
-		<section>
-			<h1>Border Inline</h1>
-		</section>
-	</main>
-
-	<header>
-		<h1># lesson-03-advanced</h1>
-	</header>
-
-	<main>
-		<section>
-			<h1>Attr Selectors</h1>
-		</section>
-		<section>
-			<h1>Combinators</h1>
-		</section>
-		<section>
-			<h1>Pseudo Classes</h1>
-		</section>
-		<section>
-			<h1>Pseudo Elements</h1>
-		</section>
-		<section>
-			<h1>Hover</h1>
-		</section>
-		<section>
-			<h1>Focus</h1>
-		</section>
-		<section>
-			<h1>Transition</h1>
-		</section>
-		<section>
-			<h1>2d transform</h1>
-		</section>
-		<section>
-			<h1>3d transform</h1>
-		</section>
-		<section>
-			<h1>Translate</h1>
-		</section>
-		<section>
-			<h1>Animation</h1>
-		</section>
-		<section>
-			<h1>Zoom</h1>
-		</section>
-		<section>
-			<h1>Resize</h1>
-		</section>
-		<section>
-			<h1>Arrows</h1>
-		</section>
-		<section>
-			<h1>Quotes</h1>
-		</section>
-		<section>
-			<h1>Order</h1>
-		</section>
-		<section>
-			<h1>Flexbox</h1>
-		</section>
-		<section>
-			<h1>Text Effects</h1>
-		</section>
-		<section>
-			<h1>Text Shadow</h1>
-		</section>
-		<section>
-			<h1>Caret Color</h1>
-		</section>
-		<section>
-			<h1>Tooltips</h1>
-		</section>
-		<section>
-			<h1>Loaders</h1>
-		</section>
-		<section>
-			<h1>Pagination</h1>
-		</section>
-		<section>
-			<h1>Counters</h1>
-		</section>
-		<section>
-			<h1>Clip</h1>
-		</section>
-		<section>
-			<h1>Shapes</h1>
-		</section>
-		<section>
-			<h1>Masking</h1>
-		</section>
-		<section>
-			<h1>Style Images</h1>
-		</section>
-		<section>
-			<h1>Grid</h1>
-		</section>
-		<section>
-			<h1>Grid Layout</h1>
-		</section>
-	</main>
-
-	<header>
-		<h1># lesson-04-professional</h1>
-	</header>
-
-	<main>
-		<section>
-			<h1>Hyphens</h1>
-		</section>
-		<section>
-			<h1>Hyphenate Character</h1>
-		</section>
-		<section>
-			<h1>Opacity</h1>
-		</section>
-		<section>
-			<h1>Writing Mode</h1>
-		</section>
-		<section>
-			<h1>Unicodeidi</h1>
-		</section>
-		<section>
-			<h1>minontent</h1>
-		</section>
-		<section>
-			<h1>Inset</h1>
-		</section>
-		<section>
-			<h1>Isolation</h1>
-		</section>
-		<section>
-			<h1>Overscroll</h1>
-		</section>
-		<section>
-			<h1>Justify Items</h1>
-		</section>
-		<section>
-			<h1>Justify Self</h1>
-		</section>
-		<section>
-			<h1>Tab Size</h1>
-		</section>
-		<section>
-			<h1>Pointer Events</h1>
-		</section>
-		<section>
-			<h1>Place Content</h1>
-		</section>
-		<section>
-			<h1>Place Items</h1>
-		</section>
-		<section>
-			<h1>Place Self</h1>
-		</section>
-		<section>
-			<h1>Mix Blend Mode</h1>
-		</section>
-		<section>
-			<h1>Offset</h1>
-		</section>
-		<section>
-			<h1>Accent Color</h1>
-		</section>
-		<section>
-			<h1>User Select</h1>
-		</section>
-		<section>
-			<h1>Cascading</h1>
-		</section>
-		<section>
-			<h1>Visibility</h1>
-		</section>
-		<section>
-			<h1>Layers</h1>
-		</section>
-		<section>
-			<h1>@ Rules</h1>
-		</section>
-		<section>
-			<h1>Paged Media</h1>
-		</section>
-		<section>
-			<h1>Printing</h1>
-		</section>
-		<section>
-			<h1>Layouts</h1>
-		</section>
-		<section>
-			<h1>Validations</h1>
-		</section>
-		<section>
-			<h1>Important</h1>
-		</section>
-		<section>
-			<h1>Multi columns</h1>
-		</section>
-		<section>
-			<h1>Variables</h1>
-		</section>
-		<section>
-			<h1>Functions</h1>
-		</section>
-		<section>
-			<h1>Math Functions</h1>
-		</section>
-		<section>
-			<h1>Specificity</h1>
-		</section>
-		<section>
-			<h1>Custom Properties</h1>
-		</section>
-	</main>
 
 	<header>
 		<h1># lesson-05-responsive</h1>
 	</header>
 
 	<main>
+		<!-- 
+
+		 -->
 		<section>
 			<h1>CSS RWD Introduction</h1>
 		</section>
+
+		<!-- 
+
+		 -->
 		<section>
 			<h1>CSS RWD Viewport</h1>
 		</section>
+
+		<!-- 
+
+		 -->
 		<section>
 			<h1>CSS RWD Grid View</h1>
 		</section>
+
+		<!-- 
+
+		 -->
 		<section>
 			<h1>CSS RWD Media Queries</h1>
 		</section>
+
+		<!-- 
+
+		 -->
 		<section>
 			<h1>CSS RWD Images</h1>
 		</section>
+
+		<!-- 
+
+		 -->
 		<section>
 			<h1>CSS RWD Videos</h1>
 		</section>
+
+		<!-- 
+
+		 -->
 		<section>
 			<h1>CSS RWD Frameworks</h1>
 		</section>
+
+		<!-- 
+
+		 -->
 		<section>
 			<h1>CSS Media Queries</h1>
 		</section>
+
 	</main>
 
 </body>
