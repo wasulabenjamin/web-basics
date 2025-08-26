@@ -13,7 +13,7 @@
 
   <!-- SEO AND INDEXING -->
   <meta name="robots" content="index, follow">
-  <meta name="keywords" content="web development basics, css, css3, introduction, basics">
+  <meta name="keywords" content="web development basics, css, css3, introduction, basic css">
 
   <!-- OPEN GRAPH/SOCIAL METADATA (SHOULD COME BEFORE ICONS)  -->
   <meta property="og:type" content="website">
@@ -57,295 +57,357 @@
 
 	<main>
 		<!-- 
+    CSS Tutorial
+    This CSS tutorial covers everything from basic styling concepts and selectors to advanced techniques, such as 
+    flexbox, grid, animations, and CSS variables. This CSS tutorial is designed to help both beginners and experienced 
+    designers to make them masters in creating visually appealing, responsive, and modern web designs.
 
-		 -->
-		<section>
+    What is CSS
+    CSS is the acronym for "Cascading Style Sheet". It's a style sheet language used for describing the presentation 
+    of a document written in a markup language like HTML. CSS helps the web developers to control the layout and other 
+    visual aspects of the web pages. CSS plays a crucial role in modern web development by providing the tools 
+    necessary to create visually appealing, accessible, and responsive websites.
+
+    Since the inception of CSS, several versions have came into existence. Some of the notable versions include:
+
+      - CSS1 (Cascading Style Sheets Level 1):
+        The initial version of CSS, released in December 1996. CSS1 provided basic styling capabilities for HTML 
+        documents, including properties for text, colors, backgrounds, margins, and borders.
+      - CSS2 (Cascading Style Sheets Level 2):
+        Released in May 1998, CSS2 introduced new features such as positioning, z-index, media types, and more 
+        advanced selectors like attribute selectors and child selectors.
+      - CSS2.1 (Cascading Style Sheets Level 2.1): 
+        This version 2.1, published as a W3C Recommendation in June 2011, clarified and refined CSS2, addressing 
+        inconsistencies and ambiguities in the specification. CSS2.1 focused on improving interoperability among web 
+        browsers.
+      - CSS3 (Cascading Style Sheets Level 3:
+        CSS3 is a collection of modules that extend the capabilities of CSS. It introduces numerous new features and 
+        enhancements, including advanced selectors, multiple column layouts, animations, transformations, gradients, 
+        shadows, and more.
+      - CSS4 (Cascading Style Sheets Level 4:
+        CSS4 is an ongoing effort to extend CSS3 with new features and enhancements.
+    
+    Each version of CSS builds upon the previous ones, adding new features and refining existing capabilities to meet 
+    the evolving needs of web developers and designers. CSS is referred as just CSS now, without a version number.
+
+    Types of CSS
+      - Inline CSS: Applied directly to an HTML element using the style attribute. 
+              It has the highest priority among the three methods.
+      - Internal CSS: IDefined within the <style> tag inside the <head> section of an HTML document.
+      - External CSS: Written in a separate .css file and linked to the HTML document using the <link> tag. 
+              This is the recommended method for large projects as it improves maintainability.
+    
+    Advantages of Using CSS
+      - Responsive design: CSS offers features like media queries that enable developers to create responsive layouts 
+        that adapt to different screen sizes and devices, ensuring a consistent user experience.
+      - Flexibility and Control: CSS provides precise control over the presentation of HTML elements, allowing 
+        developers to customize layout, typography, colors, and other visual properties.
+      - Consistency and Reusability: Developers ensure consistency across the entire website, by defining styles in a 
+        central CSS file. Styles can be reused across multiple pages, reducing redundancy and making updates easier.
+      - Search Engine Optimization (SEO) - CSS can be used to structure content in a way that improves search engine 
+        visibility.
+      - Ease of Maintenance: Centralized CSS files make it easier to maintain and update styles across a website. 
+        Changes can be applied globally, ensuring uniformity and reducing the risk of inconsistencies.
+      - Faster Page Loading: External CSS files can be cached by browsers, resulting in faster page loading times for 
+        subsequent visits to a website. This caching mechanism reduces server load and bandwidth consumption.
+    
+    Components of CSS
+    CSS works by associating rules with HTML elements. A CSS rule contains two main parts:
+      - a selector which specifies the HTML element(s) to style.
+      - a declaration block which contains one or more declarations separated by semicolons.
+    Each declaration includes a property-name and value, specifying the aspect of the element presentation to control.
+		-->
+		<section class="home">
 			<h1>Home</h1>
+			<div>
+				<h1>Hello World</h1>
+				<p>This is a sample CSS Code!</p>
+			</div>
 		</section>
 
 		<!-- 
 
-		 -->
+		-->
 		<section>
 			<h1>Roadmap</h1>
 		</section>
 
 		<!-- 
 
-		 -->
+		-->
 		<section>
 			<h1>Introduction</h1>
 		</section>
 
 		<!-- 
 
-		 -->
+		-->
 		<section>
 			<h1>Syntax</h1>
 		</section>
 
 		<!-- 
 
-		 -->
+		-->
 		<section>
 			<h1>Inclusion</h1>
 		</section>
 
 		<!-- 
 
-		 -->
+		-->
 		<section>
 			<h1>Types</h1>
 		</section>
 
 		<!-- 
 
-		 -->
+		-->
 		<section>
 			<h1>Measurement Units</h1>
 		</section>
 
 		<!-- 
 
-		 -->
+		-->
 		<section>
 			<h1>Selectors</h1>
 		</section>
 
 		<!-- 
 
-		 -->
+		-->
 		<section>
 			<h1>Universal Selectors</h1>
 		</section>
 
 		<!-- 
 
-		 -->
+		-->
 		<section>
 			<h1>Element Selectors</h1>
 		</section>
 
 		<!-- 
 
-		 -->
+		-->
 		<section>
 			<h1>Class Selectors</h1>
 		</section>
 
 		<!-- 
 
-		 -->
+		-->
 		<section>
 			<h1>ID Selectors</h1>
 		</section>
 
 		<!-- 
 
-		 -->
+		-->
 		<section>
 			<h1>Group Selectors</h1>
 		</section>
 
 		<!-- 
 
-		 -->
+		-->
 		<section>
 			<h1>Child Selectors</h1>
 		</section>
 
 		<!-- 
 
-		 -->
+		-->
 		<section>
 			<h1>Descendant Selectors</h1>
 		</section>
 
 		<!-- 
 
-		 -->
+		-->
 		<section>
 			<h1>Adjacent Sibling Selectors</h1>
 		</section>
 
 		<!-- 
 
-		 -->
+		-->
 		<section>
 			<h1>General Sibling Selectors</h1>
 		</section>
 
 		<!-- 
 
-		 -->
+		-->
 		<section>
 			<h1>Colors</h1>
 		</section>
 
 		<!-- 
 
-		 -->
+		-->
 		<section>
 			<h1>Color</h1>
 		</section>
 
 		<!-- 
 
-		 -->
+		-->
 		<section>
 			<h1>Backgrounds</h1>
 		</section>
 
 		<!-- 
 
-		 -->
+		-->
 		<section>
 			<h1>Fonts</h1>
 		</section>
 
 		<!-- 
 
-		 -->
+		-->
 		<section>
 			<h1>Text</h1>
 		</section>
 
 		<!-- 
 
-		 -->
+		-->
 		<section>
 			<h1>Text</h1>
 		</section>
 
 		<!-- 
 
-		 -->
+		-->
 		<section>
 			<h1>Images</h1>
 		</section>
 
 		<!-- 
 
-		 -->
+		-->
 		<section>
 			<h1>Image Gallery</h1>
 		</section>
 
 		<!-- 
 
-		 -->
+		-->
 		<section>
 			<h1>Icons</h1>
 		</section>
 
 		<!-- 
 
-		 -->
+		-->
 		<section>
 			<h1>Links</h1>
 		</section>
 
 		<!-- 
 
-		 -->
+		-->
 		<section>
 			<h1>Tables</h1>
 		</section>
 
 		<!-- 
 
-		 -->
+		-->
 		<section>
 			<h1>Lists</h1>
 		</section>
 
 		<!-- 
 
-		 -->
+		-->
 		<section>
 			<h1>Borders</h1>
 		</section>
 
 		<!-- 
 
-		 -->
+		-->
 		<section>
 			<h1>Rounded Corner</h1>
 		</section>
 
 		<!-- 
 
-		 -->
+		-->
 		<section>
 			<h1>Padding</h1>
 		</section>
 
 		<!-- 
 
-		 -->
+		-->
 		<section>
 			<h1>Margins</h1>
 		</section>
 
 		<!-- 
 
-		 -->
+		-->
 		<section>
 			<h1>Box Model</h1>
 		</section>
 
 		<!-- 
 
-		 -->
+		-->
 		<section>
 			<h1>Display</h1>
 		</section>
 
 		<!-- 
 
-		 -->
+		-->
 		<section>
 			<h1>Inline Block</h1>
 		</section>
 
 		<!-- 
 
-		 -->
+		-->
 		<section>
 			<h1>Cursor</h1>
 		</section>
 
 		<!-- 
 
-		 -->
+		-->
 		<section>
 			<h1>Outlines</h1>
 		</section>
 
 		<!-- 
 
-		 -->
+		-->
 		<section>
 			<h1>Comments</h1>
 		</section>
 
 		<!-- 
 
-		 -->
+		-->
 		<section>
 			<h1>Data Types</h1>
 		</section>
 
 		<!-- 
 
-		 -->
+		-->
 		<section>
 			<h1>All</h1>
 		</section>
 
 		<!-- 
 
-		 -->
+		-->
 		<section>
 			<h1>Root</h1>
 		</section>

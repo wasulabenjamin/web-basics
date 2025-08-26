@@ -44,11 +44,11 @@
 
 # 📘 Introduction
 
-This is a curated step-by-step learning path covering everything from **basic web development** to **modern fullstack
+This is a curated step-by-step learning path covering everything from **basic web development** to **modern full-stack
 apps** using tools like **Vue.js**, **Supabase**, and **PostgreSQL**. The goal: build real skills, not just follow
 tutorials.
 
-Whether you're reviewing fundamentals or pushing into real-time apps, this repo captures one developer’s personal
+Whether you're reviewing fundamentals or pushing into real-time apps, this repository captures one developer’s personal
 journey—openly shared, continually evolving.
 
 ### Audience
@@ -69,7 +69,7 @@ about GitHub and the Git Version Control System.
 
 These are the core web building blocks:
 - **HTML5**: Tags, elements, forms, semantics
-- **CSS3**: Layouts, Flexbox, Grid, animations
+- **CSS3**: Layouts, Flex-box, Grid, animations
 - **JavaScript (ES6+)**: DOM, functions, events, objects, APIs
 - **JSON**: Data interchange format used in APIs
 - **Bootstrap**: UI framework for rapid prototyping
@@ -77,9 +77,9 @@ These are the core web building blocks:
 
 Explore inside: `fundamentals/` 📂
 
-### Phase 2: Frontend Framework – Vue JS
+### Phase 2: Front-end Framework – Vue JS
 
-Lightweight, reactive, component-driven frontend framework
+Lightweight, reactive, component-driven front-end framework
 - Introduction to Vue
 - Vue directives, events, and computed properties
 - Props and state management
@@ -89,16 +89,16 @@ Lightweight, reactive, component-driven frontend framework
 
 Explore inside: `vue_tutorials/` 📂
 
-### Phase 3: Backend & Databases
+### Phase 3: Back-end & Databases
 
-Here we focus on backend learning without getting lost in boilerplate
+Here we focus on back-end learning without getting lost in boilerplate
 - **SQL with PostgreSQL**: Core CRUD operations, schema design, joins, indexes
 - **Supabase SDK**:
   - Instant Auth (email/password, OAuth)
   - Hosted PostgreSQL database
   - Auto-generated RESTful and real-time APIs
   - Row-level security
-  - **Capstone Project**: Fullstack app with auth and CRUD
+  - **Capstone Project**: Full-stack app with auth and CRUD
 
 Explore inside: `backend/` 📂
 
@@ -195,7 +195,7 @@ Have a bug or a feature request? **Here is to how you can help:**
 
 # 🙌 Acknowledgements
 
-* [Bootstrap](https://getbootstrap.com/docs/5.3) for a powerful, feature-packed frontend toolkit.
+* [Bootstrap](https://getbootstrap.com/docs/5.3) for a powerful, feature-packed front-end toolkit.
 * [Tailwind](https://tailwindcss.com/docs/) Labs for incredible dev ergonomics
 * [Vue core](https://www.tutorialspoint.com/vuejs/index.htm) team for building something simple yet powerful
 * [Supabase](https://supabase.com/dashboard/org) team for simplifying backend
