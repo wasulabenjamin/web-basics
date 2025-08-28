@@ -52,65 +52,65 @@
 <body>
 
 	<header>
-		<h1>lesson-01-beginner</h1>
+		<h1>LESSON 01: BEGINNER</h1>
 	</header>
 
 	<main>
-		<!-- 
+		<!--
     CSS Tutorial
-    This CSS tutorial covers everything from basic styling concepts and selectors to advanced techniques, such as 
-    flexbox, grid, animations, and CSS variables. This CSS tutorial is designed to help both beginners and experienced 
+    This CSS tutorial covers everything from basic styling concepts and selectors to advanced techniques, such as
+    flexbox, grid, animations, and CSS variables. This CSS tutorial is designed to help both beginners and experienced
     designers to make them masters in creating visually appealing, responsive, and modern web designs.
 
     What is CSS
-    CSS is the acronym for "Cascading Style Sheet". It's a style sheet language used for describing the presentation 
-    of a document written in a markup language like HTML. CSS helps the web developers to control the layout and other 
-    visual aspects of the web pages. CSS plays a crucial role in modern web development by providing the tools 
+    CSS is the acronym for "Cascading Style Sheet". It's a style sheet language used for describing the presentation
+    of a document written in a markup language like HTML. CSS helps the web developers to control the layout and other
+    visual aspects of the web pages. CSS plays a crucial role in modern web development by providing the tools
     necessary to create visually appealing, accessible, and responsive websites.
 
     Since the inception of CSS, several versions have came into existence. Some of the notable versions include:
 
       - CSS1 (Cascading Style Sheets Level 1):
-        The initial version of CSS, released in December 1996. CSS1 provided basic styling capabilities for HTML 
+        The initial version of CSS, released in December 1996. CSS1 provided basic styling capabilities for HTML
         documents, including properties for text, colors, backgrounds, margins, and borders.
       - CSS2 (Cascading Style Sheets Level 2):
-        Released in May 1998, CSS2 introduced new features such as positioning, z-index, media types, and more 
+        Released in May 1998, CSS2 introduced new features such as positioning, z-index, media types, and more
         advanced selectors like attribute selectors and child selectors.
-      - CSS2.1 (Cascading Style Sheets Level 2.1): 
-        This version 2.1, published as a W3C Recommendation in June 2011, clarified and refined CSS2, addressing 
-        inconsistencies and ambiguities in the specification. CSS2.1 focused on improving interoperability among web 
+      - CSS2.1 (Cascading Style Sheets Level 2.1):
+        This version 2.1, published as a W3C Recommendation in June 2011, clarified and refined CSS2, addressing
+        inconsistencies and ambiguities in the specification. CSS2.1 focused on improving interoperability among web
         browsers.
       - CSS3 (Cascading Style Sheets Level 3:
-        CSS3 is a collection of modules that extend the capabilities of CSS. It introduces numerous new features and 
-        enhancements, including advanced selectors, multiple column layouts, animations, transformations, gradients, 
+        CSS3 is a collection of modules that extend the capabilities of CSS. It introduces numerous new features and
+        enhancements, including advanced selectors, multiple column layouts, animations, transformations, gradients,
         shadows, and more.
       - CSS4 (Cascading Style Sheets Level 4:
         CSS4 is an ongoing effort to extend CSS3 with new features and enhancements.
-    
-    Each version of CSS builds upon the previous ones, adding new features and refining existing capabilities to meet 
+
+    Each version of CSS builds upon the previous ones, adding new features and refining existing capabilities to meet
     the evolving needs of web developers and designers. CSS is referred as just CSS now, without a version number.
 
     Types of CSS
-      - Inline CSS: Applied directly to an HTML element using the style attribute. 
+      - Inline CSS: Applied directly to an HTML element using the style attribute.
               It has the highest priority among the three methods.
       - Internal CSS: IDefined within the <style> tag inside the <head> section of an HTML document.
-      - External CSS: Written in a separate .css file and linked to the HTML document using the <link> tag. 
+      - External CSS: Written in a separate .css file and linked to the HTML document using the <link> tag.
               This is the recommended method for large projects as it improves maintainability.
-    
+
     Advantages of Using CSS
-      - Responsive design: CSS offers features like media queries that enable developers to create responsive layouts 
+      - Responsive design: CSS offers features like media queries that enable developers to create responsive layouts
         that adapt to different screen sizes and devices, ensuring a consistent user experience.
-      - Flexibility and Control: CSS provides precise control over the presentation of HTML elements, allowing 
+      - Flexibility and Control: CSS provides precise control over the presentation of HTML elements, allowing
         developers to customize layout, typography, colors, and other visual properties.
-      - Consistency and Reusability: Developers ensure consistency across the entire website, by defining styles in a 
+      - Consistency and Reusability: Developers ensure consistency across the entire website, by defining styles in a
         central CSS file. Styles can be reused across multiple pages, reducing redundancy and making updates easier.
-      - Search Engine Optimization (SEO) - CSS can be used to structure content in a way that improves search engine 
+      - Search Engine Optimization (SEO) - CSS can be used to structure content in a way that improves search engine
         visibility.
-      - Ease of Maintenance: Centralized CSS files make it easier to maintain and update styles across a website. 
+      - Ease of Maintenance: Centralized CSS files make it easier to maintain and update styles across a website.
         Changes can be applied globally, ensuring uniformity and reducing the risk of inconsistencies.
-      - Faster Page Loading: External CSS files can be cached by browsers, resulting in faster page loading times for 
+      - Faster Page Loading: External CSS files can be cached by browsers, resulting in faster page loading times for
         subsequent visits to a website. This caching mechanism reduces server load and bandwidth consumption.
-    
+
     Components of CSS
     CSS works by associating rules with HTML elements. A CSS rule contains two main parts:
       - a selector which specifies the HTML element(s) to style.
@@ -123,294 +123,532 @@
 				<h1>Hello World</h1>
 				<p>This is a sample CSS Code!</p>
 			</div>
-		</section>
+		</section><hr>
 
-		<!-- 
+		<!--
+    What is CSS?
+    CSS stands for Cascading Style Sheets, used to describe the presentation and design of a web pages.
+    Using CSS, you can control the color of the text, the style of fonts, the spacing between paragraphs, how columns 
+    are sized and laid out, what background images or colors are used. 
+    CSS can control the layout of multiple web pages all at once.
+    
+    Why Use CSS?
+    - CSS Saves Time: You can write CSS once and then reuse same sheet in multiple HTML pages.
+    - Pages Load Faster: If you are using CSS, you do not need to write HTML tag or attributes every time. 
+      Just write one CSS rule of a tag and apply it to all the occurrences of that tag.
+    - Easy Maintenance: To make a global change, simply change the style, and all elements in all the web pages will be 
+      updated automatically.
+    - Superior Styles to HTML: CSS has a much wider array of attributes than HTML, 
+      so you can get a far better look to your HTML page.
+    - Multiple Device Compatibility: For the same HTML document, different versions of a website can be presented for 
+      different screen widths
+    - Global Web Standards: Now most of the HTML attributes are being deprecated and it is being recommended to use CSS.
+    
+    CSS Syntax
+    Syntax of CSS consist of selectors and declaration used to apply styles to HTML elements.
 
+      selector {
+          property: value;
+      }
+
+    The selector targets the HTML element/elements that you want to style.
+    The declaration block contains one or more declarations enclosed in curly braces {}.
+    Each declaration consists of a property and a value separated by a colon :. 
+    Declarations are separated by semicolons ;.
+    
+    There are several types of selectors available in CSS, commonly used selectors are classes, IDs and tags. 
+    To know complete list of selectors visit CSS Selectors article.
+
+    CSS History and Versions
+    Current version of CSS3 and early versions were CSS1 and CSS2. 
+    As of now CSS is continuously evolving and adapting new capabilities that fulfills current website's requirements.
+
+    --------------------------------------------------------------------------------------------------------------------
+
+    CSS Syntax
+    Syntax of CSS consist of selectors and declaration used to apply styles to HTML elements.
+    
+      selector {
+          property: value;
+      }
+
+    Selector: CSS selectors are used to select the HTML element or groups of elements you want to style on a web page.
+    Property: A CSS property is an aspect or characteristic of an HTML element that can be styled or modified using CSS, 
+              such as color, font-size, or margin.
+    Value:    Values are assigned to properties.
+              For example, color property can have value like red, green etc.
+    
+    Multiple Style Rules
+    If you want to define multiple rules for a single selectors you can specify those in single block separated by a 
+    semicolon (;).
+
+      selector{
+          property1: value1;
+          property2: value2;
+          property3: value3;
+      }
+
+    CSS Selectors Syntax
+    CSS Selectors are used to select the HTML elements you want to style on a web page. 
+    They allow you to target specific elements or groups of elements to apply styles like colors, fonts, margins, etc. 
+    
+    Different types of selectors are mentioned below:
+      - Universal Selector........ Select and apply styles to all elements in an HTML document.
+      - Element Selectors......... Select specific HTML elements.
+      - Class Selectors........... Select and style an element with a specific value for its class attribute.
+      - Id Selectors.............. Select a single element with a particular value for the id attribute.
+      - Attribute Selectors....... Select an element based on a specific attribute value.
+      - Pseudo-Element Selector... Selects and styles specific parts of an element.
+      - Pseudo-Class Selector..... Selects and styles elements based on their state.
+
+    CSS Inclusion Syntax
+    CSS can be used in any HTML document using three different methods which are: inline, internal, and external CSS.
+      - Inline CSS Syntax
+        <div style="color: #04af2f;">Welcome to TutorialsPoint.</p>
+      
+      - Internal CSS Syntax
+        Internal CSS is used within the head section of an HTML document using a style tag.
+            <style>
+                body {
+                    background-color: #04af2f;
+                }
+            </style>
+      - External CSS Syntax
+        External CSS is written in a separate file with a .css extension and linked to the HTML document using link tag.
+            <link rel="stylesheet" type="text/css" href="style.css">
+    
+    CSS Media Queries Syntax
+    CSS media queries apply different CSS styles based on the screen size, resolution, and other characteristics 
+    and are often used for creating responsive designs.
+      @media (max-width: 700px) {
+          body {
+              background-color: #04af2f;
+          }
+      }
+
+    CSS Variables Syntax
+    CSS Variables allows to store and reuse values throughout the CSS program.
+        :root {
+            --main-color: #04af2f;
+        }      
+
+    CSS Comments Syntax
+    CSS comments add an explanatory note about the code.
+        /* This is a single line CSS comment */
+
+    --------------------------------------------------------------------------------------------------------------------
+
+    CSS - Comments
+    Comments are useful in adding explanatory notes or annotations within your style-sheet that are not interpreted as 
+    styling instructions by the web browser.
+    CSS comments are intended for the benefit of developers and are ignored by the browser when rendering a web page. T
+    hey are useful in documentation, debugging, etc.
+
+    In CSS, there are two main ways to create comments:
+      - Single-line Comments: Single-line comments are created using /* to start the comment and */ to end it.
+      - Multi-line Comments: Multi-line comments allow you to add comments that span multiple lines.
+        They are also enclosed within /* and */.
 		-->
-		<section>
-			<h1>Roadmap</h1>
-		</section>
-
-		<!-- 
-
-		-->
-		<section>
-			<h1>Introduction</h1>
-		</section>
-
-		<!-- 
-
-		-->
-		<section>
+		<section class="syntax">
 			<h1>Syntax</h1>
-		</section>
+      <p>This is a normal paragraph</p>
+      <p class="special">This is a special paragraph</p>
+		</section><hr>
 
-		<!-- 
+		<!--
+    Inline CSS
+    Inline CSS is applied directly to an HTML element using the style attribute. 
+    It has the highest priority among the three methods.
+      SYNTAX: <element style = "...style rules....">
 
+    Internal CSS
+    Internal CSS is defined within the <style> tag inside the <head> section of an HTML document.
+
+    External CSS
+    External CSS is written in a separate .css file and linked to the HTML document using the <link> tag. 
+    This is the recommended method for large projects as it improves maintainability.
+
+    --------------------------------------------------------------------------------------------------------------------
+
+    CSS Inclusion
+    You need to include the CSS file in your HTML document before using it. 
+    There are multiple ways to include CSS in a HTML file: inline CSS, internal CSS, or including a CSS file.
+
+    Styles can be associated with your HTML document in different ways, such as:
+      - Inline CSS Syntax
+        <div style="color: #04af2f;">Welcome to TutorialsPoint.</p>
+      
+      - Internal CSS Syntax
+        Internal CSS is used within the head section of an HTML document using a style tag.
+            <style type="text/css">
+                body {
+                    background-color: #04af2f;
+                }
+            </style>
+
+        Attributes associated with <style> elements are:−
+        - type.... text/css... Specifies style-sheet language as a content-type (MIME type). This is a required attribute.
+        - media... screen/tty/tv/projection/handheld/print/braille/aural/all
+                   Specifies the device the document will be displayed on. 
+                   Default value is all. This is an optional attribute.
+
+      - External CSS Syntax
+        External CSS is written in a separate file with a .css extension and linked to the HTML document using link tag.
+            <link rel="stylesheet" type="text/css" href="style.css">
+    
+        Attributes associated with <style> elements are:−
+        - type.... text/css... Specifies style-sheet language as a content-type (MIME type). This attribute is required.
+        - href.... URL........ Specifies the style sheet file having style rules. This attribute is required.
+        - media... screen/tty/tv/projection/handheld/print/braille/aural/all
+                    Specifies the device the document will be displayed on. 
+                    Default value is all. This is an optional attribute.
+
+    Imported CSS - @import Rule
+    The @import is used to import an external style-sheet in a manner similar to the <link> element. 
+    By using @import rule, one style-sheet can be imported into another style-sheet
+    The only key point to remember is, the @import rule must be declared on top of the document. 
+
+      SYNTAX: Refer the following two css files − style.css and demostyle.css
+
+      style.css
+      body {
+         background-color: peachpuff;
+      }
+
+      demostyle.css
+      @import url("style.css");
+
+      h1 {
+            color: #36CFFF; 
+         }
+
+      p {
+            font-size: 1.5em;
+            color: white
+      }
+
+      div {
+            border: 5px inset gold;
+            background-color: black;
+            width: 300px;
+            text-align: center
+      }
+
+      You just need to include the stylesheet, that has @import rule defined, in the <link> tag in the HTML document as follows −
+
+      <head>
+         <link type = "text/css" href = "demostyle.css">
+      </head>
+
+    CSS Rules Overriding
+    We have discussed different ways to include style sheet rules in an HTML document. 
+    Here is the rule to override any Style Sheet Rule.
+
+      - Any inline style sheet takes highest priority. 
+        So, it will override any rule defined in <style>...</style> tags or any external style sheet file.
+      - Any rule defined in <style>...</style> tags will override rules defined in any external style sheet file.
+      - Any rule defined in external style sheet file takes lowest priority, 
+        and rules defined in this file will be applied only when above two rules are not applicable.
+
+    CSS Comments Inclusion
+    Many times, you may need to put additional comments in your style sheet blocks. 
+    So, it is very easy to comment any part in style sheet. 
+    You can simple put your comments inside /*.....this is a comment in style sheet.....*/
+    You can use /* ....*/ to comment multi-line blocks.
 		-->
-		<section>
-			<h1>Inclusion</h1>
-		</section>
-
-		<!-- 
-
-		-->
-		<section>
+		<section class="types">
 			<h1>Types</h1>
-		</section>
 
-		<!-- 
+      <h2>Inline CSS</h2>
+      <p style="color: red; font-family: Verdana, sans-serif;">This line is an inline-styled paragraph</p>
+      <br>
+
+      <h2>Internal CSS</h2>
+      <style>
+        .internal-css {
+          color: green; font-family: Verdana, sans-serif;
+        }
+      </style>
+      <p class="internal-css">This line is an internal-styled paragraph</p>
+      <br>
+
+      <h2>Internal CSS</h2>
+      <p class="external-css">This line is an external-styled paragraph</p>
+
+		</section><hr>
+
+		<!--
 
 		-->
 		<section>
 			<h1>Measurement Units</h1>
-		</section>
+		</section><hr>
 
-		<!-- 
+		<!--
 
 		-->
 		<section>
 			<h1>Selectors</h1>
-		</section>
+		</section><hr>
 
-		<!-- 
+		<!--
 
 		-->
 		<section>
 			<h1>Universal Selectors</h1>
-		</section>
+		</section><hr>
 
-		<!-- 
+		<!--
 
 		-->
 		<section>
 			<h1>Element Selectors</h1>
-		</section>
+		</section><hr>
 
-		<!-- 
+		<!--
 
 		-->
 		<section>
 			<h1>Class Selectors</h1>
-		</section>
+		</section><hr>
 
-		<!-- 
+		<!--
 
 		-->
 		<section>
 			<h1>ID Selectors</h1>
-		</section>
+		</section><hr>
 
-		<!-- 
+    <!-- 
+
+    -->
+    <section>
+      <h1>Attr Selectors</h1>
+    </section><hr>
+
+		<!--
 
 		-->
 		<section>
 			<h1>Group Selectors</h1>
-		</section>
+		</section><hr>
 
-		<!-- 
+		<!--
 
 		-->
 		<section>
 			<h1>Child Selectors</h1>
-		</section>
+		</section><hr>
 
-		<!-- 
+		<!--
 
 		-->
 		<section>
 			<h1>Descendant Selectors</h1>
-		</section>
+		</section><hr>
 
-		<!-- 
+    <!--
+
+    -->
+    <section>
+      <h1>General Sibling Selectors</h1>
+    </section><hr>
+
+		<!--
 
 		-->
 		<section>
 			<h1>Adjacent Sibling Selectors</h1>
-		</section>
+		</section><hr>
+    
+    <!-- 
 
-		<!-- 
+    -->
+    <section>
+      <h1>Pseudo Elements</h1>
+    </section><hr>
+    
+    <!-- 
 
-		-->
-		<section>
-			<h1>General Sibling Selectors</h1>
-		</section>
+    -->
+    <section>
+      <h1>Pseudo Classes</h1>
+    </section><hr>
+    
+    <!-- 
 
-		<!-- 
+    -->
+    <section>
+      <h1>Combinators</h1>
+    </section><hr>
+
+		<!--
 
 		-->
 		<section>
 			<h1>Colors</h1>
-		</section>
+		</section><hr>
 
-		<!-- 
+		<!--
 
 		-->
 		<section>
 			<h1>Color</h1>
-		</section>
+		</section><hr>
 
-		<!-- 
+		<!--
 
 		-->
 		<section>
 			<h1>Backgrounds</h1>
-		</section>
+		</section><hr>
 
-		<!-- 
+		<!--
 
 		-->
 		<section>
 			<h1>Fonts</h1>
-		</section>
+		</section><hr>
 
-		<!-- 
-
-		-->
-		<section>
-			<h1>Text</h1>
-		</section>
-
-		<!-- 
+		<!--
 
 		-->
 		<section>
 			<h1>Text</h1>
-		</section>
+		</section><hr>
 
-		<!-- 
+		<!--
+
+		-->
+		<section>
+			<h1>Text</h1>
+		</section><hr>
+
+		<!--
 
 		-->
 		<section>
 			<h1>Images</h1>
-		</section>
+		</section><hr>
 
-		<!-- 
+		<!--
 
 		-->
 		<section>
 			<h1>Image Gallery</h1>
-		</section>
+		</section><hr>
 
-		<!-- 
+		<!--
 
 		-->
 		<section>
 			<h1>Icons</h1>
-		</section>
+		</section><hr>
 
-		<!-- 
+		<!--
 
 		-->
 		<section>
 			<h1>Links</h1>
-		</section>
+		</section><hr>
 
-		<!-- 
+		<!--
 
 		-->
 		<section>
 			<h1>Tables</h1>
-		</section>
+		</section><hr>
 
-		<!-- 
+		<!--
 
 		-->
 		<section>
 			<h1>Lists</h1>
-		</section>
+		</section><hr>
 
-		<!-- 
+		<!--
 
 		-->
 		<section>
 			<h1>Borders</h1>
-		</section>
+		</section><hr>
 
-		<!-- 
+		<!--
 
 		-->
 		<section>
 			<h1>Rounded Corner</h1>
-		</section>
+		</section><hr>
 
-		<!-- 
+		<!--
 
 		-->
 		<section>
 			<h1>Padding</h1>
-		</section>
+		</section><hr>
 
-		<!-- 
+		<!--
 
 		-->
 		<section>
 			<h1>Margins</h1>
-		</section>
+		</section><hr>
 
-		<!-- 
+		<!--
 
 		-->
 		<section>
 			<h1>Box Model</h1>
-		</section>
+		</section><hr>
 
-		<!-- 
+		<!--
 
 		-->
 		<section>
 			<h1>Display</h1>
-		</section>
+		</section><hr>
 
-		<!-- 
+		<!--
 
 		-->
 		<section>
 			<h1>Inline Block</h1>
-		</section>
+		</section><hr>
 
-		<!-- 
+		<!--
 
 		-->
 		<section>
 			<h1>Cursor</h1>
-		</section>
+		</section><hr>
 
-		<!-- 
+		<!--
 
 		-->
 		<section>
 			<h1>Outlines</h1>
-		</section>
+		</section><hr>
 
-		<!-- 
-
-		-->
-		<section>
-			<h1>Comments</h1>
-		</section>
-
-		<!-- 
+		<!--
 
 		-->
 		<section>
 			<h1>Data Types</h1>
-		</section>
+		</section><hr>
 
-		<!-- 
+		<!--
 
 		-->
 		<section>
 			<h1>All</h1>
-		</section>
+		</section><hr>
 
-		<!-- 
+		<!--
 
 		-->
 		<section>
 			<h1>Root</h1>
-		</section>
+		</section><hr>
 
 	</main>
 
