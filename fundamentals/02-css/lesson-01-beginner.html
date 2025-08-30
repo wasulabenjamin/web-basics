@@ -183,9 +183,9 @@
     semicolon (;).
 
       selector{
-          property1: value1;
-          property2: value2;
-          property3: value3;
+        property1: value1;
+        property2: value2;
+        property3: value3;
       }
 
     CSS Selectors Syntax
@@ -498,102 +498,233 @@
 		</section><hr>
 
 		<!--
+    CSS - Selectors
+    CSS Selectors are used to select the HTML elements you want to style on a web page. They allow you to target specific elements or groups of elements to apply styles like colors, fonts, margins, and more.
+    The element or elements that are selected by the selector are referred to as subject of the selector.
 
+    CSS Universal Selector
+    CSS universal selector is a special selector that selects all the elements in an HTML document. 
+    It is denoted by an asterisk mark (*).
+    The syntax for the universal selector is as follows:
+      * {
+        margin: 0;
+        padding: 0;
+      }
+    As per the above syntax, the universal selector is used to apply a margin and padding of 0 to all HTML elements.
+
+    CSS Element Selector
+    CSS element selector selects and styles specific HTML elements. 
+    The element selector is defined by simply using the element's name in the stylesheet.
+    The syntax for the element selector is as follows:
+      p {
+        color: green;
+      }
+
+    CSS Class Selector
+    CSS class selector selects an element with a specific class attribute. 
+    The class selector is defined using a period (.) followed by the class name.
+    The syntax for the class selector is as follows:
+      .class-name {
+        property1: value1;
+      }
+
+    CSS ID Selector
+    CSS ID selector selects an element with a specific value for its id attribute. 
+    It is denoted by the "#" (hash) symbol.
+    The syntax for the ID selector is as follows:
+      #id-name {
+        property1: value1;
+      }
+
+    CSS Attribute Selector
+    CSS attribute selector selects an element based on a specific attribute or attribute values on an element.
+    The syntax for the attribute selector is as follows:
+      a[target] {
+        property1: value1;
+      }
+
+    You can also specify the element with an attribute having a specific value.
+      a[href="https://www.tutorialspoint.com"] {
+        property1: value1;
+      }
+    
+    CSS Group Selector
+    CSS group selector allow us to apply same style to multiple elements at a time. 
+    Name of elements are comma-separated. The group selector keep CSS concise and avoid redundancy.
+    The syntax for the group selector is as follows:
+      .class-name1, .class-name2, .class-name3 {
+        property1: value1;
+      }
+
+    CSS Pseudo-class Selector
+    CSS pseudo-class selector styles a specific state of an element, 
+    such as :hover is used to style an element when hovered.
+    The syntax for the pseudo-class selector is as follows:
+      element:hover {
+        property1: value1;
+      }
+    
+    CSS Pseudo-element Selector
+    CSS pseudo-element selector is used to style a specific part of an element rather than the element itself.
+    The syntax for the pseudo-element selector is as follows:
+      a::before {
+        content: url();
+      }
+    
+    CSS Descendant Selector
+    CSS descendant selector styles all the tags which are child of a particular specified tag. 
+    To mention as descendant, a single space between parent and child element is used.
+    The syntax for the descendant selector is as follows:
+      div p {
+        color: blue;
+      }
+    The above code set text color of paragraph tags that are inside div element to blue.
+
+    CSS Child Selector
+    CSS child selector selects all the direct child of a particular element. 
+    This is denoted by '>' (Greater than) symbol.
+    The syntax for the child selector is as follows:
+      div > p {
+        color: blue;
+      }
+    The above code set text color of paragraph tags that are directly inside div element to blue.
+
+    CSS Adjacent Sibling Selectors
+    CSS adjacent sibling selector selects an element that is immediately preceded by a specified element. 
+    A plus symbol ( "+" ) is used to denote adjacent sibling.
+    The syntax of adjacent sibling selector is as follows:
+      h1 + p {
+        margin-top: 0;
+      }
+    The above code sets top margin of paragraph tag just after h1 tag to 0.
+
+    CSS General Sibling Selector
+    CSS general sibling selector targets all the element that is preceded by a specified element. 
+    The general sibling selector is denoted by tilde symbol ( "~" ).
+    The syntax of general sibling selector is as follows:
+      h1 ~ p {
+        color: gray;
+      }
+    The above code sets text color of all the paragraph after h1 tag to gray.
+
+    CSS Nested Selectors
+    CSS nesting allows to nest one style rule inside another rule, 
+    with the selector of the child rule relative to the selector of the parent rule.
+    The nesting selector shows the relationship between the parent and child rules.
+    - When the nested selectors are parsed by the browser, it automatically adds a whitespace between the selectors,
+      thus creating a new CSS selector rule.
+    - In situations where the nested rule needs to be attached to the parent rule (without any whitespace), 
+      like while using the pseudo-class or compound selectors, 
+      the & nesting selector must be prepended immediately to achieve the desired result.
+    - In order to reverse the context of rules, the & nesting selector can be appended.
+    - There can be multiple instances of & nesting selector.
 		-->
-		<section>
+		<section class="selectors">
 			<h1>Selectors</h1>
+
+  		<article class="universal-selectors">
+        <h2>Universal Selectors</h2>
+        <p>Example paragraph to be styled by a Universal Selector</p>
+        <div>Example div to be styled by a Universal Selector</div>
+        <span>Example span to be styled by a Universal Selector</span>
+      </article><br><br>
+
+  		<article class="element-selectors">
+        <h2>Element Selectors</h2>
+        <p>Example paragraph to be styled by an Element Selector</p>
+        <div>Example div to be styled by an Element Selector</div>
+        <span>Example span to be styled by an Element Selector</span>
+      </article><br><br>
+
+  		<article class="class-selectors">
+        <h2>Class Selectors</h2>
+        <p class="cs">Example paragraph to be styled by a Class Selector</p>
+        <div class="cs">Example div to be styled by a Class Selector</div>
+        <span class="cs">Example span to be styled by a Class Selector</span>
+      </article><br><br>
+
+  		<article class="id-selectors">
+        <h2>ID Selectors</h2>
+        <p id="ids">Example paragraph to be styled by an ID Selector</p>
+        <div id="ids">Example div to be styled by an ID Selector</div>
+        <span id="ids">Example span to be styled by an ID Selector</span>
+      </article><br><br>
+
+      <article class="attr-selectors">
+        <h2>Attr Selectors</h2>
+        <a href="https://github.com/wasulabenjamin">Github</a>    .     
+        <a href="#" target="_blank">Codacy</a> . 
+        <a href="#" target="_blank">LinkedIn</a> . 
+        <a href="#" target="_self">Behance</a> . 
+        <a href="#" target="_self">Dribble</a> . 
+      </article><br><br>
+
+  		<article class="group-selectors">
+        <h2>Group Selectors</h2>
+        <p>Example paragraph to be styled by a Group Selector</p>
+        <div id="gs">Example div to be styled by a Group Selector</div>
+        <span class="gs">Example span to be styled by a Group Selector</span>
+      </article><br><br>
+
+      <article class="pseudo-classes">
+        <h2>Pseudo Classes</h2>
+        <p class="pseudo-hover">Example paragraph to be styled by a Pseudo HOVER Class</p>
+        <p class="pseudo-activ">Example paragraph to be styled by a Pseudo ACTIVE Class</p>
+      </article><br><br>
+
+      <article class="pseudo-elements">
+        <h2>Pseudo Elements</h2>
+        <p>Example paragraph to be styled by a Pseudo Element</p>
+      </article><br><br>
+
+  		<article class="descendant-selectors">
+        <h2>Descendant Selectors</h2>
+        <p>Example paragraph to be styled by a Child Selector</p>
+        <div>
+          <p>. This paragraph is a child of a div, child to the article</p>
+          <p>. Another happy paragraph that will not be styled. Why? Because I am a descendant and not a direct child</p>
+        </div>
+        <p>Another paragraph to be styled by a Child Selector</p>
+      </article><br><br>
+
+  		<article class="child-selectors">
+        <h2>Child Selectors</h2>
+        <p>Example paragraph to be styled by a Child Selector</p>
+        <div>
+          <p>. This paragraph is a child of a div, child to the article</p>
+          <p>. Another sad paragraph that will not be styled. Why? Because I am a descendant and not a direct child</p>
+        </div>
+        <p>Another paragraph to be styled by a Child Selector</p>
+      </article><br><br>
+
+  		<article class="adjacent-sibling-selectors">
+        <h2>Adjacent Sibling Selectors</h2>
+        <p>This paragraph is above the div and WILL NOT be blue</p>
+        <div>
+           <p>This paragraph is inside a div and will not be blue.</p>
+        </div>
+        <p>This paragraph 1 after the div and will be blue.</p>
+        <p>This paragraph 2 after the div and WILL NOT be blue.</p>
+      </article><br><br>
+
+      <article class="general-sibling-selectors">
+        <h2>General Sibling Selectors</h2>
+        <p>This paragraph is above the div and WILL NOT be blue</p>
+        <div>
+           <p>This paragraph is inside a div and will not be blue.</p>
+        </div>
+        <p>This paragraph 1 after the div and will be blue.</p>
+        <p>This paragraph 2 after the div and will be blue.</p>
+      </article><br><br>
+
+      <article class="combinators">
+        <h2>Combinators</h2>
+        <p>Example paragraph to be styled by a(n) Combinators</p>
+        <div>Example div to be styled by a(n) Combinators</div>
+        <span>Example span to be styled by a(n) Combinators</span>
+      </article><br><br>
+
 		</section><hr>
-
-		<!--
-
-		-->
-		<section>
-			<h1>Universal Selectors</h1>
-		</section><hr>
-
-		<!--
-
-		-->
-		<section>
-			<h1>Element Selectors</h1>
-		</section><hr>
-
-		<!--
-
-		-->
-		<section>
-			<h1>Class Selectors</h1>
-		</section><hr>
-
-		<!--
-
-		-->
-		<section>
-			<h1>ID Selectors</h1>
-		</section><hr>
-
-    <!--
-
-    -->
-    <section>
-      <h1>Attr Selectors</h1>
-    </section><hr>
-
-		<!--
-
-		-->
-		<section>
-			<h1>Group Selectors</h1>
-		</section><hr>
-
-		<!--
-
-		-->
-		<section>
-			<h1>Child Selectors</h1>
-		</section><hr>
-
-		<!--
-
-		-->
-		<section>
-			<h1>Descendant Selectors</h1>
-		</section><hr>
-
-    <!--
-
-    -->
-    <section>
-      <h1>General Sibling Selectors</h1>
-    </section><hr>
-
-		<!--
-
-		-->
-		<section>
-			<h1>Adjacent Sibling Selectors</h1>
-		</section><hr>
-
-    <!--
-
-    -->
-    <section>
-      <h1>Pseudo Elements</h1>
-    </section><hr>
-
-    <!--
-
-    -->
-    <section>
-      <h1>Pseudo Classes</h1>
-    </section><hr>
-
-    <!--
-
-    -->
-    <section>
-      <h1>Combinators</h1>
-    </section><hr>
 
 		<!--
 
