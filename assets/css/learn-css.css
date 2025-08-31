@@ -78,7 +78,6 @@
     font-size: 16px;
   }
 
-
   & .relativeunit-em {
     font-size: 4em;
   }
@@ -158,7 +157,11 @@
 .selectors {
   & .universal-selectors {
     & * {
-      color: green;
+      margin: 0;
+      padding: 0;
+      background-color: #04af2f;
+      color: white;
+      border: 2px solid red;
     }
   }
 
@@ -180,12 +183,43 @@
     & .cs {
       color: yellow;
     }
+
+    & .bgc.brd {
+      background-color: peachpuff;
+      border: 4px solid red;
+    }
+
+    & p.bgc {
+      text-decoration: underline;
+    }
+
+    & .room {
+      background-color: peachpuff;
+    }
+
+    & .bed {
+      border: 2px solid blue;
+    }
+
+    & .lvg {
+      border: 2px solid green;
+    }
   }
 
   & .id-selectors {
-    & #ids {
+    & #id1,
+    & #id2,
+    & #id3,
+    & #id4 {
       color: blue;
       text-decoration: underline;
+    }
+
+    & #id1:hover,
+    & #id2:hover,
+    & #id3:hover,
+    & #id4:hover {
+      color: green;
     }
   }
 
@@ -201,11 +235,51 @@
     & a[href="https://github.com/wasulabenjamin"] {
       background-color: lightskyblue;
     }
+
+    & [data-toggle] {
+      background-color: yellow;
+    }
+
+    & [type="password"] {
+      border: 2px solid red;
+    }
+
+    & [href*="www"] {
+      color: red;
+    }
+
+    & [href^="http:"] {
+      color: green;
+    }
+
+    & [href$="page5"] {
+      color: purple;
+    }
+
+    & [href*="www"],
+    & [href^="http:"],
+    & [href$="page5"] {
+      background-color: peachpuff;
+      font-size: 20px;
+      padding: 5px;
+    }
+
+    & [href$="page5"] {
+      color: purple;
+    }
+
+    & [lang|="en"] {
+      background-color: peachpuff;
+    }
+
+    & [class~="featured"] {
+      background-color: peachpuff;
+    }
   }
 
   & .group-selectors {
-    & p, 
-    & div, 
+    & p,
+    & div,
     & span {
       background-color: peachpuff;
     }
@@ -228,16 +302,50 @@
   }
 
   & .pseudo-elements {
-    & p::before {
+    & .content-insertion::before {
       content: "Note: ";
       font-weight: bold;
       color: red;
     }
 
-    & p::after {
-      content: " [Read more]";
-      font-style: italic;
-      color: blue;
+    & .content-insertion::after {
+      content: url("https://img.icons8.com/?size=32&id=SSa3O7HCPrBv&format=png&color=000000");
+    }
+
+    & dialog {
+      padding: 20px;
+      border: 2px solid black;
+      border-radius: 10px;
+    }
+
+    & dialog::backdrop {
+      background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    }
+
+    & .f-letter::first-letter {
+      text-transform: uppercase;
+      font-size: 2em;
+      color: red;
+    }
+
+    & .f-line::first-line {
+      text-transform: uppercase;
+      background-color: peachpuff;
+    }
+
+    & .select-file::file-selector-button {
+      background-color: blue;
+      color: white;
+      height: 32px;
+      border: 2px solid red;
+    }
+
+    & .list li::marker {
+      color: red;
+    }
+
+    & .placeholder-pe::placeholder {
+      color: red;
     }
   }
 
