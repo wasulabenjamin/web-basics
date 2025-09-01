@@ -1,5 +1,3 @@
-@import url("style.css");
-
 /***********************************************************************************************************************
     HOME
 ***********************************************************************************************************************/
@@ -50,103 +48,103 @@
     MEASUREMENT UNITS
 ***********************************************************************************************************************/
 .measurement-units {
-  & .unit-mm {
+  & .absolute-unit-mm {
     font-size: 5mm;
   }
 
-  & .unit-cm {
+  & .absolute-unit-cm {
     font-size: 1cm;
   }
 
-  & .unit-q {
+  & .absolute-unit-q {
     font-size: 40Q;
   }
 
-  & .unit-in {
+  & .absolute-unit-in {
     font-size: .167in;
   }
 
-  & .unit-pt {
+  & .absolute-unit-pt {
     font-size: 12pt;
   }
 
-  & .unit-pc {
+  & .absolute-unit-pc {
     font-size: 1pc;
   }
 
-  & .unit-px {
+  & .absolute-unit-px {
     font-size: 16px;
   }
 
-  & .relativeunit-em {
+  & .absolute-unit-em {
     font-size: 4em;
   }
 
-  & .relativeunit-ex {
+  & .absolute-unit-ex {
     font-size: 4ex;
   }
 
-  & .relativeunit-ch {
+  & .absolute-unit-ch {
     font-size: 4ch;
   }
 
-  & .relativeunit-rem {
+  & .absolute-unit-rem {
     font-size: 4rem;
   }
 
-  & .relativeunit-lh {
+  & .absolute-unit-lh {
     font-size: 4lh;
   }
 
-  & .relativeunit-rlh {
+  & .absolute-unit-rlh {
     font-size: 4rlh;
   }
 
-  & .relativeunit-vh {
+  & .relative-unit-vh {
     font-size: 4vh;
   }
 
-  & .relativeunit-vw {
+  & .relative-unit-vw {
     font-size: 4vw;
   }
 
-  & .relativeunit-vmin {
+  & .relative-unit-vmin {
     font-size: 4vmin;
   }
 
-  & .relativeunit-vmax {
+  & .relative-unit-vmax {
     font-size: 4vmax;
   }
 
-  & .relativeunit-vb {
+  & .relative-unit-vb {
     font-size: 4vb;
   }
 
-  & .relativeunit-vi {
+  & .relative-unit-vi {
     font-size: 4vi;
   }
 
-  & .relativeunit-svw {
+  & .relative-unit-svw {
     font-size: 4svw;
   }
 
-  & .relativeunit-svh {
+  & .relative-unit-svh {
     font-size: 4svh;
   }
 
-  & .relativeunit-lvw {
+  & .relative-unit-lvw {
     font-size: 4lvw;
   }
 
-  & .relativeunit-lvh {
+  & .relative-unit-lvh {
     font-size: 4lvh;
   }
 
-  & .relativeunit-dvw {
+  & .relative-unit-dvw {
     font-size: 4dvw;
   }
 
-  & .relativeunit-dvh {
+  & .relative-unit-dvh {
     font-size: 4dvh;
   }
 }
@@ -300,11 +298,31 @@
       background-color: peachpuff;
     }
 
-    & .p-class-hover {
-      
-    }
+    & .pc-active {
+      & a,
+      & p,
+      & li {
+        color: black;
+        background-color: lightgrey;
+        padding: 7px;
+        border: 3px solid;
+      }
 
-    & .pc-active {}
+      & li {
+        list-style-type: none;
+        margin: 0px 0px 10px -40px; /* margin: top -> right -> bottom -> left */
+      }
+
+      & a:active {
+        color: red;
+      }
+
+      & p:active,
+      & li:active {
+        background-color: gold;
+      }
+
+    }
 
     & .pc-any-link {}
 
@@ -330,7 +348,18 @@
 
     & .pc-fullscreen {}
 
-    & .pc-focus {}
+    & .pc-focus {
+      & input {
+        padding: 10px;
+        outline: none; /* remove default blue focus glow */
+      }
+
+      & input:focus {
+        outline: none; /* remove default blue focus glow */
+        border: 3px solid green;
+        background-color: lightgrey;
+      }
+    }
 
     & .pc-focus-visible {}
 
@@ -388,7 +417,21 @@
 
     & .pc-not-b {}
 
-    & .pc-nth-child-b {}
+    & .pc-nth-child-b {
+      & div {
+        border: 2px solid;
+        margin-bottom: 20px;
+        padding: 2px;
+      }
+
+      & div:nth-child(odd) {
+        background-color: lightgrey;
+      }
+
+      & div:nth-child(even) {
+        background-color: lightblue;
+      }
+    }
 
     & .pc-nth-last-child-b {}
 
