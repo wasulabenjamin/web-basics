@@ -299,6 +299,135 @@
     & .pseudo-activ:active {
       background-color: peachpuff;
     }
+
+    & .p-class-hover {
+      
+    }
+
+    & .pc-active {}
+
+    & .pc-any-link {}
+
+    & .pc-autofill {}
+
+    & .pc-checked {}
+
+    & .pc-default {}
+
+    & .pc-defined {}
+
+    & .pc-disabled {}
+
+    & .pc-empty {}
+
+    & .pc-enabled {}
+
+    & .pc-first {}
+
+    & .pc-first-child {}
+
+    & .pc-first-of-type {}
+
+    & .pc-fullscreen {}
+
+    & .pc-focus {}
+
+    & .pc-focus-visible {}
+
+    & .pc-focus-within {}
+
+    & .pc-has-b {}
+
+    & .pc-host {}
+
+    & .pc-host-b {}
+
+    & .pc-host-context-b {}
+
+    & .pc-hover {
+      & a {
+        background-color: lightgrey;
+        padding: 10px;
+      }
+
+      & div {
+        margin-top: 20px;
+        padding: 10px;
+        border: solid 3px;
+        background-color: aqua;
+      }
+
+      & a:hover {
+        color: red;
+      }
+
+      & div:hover {
+        background-color: lightgreen;
+      }
+    }
+
+    & .pc-indeterminate {}
+
+    & .pc-in-range {}
+
+    & .pc-invalid {}
+
+    & .pc-is-b {}
+
+    & .pc-lang-b {}
+
+    & .pc-last-child {}
+
+    & .pc-last-of-type {}
+
+    & .pc-left {}
+
+    & .pc-link {}
+
+    & .pc-modal {}
+
+    & .pc-not-b {}
+
+    & .pc-nth-child-b {}
+
+    & .pc-nth-last-child-b {}
+
+    & .pc-nth-last-of-type-b {}
+
+    & .pc-nth-of-type-b {}
+
+    & .pc-only-child {}
+
+    & .pc-only-of-type {}
+
+    & .pc-optional {}
+
+    & .pc-out-of-range {}
+
+    & .pc-picture-in-picture {}
+
+    & .pc-placeholder-shown {}
+
+    & .pc-read-only {}
+
+    & .pc-read-write {}
+
+    & .pc-required {}
+
+    & .pc-right {}
+
+    & .pc-root {}
+
+    & .pc-scope {}
+
+    & .pc-target {}
+
+    & .pc-valid {}
+
+    & .pc-visited {}
+
+    & .pc-where-b {}
+
   }
 
   & .pseudo-elements {
