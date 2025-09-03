@@ -202,6 +202,16 @@
     & .lvg {
       border: 2px solid green;
     }
+
+    & .cs-mq {
+      background-color: peachpuff;
+    }
+
+    @media (max-width: 700px) {
+      & .cs-mq {
+        background-color: lightgrey;
+      }
+    }
   }
 
   & .id-selectors {
@@ -218,6 +228,59 @@
     & #id3:hover,
     & #id4:hover {
       color: green;
+    }
+  }
+
+  & .combinators {
+    & .descendant-combinator {
+      & div p {
+        color: red;
+      }
+    }
+
+    & .child-combinator {
+      & > div > p {
+        color: red;
+      }
+    }
+
+    & .adjacent-sibling-combinator {
+      & h4 + p {
+        color: red;
+      }
+    }
+
+    & .general-sibling-combinator {
+      & h4 ~ p {
+        color: red;
+      }
+    }
+
+    & .multiple-combinator {
+      & nav {
+        padding: 10px;
+        background-color: #f0f0f0;
+      }
+
+      & ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      & ul > li {
+        display: inline-block;
+        margin-right: 15px;
+      }
+
+      & ul > li + a{
+        color: red;
+        text-decoration: underline;
+      }
+
+      & ul > li > a {
+        text-decoration: none;
+        color: green;
+      }
     }
   }
 
@@ -342,7 +405,11 @@
 
     & .pc-first {}
 
-    & .pc-first-child {}
+    & .pc-first-child {
+      & div:first-child {
+        background-color: peachpuff;
+      }
+    }
 
     & .pc-first-of-type {}
 
@@ -418,18 +485,22 @@
     & .pc-not-b {}
 
     & .pc-nth-child-b {
-      & div {
+      & div > div {
         border: 2px solid;
         margin-bottom: 20px;
         padding: 2px;
       }
 
-      & div:nth-child(odd) {
+      & div > div:nth-child(odd) {
         background-color: lightgrey;
       }
 
-      & div:nth-child(even) {
+      & div > div:nth-child(even) {
         background-color: lightblue;
+      }
+
+      & div > div:nth-child(5) {
+        color: red;
       }
     }
 
@@ -554,8 +625,6 @@
       color: blue;
     }
   }
-
-  & .combinators {}
 }
 
 /***********************************************************************************************************************

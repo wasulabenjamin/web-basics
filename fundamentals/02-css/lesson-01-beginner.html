@@ -493,9 +493,9 @@
       <p class="relative-unit-vmax">Font size as 4vmax</p>
 		</section><hr>
 
-    <!-- 
+    <!--
     CSS - Selectors
-    CSS Selectors are used to select the HTML elements you want to style on a web page. 
+    CSS Selectors are used to select the HTML elements you want to style on a web page.
     They allow to target specific elements or groups of elements to apply styles like colors, fonts, margins, and more.
     The element or elements that are selected by the selector are referred to as subject of the selector.
 
@@ -576,7 +576,10 @@
 
         <h3>Combining Multiple Classes</h3>
         <p class="room bed">This is my bedroom paragraph</p>
-        <p class="room lvg">This is my livingroom paragraph</p>
+        <p class="room lvg">This is my living-room paragraph</p>
+
+        <h3>Using Class Selectors with Media Queries</h3>
+        <p class="cs-mq">This will change color when device width is less than 700px</p>
       </article><br><br>
 
       <!--
@@ -600,6 +603,105 @@
       </article><br><br>
 
       <!--
+      CSS Combinators
+
+      Combinators used to specify relationship between selectors so that styling can be done based on that relationship.
+      In other words combinators help you target elements based on their position and hierarchy within the HTML document.
+      For example, with combinators you can style paragraph element that paaced immediately after div element.
+
+      CSS Descendant Combinator
+      Used to select elements that are nested within another element, regardless of how deeply they are nested. 
+      These are often represented by a single space (" ").
+
+      CSS Child Combinator
+      The child combinator (>) is used to select elements that are direct children of a specified element. 
+      It will not select elements that are further nested inside the child elements.
+
+      CSS Adjacent Sibling Combinator
+      Adjacent sibling combinator (+) is used to select an element that is immediately preceded by a specified element.
+      It only affects the element that directly follows the specified element.
+
+      CSS General Sibling Combinator
+      The general sibling combinator (~) is used to select all elements that are siblings of a specified element and appear after it in the HTML structure. It will select all matching siblings, not just the one immediately following.
+
+      Combining Multiple Combinators
+      In CSS, you can combine multiple combinators to create more complex and specific selectors. 
+      By combining different combinators, you can target elements based on more complex relationships within the HTML
+      structure.
+      -->
+      <article class="combinators">
+        <h2>Combinators</h2>
+        <p>Example paragraph to be styled by a Combinator</p>
+        <div>Example div to be styled by a Combinator</div>
+        <span>Example span to be styled by a Combinator</span>
+
+        <div class="descendant-combinator">
+          <h3>CSS Descendant Combinator</h3>
+          <div>
+            <p>Paragraph before heading</p>
+            <h4>Some H4 Heading</h4>
+            <p>Paragraph 1</p>
+            <p>Paragraph 2</p>
+            <div>
+              <p>Paragraph inside another div</p>
+            </div>
+          </div>
+        </div><br><br>
+
+        <div class="child-combinator">
+          <h3>CSS Child Combinator > </h3>
+          <div>
+            <p>Paragraph before heading</p>
+            <h4>Some H4 Heading</h4>
+            <p>Paragraph 1</p>
+            <p>Paragraph 2</p>
+            <div>
+              <p>Paragraph inside another div</p>
+            </div>
+          </div>
+        </div><br><br>
+
+        <div class="adjacent-sibling-combinator">
+          <h3>CSS Adjacent Sibling Combinator + </h3>
+          <div>
+            <p>Paragraph before heading</p>
+            <h4>Some H4 Heading</h4>
+            <p>Paragraph 1</p>
+            <p>Paragraph 2</p>
+            <div>
+              <p>Paragraph inside another div</p>
+            </div>
+          </div>
+        </div><br><br>
+
+        <div class="general-sibling-combinator">
+          <h3>CSS General Sibling Combinator ~ </h3>
+          <div>
+            <p>Paragraph before heading</p>
+            <h4>Some H4 Heading</h4>
+            <p>Paragraph 1</p>
+            <p>Paragraph 2</p>
+            <div>
+              <p>Paragraph inside another div</p>
+            </div>
+          </div>
+        </div><br><br>
+
+        <div class="multiple-combinator">
+          <h3>Combining Multiple Combinators</h3>
+          <nav>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Services</a></li>
+              <a href="#">Contact</a>
+            </ul>
+          </nav>
+        </div><br><br>
+
+      </article><br><br>
+
+      <!--
       CSS Attribute Selector
       Attribute selectors allow you to select HTML elements based on the presence or value of one or more attributes.
       They are a powerful way to target specific elements in your HTML markup.
@@ -608,7 +710,7 @@
         a[target] {
           property1: value1;
         }
-      
+
       The following sections discusses some common ways to use attribute selectors:
       - CSS [attribute] Selector
         Selects elements that have specified attribute, regardless of its value.
@@ -666,6 +768,7 @@
         <p lang="en">We say: Hello, in English</p>
         <p lang="en-US">We say: Howdy, in English United States</p>
         <p lang="fr">We say: Bonjour, in French</p>
+        <p lang="fr en">We say: Bonjour, in French</p>
         <br><br>
 
         <h3>CSS [attribute~="value"] Selector</h3>
@@ -674,7 +777,7 @@
         <br><br>
       </article><br><br>
 
-      <!-- 
+      <!--
       CSS Group Selector
       CSS group selector allow us to apply same style to multiple elements at a time.
       Name of elements are comma-separated. The group selector keep CSS concise and avoid redundancy.
@@ -696,15 +799,15 @@
       tree, without the need for adding extra classes or JavaScript.
 
       What is Pseudo-class?
-      Pseudo-classes are often used along with CSS Selectors by inserting a colon (:) after selector. 
+      Pseudo-classes are often used along with CSS Selectors by inserting a colon (:) after selector.
         For example a : hover{}, Here selector `a` will selects all the anchor tags in document.
-      A functional pseudo-class contains a pair of parentheses to define the arguments. 
+      A functional pseudo-class contains a pair of parentheses to define the arguments.
         For example: :lang(en).
-      The element to which a pseudo-class is attached, is termed as an anchor element. 
+      The element to which a pseudo-class is attached, is termed as an anchor element.
         For example: button:hover, a:focus, etc... Here button and a elements are called the anchor elements.
       Pseudo-classes apply style to an element as per the content of the document tree.
       Pseudo-classes also apply a style to an element in relation to the external factors, such as:
-        - History of the navigation of the element (:visited), 
+        - History of the navigation of the element (:visited),
         - Status of the content (:checked), or position of mouse (:hover)
       The syntax for pseudo-class selector is as follows:
         selector:pseudo-class {
@@ -712,35 +815,35 @@
         }
 
       Pseudo-Class Hover
-      In CSS, pseudo-class :hover is used to specify mouse hovering state of an element. 
+      In CSS, pseudo-class :hover is used to specify mouse hovering state of an element.
       This used to style element while users mouse passes through an element in document.
       The syntax for pseudo-class hover selector is as follows:
         tag:hover {
            property: value;
-        } 
-      
+        }
+
       Pseudo-Class Active
       Pseudo-class :active will apply style to an element when user activates the element by clicking or tapping on it.
-      This is most commonly used with interactive elements like button and anchor tag, but all the HTML elements can use 
+      This is most commonly used with interactive elements like button and anchor tag, but all the HTML elements can use
       this pseudo-class. The syntax for pseudo-class active selector is as follows:
         tag:active {
           property: value;
-        } 
-      
+        }
+
       Pseudo-Class Focus
       Pseudo-class :focus will apply style to an element when user focused an element like input tag by clicking on it.
       Before typing text in input element users has to click in input area to enable cursor, this is called focusing.
       The syntax for pseudo-class focus selector is as follows:
         tag:focus {
           property: value;
-        } 
-      
+        }
+
       Pseudo-Class nth Child
       The pseudo-class :nth-child(n) will apply style to any specified direct child of an element.
       The syntax for pseudo-class nth-child(n) selector is as follows:
         tag:nth-child(number/ expression / odd / even) {
           property: value;
-        } 
+        }
       The pseudo-class nth-child can take number, mathematical expression or values like odd, even as parameter.
 
       Pseudo-Class First-Child
@@ -748,87 +851,87 @@
       The syntax for pseudo-class first-child selector is as follows:
         tag:first-child {
           property: value;
-        } 
-        
+        }
+
       Pseudo-Class Last-Child
       The pseudo-class last-child used to select last direct child element.
       The syntax for pseudo-class last-child selector is as follows:
         tag:last-child {
           property: value;
-        } 
-      
+        }
+
       Pseudo-Class Lang
-      The pseudo-class :lang() will apply style to an element based on value of lang attribute set to the element or 
+      The pseudo-class :lang() will apply style to an element based on value of lang attribute set to the element or
       it's parent.
 
       Pseudo-Class Not
-      The pseudo-class :not(selector) is used to apply style on all the elements expect elements that included in 
+      The pseudo-class :not(selector) is used to apply style on all the elements expect elements that included in
       mentioned selectors.
       The syntax for pseudo-class not selector is as follows:
         tag:not(selector){
           property: value;
-        } 
+        }
       The selector can be a class, id, or tag in html.
 
 
       The table given below lists all the CSS pseudo-classes:
-      :active................ Represents an element that has been activated by the user.  
-      :any-link.............. Represents an element that acts as the source anchor of a hyperlink, 
-                              independent of whether it has been visited.  
-      :autofill.............. Matches an element that has its value autofill by the browser.  
-      :checked............... Matches any radio, checkbox or option element that is checked or toggled. 
-      :default............... Selects form elements that are the default in a group of related elements.  
-      :defined............... Represents any custom element that has been defined.  
-      :disabled.............. Represents a disabled element.  
-      :empty................. Matches an element that has no children.  
-      :enabled............... Represents an enabled element, after its has been activated.  
-      :first................. Represents the first page of a printed document, with the @page at-rule.  
-      :first-child........... Represents the first element among a group of sibling elements. 
-      :first-of-type......... Represents the first element of its type among a group of sibling elements. 
-      :fullscreen............ Matches an element that is currently displayed in fullscreen mode.  
-      :focus................. Represents an element that has received focus.  
-      :focus-visible......... Applies while an element matches the :focus pseudo-class or receives focus. 
-      :focus-within.......... Matches an element if the element or any of its descendants are focused.  
-      :has()................. This represents an element if any of the relative selectors.  
-      :host.................. This selects the shadow host of the shadow DOM containing the CSS it is used inside.  
-      :host()................ Selects the shadow host of the shadow DOM containing the CSS it is used inside. 
-      :host-context()........ Allows styling a custom element based on the classes or attributes of its ancestor elements. 
-      :hover................. Matches when the user interacts with an element with a pointing device, 
-                              like a mouse, but does not necessarily activate it. 
-      :indeterminate......... Represents any form element whose state is indeterminate or unknown.  
-      :in-range.............. Represents an element whose current value is within the range limits. 
-      :invalid............... Represents any element whose contents fail to validate. 
-      :is().................. Takes a selector list as its argument, 
-                              and selects any element that can be selected by one of the selectors in that list. 
-      :lang()................ Matches an element based on the language they are defined to be in. 
-      :last-child............ Represents the last element among a group of sibling elements.  
-      :last-of-type.......... Represents the last element of its type among a group of sibling elements.  
-      :left.................. Represents all left-hand pages of a printed document, used with @page at-rule.  
-      :link.................. Represents an element that has not yet been visited.  
-      :modal................. Matches an element that is in a state in which it excludes all interaction with elements 
-                              outside it until the interaction has been dismissed. 
-      :not()................. Represents an element that do not match a list of selectors.  
-      :nth-child()........... Selects child elements 
-                              according to their position among all the sibling elements within a parent element.  
-      :nth-last-child()...... Matches elements based on their position among siblings, counting from the last (end) 
-      :nth-last-of-type().... Matches elements based on their position among siblings of the same type, 
-                              counting from the last (end). 
-      :nth-of-type()......... Matches elements based on their position among siblings of the same type. 
-      :only-child............ Represents an element without any siblings. 
-      :only-of-type.......... Represents an element that has no siblings of same type.  
-      :optional.............. Represents an element that does not have a required attribute set on it.  
-      :out-of-range.......... Represents an element whose current value is outside the range limits.  
-      :picture-in-picture.... Matches an element that is currently in picture-in-picture mode.  
-      :placeholder-shown..... Represents any element that is currently displaying placeholder text. 
-      :read-only............. Represents an element that is not editable by the user. 
-      :read-write............ Represents an element that is editable by the user. 
-      :required.............. Represents an element that has a required attribute set on it.  
-      :right................. Represents all right-hand pages of a printed document, used with @page at-rule. 
-      :root.................. Matches the root element of a document tree.  
-      :scope................. Represents elements that are a reference point, or scope, for selectors to match with.  
-      :target................ Represents the target element with an id matching the URL's fragment. 
-      :valid................. Represents any element whose contents validate successfully.  
-      :visited............... Applies once the link has been visited. 
+      :active................ Represents an element that has been activated by the user.
+      :any-link.............. Represents an element that acts as the source anchor of a hyperlink,
+                              independent of whether it has been visited.
+      :autofill.............. Matches an element that has its value autofill by the browser.
+      :checked............... Matches any radio, checkbox or option element that is checked or toggled.
+      :default............... Selects form elements that are the default in a group of related elements.
+      :defined............... Represents any custom element that has been defined.
+      :disabled.............. Represents a disabled element.
+      :empty................. Matches an element that has no children.
+      :enabled............... Represents an enabled element, after its has been activated.
+      :first................. Represents the first page of a printed document, with the @page at-rule.
+      :first-child........... Represents the first element among a group of sibling elements.
+      :first-of-type......... Represents the first element of its type among a group of sibling elements.
+      :fullscreen............ Matches an element that is currently displayed in fullscreen mode.
+      :focus................. Represents an element that has received focus.
+      :focus-visible......... Applies while an element matches the :focus pseudo-class or receives focus.
+      :focus-within.......... Matches an element if the element or any of its descendants are focused.
+      :has()................. This represents an element if any of the relative selectors.
+      :host.................. This selects the shadow host of the shadow DOM containing the CSS it is used inside.
+      :host()................ Selects the shadow host of the shadow DOM containing the CSS it is used inside.
+      :host-context()........ Allows styling a custom element based on the classes or attributes of its ancestor elements.
+      :hover................. Matches when the user interacts with an element with a pointing device,
+                              like a mouse, but does not necessarily activate it.
+      :indeterminate......... Represents any form element whose state is indeterminate or unknown.
+      :in-range.............. Represents an element whose current value is within the range limits.
+      :invalid............... Represents any element whose contents fail to validate.
+      :is().................. Takes a selector list as its argument,
+                              and selects any element that can be selected by one of the selectors in that list.
+      :lang()................ Matches an element based on the language they are defined to be in.
+      :last-child............ Represents the last element among a group of sibling elements.
+      :last-of-type.......... Represents the last element of its type among a group of sibling elements.
+      :left.................. Represents all left-hand pages of a printed document, used with @page at-rule.
+      :link.................. Represents an element that has not yet been visited.
+      :modal................. Matches an element that is in a state in which it excludes all interaction with elements
+                              outside it until the interaction has been dismissed.
+      :not()................. Represents an element that do not match a list of selectors.
+      :nth-child()........... Selects child elements
+                              according to their position among all the sibling elements within a parent element.
+      :nth-last-child()...... Matches elements based on their position among siblings, counting from the last (end)
+      :nth-last-of-type().... Matches elements based on their position among siblings of the same type,
+                              counting from the last (end).
+      :nth-of-type()......... Matches elements based on their position among siblings of the same type.
+      :only-child............ Represents an element without any siblings.
+      :only-of-type.......... Represents an element that has no siblings of same type.
+      :optional.............. Represents an element that does not have a required attribute set on it.
+      :out-of-range.......... Represents an element whose current value is outside the range limits.
+      :picture-in-picture.... Matches an element that is currently in picture-in-picture mode.
+      :placeholder-shown..... Represents any element that is currently displaying placeholder text.
+      :read-only............. Represents an element that is not editable by the user.
+      :read-write............ Represents an element that is editable by the user.
+      :required.............. Represents an element that has a required attribute set on it.
+      :right................. Represents all right-hand pages of a printed document, used with @page at-rule.
+      :root.................. Matches the root element of a document tree.
+      :scope................. Represents elements that are a reference point, or scope, for selectors to match with.
+      :target................ Represents the target element with an id matching the URL's fragment.
+      :valid................. Represents any element whose contents validate successfully.
+      :visited............... Applies once the link has been visited.
       :where()............... Takes a selector list as its argument and selects any element that matches.
       -->
       <article class="pseudo-classes">
@@ -836,10 +939,6 @@
         <p class="pseudo-hover">Example paragraph to be styled by a Pseudo HOVER Class</p>
         <p class="pseudo-activ">Example paragraph to be styled by a Pseudo ACTIVE Class</p>
         <br>
-
-        <div class="p-class-hover">
-          <h3>Pseudo-Class Hover</h3>
-        </div><br><br>
 
         <div class="pc-active">
           <h3>Pseudo-Class :active</h3>
@@ -890,6 +989,15 @@
 
         <div class="pc-first-child">
           <h3>Pseudo-Class :first-child</h3>
+          <p>Second child of div</p>
+          <div>
+            <div>Div 1</div>
+            <div>Div 2</div>
+            <div>Div 3</div>
+            <div>Div 4</div>
+            <div>Div 5</div>
+            <div>Div 6</div>
+          </div>
         </div><br>
 
         <div class="pc-first-of-type">
@@ -1076,7 +1184,7 @@
       The syntax for the pseudo-element selector is as follows:
         a::before {
           content: url();
-        } 
+        }
       -->
       <article class="pseudo-elements">
         <h2>Pseudo Elements</h2>
@@ -1166,7 +1274,7 @@
 
       </article><br><br>
 
-      <!-- 
+      <!--
       CSS Descendant Selector
       CSS descendant selector styles all the tags which are child of a particular specified tag.
       To mention as descendant, a single space between parent and child element is used.
@@ -1186,7 +1294,7 @@
         <p>Another paragraph to be styled by a Child Selector</p>
       </article><br><br>
 
-      <!-- 
+      <!--
       CSS Child Selector
       CSS child selector selects all the direct child of a particular element.
       This is denoted by '>' (Greater than) symbol.
@@ -1206,7 +1314,7 @@
         <p>Another paragraph to be styled by a Child Selector</p>
       </article><br><br>
 
-      <!-- 
+      <!--
       CSS Adjacent Sibling Selectors
       CSS adjacent sibling selector selects an element that is immediately preceded by a specified element.
       A plus symbol ( "+" ) is used to denote adjacent sibling.
@@ -1226,7 +1334,7 @@
         <p>This paragraph 2 after the div and WILL NOT be blue.</p>
       </article><br><br>
 
-      <!-- 
+      <!--
       CSS General Sibling Selector
       CSS general sibling selector targets all the element that is preceded by a specified element.
       The general sibling selector is denoted by tilde symbol ( "~" ).
@@ -1244,15 +1352,6 @@
         </div>
         <p>This paragraph 1 after the div and will be blue.</p>
         <p>This paragraph 2 after the div and will be blue.</p>
-      </article><br><br>
-
-      <!-- 
-      -->
-      <article class="combinators">
-        <h2>Combinators</h2>
-        <p>Example paragraph to be styled by a(n) Combinators</p>
-        <div>Example div to be styled by a(n) Combinators</div>
-        <span>Example span to be styled by a(n) Combinators</span>
       </article><br><br>
 
 		</section><hr>
