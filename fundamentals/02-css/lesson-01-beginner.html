@@ -610,11 +610,11 @@
       For example, with combinators you can style paragraph element that paaced immediately after div element.
 
       CSS Descendant Combinator
-      Used to select elements that are nested within another element, regardless of how deeply they are nested. 
+      Used to select elements that are nested within another element, regardless of how deeply they are nested.
       These are often represented by a single space (" ").
 
       CSS Child Combinator
-      The child combinator (>) is used to select elements that are direct children of a specified element. 
+      The child combinator (>) is used to select elements that are direct children of a specified element.
       It will not select elements that are further nested inside the child elements.
 
       CSS Adjacent Sibling Combinator
@@ -625,7 +625,7 @@
       The general sibling combinator (~) is used to select all elements that are siblings of a specified element and appear after it in the HTML structure. It will select all matching siblings, not just the one immediately following.
 
       Combining Multiple Combinators
-      In CSS, you can combine multiple combinators to create more complex and specific selectors. 
+      In CSS, you can combine multiple combinators to create more complex and specific selectors.
       By combining different combinators, you can target elements based on more complex relationships within the HTML
       structure.
       -->
@@ -953,22 +953,82 @@
 
         <div class="pc-any-link">
           <h3>Pseudo-Class :any-link</h3>
+          <div>
+            <a href="https://github.com/wasulabenjamin">click here</a>
+          </div>
+          <div>
+            <a class="with-nohref">with no href</a>
+          </div>
+          <div>
+            <a href="" class="">with empty href</a>
+          </div>
         </div><br>
 
         <div class="pc-autofill">
           <h3>Pseudo-Class :autofill</h3>
-        </div><br>
+          <form method="post" action="">
+            <label for="name">First Name</label>
+            <input type="text" id="name"/>
 
-        <div class="pc-checked">
-          <h3>Pseudo-Class :checked</h3>
+            <label for="name">Last Name</label>
+            <input type="text" id="name"/>
+
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" autocomplete="email"/>
+          </form>
         </div><br>
 
         <div class="pc-default">
-          <h3>Pseudo-Class :default</h3>
+          <h3>Pseudo-Class :default and :checked</h3>
+          <form action="">
+            <fieldset>
+              <legend>Choose option</legend>
+
+              <input type="radio" name="option" id="onlya" value="onlyA" />
+              <label for="onlyA">Only A</label>
+
+              <input type="radio" name="option" id="onlyb" value="onlyB" />
+              <label for="onlyB">Only B</label>
+
+              <input type="radio" name="option" id="bothAB" value="bothAB" checked/>
+              <label for="bothAB">Both A & B</label>
+
+              <input type="radio" name="option" id="none" value="none" />
+              <label for="none">None</label>
+            </fieldset>
+            <fieldset>
+              <legend>Chose Falvor</legend>
+
+              <input type="checkbox" name="flav" value="butterscotch" checked> Butterscotch
+              <input type="checkbox" name="flav" value="Chocolate"> Chocolate
+              <input type="checkbox" name="flav" value="cookiencream"> Cookie n Cream
+              <input type="checkbox" name="flav" value="hazelnut" checked> Hazelnut
+              <input type="checkbox" name="flav value="almond"> Roasted Almond
+              <input type="checkbox" name="flav" value="strawberry"> Strawberry
+            </fieldset>
+          </form>
         </div><br>
 
         <div class="pc-defined">
           <h3>Pseudo-Class :defined</h3>
+          <sample-custom-element
+            text="Custom element with font color blue and other styles as per the :defined pseudo-class">
+          </sample-custom-element>
+
+          <p>Standard p element with yellow background, and font as per the :defined pseudo-class</p>
+
+          <script>
+            customElements.define(
+              "sample-custom-element", class extends HTMLElement {
+                constructor() {
+                  super();
+                  let divElem = document.createElement("div");
+                  divElem.textContent = this.getAttribute("text");
+                  let shadowRoot = this.attachShadow({ mode: "open" }).appendChild(divElem);
+                }
+              },
+            );
+          </script>
         </div><br>
 
         <div class="pc-disabled">
@@ -989,14 +1049,17 @@
 
         <div class="pc-first-child">
           <h3>Pseudo-Class :first-child</h3>
-          <p>Second child of div</p>
+
+          <section>
+            <p>This paragraph is first child of section element, will be blue.</p>
+            <p>This paragraph will not be affected.</p>
+            <p>Another paragraph that won't be affected.</p>
+          </section>
+
           <div>
-            <div>Div 1</div>
-            <div>Div 2</div>
-            <div>Div 3</div>
-            <div>Div 4</div>
-            <div>Div 5</div>
-            <div>Div 6</div>
+            <p>This paragraph is first child of div element will be blue.</p>
+            <p>This paragraph will not be affected.</p>
+            <p>Another paragraph that won't be affected.</p>
           </div>
         </div><br>
 
@@ -1059,12 +1122,25 @@
           <h3>Pseudo-Class :is()</h3>
         </div><br>
 
-        <div class="pc-lang-b">
+        <div class="pc-lang">
           <h3>Pseudo-Class :lang()</h3>
+          <q lang="en">This language is set as English, Here css use double(" ") quotes</q><br>
+          <q lang="fr">This language is set as French, Here css use guillemet( ) quotes</q>
         </div><br>
 
         <div class="pc-last-child">
           <h3>Pseudo-Class :last-child</h3>
+          <section>
+            <p>This paragraph is first child of section element</p>
+            <p>This paragraph will not be affected.</p>
+            <p>This is the last paragraph that will be affected.</p>
+          </section>
+
+          <div>
+            <p>This paragraph is first child of div element</p>
+            <p>This paragraph will not be affected.</p>
+            <p>This is the last paragraph that will be affected.</p>
+          </div>
         </div><br>
 
         <div class="pc-last-of-type">
@@ -1083,11 +1159,15 @@
           <h3>Pseudo-Class :modal</h3>
         </div><br>
 
-        <div class="pc-not-b">
+        <div class="pc-not">
           <h3>Pseudo-Class :not()</h3>
+          <p>This is a normal paragraph.</p>
+          <p class="special" id="superSpecial">This is a super special paragraph.</p>
+          <p>This is another normal paragraph.</p>
+          <p class="special">This is special paragraph.</p>
         </div><br>
 
-        <div class="pc-nth-child-b">
+        <div class="pc-nth-child">
           <h3>Pseudo-Class :nth-child()</h3>
           <p>Second child of div</p>
           <div>

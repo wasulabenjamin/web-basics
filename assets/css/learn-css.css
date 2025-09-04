@@ -387,15 +387,92 @@
 
     }
 
-    & .pc-any-link {}
+    & .pc-any-link {
+      & div {
+        padding: 5px;
+        border: 2px solid black;
+        margin: 1em;
+        width: 500px;
+      }
 
-    & .pc-autofill {}
+      & a:any-link {
+        text-decoration: none;
+        font-weight: 900;
+        color: green;
+        font-size: 1em;
+      }
 
-    & .pc-checked {}
+      & :any-link:hover {
+        color: red;
+      }
+    }
 
-    & .pc-default {}
+    & .pc-autofill {
+      & label {
+        display: block;
+        margin-top: 1em;
+      }
 
-    & .pc-defined {}
+      & input {
+        border: 3px solid grey;
+        padding: 5px;
+      }
+
+      & input:-webkit-autofill,
+      & input:-webkit-autofill:focus,
+      & select:-webkit-autofill,
+      & select:-webkit-autofill:focus {
+        -webkit-text-fill-color: blue;
+        border: 3px solid red;
+        border-radius: 3px;
+        box-shadow: 0 0 0px 1000px yellow inset;
+      }
+
+      & input:autofill,
+      & input:autofill:focus,
+      & select:autofill,
+      & select:autofll:focus {
+        -webkit-text-fill-color: blue;
+        border: 3px solid red;
+        border-radius: 3px;
+        box-shadow: 0 0 0px 1000px yellow inset;
+      }
+    }
+
+    & .pc-default {
+      & fieldset {
+        width: 700px;
+        height: 50px;
+      }
+
+      & fieldset:nth-child(2) {
+        margin-top: 20px;
+      }
+
+      & input:default {
+        box-shadow: 0 0 4px 3px lightgreen;
+      }
+
+      & input:checked {
+        box-shadow: 0 0 4px 3px lightblue;
+      }
+    }
+
+    & .pc-defined {
+      & sample-custom-element {
+        color: blue;
+      }
+
+      & p {
+        background-color: peachpuff;
+      }
+
+      & :defined {
+        font-style: normal;
+        font-weight: 700;
+        font-family: fantasy;
+      }
+    }
 
     & .pc-disabled {}
 
@@ -406,8 +483,9 @@
     & .pc-first {}
 
     & .pc-first-child {
-      & div:first-child {
+      & p:first-child {
         background-color: peachpuff;
+        color: blue;
       }
     }
 
@@ -470,9 +548,22 @@
 
     & .pc-is-b {}
 
-    & .pc-lang-b {}
+    & .pc-lang {
+      & :lang(en) {
+        quotes: '""';
+      }
 
-    & .pc-last-child {}
+      & :lang(fr) {
+        quotes: '''';
+      }
+    }
+
+    & .pc-last-child {
+      & p:last-child {
+        background-color: peachpuff;
+        color: blue;
+      }
+    }
 
     & .pc-last-of-type {}
 
@@ -482,9 +573,17 @@
 
     & .pc-modal {}
 
-    & .pc-not-b {}
+    & .pc-not {
+      & p:not(.special) {
+        color: red;
+      }
 
-    & .pc-nth-child-b {
+      & .special:not(#superSpecial) {
+        background-color: peachpuff;
+      }
+    }
+
+    & .pc-nth-child {
       & div > div {
         border: 2px solid;
         margin-bottom: 20px;
