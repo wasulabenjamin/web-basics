@@ -1003,7 +1003,7 @@
               <input type="checkbox" name="flav" value="Chocolate"> Chocolate
               <input type="checkbox" name="flav" value="cookiencream"> Cookie n Cream
               <input type="checkbox" name="flav" value="hazelnut" checked> Hazelnut
-              <input type="checkbox" name="flav value="almond"> Roasted Almond
+              <input type="checkbox" name="flav" value="almond"> Roasted Almond
               <input type="checkbox" name="flav" value="strawberry"> Strawberry
             </fieldset>
           </form>
@@ -1033,18 +1033,28 @@
 
         <div class="pc-disabled">
           <h3>Pseudo-Class :disabled</h3>
+          <form action="">
+            <label>Doctor Name</label>
+            <input type="text"><br>
+
+            <label>Hospital Name</label>
+            <input type="text"><br>
+
+            <label>Diagnosis</label>
+            <input type="text" disabled="disabled" value="Diagnosis"><br><br>
+
+            <button type="submit" disabled="disabled">Submit</button>
+            <button type="reset">Reset</button>
+          </form>
         </div><br>
 
         <div class="pc-empty">
           <h3>Pseudo-Class :empty</h3>
-        </div><br>
-
-        <div class="pc-enabled">
-          <h3>Pseudo-Class :enabled</h3>
-        </div><br>
-
-        <div class="pc-first">
-          <h3>Pseudo-Class :first</h3>
+          <div>
+            <p>Not an empty paragraph</p>
+            <p></p>
+            <p>Not an empty paragraph</p>
+          </div>
         </div><br>
 
         <div class="pc-first-child">
@@ -1065,23 +1075,35 @@
 
         <div class="pc-first-of-type">
           <h3>Pseudo-Class :first-of-type</h3>
-        </div><br>
-
-        <div class="pc-fullscreen">
-          <h3>Pseudo-Class :fullscreen</h3>
+          <div>
+            <h4>Parent element</h4>
+            <p>First child looks different due to :first-of-type pseudo-class</p>
+            <p>second child, so no change</p>
+          </div>
+          <div>
+            <h4>Parent element</h4>
+            <h4>h4 tag, so no change</h4>
+            <p><b>p</b> tag, and first-of-type of paragraph under this parent.</p>
+          </div>
         </div><br>
 
         <div class="pc-focus">
           <h3>Pseudo-Class :focus</h3>
           <input type="text" name="something" placeholder="Type something mate!">
+          <p>The link here has a <a href="#0">change in background and foreground color</a> as it is focused.</p>
+          <button>Click Me!!</button>
         </div><br>
 
         <div class="pc-focus-visible">
           <h3>Pseudo-Class :focus-visible</h3>
+          <button class="btn-f">focus-only</button>
+          <button class="btn-fo">focus-visible</button>
         </div><br>
 
         <div class="pc-focus-within">
           <h3>Pseudo-Class :focus-within</h3>
+          <label for="name">First Name</label>
+          <input type="text" id="name"/>
         </div><br>
 
         <div class="pc-has-b">

@@ -1,4 +1,13 @@
 /***********************************************************************************************************************
+    IMPORTANT!
+input,
+input:focus {
+  outline: none;
+  border: 2px solid black;
+}
+***********************************************************************************************************************/
+
+/***********************************************************************************************************************
     HOME
 ***********************************************************************************************************************/
 .home {
@@ -373,7 +382,7 @@
 
       & li {
         list-style-type: none;
-        margin: 0px 0px 10px -40px; /* margin: top -> right -> bottom -> left */
+        margin: 0 0 10px -40px; /* margin: top -> right -> bottom -> left */
       }
 
       & a:active {
@@ -425,17 +434,17 @@
         -webkit-text-fill-color: blue;
         border: 3px solid red;
         border-radius: 3px;
-        box-shadow: 0 0 0px 1000px yellow inset;
+        box-shadow: 0 0 0 1000px yellow inset;
       }
 
       & input:autofill,
       & input:autofill:focus,
       & select:autofill,
-      & select:autofll:focus {
+      & select:autofill:focus {
         -webkit-text-fill-color: blue;
         border: 3px solid red;
         border-radius: 3px;
-        box-shadow: 0 0 0px 1000px yellow inset;
+        box-shadow: 0 0 0 1000px yellow inset;
       }
     }
 
@@ -474,13 +483,35 @@
       }
     }
 
-    & .pc-disabled {}
+    & .pc-disabled {
+      & input {
+        width: 150px;
+        padding-left: 10px;
+        margin-top: 10px;
+        border: 1px solid  black;
+      }
 
-    & .pc-empty {}
+      & input[type="text"]:enabled {
+        background-color: white;
+      }
 
-    & .pc-enabled {}
+      & input[type="text"]:disabled {
+        background-color: lightgrey;
+      }
+    }
 
-    & .pc-first {}
+    & .pc-empty {
+      & div {
+        border: 3px solid black;
+        width: 200px;
+        text-align: center;
+      }
+
+      & p:empty {
+        background-color: peachpuff;
+        height: 20px;
+      }
+    }
 
     & .pc-first-child {
       & p:first-child {
@@ -489,9 +520,18 @@
       }
     }
 
-    & .pc-first-of-type {}
+    & .pc-first-of-type {
+      & div {
+        border: 2px solid black;
+        margin-bottom: 5px;
+        padding: 10px;
+      }
 
-    & .pc-fullscreen {}
+      & p:first-of-type {
+        color: black;
+        background-color: peachpuff;
+      }
+    }
 
     & .pc-focus {
       & input {
@@ -504,11 +544,54 @@
         border: 3px solid green;
         background-color: lightgrey;
       }
+
+      & a:focus {
+        outline: none;
+        color: green;
+        background-color: yellow;
+      }
+
+      & button {
+        width: 150px;
+        height: 50px;
+        font-size: 16px;
+        background-color: #fff;
+        border: 2px solid black;
+        border-radius: 30px;
+        transition: all 0.3s ease;
+      }
+
+      & button:hover {
+        background-color: lightpink;
+        color: blue;
+        border-radius: 12px;
+      }
+
+      & button:focus {
+        background-color: darkred;
+        color: white;
+        border-radius: 6px;
+      }
     }
 
-    & .pc-focus-visible {}
+    & .pc-focus-visible {
+      /* Apply focus styles for all focused elements */
+      & .btn-f:focus {
+        outline: 3px solid blue;
+      }
 
-    & .pc-focus-within {}
+      /* Apply focus styles only when accessed via keyboard navigation */
+      & .btn-fo:focus-visible {
+        outline: 3px solid green;
+        background-color: yellow;
+      }
+    }
+
+    & .pc-focus-within {
+      & label {
+        display: block;
+      }
+    }
 
     & .pc-has-b {}
 
@@ -550,7 +633,8 @@
 
     & .pc-lang {
       & :lang(en) {
-        quotes: '""';
+
+
       }
 
       & :lang(fr) {
