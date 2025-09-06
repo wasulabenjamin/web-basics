@@ -590,16 +590,45 @@ input:focus {
     & .pc-focus-within {
       & label {
         display: block;
+        font-size: 16px;
+        color: black;
+      }
+
+      & input[type="text"] {
+        padding: 5px;
+        font-size: 16px;
+        border: 2px solid black;
+        width: 500px;
+      }
+
+      & input[type="text"]:focus {
+        background-color: lightblue;
+      }
+
+      & label:focus-within {
+        font-size: 25px;
+        color: red;
       }
     }
 
-    & .pc-has-b {}
+    & .pc-has {
+      & :is(h1, h2, h3, h4, h5, h6):has(+ p, + ul, + ol) {
+        background-color: lightblue;
+        padding-top: 50px;
+      }
 
-    & .pc-host {}
+      & div:has(video, audio) {
+        border: 2px solid red;
+        width: fit-content;
+        padding: 15px;
+      }
+    }
 
-    & .pc-host-b {}
-
-    & .pc-host-context-b {}
+    & .pc-host {
+      & li {
+        padding: 10px;
+      }
+    }
 
     & .pc-hover {
       & a {

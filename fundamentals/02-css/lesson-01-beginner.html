@@ -1102,24 +1102,124 @@
 
         <div class="pc-focus-within">
           <h3>Pseudo-Class :focus-within</h3>
-          <label for="name">First Name</label>
-          <input type="text" id="name"/>
+          <label for="name">
+            First Name
+            <input type="text" id="name"/>
+          </label>
         </div><br>
 
-        <div class="pc-has-b">
-          <h3>Pseudo-Class :has()</h3>
+        <div class="pc-has">
+          <h3>Pseudo-Class :has() and :is()</h3>
+          <h4>Parent H4 element</h4>
+          <p>First child looks different due to :has() pseudo-class</p>
+          <p>second child, so no change</p>
+          <div>
+            <video src="../../assets/video/sample-video.mp4" controls></video>
+          </div>
         </div><br>
 
         <div class="pc-host">
           <h3>Pseudo-Class :host</h3>
+
+          <h4>See the list:</h4>
+          <ul>
+            <li><sample-span>Web component - Custom element</sample-span></li>
+            <li><sample-span>Host element</sample-span></li>
+            <li><sample-span>HTML, JS, CSS</sample-span></li>
+          </ul>
         </div><br>
+        <script>
+          customElements.define("sample-span", class extends HTMLElement {
+              constructor() {
+                super();
+
+                const shadowRoot = this.attachShadow({ mode: "open" });
+                const style = document.createElement("style");
+                const span = document.createElement("span");
+
+                style.textContent = `
+                  :host {
+                    background-color: yellow;
+                    padding: 5px;
+                    color: blue;
+                    border: 2px solid red;
+                  }
+                `;
+
+                span.textContent = this.textContent;
+                shadowRoot.appendChild(style);
+                shadowRoot.appendChild(span);
+              }
+          });
+        </script>
 
         <div class="pc-host-b">
           <h3>Pseudo-Class :host()</h3>
+          <p>
+            Lorem ipsum dolor sit amet,
+            <paragraph-span class="pg-span">consectetur adipisicing elit.</paragraph-span>
+            Eveniet nulla odio quam.
+          </p>
+
+          <script>
+            customElements.define("paragraph-span", class extends HTMLElement {
+              constructor() {
+                super();
+
+                const shadowRoot = this.attachShadow({ mode: "open" });
+                const style = document.createElement("style");
+                const span = document.createElement("span");
+
+                style.textContent = `
+                  :host(.pg-span) {
+                    background-color: yellow;
+                    padding: 5px;
+                    color: blue;
+                    border: 2px solid red;
+                  }
+                `;
+
+                span.textContent = this.textContent;
+                shadowRoot.appendChild(style);
+                shadowRoot.appendChild(span);
+              }
+            });
+          </script>
         </div><br>
 
         <div class="pc-host-context-b">
           <h3>Pseudo-Class :host-context()</h3>
+
+          <h4>CSS Basics - <a href="#"><context-span>:host-context()</context-span></a></h4>
+          <p>
+            CSS <context-span>:host-context()</context-span> pseudo-class selector allows you to style a custom element
+            differently depending on where it is used in the DOM, based on the classes or attributes of its ancestor
+            elements.
+          </p>
+
+          <script>
+            customElements.define("context-span", class extends HTMLElement {
+              constructor() {
+                super();
+
+                const shadowRoot = this.attachShadow({ mode: "open" });
+                const style = document.createElement("style");
+
+                style.textContent = `
+                  :host-context(div) {
+                    background-color: violet;
+                    color: blue;
+                    border: 3px solid red;
+                  }
+                  :host-context(div)::after {
+                    content: "This is a div element";
+                  }
+                `;
+
+                shadowRoot.appendChild(style);
+              }
+            });
+          </script>
         </div><br>
 
         <div class="pc-hover">
@@ -1138,10 +1238,6 @@
 
         <div class="pc-invalid">
           <h3>Pseudo-Class :invalid</h3>
-        </div><br>
-
-        <div class="pc-is-b">
-          <h3>Pseudo-Class :is()</h3>
         </div><br>
 
         <div class="pc-lang">
