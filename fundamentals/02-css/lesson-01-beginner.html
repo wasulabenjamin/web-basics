@@ -1230,14 +1230,53 @@
 
         <div class="pc-indeterminate">
           <h3>Pseudo-Class :indeterminate</h3>
+          <input type="checkbox" id="checkBox"> Checkbox
+          <input type="radio" id="radio"> Radio
+          <progress></progress>
+
+          <script>
+            const checkBox = document.getElementById("checkBox");
+            const radio = document.getElementById("radio");
+
+            checkBox.indeterminate = true;
+            radio.indeterminate = true;
+          </script>
         </div><br>
 
         <div class="pc-in-range">
           <h3>Pseudo-Class :in-range</h3>
+          <label for="inrange">Pick a number: </label>
+          <input type="number" min="1" max="50" value="1" id="inrange">
+          <label></label>
         </div><br>
 
         <div class="pc-invalid">
           <h3>Pseudo-Class :invalid</h3>
+
+          <p>Input type is number ranging between 1 and 10.</p>
+          <input type="number" id="number-input" min="1" max="10" value="2">
+          <label for="number-input"></label>
+
+          <p>Input type is email, which is required. If empty, its invalid.</p>
+          <input type="email" id="email-input" placeholder="abc@gmail.com" required>
+          <label for="email-input"></label>
+
+          <form>
+            <fieldset>
+              <label for="user-id">UserId</label><br />
+              <input type="number" name="user-id" id="user-id" required />
+              <label for="user-id"></label>
+            </fieldset>
+
+            <fieldset>
+              <label for="user-email">Email</label><br />
+              <input type="email" name="user-email" id="user-email" required />
+              <label for="user-email"></label>
+            </fieldset>
+
+            <button type="submit" name="send">Submit</button>
+          </form>
+
         </div><br>
 
         <div class="pc-lang">
@@ -1263,14 +1302,17 @@
 
         <div class="pc-last-of-type">
           <h3>Pseudo-Class :last-of-type</h3>
-        </div><br>
 
-        <div class="pc-left">
-          <h3>Pseudo-Class :left</h3>
+          <div class="item">first div, so no change.</div>
+          <div class="item">second div, so no change.</div>
+          <div class="item">Third div, last child of the parent div, so CSS applied.</div>
+          <p class="item">Last p element of its parent, selected by .container.item class selector.</p>
         </div><br>
 
         <div class="pc-link">
           <h3>Pseudo-Class :link</h3>
+          <strong><a href="#">Tutorialspoint</a></strong>
+          <strong><a href="#">Google</a></strong>
         </div><br>
 
         <div class="pc-modal">
@@ -1320,10 +1362,6 @@
 
         <div class="pc-optional">
           <h3>Pseudo-Class :optional</h3>
-        </div><br>
-
-        <div class="pc-out-of-range">
-          <h3>Pseudo-Class :out-of-range</h3>
         </div><br>
 
         <div class="pc-picture-in-picture">

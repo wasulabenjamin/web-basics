@@ -652,22 +652,105 @@ input:focus {
       }
     }
 
-    & .pc-indeterminate {}
+    & .pc-indeterminate {
+      & input[type="checkbox"]:indeterminate {
+        box-shadow: 0 0 5px 5px rgb(224, 5, 5);
+      }
 
-    & .pc-in-range {}
+      & input[type="radio"]:indeterminate {
+        box-shadow: 0 0 5px 5px rgb(17, 235, 28);
+      }
 
-    & .pc-invalid {}
+      & progress:indeterminate {
+        display: block;
+        margin-top: 10px;
+        width: 300px;
+        height: 50px;
+      }
+    }
 
-    & .pc-is-b {}
+    & .pc-in-range {
+      & input:in-range {
+        background-color: beige;
+        padding: 5px;
+        border: 2px solid green;
+      }
+
+      & input:in-range + label::after {
+        content: "In range";
+        color: green;
+      }
+
+      & input:out-of-range {
+        border: 2px solid red;
+        padding: 5px;
+      }
+
+      & input:out-of-range + label::after {
+        content: "Sorry! Enter a value within the specified range.";
+        color: red;
+      }
+    }
+
+    & .pc-invalid {
+      & input {
+        outline: none;
+        margin-left: 10px;
+        height: 24px;
+        width: 200px;
+        padding: 5px;
+      }
+
+      & input:invalid {
+        background-color: lightpink;
+      }
+
+      & input:invalid + label::after {
+        display: block;
+        margin: 5px 0 0 10px;
+      }
+
+      & input:invalid:hover,
+      & input:invalid:focus {
+        border: 3px solid red;
+      }
+
+      & input[type="number"]:invalid + label::after {
+        content: "Please enter a valid number.";
+        color: red;
+      }
+
+      & input[type="email"]:invalid + label::after {
+        content: "Please enter a valid email address.";
+        color: red;
+      }
+
+      & fieldset:invalid ~ fieldset {
+        visibility: hidden;
+      }
+
+      & form:invalid button {
+        background-color: darkgrey;
+        opacity: .2;
+      }
+
+      & button {
+        width: 200px;
+        border: thin solid darkgrey;
+        font-size: 1.25em;
+        background-color: green;
+        color: white;
+        position:relative;
+      }
+    }
 
     & .pc-lang {
       & :lang(en) {
-
-
+        quotes: '"' '"';
       }
 
       & :lang(fr) {
-        quotes: '''';
+        quotes: ' ' ' ';
       }
     }
 
@@ -678,11 +761,34 @@ input:focus {
       }
     }
 
-    & .pc-last-of-type {}
+    & .pc-last-of-type {
+      & div,
+      & p {
+        padding-top: 10px;
+      }
 
-    & .pc-left {}
+      .item:last-of-type {
+        background-color: peachpuff;
+      }
+    }
 
-    & .pc-link {}
+    & .pc-link {
+      & a {
+        font-size: 1em;
+        padding: 5px;
+        display: inline-block;
+        margin-right: 10px;
+      }
+
+      & a:link {
+        background-color: lightyellow;
+      }
+
+      & a:hover {
+        background-color: lightsalmon;
+        color: green;
+      }
+    }
 
     & .pc-modal {}
 
@@ -727,8 +833,6 @@ input:focus {
     & .pc-only-of-type {}
 
     & .pc-optional {}
-
-    & .pc-out-of-range {}
 
     & .pc-picture-in-picture {}
 
