@@ -1317,6 +1317,22 @@
 
         <div class="pc-modal">
           <h3>Pseudo-Class :modal</h3>
+
+          <dialog>
+            <button autofocus>close</button>
+            <p>The modal dialog has a beautiful backdrop!</p>
+            <p>And see my styling using :modal pseudo-class</p>
+          </dialog>
+          <button>Open the Dialog</button>
+
+          <script>
+            const dialog = document.querySelector("dialog");
+            const buttonOpen = document.querySelector("dialog + button");
+            const buttonClose = document.querySelector("dialog button");
+
+            buttonOpen.addEventListener("click", () => dialog.showModal());
+            buttonClose.addEventListener("click", () => dialog.close());
+          </script>
         </div><br>
 
         <div class="pc-not">
@@ -1326,6 +1342,46 @@
           <p>This is another normal paragraph.</p>
           <p class="special">This is special paragraph.</p>
         </div><br>
+
+        <!--
+        * Think of `n` as a free variable that takes all whole numbers starting at 0 and increasing by 1.
+        * The formula (`an+b`) is evaluated for every `n`.
+        * If the result is a valid child index (≥1 and ≤ number of children), then that child matches.
+        * If the result is ≤0 or > the number of children, it just produces no match (not an error, just ignored).
+
+        So it’s not recursion (nothing calls itself again) — it’s more like generating a sequence of numbers (1, 23, …),
+        plugging each into the formula, and checking whether the result is a valid child index.
+
+        * `:nth-child()` starts counting from the first child forward.
+        * `:nth-last-child()` starts counting from the last child backward (same formula logic, applied from the back).
+
+        👉
+        The “engine” never stops generating results (in theory, it’s infinite),
+        but in practice you “run out” when indices go outside the child range.
+        See below example for a 10-item list:
+
+        for -n+1;
+        n = -0 + 1 →  1 ✅
+        n = -1 + 1 →  0 ❌
+        n = -2 + 1 → -1 ❌
+        n = -3 + 1 → -2 ❌ ... don't continue as we will always get a negative
+
+        for n+1;
+        n = 0 + 1 →  1 ✅
+        n = 1 + 1 →  2 ✅
+        n = 2 + 1 →  3 ✅
+        n = 3 + 1 →  4 ✅ ... continue until we run out of children
+
+        for 3n+4;
+        n = 3 * 0 + 4 → 4  ✅
+        n = 3 * 1 + 4 → 7  ✅
+        n = 3 * 2 + 4 → 10 ✅ ... dont continue since we only have 10 list items
+
+        for 5n;
+        n = 5 * 0 → 0   ❌ (0 is invalid, there’s no “0th child”).
+        n = 5 * 1 → 5   ✅
+        n = 5 * 2 → 10  ✅ ... again, dont continue since we only have 10 list items
+        -->
 
         <div class="pc-nth-child">
           <h3>Pseudo-Class :nth-child()</h3>
@@ -1340,15 +1396,70 @@
           </div>
         </div><br>
 
-        <div class="pc-nth-last-child-b">
+        <div class="pc-nth-last-child">
           <h3>Pseudo-Class :nth-last-child()</h3>
+
+          <p>Styling last item as bold and red color.</p>
+          <p>Styling every third list item starting with the fourth list item from the last with a pink background.</p>
+          <p>Styling fifth item from last as bold.</p>
+          <ol>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+            <li>Item 6</li>
+            <li>Item 7</li>
+            <li>Item 8</li>
+            <li>Item 9</li>
+            <li>Item 10</li>
+          </ol>
+
+          <ul class="results">
+            <li>Alice — 98%</li>
+            <li>Bob — 95%</li>
+            <li>Carol — 92%</li>
+            <li>David — 80%</li>
+            <li>Eve — 75%</li>
+            <li>Frank — 70%</li>
+            <li>Grace — 65%</li>
+            <li>Heidi — 60%</li>
+            <li>Ivan — 55%</li>
+            <li>Judy — 50%</li>
+          </ul>
+
+          <p>Styling the heading of the table as bold and blue in color.</p>
+          <p>Styling all odd-numbered rows from the end with a pink background color.</p>
+          <p>Styling all even-numbered rows from the end with a greenyellow background color.</p>
+          <table>
+            <tr> <th>Names        </th> </tr>
+            <tr> <td>Jhon Sean    </td> </tr>
+            <tr> <td>Rocky Luis   </td> </tr>
+            <tr> <td>Oliver David </td> </tr>
+            <tr> <td>Marry Alamnd </td> </tr>
+            <tr> <td>Dora Ann     </td> </tr>
+          </table>
+
+          <h3>Styling list items with the class fruits to have a pink background.</h3>
+          <h3>Counting from the last child, styling first child element of the fruits class.</h3>
+          <ul>
+            <li>Orange</li>
+            <li>Apple</li>
+            <li class="fruits">Mango</li>
+            <li>Grapes</li>
+            <li class="fruits">Banana</li>
+            <li>Watermelon</li>
+            <li class="fruits">Cheery</li>
+            <li class="fruits">Pear</li>
+          </ul>
+
         </div><br>
 
-        <div class="pc-nth-last-of-type-b">
+        <div class="pc-nth-last-of-type">
           <h3>Pseudo-Class :nth-last-of-type()</h3>
         </div><br>
 
-        <div class="pc-nth-of-type-b">
+        <div class="pc-nth-of-type">
           <h3>Pseudo-Class :nth-of-type()</h3>
         </div><br>
 
@@ -1408,7 +1519,7 @@
           <h3>Pseudo-Class :visited</h3>
         </div><br>
 
-        <div class="pc-where-b">
+        <div class="pc-where">
           <h3>Pseudo-Class :where()</h3>
         </div><br>
 

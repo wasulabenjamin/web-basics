@@ -790,7 +790,17 @@ input:focus {
       }
     }
 
-    & .pc-modal {}
+    & .pc-modal {
+      & ::backdrop {
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      & :modal {
+        background-color: white;
+        border: 2px solid black;
+        box-shadow: 3px 3px 10px rgba(0 0 0 / 0.5);
+      }
+    }
 
     & .pc-not {
       & p:not(.special) {
@@ -822,11 +832,115 @@ input:focus {
       }
     }
 
-    & .pc-nth-last-child-b {}
+    /*
+    * Think of `n` as a free variable that takes all whole numbers starting at 0 and increasing by 1.
+    * The formula (`an+b`) is evaluated for every `n`.
+    * If the result is a valid child index (≥1 and ≤ number of children), then that child matches.
+    * If the result is ≤0 or > the number of children, it just produces no match (not an error, just ignored).
 
-    & .pc-nth-last-of-type-b {}
+    So it’s not recursion (nothing calls itself again) — it’s more like generating a sequence of numbers (1, 2, 3, …),
+    plugging each into the formula, and checking whether the result is a valid child index.
 
-    & .pc-nth-of-type-b {}
+    * `:nth-child()` starts counting from the first child forward.
+    * `:nth-last-child()` starts counting from the last child backward (same formula logic, applied from the other end).
+
+    👉
+    The “engine” never stops generating results (in theory, it’s infinite),
+    but in practice you “run out” when indices go outside the child range.
+    See below example for a 10-item list:
+
+    for -n+1;
+    n = -0 + 1 →  1 ✅
+    n = -1 + 1 →  0 ❌
+    n = -2 + 1 → -1 ❌
+    n = -3 + 1 → -2 ❌ ... don't continue as we will always get a negative
+
+    for n+1;
+    n = 0 + 1 →  1 ✅
+    n = 1 + 1 →  2 ✅
+    n = 2 + 1 →  3 ✅
+    n = 3 + 1 →  4 ✅ ... continue until we run out of children
+
+    for 3n+4;
+    n = 3 * 0 + 4 → 4  ✅
+    n = 3 * 1 + 4 → 7  ✅
+    n = 3 * 2 + 4 → 10 ✅ ... dont continue since we only have 10 list items
+
+    for 5n;
+    n = 5 * 0 → 0   ❌ (0 is invalid, there’s no “0th child”).
+    n = 5 * 1 → 5   ✅
+    n = 5 * 2 → 10  ✅ ... again, dont continue since we only have 10 list items
+    */
+    & .pc-nth-last-child {
+      & ol li:nth-last-child(-n+1) {
+        font-weight: bold;
+        color: red;
+      }
+
+      & ol li:nth-last-child(3n+4){
+        background-color: pink;
+      }
+
+      & ol li:nth-last-child(5n){
+        font-weight: bold;
+      }
+
+      & .results li:nth-child(-n+3) {
+        background: lightgreen;
+        font-weight: bold;
+      }
+
+      & .results li:nth-last-child(-n+3) {
+        background: lightcoral;
+        font-weight: bold;
+      }
+
+      & table {
+        border: 2px solid black;
+      }
+
+      & table tr:nth-child(even) {
+        background-color: lightblue;
+      }
+
+      & tr:nth-last-child(6) {
+        font-weight: bold;
+        color: blue;
+      }
+
+      & tr:nth-last-child(odd)  {
+        background-color: pink;
+      }
+
+      & tr:nth-last-child(even)  {
+        background-color: greenyellow;
+      }
+
+      & h3 + ul {
+        list-style-type: none;
+      }
+
+      & h3 + ul > li {
+        display: inline-block;
+        border: 3px solid black;
+        margin: 5px;
+        padding: 5px;
+      }
+
+      & .fruits {
+        background-color: pink;
+      }
+
+      & li:nth-last-child(3),
+      & li:nth-last-child(3 of .fruits) {
+        font-weight: bold;
+        color: blue;
+      }
+    }
+
+    & .pc-nth-last-of-type {}
+
+    & .pc-nth-of-type {}
 
     & .pc-only-child {}
 
@@ -856,7 +970,7 @@ input:focus {
 
     & .pc-visited {}
 
-    & .pc-where-b {}
+    & .pc-where {}
 
   }
 
