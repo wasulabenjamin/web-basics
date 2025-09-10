@@ -1457,26 +1457,104 @@
 
         <div class="pc-nth-last-of-type">
           <h3>Pseudo-Class :nth-last-of-type()</h3>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+          <p>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
+          <p>The standard chunk of Lorem Ipsum used since the 1500s</p>
+          <p>Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero</p>
+          <p>Lorem Ipsum is therefore always free from repetition,</p>
         </div><br>
 
         <div class="pc-nth-of-type">
           <h3>Pseudo-Class :nth-of-type()</h3>
+          <p>This is first <b>p</b> tag. </p>
+          <div>This is first <b>div</b> tag.</div>
+          <p>This is second <b>p</b> tag.</p>
+          <p>This is third <b>p</b> tag.</p>
+          <p>This is fourth <b>p</b> tag.</p>
+          <div>This is second <b>div</b> tag..</div>
         </div><br>
 
         <div class="pc-only-child">
           <h3>Pseudo-Class :only-child</h3>
+
+          <div class="field">
+            <ol>Ordered list:
+              <li>Only one item</li>
+            </ol>
+          </div>
+
+          <div class="field">
+            <ol>Ordered list:
+              <li>One item</li>
+              <li>Two item</li>
+            </ol>
+          </div>
+
+          <div class="field">
+            <ul>Unordered list:
+              <li>First Item</li>
+            </ul>
+          </div>
         </div><br>
 
         <div class="pc-only-of-type">
           <h3>Pseudo-Class :only-of-type</h3>
+
+          <div class="field">
+            <h2>Heading 2 - only type</h2>
+            <p>Paragraph tag - only type</p>
+          </div>
+
+          <div class="field">
+            <h2>Heading 2 - only type</h2>
+            <p>Paragraph tag 1 - we are two</p>
+            <p>Paragraph tag 2 - we are two</p>
+          </div>
         </div><br>
 
         <div class="pc-optional">
           <h3>Pseudo-Class :optional</h3>
+
+          <form>
+            <div class="field">
+              <label for="name" class="required">Name:</label>
+              <input type="name" id="name" required/>
+
+              <label for="age">Age: (optional)</label>
+              <input type="age" id="age" />
+
+              <label for="feedback">Feedback: (optional)</label>
+              <input type="text" id="feedback" /><br><br>
+
+              <button type="submit">Submit</button>
+            </div>
+          </form>
         </div><br>
 
         <div class="pc-picture-in-picture">
           <h3>Pseudo-Class :picture-in-picture</h3>
+
+          <video id="sample-video" src="../../assets/video/sample-video.mp4" controls=""></video>
+          <div class="container">
+            <label for="pip-toggle" class="heading">Toggle Picture-in-Picture: </label>
+            <input id="pip-toggle" type="checkbox" class="hidden"/>
+            <span id="pip-status" class="hidden">Off</span>
+          </div>
+          <script>
+            const video = document.querySelector("#sample-video");
+            const pipToggle = document.querySelector("#pip-toggle");
+            const pipStatus = document.querySelector("#pip-status");
+
+            'pictureInPictureEnabled' in document
+              ? (pipToggle.classList.remove('hidden'), pipStatus.classList.remove('hidden'))
+              : pipToggle.disabled = true;
+
+            pipToggle.addEventListener("change", () => {
+              pipStatus.textContent = pipToggle.checked ? "On" : "Off";
+              pipToggle.checked ? video.requestPictureInPicture() : document.exitPictureInPicture();
+            });
+          </script>
         </div><br>
 
         <div class="pc-placeholder-shown">

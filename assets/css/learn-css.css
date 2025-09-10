@@ -938,17 +938,118 @@ input:focus {
       }
     }
 
-    & .pc-nth-last-of-type {}
+    & .pc-nth-last-of-type {
+      & p:nth-last-of-type(2) {
+        background-color: pink;
+      }
 
-    & .pc-nth-of-type {}
+      & p:nth-last-of-type(odd) {
+        background-color: pink;
+        color: blue;
+      }
 
-    & .pc-only-child {}
+      & p:nth-last-of-type(even) {
+        background-color: greenyellow;
+        color: red;
+      }
+    }
 
-    & .pc-only-of-type {}
+    & .pc-nth-of-type {
+      & p:nth-of-type(2) {
+        background-color: pink;
+      }
 
-    & .pc-optional {}
+      & p:nth-of-type(2n+1) {
+        color: blue;
+      }
 
-    & .pc-picture-in-picture {}
+      & div:nth-of-type(2) {
+        background-color: peachpuff;
+      }
+    }
+
+    & .pc-only-child {
+      & .field {
+        margin: 1px;
+        padding: 1px;
+      }
+
+      & li:only-child {
+        color: darkblue;
+        background-color: lightpink;
+        padding: 10px;
+      }
+
+      & div {
+        border: 2px solid black;
+        width: 500px;
+      }
+    }
+
+    & .pc-only-of-type {
+      & .field {
+        margin: 1px;
+        padding: 1px;
+      }
+
+      & p:only-of-type {
+        color: darkblue;
+        background-color: lightpink;
+        padding: 10px;
+      }
+
+      & h2:only-of-type {
+        color: darkblue;
+        background-color: lightsalmon;
+      }
+    }
+
+    & .pc-optional {
+      & label {
+        display: block;
+        margin: 10px 0 10px 0;
+        padding: 1px;
+      }
+
+      & .field {
+        border: 2px solid black;
+        padding: 10px;
+        width: fit-content;
+      }
+
+      & input:optional {
+        border: 5px solid red;
+      }
+
+      /*
+      Adding a red asterisk (*) after the label of required input fields
+      The `+` is the adjacent sibling combinator, which selects the input element that immediately follows the label.
+      The `::after` pseudo-element is used to insert content after the selected element.
+      */
+      & label:has(+ input:required)::after {
+        content: "*";
+        color: red;
+      }
+    }
+
+    & .pc-picture-in-picture {
+      & video {
+        max-width: 50%;
+        border: 1px solid black;
+      }
+
+      & .container {
+        margin-top: 20px;
+      }
+
+      & .heading {
+        margin-right: 10px;
+      }
+
+      & .hidden {
+        display: none;
+      }
+    }
 
     & .pc-placeholder-shown {}
 
