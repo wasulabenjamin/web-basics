@@ -57,19 +57,18 @@
 
 	<main>
 		<!--
-    CSS Tutorial
+    CSS Tutorial.
     This CSS tutorial covers everything from basic styling concepts and selectors to advanced techniques, such as
     flexbox, grid, animations, and CSS variables. This CSS tutorial is designed to help both beginners and experienced
     designers to make them masters in creating visually appealing, responsive, and modern web designs.
 
-    What is CSS
+    What is CSS?
     CSS is the acronym for "Cascading Style Sheet". It's a style sheet language used for describing the presentation
     of a document written in a markup language like HTML. CSS helps the web developers to control the layout and other
     visual aspects of the web pages. CSS plays a crucial role in modern web development by providing the tools
     necessary to create visually appealing, accessible, and responsive websites.
 
-    Since the inception of CSS, several versions have came into existence. Some of the notable versions include:
-
+    Since the start of CSS, several versions have come into existence. Some of the notable versions include:
       - CSS1 (Cascading Style Sheets Level 1):
         The initial version of CSS, released in December 1996. CSS1 provided basic styling capabilities for HTML
         documents, including properties for text, colors, backgrounds, margins, and borders.
@@ -81,23 +80,23 @@
         inconsistencies and ambiguities in the specification. CSS2.1 focused on improving interoperability among web
         browsers.
       - CSS3 (Cascading Style Sheets Level 3:
-        CSS3 is a collection of modules that extend the capabilities of CSS. It introduces numerous new features and
+        CSS3 is a collection of modules that extend the capabilities of CSS. It introduces many new features and
         enhancements, including advanced selectors, multiple column layouts, animations, transformations, gradients,
         shadows, and more.
       - CSS4 (Cascading Style Sheets Level 4:
         CSS4 is an ongoing effort to extend CSS3 with new features and enhancements.
 
     Each version of CSS builds upon the previous ones, adding new features and refining existing capabilities to meet
-    the evolving needs of web developers and designers. CSS is referred as just CSS now, without a version number.
+    the evolving needs of web developers and designers. CSS is referred to as just CSS now, without a version number.
 
-    Types of CSS
+    Types of CSS.
       - Inline CSS: Applied directly to an HTML element using the style attribute.
               It has the highest priority among the three methods.
       - Internal CSS: IDefined within the <style> tag inside the <head> section of an HTML document.
       - External CSS: Written in a separate .css file and linked to the HTML document using the <link> tag.
               This is the recommended method for large projects as it improves maintainability.
 
-    Advantages of Using CSS
+    Advantages of Using CSS.
       - Responsive design: CSS offers features like media queries that enable developers to create responsive layouts
         that adapt to different screen sizes and devices, ensuring a consistent user experience.
       - Flexibility and Control: CSS provides precise control over the presentation of HTML elements, allowing
@@ -109,13 +108,13 @@
       - Ease of Maintenance: Centralized CSS files make it easier to maintain and update styles across a website.
         Changes can be applied globally, ensuring uniformity and reducing the risk of inconsistencies.
       - Faster Page Loading: External CSS files can be cached by browsers, resulting in faster page loading times for
-        subsequent visits to a website. This caching mechanism reduces server load and bandwidth consumption.
+        later visits to a website. This caching mechanism reduces server load and bandwidth consumption.
 
-    Components of CSS
+    Components of CSS.
     CSS works by associating rules with HTML elements. A CSS rule contains two main parts:
-      - a selector which specifies the HTML element(s) to style.
-      - a declaration block which contains one or more declarations separated by semicolons.
-    Each declaration includes a property-name and value, specifying the aspect of the element presentation to control.
+    - a selector which specifies the HTML element(s) to style.
+    - a declaration block which contains one or more declarations separated by semicolons.
+      Each declaration includes a property-name and value, specifying the aspect of the element presentation to control.
 		-->
 		<section class="home">
 			<h1>Home</h1>
@@ -127,13 +126,13 @@
 
 		<!--
     What is CSS?
-    CSS stands for Cascading Style Sheets, used to describe the presentation and design of a web pages.
+    CSS stands for Cascading Style Sheets, used to describe the presentation and design of web pages.
     Using CSS, you can control the color of the text, the style of fonts, the spacing between paragraphs, how columns
     are sized and laid out, what background images or colors are used.
     CSS can control the layout of multiple web pages all at once.
 
     Why Use CSS?
-    - CSS Saves Time: You can write CSS once and then reuse same sheet in multiple HTML pages.
+    - CSS Saves Time: You can write CSS once and then reuse the same styles across multiple HTML pages.
     - Pages Load Faster: If you are using CSS, you do not need to write HTML tag or attributes every time.
       Just write one CSS rule of a tag and apply it to all the occurrences of that tag.
     - Easy Maintenance: To make a global change, simply change the style, and all elements in all the web pages will be
@@ -142,53 +141,49 @@
       so you can get a far better look to your HTML page.
     - Multiple Device Compatibility: For the same HTML document, different versions of a website can be presented for
       different screen widths
-    - Global Web Standards: Now most of the HTML attributes are being deprecated and it is being recommended to use CSS.
+    - Global Web Standards: Now that most HTML attributes are being deprecated, it is recommended to use CSS.
 
-    CSS Syntax
-    Syntax of CSS consist of selectors and declaration used to apply styles to HTML elements.
-
+    CSS Syntax consists of selectors and declaration used to apply styles to HTML elements.
       selector {
-          property: value;
+        property: value;
       }
 
-    The selector targets the HTML element/elements that you want to style.
+    The selector targets the HTML element(s) that you want to style.
     The declaration block contains one or more declarations enclosed in curly braces {}.
-    Each declaration consists of a property and a value separated by a colon :.
-    Declarations are separated by semicolons ;.
+    Each declaration consists of a property and a value separated by a colon:
+    Semicolons(;) separate declarations
 
     There are several types of selectors available in CSS, commonly used selectors are classes, IDs and tags.
-    To know complete list of selectors visit CSS Selectors article.
+    To know the complete list of selectors, visit the CSS Selectors article.
 
     CSS History and Versions
-    Current version of CSS3 and early versions were CSS1 and CSS2.
-    As of now CSS is continuously evolving and adapting new capabilities that fulfills current website's requirements.
+    Current version of CSS is CSS3.Early versions were CSS1 and CSS2.
+    As of now, CSS is continuously evolving and adapting new capabilities that fulfill current websites' requirements.
 
     --------------------------------------------------------------------------------------------------------------------
 
-    CSS Syntax
-    Syntax of CSS consist of selectors and declaration used to apply styles to HTML elements.
-
+    CSS Syntax.
+    CSS syntax consists of selectors and declaration used to apply styles to HTML elements.
       selector {
-          property: value;
+        property: value;
       }
 
     Selector: CSS selectors are used to select the HTML element or groups of elements you want to style on a web page.
-    Property: A CSS property is an aspect or characteristic of an HTML element that can be styled or modified using CSS,
+    Property: An aspect or characteristic of an HTML element that can be styled or modified using CSS,
               such as color, font-size, or margin.
     Value:    Values are assigned to properties.
-              For example, color property can have value like red, green etc.
+              For example, color property can have value like red, green, e.t.c.
 
     Multiple Style Rules
-    If you want to define multiple rules for a single selectors you can specify those in single block separated by a
+    If you want to define multiple rules for a single selector, you can specify those in a single block separated by a
     semicolon (;).
-
       selector{
         property1: value1;
         property2: value2;
         property3: value3;
       }
 
-    CSS Selectors Syntax
+    CSS Selectors Syntax.
     CSS Selectors are used to select the HTML elements you want to style on a web page.
     They allow you to target specific elements or groups of elements to apply styles like colors, fonts, margins, etc.
 
@@ -201,48 +196,49 @@
       - Pseudo-Element Selector... Selects and styles specific parts of an element.
       - Pseudo-Class Selector..... Selects and styles elements based on their state.
 
-    CSS Inclusion Syntax
+    CSS Inclusion Syntax.
     CSS can be used in any HTML document using three different methods which are: inline, internal, and external CSS.
-      - Inline CSS Syntax
+      - Inline CSS Syntax.
         <div style="color: #04af2f;">Welcome to TutorialsPoint.</p>
 
-      - Internal CSS Syntax
+      - Internal CSS Syntax.
         Internal CSS is used within the head section of an HTML document using a style tag.
             <style>
-                body {
-                    background-color: #04af2f;
-                }
+              body {
+                background-color: #04af2f;
+              }
             </style>
-      - External CSS Syntax
-        External CSS is written in a separate file with a .css extension and linked to the HTML document using link tag.
+
+      - External CSS Syntax.
+        External CSS is written in a separate .css file and linked to the HTML document using a link tag.
             <link rel="stylesheet" type="text/css" href="style.css">
 
-    CSS Media Queries Syntax
+    CSS Media Queries Syntax.
     CSS media queries apply different CSS styles based on the screen size, resolution, and other characteristics
     and are often used for creating responsive designs.
       @media (max-width: 700px) {
-          body {
-              background-color: #04af2f;
-          }
+        body {
+          background-color: #04af2f;
+        }
       }
 
     CSS Variables Syntax
-    CSS Variables allows to store and reuse values throughout the CSS program.
-        :root {
-            --main-color: #04af2f;
-        }
+    CSS Variables allows storing and reusing values throughout the CSS program.
+      :root {
+        --main-color: #04af2f;
+      }
 
     CSS Comments Syntax
     CSS comments add an explanatory note about the code.
-        /* This is a single line CSS comment */
+      /* This is a single line CSS comment */
 
     --------------------------------------------------------------------------------------------------------------------
 
     CSS - Comments
     Comments are useful in adding explanatory notes or annotations within your style-sheet that are not interpreted as
     styling instructions by the web browser.
-    CSS comments are intended for the benefit of developers and are ignored by the browser when rendering a web page. T
-    hey are useful in documentation, debugging, etc.
+    CSS comments are intended for the benefit of developers and are ignored by the browser when rendering a web page.
+    They are useful in documentation, debugging, etc.
 
     In CSS, there are two main ways to create comments:
       - Single-line Comments: Single-line comments are created using /* to start the comment and */ to end it.
@@ -256,15 +252,15 @@
 		</section><hr>
 
 		<!--
-    Inline CSS
+    Inline CSS.
     Inline CSS is applied directly to an HTML element using the style attribute.
     It has the highest priority among the three methods.
       SYNTAX: <element style = "...style rules....">
 
-    Internal CSS
+    Internal CSS.
     Internal CSS is defined within the <style> tag inside the <head> section of an HTML document.
 
-    External CSS
+    External CSS.
     External CSS is written in a separate .css file and linked to the HTML document using the <link> tag.
     This is the recommended method for large projects as it improves maintainability.
 
@@ -272,13 +268,13 @@
 
     CSS Inclusion
     You need to include the CSS file in your HTML document before using it.
-    There are multiple ways to include CSS in a HTML file: inline CSS, internal CSS, or including a CSS file.
+    There are multiple ways to include CSS in an HTML file: inline CSS, internal CSS, or including a CSS file.
 
-    Styles can be associated with your HTML document in different ways, such as:
-      - Inline CSS Syntax
+    Styles can be associated with your HTML document in different ways, such as
+      - Inline CSS Syntax.
         <div style="color: #04af2f;">Welcome to TutorialsPoint.</p>
 
-      - Internal CSS Syntax
+      - Internal CSS Syntax.
         Internal CSS is used within the head section of an HTML document using a style tag.
             <style type="text/css">
                 body {
@@ -287,28 +283,30 @@
             </style>
 
         Attributes associated with <style> elements are:−
-        - type.... text/css... Specifies style-sheet language as a content-type (MIME type). This is a required attribute.
-        - media... screen/tty/tv/projection/handheld/print/braille/aural/all
-                   Specifies the device the document will be displayed on.
-                   Default value is all. This is an optional attribute.
+          * type.... text/css
+                     Specifies style-sheet language as a content-type (MIME type). This is a required attribute.
+          * media... screen/tty/tv/projection/handheld/print/braille/aural/all
+                     Specifies the device the document will be displayed on.
+                     Default value is all. This is an optional attribute.
 
-      - External CSS Syntax
-        External CSS is written in a separate file with a .css extension and linked to the HTML document using link tag.
-            <link rel="stylesheet" type="text/css" href="style.css">
+      - External CSS Syntax.
+        External CSS is written in a separate .css file and linked to the HTML document using a link tag.
+          <link rel="stylesheet" type="text/css" href="style.css">
 
         Attributes associated with <style> elements are:−
-        - type.... text/css... Specifies style-sheet language as a content-type (MIME type). This attribute is required.
-        - href.... URL........ Specifies the style sheet file having style rules. This attribute is required.
-        - media... screen/tty/tv/projection/handheld/print/braille/aural/all
-                    Specifies the device the document will be displayed on.
-                    Default value is all. This is an optional attribute.
+          * type.... text/css
+          * media... screen/tty/tv/projection/handheld/print/braille/aural/all
+          * href.... URL
+                     Specifies the style sheet file having style rules. This attribute is required.
+                     Specifies the device the document will be displayed on.
+                     Default value is all. This is an optional attribute.
 
     Imported CSS - @import Rule
     The @import is used to import an external style-sheet in a manner similar to the <link> element.
-    By using @import rule, one style-sheet can be imported into another style-sheet
+    By using @import rule, one style-sheet can be imported into another style-sheet.
     The only key point to remember is, the @import rule must be declared on top of the document.
 
-      SYNTAX: Refer the following two css files − style.css and demostyle.css
+      SYNTAX: Refer the following two CSS files; style.css and demostyle.css
 
       style.css
       body {
@@ -317,16 +315,13 @@
 
       demostyle.css
       @import url("style.css");
-
       h1 {
             color: #36CFFF;
          }
-
       p {
             font-size: 1.5em;
             color: white
       }
-
       div {
             border: 5px inset gold;
             background-color: black;
@@ -334,27 +329,34 @@
             text-align: center
       }
 
-      You just need to include the stylesheet, that has @import rule defined, in the <link> tag in the HTML document as follows −
+      You just need to include the stylesheet that has @import rule defined in the <link> tag in the HTML document
+      as follows −
 
       <head>
-         <link type = "text/css" href = "demostyle.css">
+        ...
+        <link type = "text/css" href = "demostyle.css">
       </head>
 
-    CSS Rules Overriding
+    CSS Rules Overriding.
     We have discussed different ways to include style sheet rules in an HTML document.
     Here is the rule to override any Style Sheet Rule.
 
-      - Any inline style sheet takes highest priority.
+      - Any inline style sheet takes the highest priority.
         So, it will override any rule defined in <style>...</style> tags or any external style sheet file.
       - Any rule defined in <style>...</style> tags will override rules defined in any external style sheet file.
-      - Any rule defined in external style sheet file takes lowest priority,
-        and rules defined in this file will be applied only when above two rules are not applicable.
+      - Any rule defined in an external stylesheet file takes the lowest priority,
+        and rules defined in this file will be applied only when the above two rules are not applicable.
+      - Not forgetting, external stylesheets load in order, and the last loaded override earlier ones
+      - Specificity overrides order:
+            #id beats .class, which beats element
+            div#hero h1 is more specific than just h1
+      - !important overrides everything (but should be used sparingly as it breaks the natural cascade)
 
     CSS Comments Inclusion
     Many times, you may need to put additional comments in your style sheet blocks.
-    So, it is very easy to comment any part in style sheet.
-    You can simple put your comments inside /*.....this is a comment in style sheet.....*/
-    You can use /* ....*/ to comment multi-line blocks.
+    So, it is very easy to comment on any part in the stylesheet.
+    You can simply put your comments inside /* ...this is a comment in style sheet... */
+    You can use /* ... */ to comment multi-line blocks.
 		-->
 		<section class="types">
 			<h1>Types</h1>
@@ -390,70 +392,70 @@
 
     There should be no whitespace between the number and the unit. The unit can be left out when the value is 0.
 
-    Length Units
+    Length Units.
     Length units can be categorized into two types:
-      - Absolute units: Fixed unit lengths that does not depend on screen width.
-      - Relative units: Responsive unit lengths that changes according to screen width.
+      - Absolute units: Fixed unit lengths that do not depend on screen width.
+      - Relative units: Responsive unit lengths that change, according to screen width.
 
-    Absolute Length Units
+    Absolute Length Units.
     These units are categorized as fixed-length units, which means that lengths specified with absolute units maintain
     an exact, unchanged size on the screen.
 
     These units prove to be very effective when the browser has comprehensive information about the properties of the screen, the printer being used, or other appropriate user agents.
 
     The following are all the types of absolute units:
-      - mm... Refers to millimeter, it is used to specify the measurements in millimeters.
-              1mm = 1/10th of 1cm
-      - cm... Refers to centimeter, it is used to specify the measurements in centimeters.
-              1cm = 37.8px = 25.2/64in
-      - Q.... Refers to Quarter-millimeters, it is used to specify the measurements in centimeters.
-              1Q = 1/40th of 1cm
-      - in... Refers to inches, it is used to specify the measurement in inches.
-              1in = 2.54cm = 96px
-      - pt... Refers to point, it is used to specify the measurements in points.
-              1pt = 1/72 of 1in
-      - pc... Refers to picas, it is used to specify the measurement in picas.
-              1pc = 1/6th of 1in
-      - px... Refers to pixels, it is used to specify the measurement in pixels.
-              1px = 1/96th of 1in
+      - mm....... Refers to millimeter, it is used to specify the measurements in millimeters.
+                  1mm = 1/10th of 1cm
+      - cm....... Refers to centimeter, it is used to specify the measurements in centimeters.
+                  1cm = 37.8px = 25.2/64in
+      - Q........ Refers to Quarter-millimeters, it is used to specify the measurements in centimeters.
+                  1Q = 1/40th of 1cm
+      - in....... Refers to inches, it is used to specify the measurement in inches.
+                  1in = 2.54cm = 96px
+      - pt....... Refers to point, it is used to specify the measurements in points.
+                  1pt = 1/72 of 1in
+      - pc....... Refers to picas, it is used to specify the measurement in picas.
+                  1pc = 1/6th of 1in
+      - px....... Refers to pixels, it is used to specify the measurement in pixels.
+                  1px = 1/96th of 1in
+      - em....... Relative to the font-size of the element.
+      - ex....... Relative to the x-height of the current font.
+      - ch....... Relative to the width of the "0".
+      - rem...... Relative to the font-size of the root element.
+      - lh....... Relative to the line height of the element.
+      - rlh...... t is relative to the line height of the root element.
 
     Absolute units prove valuable for projects where responsiveness is not a priority.
     However, they are less beneficial for responsive websites because they do not adjust when screen dimensions change.
 
-    Relative Length Units
+    Relative Length Units.
     Relative length units are measured in relation to other elements or viewport of the screen.
-    Relative units are great for styling responsive websites because they can be adjusted proportionally based on window size or parent elements. These units define lengths relative to other length properties.
+    Relative units are great for styling responsive websites because they can be adjusted proportionally based on
+    window size or parent elements. These units define lengths relative to other length properties.
 
-    The following are all the types of absolute units:
+    The following are all the types of relative units:
 
-    Unit  Description Example
-    em.......... Relative to the font-size of the element.
-    ex.......... Relative to the x-height of the current font.
-    ch.......... Relative to width of the "0".
-    rem......... Relative to font-size of the root element.
-    lh.......... Relative to the line height of the element.
-    rlh......... t is relative to the line height of the root element.
+    vb.......... Relative to the size of the initial containing block in the direction of the root element block axis.
+                 1vb = 1% of the containing block's size (block axis).
     vh.......... Relative to the height of the viewport.
                  1vh = 1% or 1/100 of the height of the viewport.
-    vw.......... Relative to the width of the viewport.
-                 1vw = 1% or 1/100 of the width of viewport.
     vmin........ Relative to the smaller dimension of the viewport.
                  1vmin = 1% or 1/100 of the viewport's smaller dimension.
-    vmax........ Relative to the larger dimension of the viewport.
-                 1vmax = 1% or 1/100 of the viewport's larger dimension.
-    vb.......... Relative to the size of the initial containing block in the direction of the root element block axis.
-                 1vb = 1% of containing block's size (block axis).
+    vw.......... Relative to the width of the viewport.
+                 1vw = 1% or 1/100 of the width of viewport.
     vi.......... Relative to the size of the initial containing block in the direction of the root element inline axis.
-                 1vb = 1% of containing block's size (inline axis).
+                 1vb = 1% of the containing block's size (inline axis).
+    dvw, dvh.... Relative to the width and height of the dynamic viewport.
+                 1dvw = 1% or 1/100 of the dynamic viewport's width
+                 1dvh = 1% or 1/100 of the dynamic viewport's height.
     svw, svh.... Relative to the width and height of the smaller viewport.
                  1svw = 1% or 1/100 of the smaller viewport's width
                  1svh = 1% or 1/100 of the smaller viewport's height.
     lvw, lvh.... Relative to the width and height of the larger viewport.
                  1lvw = 1% or 1/100 of the larger viewport's width
                  1lvh = 1% or 1/100 of the larger viewport's height.
-    dvw, dvh.... Relative to the width and height of the dynamic viewport.
-                 1dvw = 1% or 1/100 of the dynamic viewport's width
-                 1dvh = 1% or 1/100 of the dynamic viewport's height.
+    vmax........ Relative to the larger dimension of the viewport.
+                 1vmax = 1% or 1/100 of the viewport's larger dimension.
 		-->
 		<section class="measurement-units">
 			<h1>Measurement Units</h1>
