@@ -439,8 +439,6 @@
                  1vb = 1% of the containing block's size (block axis).
     vh.......... Relative to the height of the viewport.
                  1vh = 1% or 1/100 of the height of the viewport.
-    vmin........ Relative to the smaller dimension of the viewport.
-                 1vmin = 1% or 1/100 of the viewport's smaller dimension.
     vw.......... Relative to the width of the viewport.
                  1vw = 1% or 1/100 of the width of viewport.
     vi.......... Relative to the size of the initial containing block in the direction of the root element inline axis.
@@ -454,6 +452,8 @@
     lvw, lvh.... Relative to the width and height of the larger viewport.
                  1lvw = 1% or 1/100 of the larger viewport's width
                  1lvh = 1% or 1/100 of the larger viewport's height.
+    vmin........ Relative to the smaller dimension of the viewport.
+                 1vmin = 1% or 1/100 of the viewport's smaller dimension.
     vmax........ Relative to the larger dimension of the viewport.
                  1vmax = 1% or 1/100 of the viewport's larger dimension.
 		-->
@@ -477,47 +477,46 @@
 
       <h2>Relative Units</h2>
       <h3>By Height</h3>
+      <p class="relative-unit-vb">Font size as 4vb</p>
+      <p class="relative-unit-vh">Font size as 4vh</p>
       <p class="relative-unit-dvh">Font size as 4dvh</p>
       <p class="relative-unit-lvh">Font size as 4lvh</p>
       <p class="relative-unit-svh">Font size as 4svh</p>
-      <p class="relative-unit-vb">Font size as 4vb</p>
-      <p class="relative-unit-vh">Font size as 4vh</p>
-      <p class="relative-unit-vmin">Font size as 4vmin</p>
 
       <h3>By Width</h3>
-      <p class="relative-unit-vw">Font size as 4vw</p>
       <p class="relative-unit-vi">Font size as 4vi</p>
-      <p class="relative-unit-svw">Font size as 4svw</p>
-      <p class="relative-unit-lvw">Font size as 4lvw</p>
+      <p class="relative-unit-vw">Font size as 4vw</p>
       <p class="relative-unit-dvw">Font size as 4dvw</p>
+      <p class="relative-unit-lvw">Font size as 4lvw</p>
+      <p class="relative-unit-svw">Font size as 4svw</p>
 
       <h3>By Both</h3>
+      <p class="relative-unit-vmin">Font size as 4vmin</p>
       <p class="relative-unit-vmax">Font size as 4vmax</p>
 		</section><hr>
 
     <!--
     CSS - Selectors
     CSS Selectors are used to select the HTML elements you want to style on a web page.
-    They allow to target specific elements or groups of elements to apply styles like colors, fonts, margins, and more.
-    The element or elements that are selected by the selector are referred to as subject of the selector.
+    They allow targeting specific elements or groups of elements to apply styles like colors, fonts, margins, and more.
+    The element or elements that are selected by the selector are referred to as a subject of the selector.
 
     CSS Nested Selectors
-    CSS nesting allows to nest one style rule inside another rule,
-    with the selector of the child rule relative to the selector of the parent rule.
-    The nesting selector shows the relationship between the parent and child rules.
-      - When the nested selectors are parsed by the browser, it automatically adds a whitespace between the selectors,
-        thus creating a new CSS selector rule.
-      - In situations where the nested rule needs to be attached to the parent rule (without any whitespace),
-        like while using the pseudo-class or compound selectors,
-        the & nesting selector must be prepended immediately to achieve the desired result.
-      - In order to reverse the context of rules, the & nesting selector can be appended.
-      - There can be multiple instances of & nesting selector.
+    CSS nesting allows nesting one style rule inside another rule, with the selector of the child rule relative to the
+    selector of the parent rule. The nesting selector shows the relationship between the parent and child rules.
+      - When the browser parses the nested selectors, it automatically adds whitespace between the selectors, thus
+        creating a new CSS selector rule.
+      - In situations where the nested rule needs to be attached to the parent rule (without any whitespace), like
+        while using the pseudo-class or compound selectors, the umber-sand(&) nesting selector must be prepended
+        immediately to achieve the desired result.
+      - In order to reverse the context of rules, the umber-sand(&) nesting selector can be appended.
+      - There can be multiple instances of the umber-sand(&) nesting selector.
     -->
 		<section class="selectors">
 			<h1>Selectors</h1>
 
       <!--
-      CSS Universal Selector
+      CSS Universal Selector.
       CSS universal selector is a special selector that selects all the elements in an HTML document.
       It is denoted by an asterisk mark (*).
       The syntax for the universal selector is as follows:
@@ -535,7 +534,7 @@
       </article><br><br>
 
       <!--
-      CSS Element Selector
+      CSS Element Selector.
       CSS element selector selects and styles specific HTML elements.
       The element selector is defined by simply using the element's name in the stylesheet.
       The syntax for the element selector is as follows:
@@ -551,7 +550,7 @@
       </article><br><br>
 
       <!--
-      CSS Class Selector
+      CSS Class Selector.
       CSS class selector selects an element with a specific class attribute.
       The class selector is defined using a period (.) followed by the class name.
       The syntax for the class selector is as follows:
@@ -567,8 +566,8 @@
         <br><br>
 
         <h3>Multiple Class Selectors</h3>
-        <p class="bgc">This is a paragraph with background color. will not be styled</p>
-        <p class="bgc brd">This is a paragraph with background color and border. will be styled</p>
+        <p class="bgc">This is a paragraph with background color will not be styled</p>
+        <p class="bgc brd">This is a paragraph with background color and border will be styled</p>
         <br><br>
 
         <h3>Combining Class Selector with Other Selectors</h3>
@@ -602,29 +601,40 @@
 
         <h3>ID Selector with Hover Pseudo-Classes</h3>
         <p id="id4">Example paragraph to be styled by an ID Selector</p>
+
+        <h3>Using ID Selector with Forms</h3>
+        <form>
+          <label for="user">Username:</label>
+          <input type="text" id="user" name="username" placeholder="Enter your username">
+          <br><br>
+          <button type="submit" id="btn">Submit</button>
+        </form>
       </article><br><br>
 
       <!--
       CSS Combinators
 
-      Combinators used to specify relationship between selectors so that styling can be done based on that relationship.
-      In other words combinators help you target elements based on their position and hierarchy within the HTML document.
-      For example, with combinators you can style paragraph element that paaced immediately after div element.
+      Combinators used to specify a relationship between selectors so that styling can be done based on that relationship.
+      In other words, combinators help focus on elements based on their position and hierarchy within the HTML document.
+      For example, with combinators you can style a paragraph element placed immediately after a div element.
 
       CSS Descendant Combinator
       Used to select elements that are nested within another element, regardless of how deeply they are nested.
-      These are often represented by a single space (" ").
+      These are often represented by a single space.
 
       CSS Child Combinator
       The child combinator (>) is used to select elements that are direct children of a specified element.
       It will not select elements that are further nested inside the child elements.
 
       CSS Adjacent Sibling Combinator
-      Adjacent sibling combinator (+) is used to select an element that is immediately preceded by a specified element.
+      Adjacent sibling combinator (+) is used to select an element immediately preceded by a specified element.
       It only affects the element that directly follows the specified element.
 
       CSS General Sibling Combinator
-      The general sibling combinator (~) is used to select all elements that are siblings of a specified element and appear after it in the HTML structure. It will select all matching siblings, not just the one immediately following.
+      The general sibling combinator (~) is used to select all elements that are siblings of a specified element and
+      appear after it in the HTML structure.
+      It will select all matching siblings, not just the one immediately following.
+      It will not select elements that are further nested inside the child elements.
 
       Combining Multiple Combinators
       In CSS, you can combine multiple combinators to create more complex and specific selectors.
@@ -640,12 +650,12 @@
         <div class="descendant-combinator">
           <h3>CSS Descendant Combinator</h3>
           <div>
-            <p>Paragraph before heading</p>
+            <p>Paragraph 0 before heading</p>
             <h4>Some H4 Heading</h4>
             <p>Paragraph 1</p>
             <p>Paragraph 2</p>
             <div>
-              <p>Paragraph inside another div</p>
+              <p>Paragraph 3 inside another div</p>
             </div>
           </div>
         </div><br><br>
@@ -653,12 +663,12 @@
         <div class="child-combinator">
           <h3>CSS Child Combinator > </h3>
           <div>
-            <p>Paragraph before heading</p>
+            <p>Paragraph 0 before heading</p>
             <h4>Some H4 Heading</h4>
             <p>Paragraph 1</p>
             <p>Paragraph 2</p>
             <div>
-              <p>Paragraph inside another div</p>
+              <p>Paragraph 3 inside another div</p>
             </div>
           </div>
         </div><br><br>
@@ -666,12 +676,12 @@
         <div class="adjacent-sibling-combinator">
           <h3>CSS Adjacent Sibling Combinator + </h3>
           <div>
-            <p>Paragraph before heading</p>
+            <p>Paragraph 0 before heading</p>
             <h4>Some H4 Heading</h4>
             <p>Paragraph 1</p>
             <p>Paragraph 2</p>
             <div>
-              <p>Paragraph inside another div</p>
+              <p>Paragraph 3 inside another div</p>
             </div>
           </div>
         </div><br><br>
@@ -679,12 +689,12 @@
         <div class="general-sibling-combinator">
           <h3>CSS General Sibling Combinator ~ </h3>
           <div>
-            <p>Paragraph before heading</p>
+            <p>Paragraph 0 before heading</p>
             <h4>Some H4 Heading</h4>
             <p>Paragraph 1</p>
             <p>Paragraph 2</p>
             <div>
-              <p>Paragraph inside another div</p>
+              <p>Paragraph 3 inside another div</p>
             </div>
           </div>
         </div><br><br>
@@ -713,24 +723,31 @@
           property1: value1;
         }
 
-      The following sections discusses some common ways to use attribute selectors:
-      - CSS [attribute] Selector
+      The following sections discuss some common ways to use attribute selectors:
+      - CSS [attribute] Selector.
         Selects elements that have specified attribute, regardless of its value.
-      - CSS [attribute="value"] Selector
+      - CSS [attribute="value"] Selector.
         Selects elements that have a specific attribute with a specific value.
-      - CSS [attribute*="value"] Selector
+      - CSS [attribute*="value"] Selector.
         Selects elements that have a specific attribute with a value containing a specific substring anywhere within it.
-      - CSS [attribute^="value"] Selector
+      - CSS [attribute^="value"] Selector.
         Selects elements that have a specific attribute with a value that starts with a specific string.
-      - CSS [attribute$="value"] Selector
+      - CSS [attribute$="value"] Selector.
         Selects elements that have a specific attribute with a value that ends with a specific string.
-      - CSS [attribute|="value"] Selector
+      - CSS [attribute|="value"] Selector.
         Selects elements that have a specific attribute with a specific value OR the specific value followed by a hyphen
         This selector is often used for selecting elements with language-specific attributes,
         such as lang attributes, which often use hyphens to denote language subcodes.
+        NOTE: IT MATCHES THE VALUE IF AND ONLY IF IT IS EXACTLY EQUAL TO VALUE OR STARTS WITH VALUE-
+              IF ANYTHING THAT FOLLOWS THE SUB-STRING IS NOT AN HYPHEN, IT WILL NOT MATCH
       - CSS [attribute~="value"] Selector
         This selector is used to select elements that have a specific attribute with a value containing a specified word.
         The word should be a standalone word, surrounded by spaces or at the beginning or end of the attribute value.
+
+      IMPORTANT!
+      For operators like =, ^=, $=, *=, |= the browser treats the whole attribute value as a single plain string,
+      spaces and all. No matter how many names you may have for that attribute.
+      The only selector that split by whitespace is [attr~=value]
       -->
       <article class="attr-selectors">
         <h2>Attr Selectors</h2>
@@ -777,14 +794,35 @@
         <div class="card featured">I am a featured div</div>
         <div class="card highlight">I am a highlight div</div>
         <br><br>
+
+        <h3>Additional Examples</h3>
+        <div class="additional-examples">
+          <p title="css bg-red1">Please paint my background red</p>
+          <p title="css bg-red2">Please paint my background red</p>
+          <p title="css bg-red3">Please paint my background red</p>
+          <p title="css bg-red3">Please paint my background green</p>
+          <br><br>
+
+          <p title="css bg-blue1">Please paint my background blue</p>
+          <p title="css bg-blue2">Please paint my background blue</p>
+          <p title="css bg-blue3">Please paint my background blue</p>
+          <p title="css g-blue3">Please paint my background green</p>
+          <br><br>
+
+          <p title="css background">You can set backgrounds of various HTML elements.</p>
+          <p title="css background red">You can set backgrounds of various HTML elements.</p>
+          <p title="css background green">You can set backgrounds of various HTML elements.</p>
+        </div>
       </article><br><br>
 
       <!--
-      CSS Group Selector
-      CSS group selector allow us to apply same style to multiple elements at a time.
-      Name of elements are comma-separated. The group selector keep CSS concise and avoid redundancy.
+      CSS Group Selector.
+      CSS group selector allows us to apply the same style to multiple elements at a time.
+      Names of elements are comma-separated. The group selector keeps CSS concise and avoids redundancy.
       The syntax for the group selector is as follows:
-        .class-name1, .class-name2, .class-name3 {
+        .class-name1,
+        .class-name2,
+        .class-name3 {
           property1: value1;
         }
       -->
