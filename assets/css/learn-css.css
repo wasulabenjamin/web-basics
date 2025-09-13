@@ -413,15 +413,34 @@ input:focus {
         color: black;
       }
 
-      /*
-      Will not work because there no hyphen after css
-      */
+      /* Will not work because theres no hyphen after css */
       & p[title|="css"] {
         background-color: green;
       }
 
       & p[title~="background"] {
         background-color: indigo;
+        color: white;
+      }
+    }
+
+    & .multiple-attr-selectors {
+      & li {
+        list-style-type: none;
+        margin: 0 0 10px -40px; /* margin: top -> right -> bottom -> left */
+      }
+
+      & a[href] {
+        text-decoration: none;
+      }
+
+      a[href="web-basics.html"] {
+        background-color: red;
+      }
+
+      /* Both conditions must be true at the same time for style to apply */
+      a[href="web-basics.htm"][href$="m"] {
+        background-color: orange;
         color: white;
       }
     }
@@ -548,6 +567,7 @@ input:focus {
     }
 
     & .pc-defined {
+      /*noinspection CssInvalidHtmlTagReference*/
       & sample-custom-element {
         color: blue;
       }

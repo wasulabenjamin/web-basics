@@ -813,6 +813,15 @@
           <p title="css background red">You can set backgrounds of various HTML elements.</p>
           <p title="css background green">You can set backgrounds of various HTML elements.</p>
         </div>
+        <br><br>
+
+        <h3>Multiple Attribute Selectors</h3>
+        <ul class="multiple-attr-selectors">
+          <li><a href="web-basics.html">Link 01</a></li>
+          <li><a href="web-basics.htm">Link 02</a></li>
+          <li><a href="web-basics.com">Link 03</a></li>
+          <li><a href="web-basics.co.ke">Link 04</a></li>
+        </ul>
       </article><br><br>
 
       <!--
@@ -834,85 +843,29 @@
       </article><br><br>
 
       <!--
-      CSS Pseudo-Class Selector
+      CSS Pseudo-Class Selector.
       Pseudo-classes in CSS are used to select and style elements based on their state or position within the document
-      tree, without the need for adding extra classes or JavaScript.
+      tree, without the need to add extra classes or JavaScript.
 
       What is Pseudo-class?
       Pseudo-classes are often used along with CSS Selectors by inserting a colon (:) after selector.
-        For example a : hover{}, Here selector `a` will selects all the anchor tags in document.
+        For example, a:hover{}, Here selector `a` will select all the anchor tags in a document.
+
       A functional pseudo-class contains a pair of parentheses to define the arguments.
         For example: :lang(en).
-      The element to which a pseudo-class is attached, is termed as an anchor element.
-        For example: button:hover, a:focus, etc... Here button and a elements are called the anchor elements.
+
+      The element to which a pseudo-class is attached is termed as an anchor element.
+        For example, button:hover, a:focus, etc... Here a button and an element are called the anchor elements.
+
       Pseudo-classes apply style to an element as per the content of the document tree.
-      Pseudo-classes also apply a style to an element in relation to the external factors, such as:
+      Pseudo-classes also apply a style to an element in relation to the external factors, such as
         - History of the navigation of the element (:visited),
         - Status of the content (:checked), or position of mouse (:hover)
+
       The syntax for pseudo-class selector is as follows:
         selector:pseudo-class {
           property: value;
         }
-
-      Pseudo-Class Hover
-      In CSS, pseudo-class :hover is used to specify mouse hovering state of an element.
-      This used to style element while users mouse passes through an element in document.
-      The syntax for pseudo-class hover selector is as follows:
-        tag:hover {
-           property: value;
-        }
-
-      Pseudo-Class Active
-      Pseudo-class :active will apply style to an element when user activates the element by clicking or tapping on it.
-      This is most commonly used with interactive elements like button and anchor tag, but all the HTML elements can use
-      this pseudo-class. The syntax for pseudo-class active selector is as follows:
-        tag:active {
-          property: value;
-        }
-
-      Pseudo-Class Focus
-      Pseudo-class :focus will apply style to an element when user focused an element like input tag by clicking on it.
-      Before typing text in input element users has to click in input area to enable cursor, this is called focusing.
-      The syntax for pseudo-class focus selector is as follows:
-        tag:focus {
-          property: value;
-        }
-
-      Pseudo-Class nth Child
-      The pseudo-class :nth-child(n) will apply style to any specified direct child of an element.
-      The syntax for pseudo-class nth-child(n) selector is as follows:
-        tag:nth-child(number/ expression / odd / even) {
-          property: value;
-        }
-      The pseudo-class nth-child can take number, mathematical expression or values like odd, even as parameter.
-
-      Pseudo-Class First-Child
-      The pseudo-class first-child used to select first direct child element.
-      The syntax for pseudo-class first-child selector is as follows:
-        tag:first-child {
-          property: value;
-        }
-
-      Pseudo-Class Last-Child
-      The pseudo-class last-child used to select last direct child element.
-      The syntax for pseudo-class last-child selector is as follows:
-        tag:last-child {
-          property: value;
-        }
-
-      Pseudo-Class Lang
-      The pseudo-class :lang() will apply style to an element based on value of lang attribute set to the element or
-      it's parent.
-
-      Pseudo-Class Not
-      The pseudo-class :not(selector) is used to apply style on all the elements expect elements that included in
-      mentioned selectors.
-      The syntax for pseudo-class not selector is as follows:
-        tag:not(selector){
-          property: value;
-        }
-      The selector can be a class, id, or tag in html.
-
 
       The table given below lists all the CSS pseudo-classes:
       :active................ Represents an element that has been activated by the user.
@@ -924,11 +877,11 @@
       :defined............... Represents any custom element that has been defined.
       :disabled.............. Represents a disabled element.
       :empty................. Matches an element that has no children.
-      :enabled............... Represents an enabled element, after its has been activated.
+      :enabled............... Represents an enabled element after it has been activated.
       :first................. Represents the first page of a printed document, with the @page at-rule.
       :first-child........... Represents the first element among a group of sibling elements.
       :first-of-type......... Represents the first element of its type among a group of sibling elements.
-      :fullscreen............ Matches an element that is currently displayed in fullscreen mode.
+      :fullscreen............ Matches an element currently displayed in fullscreen mode.
       :focus................. Represents an element that has received focus.
       :focus-visible......... Applies while an element matches the :focus pseudo-class or receives focus.
       :focus-within.......... Matches an element if the element or any of its descendants are focused.
@@ -941,7 +894,7 @@
       :indeterminate......... Represents any form element whose state is indeterminate or unknown.
       :in-range.............. Represents an element whose current value is within the range limits.
       :invalid............... Represents any element whose contents fail to validate.
-      :is().................. Takes a selector list as its argument,
+      :is().................. Takes a selector list as its argument
                               and selects any element that can be selected by one of the selectors in that list.
       :lang()................ Matches an element based on the language they are defined to be in.
       :last-child............ Represents the last element among a group of sibling elements.
@@ -950,7 +903,7 @@
       :link.................. Represents an element that has not yet been visited.
       :modal................. Matches an element that is in a state in which it excludes all interaction with elements
                               outside it until the interaction has been dismissed.
-      :not()................. Represents an element that do not match a list of selectors.
+      :not()................. Represents an element that does not match a list of selectors.
       :nth-child()........... Selects child elements
                               according to their position among all the sibling elements within a parent element.
       :nth-last-child()...... Matches elements based on their position among siblings, counting from the last (end)
@@ -961,8 +914,8 @@
       :only-of-type.......... Represents an element that has no siblings of same type.
       :optional.............. Represents an element that does not have a required attribute set on it.
       :out-of-range.......... Represents an element whose current value is outside the range limits.
-      :picture-in-picture.... Matches an element that is currently in picture-in-picture mode.
-      :placeholder-shown..... Represents any element that is currently displaying placeholder text.
+      :picture-in-picture.... Matches an element currently in picture-in-picture mode.
+      :placeholder-shown..... Represents any element currently displaying placeholder text.
       :read-only............. Represents an element that is not editable by the user.
       :read-write............ Represents an element that is editable by the user.
       :required.............. Represents an element that has a required attribute set on it.
@@ -980,6 +933,15 @@
         <p class="pseudo-activ">Example paragraph to be styled by a Pseudo ACTIVE Class</p>
         <br>
 
+        <!--
+        Pseudo-Class Active.
+        Applies style to an element when a user activates the element by clicking or tapping on it.
+        This is most commonly used with interactive elements like button and anchor tag, but all the HTML elements can
+        use this pseudo-class. The syntax for pseudo-class active selector is as follows:
+          tag:active {
+            property: value;
+          }
+        -->
         <div class="pc-active">
           <h3>Pseudo-Class :active</h3>
           <a href="">Click Me!</a><br>
@@ -991,6 +953,8 @@
           </ul>
         </div><br>
 
+        <!--
+        -->
         <div class="pc-any-link">
           <h3>Pseudo-Class :any-link</h3>
           <div>
@@ -1004,36 +968,40 @@
           </div>
         </div><br>
 
+        <!--
+        -->
         <div class="pc-autofill">
           <h3>Pseudo-Class :autofill</h3>
           <form method="post" action="">
-            <label for="name">First Name</label>
-            <input type="text" id="name"/>
+            <label for="fas-name">First Name</label>
+            <input type="text" id="fas-name">
 
-            <label for="name">Last Name</label>
-            <input type="text" id="name"/>
+            <label for="las-name">Last Name</label>
+            <input type="text" id="las-name">
 
             <label for="email">Email</label>
             <input type="email" name="email" id="email" autocomplete="email"/>
           </form>
         </div><br>
 
+        <!--
+        -->
         <div class="pc-default">
           <h3>Pseudo-Class :default and :checked</h3>
           <form action="">
             <fieldset>
               <legend>Choose option</legend>
 
-              <input type="radio" name="option" id="onlya" value="onlyA" />
+              <input type="radio" name="option" id="onlya" value="onlyA">
               <label for="onlyA">Only A</label>
 
-              <input type="radio" name="option" id="onlyb" value="onlyB" />
+              <input type="radio" name="option" id="onlyb" value="onlyB">
               <label for="onlyB">Only B</label>
 
-              <input type="radio" name="option" id="bothAB" value="bothAB" checked/>
+              <input type="radio" name="option" id="bothAB" value="bothAB" checked>
               <label for="bothAB">Both A & B</label>
 
-              <input type="radio" name="option" id="none" value="none" />
+              <input type="radio" name="option" id="none" value="none">
               <label for="none">None</label>
             </fieldset>
             <fieldset>
@@ -1049,13 +1017,16 @@
           </form>
         </div><br>
 
+        <!--
+        -->
         <div class="pc-defined">
           <h3>Pseudo-Class :defined</h3>
+          <!--suppress HtmlUnknownTag -->
           <sample-custom-element
             text="Custom element with font color blue and other styles as per the :defined pseudo-class">
           </sample-custom-element>
 
-          <p>Standard p element with yellow background, and font as per the :defined pseudo-class</p>
+          <p>Standard p element with a yellow background, and font as per the :defined pseudo-class</p>
 
           <script>
             customElements.define(
@@ -1071,6 +1042,8 @@
           </script>
         </div><br>
 
+        <!--
+        -->
         <div class="pc-disabled">
           <h3>Pseudo-Class :disabled</h3>
           <form action="">
@@ -1088,6 +1061,8 @@
           </form>
         </div><br>
 
+        <!--
+        -->
         <div class="pc-empty">
           <h3>Pseudo-Class :empty</h3>
           <div>
@@ -1097,6 +1072,14 @@
           </div>
         </div><br>
 
+        <!--
+        Pseudo-Class First-Child.
+        The pseudo-class first-child is used to select the first direct child element.
+        The syntax for pseudo-class first-child selector is as follows:
+          tag:first-child {
+            property: value;
+          }
+        -->
         <div class="pc-first-child">
           <h3>Pseudo-Class :first-child</h3>
 
@@ -1113,6 +1096,8 @@
           </div>
         </div><br>
 
+        <!--
+        -->
         <div class="pc-first-of-type">
           <h3>Pseudo-Class :first-of-type</h3>
           <div>
@@ -1127,6 +1112,15 @@
           </div>
         </div><br>
 
+        <!--
+        Pseudo-Class Focus.
+        Applies style to an element when the user focuses on an element like input tag by clicking on it.
+        Before typing text in the input element, a user has to click in the input area to enable the cursor;
+        this is called focusing. The syntax for pseudo-class focus selector is as follows:
+          tag:focus {
+            property: value;
+          }
+        -->
         <div class="pc-focus">
           <h3>Pseudo-Class :focus</h3>
           <input type="text" name="something" placeholder="Type something mate!">
@@ -1134,12 +1128,16 @@
           <button>Click Me!!</button>
         </div><br>
 
+        <!--
+        -->
         <div class="pc-focus-visible">
           <h3>Pseudo-Class :focus-visible</h3>
           <button class="btn-f">focus-only</button>
           <button class="btn-fo">focus-visible</button>
         </div><br>
 
+        <!--
+        -->
         <div class="pc-focus-within">
           <h3>Pseudo-Class :focus-within</h3>
           <label for="name">
@@ -1148,6 +1146,8 @@
           </label>
         </div><br>
 
+        <!--
+        -->
         <div class="pc-has">
           <h3>Pseudo-Class :has() and :is()</h3>
           <h4>Parent H4 element</h4>
@@ -1158,6 +1158,8 @@
           </div>
         </div><br>
 
+        <!--
+        -->
         <div class="pc-host">
           <h3>Pseudo-Class :host</h3>
 
@@ -1193,6 +1195,8 @@
           });
         </script>
 
+        <!--
+        -->
         <div class="pc-host-b">
           <h3>Pseudo-Class :host()</h3>
           <p>
@@ -1227,6 +1231,8 @@
           </script>
         </div><br>
 
+        <!--
+        -->
         <div class="pc-host-context-b">
           <h3>Pseudo-Class :host-context()</h3>
 
@@ -1262,12 +1268,23 @@
           </script>
         </div><br>
 
+        <!--
+        Pseudo-Class Hover.
+        In CSS, pseudo-class :hover is used to specify the mouse hovering state of an element.
+        This used to style an element while users mouse passes through an element in a document.
+        The syntax for pseudo-class hover selector is as follows:
+          tag:hover {
+             property: value;
+          }
+        -->
         <div class="pc-hover">
           <h3>Pseudo-Class :hover</h3>
           <a href="#"> Hover over me!</a>
           <div>Hover over this div</div>
         </div><br>
 
+        <!--
+        -->
         <div class="pc-indeterminate">
           <h3>Pseudo-Class :indeterminate</h3>
           <input type="checkbox" id="checkBox"> Checkbox
@@ -1283,6 +1300,8 @@
           </script>
         </div><br>
 
+        <!--
+        -->
         <div class="pc-in-range">
           <h3>Pseudo-Class :in-range</h3>
           <label for="inrange">Pick a number: </label>
@@ -1290,6 +1309,8 @@
           <label></label>
         </div><br>
 
+        <!--
+        -->
         <div class="pc-invalid">
           <h3>Pseudo-Class :invalid</h3>
 
@@ -1319,12 +1340,24 @@
 
         </div><br>
 
+        <!--
+        Pseudo-Class Lang
+        Applies style to an element based on the value of lang attribute set to the element, or it's parent.
+        -->
         <div class="pc-lang">
           <h3>Pseudo-Class :lang()</h3>
           <q lang="en">This language is set as English, Here css use double(" ") quotes</q><br>
           <q lang="fr">This language is set as French, Here css use guillemet( ) quotes</q>
         </div><br>
 
+        <!--
+        Pseudo-Class Last-Child
+        The pseudo-class last-child used to select the last direct child element.
+        The syntax for pseudo-class last-child selector is as follows:
+          tag:last-child {
+            property: value;
+          }
+        -->
         <div class="pc-last-child">
           <h3>Pseudo-Class :last-child</h3>
           <section>
@@ -1340,6 +1373,8 @@
           </div>
         </div><br>
 
+        <!--
+        -->
         <div class="pc-last-of-type">
           <h3>Pseudo-Class :last-of-type</h3>
 
@@ -1349,12 +1384,16 @@
           <p class="item">Last p element of its parent, selected by .container.item class selector.</p>
         </div><br>
 
+        <!--
+        -->
         <div class="pc-link">
           <h3>Pseudo-Class :link</h3>
           <strong><a href="#">Tutorialspoint</a></strong>
           <strong><a href="#">Google</a></strong>
         </div><br>
 
+        <!--
+        -->
         <div class="pc-modal">
           <h3>Pseudo-Class :modal</h3>
 
@@ -1375,6 +1414,16 @@
           </script>
         </div><br>
 
+        <!--
+        Pseudo-Class Not
+        The pseudo-class :not(selector) is used to apply style on all the elements expect elements that included in
+        mentioned selectors.
+        The syntax for pseudo-class not selector is as follows:
+          tag:not(selector){
+            property: value;
+          }
+        The selector can be a class, id, or tag in HTML.
+        -->
         <div class="pc-not">
           <h3>Pseudo-Class :not()</h3>
           <p>This is a normal paragraph.</p>
@@ -1423,6 +1472,15 @@
         n = 5 * 2 → 10  ✅ ... again, dont continue since we only have 10 list items
         -->
 
+        <!--
+        Pseudo-Class nth Child.
+        The pseudo-class :nth-child(n) will apply style to any specified direct child of an element.
+        The syntax for pseudo-class nth-child(n) selector is as follows:
+          tag:nth-child(number/ expression / odd / even) {
+            property: value;
+          }
+        The pseudo-class nth-child can take number, mathematical expression or values like odd, even as parameter.
+        -->
         <div class="pc-nth-child">
           <h3>Pseudo-Class :nth-child()</h3>
           <p>Second child of div</p>
@@ -1436,6 +1494,8 @@
           </div>
         </div><br>
 
+        <!--
+        -->
         <div class="pc-nth-last-child">
           <h3>Pseudo-Class :nth-last-child()</h3>
 
@@ -1495,6 +1555,8 @@
 
         </div><br>
 
+        <!--
+        -->
         <div class="pc-nth-last-of-type">
           <h3>Pseudo-Class :nth-last-of-type()</h3>
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
@@ -1505,6 +1567,8 @@
           <p>Lorem Ipsum is therefore always free from repetition,</p>
         </div><br>
 
+        <!--
+        -->
         <div class="pc-nth-of-type">
           <h3>Pseudo-Class :nth-of-type()</h3>
           <p>This is first <b>p</b> tag. </p>
@@ -1515,29 +1579,36 @@
           <div>This is second <b>div</b> tag..</div>
         </div><br>
 
+        <!--
+        -->
         <div class="pc-only-child">
           <h3>Pseudo-Class :only-child</h3>
 
           <div class="field">
-            <ol>Ordered list:
+            <p>Ordered list:</p>
+            <ol>
               <li>Only one item</li>
             </ol>
           </div>
 
           <div class="field">
-            <ol>Ordered list:
+            <p>Ordered list:</p>
+            <ol>
               <li>One item</li>
               <li>Two item</li>
             </ol>
           </div>
 
           <div class="field">
-            <ul>Unordered list:
+            <p>Unordered list:</p>
+            <ul>
               <li>First Item</li>
             </ul>
           </div>
         </div><br>
 
+        <!--
+        -->
         <div class="pc-only-of-type">
           <h3>Pseudo-Class :only-of-type</h3>
 
@@ -1553,6 +1624,8 @@
           </div>
         </div><br>
 
+        <!--
+        -->
         <div class="pc-optional">
           <h3>Pseudo-Class :optional</h3>
 
@@ -1572,6 +1645,8 @@
           </form>
         </div><br>
 
+        <!--
+        -->
         <div class="pc-picture-in-picture">
           <h3>Pseudo-Class :picture-in-picture</h3>
 
@@ -1597,46 +1672,68 @@
           </script>
         </div><br>
 
+        <!--
+        -->
         <div class="pc-placeholder-shown">
           <h3>Pseudo-Class :placeholder-shown</h3>
         </div><br>
 
+        <!--
+        -->
         <div class="pc-read-only">
           <h3>Pseudo-Class :read-only</h3>
         </div><br>
 
+        <!--
+        -->
         <div class="pc-read-write">
           <h3>Pseudo-Class :read-write</h3>
         </div><br>
 
+        <!--
+        -->
         <div class="pc-required">
           <h3>Pseudo-Class :required</h3>
         </div><br>
 
+        <!--
+        -->
         <div class="pc-right">
           <h3>Pseudo-Class :right</h3>
         </div><br>
 
+        <!--
+        -->
         <div class="pc-root">
           <h3>Pseudo-Class :root</h3>
         </div><br>
 
+        <!--
+        -->
         <div class="pc-scope">
           <h3>Pseudo-Class :scope</h3>
         </div><br>
 
+        <!--
+        -->
         <div class="pc-target">
           <h3>Pseudo-Class :target</h3>
         </div><br>
 
+        <!--
+        -->
         <div class="pc-valid">
           <h3>Pseudo-Class :valid</h3>
         </div><br>
 
+        <!--
+        -->
         <div class="pc-visited">
           <h3>Pseudo-Class :visited</h3>
         </div><br>
 
+        <!--
+        -->
         <div class="pc-where">
           <h3>Pseudo-Class :where()</h3>
         </div><br>
