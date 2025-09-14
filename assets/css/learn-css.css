@@ -493,6 +493,20 @@ input:focus {
         background-color: gold;
       }
 
+      & form {
+        border: 2px solid black;
+        margin: 10px;
+        padding: 20px;
+
+        &:active {
+          background-color: lightblue;
+        }
+
+        & button {
+          background: black;
+          color: white;
+        }
+      }
     }
 
     & .pc-any-link {
@@ -516,34 +530,44 @@ input:focus {
     }
 
     & .pc-autofill {
-      & label {
-        display: block;
-        margin-top: 1em;
-      }
+      & form {
+        max-width: 500px;
+        margin: auto;
 
-      & input {
-        border: 3px solid grey;
-        padding: 5px;
-      }
+        & label {
+          display: block;
+          margin: 1em 0 .5em 0;
+          font-weight: bold;
+        }
 
-      & input:-webkit-autofill,
-      & input:-webkit-autofill:focus,
-      & select:-webkit-autofill,
-      & select:-webkit-autofill:focus {
-        -webkit-text-fill-color: blue;
-        border: 3px solid red;
-        border-radius: 3px;
-        box-shadow: 0 0 0 1000px yellow inset;
-      }
+        & input {
+          width: 100%;
+          padding: 0.5rem;
+          border: 2px solid #ccc;
+          border-radius: 4px;
+          font-size: 1rem;
+          transition: all 0.3s ease;
+        }
 
-      & input:autofill,
-      & input:autofill:focus,
-      & select:autofill,
-      & select:autofill:focus {
-        -webkit-text-fill-color: blue;
-        border: 3px solid red;
-        border-radius: 3px;
-        box-shadow: 0 0 0 1000px yellow inset;
+        input:focus {
+          border-color: #0078d4;
+          outline: none;
+          box-shadow: 0 0 4px rgba(0,120,212,0.5);
+        }
+
+        input:autofill,
+        input:-webkit-autofill {
+          -webkit-text-fill-color: #0b5345; /* dark green text */
+          border: 2px solid #1abc9c;
+          box-shadow: 0 0 0 1000px #d1f2eb inset; /* override yellow */
+          transition: background-color 9999s ease-in-out 0s; /* trick to suppress autofill flash */
+        }
+
+        input:autofill:focus,
+        input:-webkit-autofill:focus {
+          border: 2px solid #16a085;
+          box-shadow: 0 0 0 1000px peachpuff inset;
+        }
       }
     }
 

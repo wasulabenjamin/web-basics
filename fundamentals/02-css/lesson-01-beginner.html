@@ -366,6 +366,7 @@
       <br>
 
       <h2>Internal CSS</h2>
+      <!--suppress HtmlUnknownTag -->
       <style>
         .internal-css {
           color: green; font-family: Verdana, sans-serif;
@@ -706,7 +707,7 @@
               <li><a href="#">Home</a></li>
               <li><a href="#">About</a></li>
               <li><a href="#">Services</a></li>
-              <a href="#">Contact</a>
+              <li><a href="#">Contact</a></li>
             </ul>
           </nav>
         </div><br><br>
@@ -766,8 +767,8 @@
         <br><br>
 
         <h3>CSS [attribute="value"] Selector</h3>
-        <input type="text" name="" placeholder="Enter Name">
-        <input type="password" name="" placeholder="Enter Password">
+        <label><input type="text" name="" placeholder="Enter Name"></label>
+        <label><input type="password" name="" placeholder="Enter Password"></label>
         <br><br>
 
         <h3>CSS [attribute*="value"], [attribute^="value"], and [attribute$="value"] Selectors</h3>
@@ -941,6 +942,12 @@
           tag:active {
             property: value;
           }
+
+        IMPORTANT!
+        You must place the :active rule after all the other link-related rules, that are defined by, LVHA-order,
+          i.e. :link-:visited-:hover-active.
+        This is important as the styles specified by :active gets overridden by the subsequent link-related
+        pseudo-classes, such as :link, :hover or :visited.
         -->
         <div class="pc-active">
           <h3>Pseudo-Class :active</h3>
@@ -951,9 +958,21 @@
             <li>Item 2</li>
             <li>Item 3</li>
           </ul>
+
+          <form action="">
+            <label for="names">Name: </label>
+            <input id="names"/>
+            <button id="my-button" type="button">Click Me!</button>
+          </form>
         </div><br>
 
         <!--
+        The :any-link pseudo-class in CSS represents an element that is the source anchor of a hyperlink,
+        irrespective of whether it has been visited or unvisited.
+        Thus, it matches all the <a> or <area> element that has href attribute.
+        In short, it also matches all the elements that match :link or :visited.
+
+        NOTE: This is not supported on safari browser.
         -->
         <div class="pc-any-link">
           <h3>Pseudo-Class :any-link</h3>
@@ -969,18 +988,28 @@
         </div><br>
 
         <!--
+        The :autofill pseudo-class in CSS is used to style the appearance of the <input> element, whose value gets
+        autofilled by the browser, indicating the user that their previous data has been saved and loaded in the form.
+        As the user edits the field, the pseudo-class :autofill stops matching.
+
+        Many browsers, in their internal stylesheets, use important! against the -webkit-autofill style declarations,
+        which can not be overridden by the webpages.
+
+        For best browser support, you should use both, -webkit-autofill and :autofill.
+        :autofill pseudo-class is implemented with the vendor prefix: -webkit- in browsers Chrome, Edge, Opera.
         -->
         <div class="pc-autofill">
           <h3>Pseudo-Class :autofill</h3>
-          <form method="post" action="">
-            <label for="fas-name">First Name</label>
-            <input type="text" id="fas-name">
-
-            <label for="las-name">Last Name</label>
-            <input type="text" id="las-name">
-
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" autocomplete="email"/>
+          <form action="" autocomplete="on">
+            <label for="autofill-fname">First Name</label>
+            <input type="text" id="autofill-fname" name="autofill-fname" autocomplete="autofill-fname">
+            <label for="autofill-lname">Last Name</label>
+            <input type="text" id="autofill-lname" name="autofill-lname" autocomplete="autofill-lname">
+            <label for="autofill-email">Email</label>
+            <input type="email" id="autofill-email" name="autofill-email" autocomplete="autofill-email">
+            <label for="autofill-passw">Password</label>
+            <input type="password" id="autofill-passw" name="autofill-passw" autocomplete="autofill-passw">
+            <button type="submit">Submit</button>
           </form>
         </div><br>
 
@@ -1140,9 +1169,9 @@
         -->
         <div class="pc-focus-within">
           <h3>Pseudo-Class :focus-within</h3>
-          <label for="name">
+          <label for="fstname">
             First Name
-            <input type="text" id="name"/>
+            <input type="text" id="fstname"/>
           </label>
         </div><br>
 
@@ -1169,31 +1198,31 @@
             <li><sample-span>Host element</sample-span></li>
             <li><sample-span>HTML, JS, CSS</sample-span></li>
           </ul>
+          <script>
+            customElements.define("sample-span", class extends HTMLElement {
+                constructor() {
+                  super();
+
+                  const shadowRoot = this.attachShadow({ mode: "open" });
+                  const style = document.createElement("style");
+                  const span = document.createElement("span");
+
+                  style.textContent = `
+                    :host {
+                      background-color: yellow;
+                      padding: 5px;
+                      color: blue;
+                      border: 2px solid red;
+                    }
+                  `;
+
+                  span.textContent = this.textContent;
+                  shadowRoot.appendChild(style);
+                  shadowRoot.appendChild(span);
+                }
+            });
+          </script>
         </div><br>
-        <script>
-          customElements.define("sample-span", class extends HTMLElement {
-              constructor() {
-                super();
-
-                const shadowRoot = this.attachShadow({ mode: "open" });
-                const style = document.createElement("style");
-                const span = document.createElement("span");
-
-                style.textContent = `
-                  :host {
-                    background-color: yellow;
-                    padding: 5px;
-                    color: blue;
-                    border: 2px solid red;
-                  }
-                `;
-
-                span.textContent = this.textContent;
-                shadowRoot.appendChild(style);
-                shadowRoot.appendChild(span);
-              }
-          });
-        </script>
 
         <!--
         -->
@@ -1337,7 +1366,6 @@
 
             <button type="submit" name="send">Submit</button>
           </form>
-
         </div><br>
 
         <!--
@@ -1552,7 +1580,6 @@
             <li class="fruits">Cheery</li>
             <li class="fruits">Pear</li>
           </ul>
-
         </div><br>
 
         <!--
