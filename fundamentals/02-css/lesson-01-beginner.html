@@ -497,146 +497,26 @@
 
 		</section><hr>
 
-		<!--
+    <!-- 
     CSS - Selectors
-    CSS Selectors are used to select the HTML elements you want to style on a web page. They allow you to target specific elements or groups of elements to apply styles like colors, fonts, margins, and more.
+    CSS Selectors are used to select the HTML elements you want to style on a web page. 
+    They allow to target specific elements or groups of elements to apply styles like colors, fonts, margins, and more.
     The element or elements that are selected by the selector are referred to as subject of the selector.
-
-    CSS Universal Selector
-    CSS universal selector is a special selector that selects all the elements in an HTML document.
-    It is denoted by an asterisk mark (*).
-    The syntax for the universal selector is as follows:
-      * {
-        margin: 0;
-        padding: 0;
-      }
-    As per the above syntax, the universal selector is used to apply a margin and padding of 0 to all HTML elements.
-
-    CSS Element Selector
-    CSS element selector selects and styles specific HTML elements.
-    The element selector is defined by simply using the element's name in the stylesheet.
-    The syntax for the element selector is as follows:
-      p {
-        color: green;
-      }
-
-    CSS Class Selector
-    CSS class selector selects an element with a specific class attribute.
-    The class selector is defined using a period (.) followed by the class name.
-    The syntax for the class selector is as follows:
-      .class-name {
-        property1: value1;
-      }
-
-    CSS ID Selector
-    CSS ID selector selects an element with a specific value for its id attribute.
-    It is denoted by the "#" (hash) symbol.
-    The syntax for the ID selector is as follows:
-      #id-name {
-        property1: value1;
-      }
-
-    CSS Attribute Selector
-    CSS attribute selectors allow you to select HTML elements based on the presence or value of one or more attributes.
-    They are a powerful way to target specific elements in your HTML markup.
-    Attribute selectors are enclosed in square brackets [] and can take various forms.
-    The syntax for the attribute selector is as follows:
-      a[target] {
-        property1: value1;
-      }
-    The following sections discusses some common ways to use attribute selectors:
-    - CSS [attribute] Selector
-      Selects elements that have specified attribute, regardless of its value.
-    - CSS [attribute="value"] Selector
-      Selects elements that have a specific attribute with a specific value.
-    - CSS [attribute*="value"] Selector
-      Selects elements that have a specific attribute with a value containing a specific substring anywhere within it.
-    - CSS [attribute^="value"] Selector
-      Selects elements that have a specific attribute with a value that starts with a specific string.
-    - CSS [attribute$="value"] Selector
-      Selects elements that have a specific attribute with a value that ends with a specific string.
-    - CSS [attribute|="value"] Selector
-      Selects elements that have a specific attribute with a specific value OR the specific value followed by a hyphen
-      This selector is often used for selecting elements with language-specific attributes,
-      such as lang attributes, which often use hyphens to denote language subcodes.
-    - CSS [attribute~="value"] Selector
-      This selector is used to select elements that have a specific attribute with a value containing a specified word.
-      The word should be a standalone word, surrounded by spaces or at the beginning or end of the attribute value.
-
-    CSS Group Selector
-    CSS group selector allow us to apply same style to multiple elements at a time.
-    Name of elements are comma-separated. The group selector keep CSS concise and avoid redundancy.
-    The syntax for the group selector is as follows:
-      .class-name1, .class-name2, .class-name3 {
-        property1: value1;
-      }
-
-    CSS Pseudo-class Selector
-    CSS pseudo-class selector styles a specific state of an element,
-    such as :hover is used to style an element when hovered.
-    The syntax for the pseudo-class selector is as follows:
-      element:hover {
-        property1: value1;
-      }
-
-    CSS Pseudo-element Selector
-    CSS pseudo-element selector is used to style a specific part of an element rather than the element itself.
-    The syntax for the pseudo-element selector is as follows:
-      a::before {
-        content: url();
-      }
-
-    CSS Descendant Selector
-    CSS descendant selector styles all the tags which are child of a particular specified tag.
-    To mention as descendant, a single space between parent and child element is used.
-    The syntax for the descendant selector is as follows:
-      div p {
-        color: blue;
-      }
-    The above code set text color of paragraph tags that are inside div element to blue.
-
-    CSS Child Selector
-    CSS child selector selects all the direct child of a particular element.
-    This is denoted by '>' (Greater than) symbol.
-    The syntax for the child selector is as follows:
-      div > p {
-        color: blue;
-      }
-    The above code set text color of paragraph tags that are directly inside div element to blue.
-
-    CSS Adjacent Sibling Selectors
-    CSS adjacent sibling selector selects an element that is immediately preceded by a specified element.
-    A plus symbol ( "+" ) is used to denote adjacent sibling.
-    The syntax of adjacent sibling selector is as follows:
-      h1 + p {
-        margin-top: 0;
-      }
-    The above code sets top margin of paragraph tag just after h1 tag to 0.
-
-    CSS General Sibling Selector
-    CSS general sibling selector targets all the element that is preceded by a specified element.
-    The general sibling selector is denoted by tilde symbol ( "~" ).
-    The syntax of general sibling selector is as follows:
-      h1 ~ p {
-        color: gray;
-      }
-    The above code sets text color of all the paragraph after h1 tag to gray.
-
-    CSS Nested Selectors
-    CSS nesting allows to nest one style rule inside another rule,
-    with the selector of the child rule relative to the selector of the parent rule.
-    The nesting selector shows the relationship between the parent and child rules.
-    - When the nested selectors are parsed by the browser, it automatically adds a whitespace between the selectors,
-      thus creating a new CSS selector rule.
-    - In situations where the nested rule needs to be attached to the parent rule (without any whitespace),
-      like while using the pseudo-class or compound selectors,
-      the & nesting selector must be prepended immediately to achieve the desired result.
-    - In order to reverse the context of rules, the & nesting selector can be appended.
-    - There can be multiple instances of & nesting selector.
-		-->
+    -->
 		<section class="selectors">
 			<h1>Selectors</h1>
 
+      <!--
+      CSS Universal Selector
+      CSS universal selector is a special selector that selects all the elements in an HTML document.
+      It is denoted by an asterisk mark (*).
+      The syntax for the universal selector is as follows:
+        * {
+          margin: 0;
+          padding: 0;
+        }
+      As per the above syntax, the universal selector is used to apply a margin and padding of 0 to all HTML elements.
+      -->
   		<article class="universal-selectors">
         <h2>Universal Selectors</h2>
         <p>Example paragraph to be styled by a Universal Selector</p>
@@ -644,6 +524,15 @@
         <span>Example span to be styled by a Universal Selector</span>
       </article><br><br>
 
+      <!--
+      CSS Element Selector
+      CSS element selector selects and styles specific HTML elements.
+      The element selector is defined by simply using the element's name in the stylesheet.
+      The syntax for the element selector is as follows:
+        p {
+          color: green;
+        }
+      -->
   		<article class="element-selectors">
         <h2>Element Selectors</h2>
         <p>Example paragraph to be styled by an Element Selector</p>
@@ -651,6 +540,15 @@
         <span>Example span to be styled by an Element Selector</span>
       </article><br><br>
 
+      <!--
+      CSS Class Selector
+      CSS class selector selects an element with a specific class attribute.
+      The class selector is defined using a period (.) followed by the class name.
+      The syntax for the class selector is as follows:
+        .class-name {
+          property1: value1;
+        }
+      -->
   		<article class="class-selectors">
         <h2>Class Selectors</h2>
         <p class="cs">Example paragraph to be styled by a Class Selector</p>
@@ -673,6 +571,15 @@
         <p class="room lvg">This is my livingroom paragraph</p>
       </article><br><br>
 
+      <!--
+      CSS ID Selector
+      CSS ID selector selects an element with a specific value for its id attribute.
+      It is denoted by the "#" (hash) symbol.
+      The syntax for the ID selector is as follows:
+        #id-name {
+          property1: value1;
+        }
+      -->
   		<article class="id-selectors">
         <h2>ID Selectors</h2>
         <p id="id1">Example paragraph to be styled by an ID Selector</p>
@@ -684,6 +591,35 @@
         <p id="id4">Example paragraph to be styled by an ID Selector</p>
       </article><br><br>
 
+      <!--
+      CSS Attribute Selector
+      Attribute selectors allow you to select HTML elements based on the presence or value of one or more attributes.
+      They are a powerful way to target specific elements in your HTML markup.
+      Attribute selectors are enclosed in square brackets [] and can take various forms.
+      The syntax for the attribute selector is as follows:
+        a[target] {
+          property1: value1;
+        }
+      
+      The following sections discusses some common ways to use attribute selectors:
+      - CSS [attribute] Selector
+        Selects elements that have specified attribute, regardless of its value.
+      - CSS [attribute="value"] Selector
+        Selects elements that have a specific attribute with a specific value.
+      - CSS [attribute*="value"] Selector
+        Selects elements that have a specific attribute with a value containing a specific substring anywhere within it.
+      - CSS [attribute^="value"] Selector
+        Selects elements that have a specific attribute with a value that starts with a specific string.
+      - CSS [attribute$="value"] Selector
+        Selects elements that have a specific attribute with a value that ends with a specific string.
+      - CSS [attribute|="value"] Selector
+        Selects elements that have a specific attribute with a specific value OR the specific value followed by a hyphen
+        This selector is often used for selecting elements with language-specific attributes,
+        such as lang attributes, which often use hyphens to denote language subcodes.
+      - CSS [attribute~="value"] Selector
+        This selector is used to select elements that have a specific attribute with a value containing a specified word.
+        The word should be a standalone word, surrounded by spaces or at the beginning or end of the attribute value.
+      -->
       <article class="attr-selectors">
         <h2>Attr Selectors</h2>
         <a href="https://github.com/wasulabenjamin">Github</a>    .
@@ -728,9 +664,17 @@
         <div class="card featured">I am a featured div</div>
         <div class="card highlight">I am a highlight div</div>
         <br><br>
-
       </article><br><br>
 
+      <!-- 
+      CSS Group Selector
+      CSS group selector allow us to apply same style to multiple elements at a time.
+      Name of elements are comma-separated. The group selector keep CSS concise and avoid redundancy.
+      The syntax for the group selector is as follows:
+        .class-name1, .class-name2, .class-name3 {
+          property1: value1;
+        }
+      -->
   		<article class="group-selectors">
         <h2>Group Selectors</h2>
         <p>Example paragraph to be styled by a Group Selector</p>
@@ -738,12 +682,24 @@
         <span class="gs">Example span to be styled by a Group Selector</span>
       </article><br><br>
 
+      <!--
+      CSS Pseudo-class Selector
+      CSS pseudo-class selector styles a specific state of an element,
+      such as :hover is used to style an element when hovered.
+      The syntax for the pseudo-class selector is as follows:
+        element:hover {
+          property1: value1;
+        }
+ 
+      -->
       <article class="pseudo-classes">
         <h2>Pseudo Classes</h2>
         <p class="pseudo-hover">Example paragraph to be styled by a Pseudo HOVER Class</p>
         <p class="pseudo-activ">Example paragraph to be styled by a Pseudo ACTIVE Class</p>
       </article><br><br>
 
+      <!-- 
+      -->
       <article class="pseudo-elements">
         <h2>Pseudo Elements</h2>
         <br><br>
@@ -832,6 +788,8 @@
 
       </article><br><br>
 
+      <!-- 
+      -->
   		<article class="descendant-selectors">
         <h2>Descendant Selectors</h2>
         <p>Example paragraph to be styled by a Child Selector</p>
@@ -842,6 +800,8 @@
         <p>Another paragraph to be styled by a Child Selector</p>
       </article><br><br>
 
+      <!-- 
+      -->
   		<article class="child-selectors">
         <h2>Child Selectors</h2>
         <p>Example paragraph to be styled by a Child Selector</p>
@@ -852,6 +812,8 @@
         <p>Another paragraph to be styled by a Child Selector</p>
       </article><br><br>
 
+      <!-- 
+      -->
   		<article class="adjacent-sibling-selectors">
         <h2>Adjacent Sibling Selectors</h2>
         <p>This paragraph is above the div and WILL NOT be blue</p>
@@ -862,6 +824,8 @@
         <p>This paragraph 2 after the div and WILL NOT be blue.</p>
       </article><br><br>
 
+      <!-- 
+      -->
       <article class="general-sibling-selectors">
         <h2>General Sibling Selectors</h2>
         <p>This paragraph is above the div and WILL NOT be blue</p>
@@ -872,6 +836,8 @@
         <p>This paragraph 2 after the div and will be blue.</p>
       </article><br><br>
 
+      <!-- 
+      -->
       <article class="combinators">
         <h2>Combinators</h2>
         <p>Example paragraph to be styled by a(n) Combinators</p>
