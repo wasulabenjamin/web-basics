@@ -101,7 +101,7 @@
         that adapt to different screen sizes and devices, ensuring a consistent user experience.
       - Flexibility and Control: CSS provides precise control over the presentation of HTML elements, allowing
         developers to customize layout, typography, colors, and other visual properties.
-      - Consistency and Reusability: Developers ensure consistency across the entire website, by defining styles in a
+      - Consistency and Reusability: Developers ensure consistency across the entire website by defining styles in a
         central CSS file. Styles can be reused across multiple pages, reducing redundancy and making updates easier.
       - Search Engine Optimization (SEO) - CSS can be used to structure content in a way that improves search engine
         visibility.
@@ -355,7 +355,7 @@
     CSS Comments Inclusion
     Many times, you may need to put additional comments in your style sheet blocks.
     So, it is very easy to comment on any part in the stylesheet.
-    You can simply put your comments inside /* ...this is a comment in style sheet... */
+    You can simply put your comments inside /* ...this is a comment in the stylesheet... */
     You can use /* ... */ to comment multi-line blocks.
 		-->
 		<section class="types">
@@ -402,7 +402,8 @@
     These units are categorized as fixed-length units, which means that lengths specified with absolute units maintain
     an exact, unchanged size on the screen.
 
-    These units prove to be very effective when the browser has comprehensive information about the properties of the screen, the printer being used, or other appropriate user agents.
+    These units prove to be very effective when the browser has comprehensive information about the properties of the
+    screen, the printer being used, or other appropriate user agents.
 
     The following are all the types of absolute units:
       - mm....... Refers to millimeter, it is used to specify the measurements in millimeters.
@@ -581,7 +582,7 @@
         <p class="room lvg">This is my living-room paragraph</p>
 
         <h3>Using Class Selectors with Media Queries</h3>
-        <p class="cs-mq">This will change color when device width is less than 700px</p>
+        <p class="cs-mq">This will change color when the device width is less than 700px</p>
       </article><br><br>
 
       <!--
@@ -613,34 +614,10 @@
       </article><br><br>
 
       <!--
-      CSS Combinators
-
-      Combinators used to specify a relationship between selectors so that styling can be done based on that relationship.
+      CSS Combinators.
+      They specify a relationship between selectors so that styling can be done based on that relationship.
       In other words, combinators help focus on elements based on their position and hierarchy within the HTML document.
       For example, with combinators you can style a paragraph element placed immediately after a div element.
-
-      CSS Descendant Combinator
-      Used to select elements that are nested within another element, regardless of how deeply they are nested.
-      These are often represented by a single space.
-
-      CSS Child Combinator
-      The child combinator (>) is used to select elements that are direct children of a specified element.
-      It will not select elements that are further nested inside the child elements.
-
-      CSS Adjacent Sibling Combinator
-      Adjacent sibling combinator (+) is used to select an element immediately preceded by a specified element.
-      It only affects the element that directly follows the specified element.
-
-      CSS General Sibling Combinator
-      The general sibling combinator (~) is used to select all elements that are siblings of a specified element and
-      appear after it in the HTML structure.
-      It will select all matching siblings, not just the one immediately following.
-      It will not select elements that are further nested inside the child elements.
-
-      Combining Multiple Combinators
-      In CSS, you can combine multiple combinators to create more complex and specific selectors.
-      By combining different combinators, you can target elements based on more complex relationships within the HTML
-      structure.
       -->
       <article class="combinators">
         <h2>Combinators</h2>
@@ -648,6 +625,11 @@
         <div>Example div to be styled by a Combinator</div>
         <span>Example span to be styled by a Combinator</span>
 
+        <!--
+        CSS Descendant Combinator
+        Used to select elements that are nested within another element, regardless of how deeply they are nested.
+        These are often represented by a single space.
+        -->
         <div class="descendant-combinator">
           <h3>CSS Descendant Combinator</h3>
           <div>
@@ -661,6 +643,11 @@
           </div>
         </div><br><br>
 
+        <!--
+        CSS Child Combinator
+        The child combinator (>) is used to select elements that are direct children of a specified element.
+        It will not select elements that are further nested inside the child elements.
+        -->
         <div class="child-combinator">
           <h3>CSS Child Combinator > </h3>
           <div>
@@ -674,6 +661,11 @@
           </div>
         </div><br><br>
 
+        <!--
+        CSS Adjacent Sibling Combinator
+        Adjacent sibling combinator (+) is used to select an element immediately preceded by a specified element.
+        It only affects the element that directly follows the specified element.
+        -->
         <div class="adjacent-sibling-combinator">
           <h3>CSS Adjacent Sibling Combinator + </h3>
           <div>
@@ -687,6 +679,13 @@
           </div>
         </div><br><br>
 
+        <!--
+        CSS General Sibling Combinator
+        The general sibling combinator (~) is used to select all elements that are siblings of a specified element and
+        appear after it in the HTML structure.
+        It will select all matching siblings, not just the one immediately following.
+        It will not select elements that are further nested inside the child elements.
+        -->
         <div class="general-sibling-combinator">
           <h3>CSS General Sibling Combinator ~ </h3>
           <div>
@@ -700,6 +699,12 @@
           </div>
         </div><br><br>
 
+        <!--
+        Combining Multiple Combinators
+        In CSS, you can combine multiple combinators to create more complex and specific selectors.
+        By combining different combinators, you can specifically target the elements based on more complex relationships
+        within the HTML structure.
+        -->
         <div class="multiple-combinator">
           <h3>Combining Multiple Combinators</h3>
           <nav>
@@ -711,7 +716,6 @@
             </ul>
           </nav>
         </div><br><br>
-
       </article><br><br>
 
       <!--
@@ -739,7 +743,7 @@
         Selects elements that have a specific attribute with a specific value OR the specific value followed by a hyphen
         This selector is often used for selecting elements with language-specific attributes,
         such as lang attributes, which often use hyphens to denote language subcodes.
-        NOTE: IT MATCHES THE VALUE IF AND ONLY IF IT IS EXACTLY EQUAL TO VALUE OR STARTS WITH VALUE-
+        NOTE: IT MATCHES THE VALUE IF AND ONLY IF IT IS EXACTLY EQUAL TO VALUE OR STARTS WITH 'VALUE-'
               IF ANYTHING THAT FOLLOWS THE SUB-STRING IS NOT AN HYPHEN, IT WILL NOT MATCH
       - CSS [attribute~="value"] Selector
         This selector is used to select elements that have a specific attribute with a value containing a specified word.
@@ -752,18 +756,18 @@
       -->
       <article class="attr-selectors">
         <h2>Attr Selectors</h2>
-        <a href="https://github.com/wasulabenjamin">Github</a>    .
-        <a href="#" target="_blank">Codacy</a> .
-        <a href="#" target="_blank">LinkedIn</a> .
-        <a href="#" target="_self">Behance</a> .
-        <a href="#" target="_self">Dribble</a> .
+        <a href="https://github.com/wasulabenjamin">GitHub</a>.
+        <a href="#" target="_blank">Codacy</a>.
+        <a href="#" target="_blank">LinkedIn</a>.
+        <a href="#" target="_self">Behance</a>.
+        <a href="#" target="_self">Dribble</a>.
         <br><br>
 
         <h3>CSS [attribute] Selector</h3>
         <div data-toggle="yes">An example div with a data-toggle attribute</div>
         <div>An example div without a data-toggle attribute</div>
         <p data-toggle="no">An example paragraph with a data-toggle attribute</p>
-        <p>An example paragraph  without data-toggle attribute</p>
+        <p>An example paragraph without a data-toggle attribute</p>
         <br><br>
 
         <h3>CSS [attribute="value"] Selector</h3>
@@ -772,21 +776,21 @@
         <br><br>
 
         <h3>CSS [attribute*="value"], [attribute^="value"], and [attribute$="value"] Selectors</h3>
-        <a href="https://example.com/page0">Page 0</a>
-        <a href="https://www.example.com/page1">Page 1</a>
-        <a href="https://example.com/page2">Page 2</a>
-        <a href="http://example.com/page3">Page 3</a>
-        <a href="https://example.com/page4">Page 4</a>
-        <a href="https://example.com/page5">Page 5</a>
-        <a href="https://example.com/page6">Page 6</a>
-        <a href="https://example.com/page7">Page 7</a>
-        <a href="https://example.com/page8">Page 8</a>
-        <a href="https://example.com/page9">Page 9</a>
+        <a href="https://example.com/page0">Page-0</a>
+        <a href="https://www.example.com/page1">Page-1</a>
+        <a href="https://example.com/page2">Page-2</a>
+        <a href="http://example.com/page3">Page-3</a>
+        <a href="https://example.com/page4">Page-4</a>
+        <a href="https://example.com/page5">Page-5</a>
+        <a href="https://example.com/page6">Page-6</a>
+        <a href="https://example.com/page7">Page-7</a>
+        <a href="https://example.com/page8">Page-8</a>
+        <a href="https://example.com/page9">Page-9</a>
         <br><br>
 
         <h3>CSS [attribute|="value"] Selector</h3>
         <p lang="en">We say: Hello, in English</p>
-        <p lang="en-US">We say: Howdy, in English United States</p>
+        <p lang="en-US">We say: Howdy, in the English United States</p>
         <p lang="fr">We say: Bonjour, in French</p>
         <p lang="fr en">We say: Bonjour, in French</p>
         <br><br>
@@ -931,7 +935,7 @@
       <article class="pseudo-classes">
         <h2>Pseudo Classes</h2>
         <p class="pseudo-hover">Example paragraph to be styled by a Pseudo HOVER Class</p>
-        <p class="pseudo-activ">Example paragraph to be styled by a Pseudo ACTIVE Class</p>
+        <p class="pseudo-active">Example paragraph to be styled by a Pseudo ACTIVE Class</p>
         <br>
 
         <!--
@@ -944,15 +948,15 @@
           }
 
         IMPORTANT!
-        You must place the :active rule after all the other link-related rules, that are defined by, LVHA-order,
+        You must place the :active rule after all the other link-related rules that are defined by, LVHA-order.
           i.e. :link-:visited-:hover-active.
-        This is important as the styles specified by :active gets overridden by the subsequent link-related
-        pseudo-classes, such as :link, :hover or :visited.
+        This is important as the styles specified by :active get overridden by the later link-related
+        pseudo-classes, such as, :link, :hover or :visited.
         -->
         <div class="pc-active">
           <h3>Pseudo-Class :active</h3>
           <a href="">Click Me!</a><br>
-          <p>Click me to see effect!</p>
+          <p>Click me to see the effect!</p>
           <ul>
             <li>Item 1</li>
             <li>Item 2</li>
@@ -969,7 +973,7 @@
         <!--
         The :any-link pseudo-class in CSS represents an element that is the source anchor of a hyperlink,
         irrespective of whether it has been visited or unvisited.
-        Thus, it matches all the <a> or <area> element that has href attribute.
+        Thus, it matches all the <a> or <area> elements that have the href attribute.
         In short, it also matches all the elements that match :link or :visited.
 
         NOTE: This is not supported on safari browser.
@@ -993,9 +997,9 @@
         As the user edits the field, the pseudo-class :autofill stops matching.
 
         Many browsers, in their internal stylesheets, use important! against the -webkit-autofill style declarations,
-        which can not be overridden by the webpages.
+        which cannot be overridden by the webpages.
 
-        For best browser support, you should use both, -webkit-autofill and :autofill.
+        For the best browser support, you should use both, -webkit-autofill and :autofill.
         :autofill pseudo-class is implemented with the vendor prefix: -webkit- in browsers Chrome, Edge, Opera.
         -->
         <div class="pc-autofill">
@@ -1003,17 +1007,29 @@
           <form action="" autocomplete="on">
             <label for="autofill-fname">First Name</label>
             <input type="text" id="autofill-fname" name="autofill-fname" autocomplete="autofill-fname">
+
             <label for="autofill-lname">Last Name</label>
             <input type="text" id="autofill-lname" name="autofill-lname" autocomplete="autofill-lname">
+
             <label for="autofill-email">Email</label>
             <input type="email" id="autofill-email" name="autofill-email" autocomplete="autofill-email">
+
             <label for="autofill-passw">Password</label>
             <input type="password" id="autofill-passw" name="autofill-passw" autocomplete="autofill-passw">
+
             <button type="submit">Submit</button>
           </form>
         </div><br>
 
         <!--
+        The CSS pseudo-class selector :default selects the form elements that are the default values in the group of
+        similar or related elements. This pseudo-class may match the <button>, <input type="checkbox">,
+        <input type="radio"> and <option> elements, in the following manner:
+          - In the case of a <button>, if it is a <form> submit button.
+            It also applies to <input> types that submit forms.
+          - In case the checked attribute is specified for <input type="checkbox"> and <input type="radio">.
+          - The first option element with the selected attribute.
+            In the case of multiple <select>s, having more than one selected option, all will match :default.
         -->
         <div class="pc-default">
           <h3>Pseudo-Class :default and :checked</h3>
@@ -1021,27 +1037,39 @@
             <fieldset>
               <legend>Choose option</legend>
 
-              <input type="radio" name="option" id="onlya" value="onlyA">
-              <label for="onlyA">Only A</label>
+              <input type="radio" name="option" id="only-a" value="onlyA">
+              <label for="only-a">Only A</label>
 
-              <input type="radio" name="option" id="onlyb" value="onlyB">
-              <label for="onlyB">Only B</label>
+              <input type="radio" name="option" id="only-b" value="onlyB">
+              <label for="only-b">Only B</label>
 
-              <input type="radio" name="option" id="bothAB" value="bothAB" checked>
-              <label for="bothAB">Both A & B</label>
+              <input type="radio" name="option" id="both-AB" value="bothAB" checked>
+              <label for="both-AB">Both A & B</label>
 
               <input type="radio" name="option" id="none" value="none">
               <label for="none">None</label>
             </fieldset>
             <fieldset>
-              <legend>Chose Falvor</legend>
+              <legend>Chose Flavor</legend>
 
-              <input type="checkbox" name="flav" value="butterscotch" checked> Butterscotch
-              <input type="checkbox" name="flav" value="Chocolate"> Chocolate
-              <input type="checkbox" name="flav" value="cookiencream"> Cookie n Cream
-              <input type="checkbox" name="flav" value="hazelnut" checked> Hazelnut
-              <input type="checkbox" name="flav" value="almond"> Roasted Almond
-              <input type="checkbox" name="flav" value="strawberry"> Strawberry
+              <input type="checkbox" name="flavor" id="butterscotch" value="butterscotch" checked>
+              <label for="butterscotch">Butterscotch</label>
+
+              <input type="checkbox" name="flavor" id="chocolate" value="chocolate">
+              <label for="chocolate">Chocolate</label>
+
+              <input type="checkbox" name="flavor" id="cookie-cream" value="cookie-cream">
+              <label for="cookie-cream">Cookie n Cream</label>
+
+              <input type="checkbox" name="flavor" id="hazelnut" value="hazelnut" checked>
+              <label for="hazelnut">Hazelnut</label>
+
+              <input type="checkbox" name="flavor" id="almond" value="almond">
+              <label for="almond">Roasted Almond</label>
+
+              <input type="checkbox" name="flavor" id="strawberry" value="strawberry">
+              <label for="strawberry">Strawberry</label>
+
             </fieldset>
           </form>
         </div><br>

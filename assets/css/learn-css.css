@@ -3,8 +3,12 @@
 input,
 input:focus {
   outline: none;
-  border: 2px solid black;
 }
+
+a:link {}
+a:visited {}
+a:hover {}
+a:active {}
 ***********************************************************************************************************************/
 
 /***********************************************************************************************************************
@@ -308,7 +312,7 @@ input:focus {
         margin-right: 15px;
       }
 
-      & ul > li + a{
+      & ul > li + a {
         color: red;
         text-decoration: underline;
       }
@@ -465,7 +469,7 @@ input:focus {
       background-color: peachpuff;
     }
 
-    & .pseudo-activ:active {
+    & .pseudo-active:active {
       background-color: peachpuff;
     }
 
@@ -535,7 +539,7 @@ input:focus {
         margin: auto;
 
         & label {
-          display: block;
+          display: inline-block;
           margin: 1em 0 .5em 0;
           font-weight: bold;
         }
@@ -575,10 +579,10 @@ input:focus {
       & fieldset {
         width: 700px;
         height: 50px;
-      }
 
-      & fieldset:nth-child(2) {
-        margin-top: 20px;
+        & + * {
+          margin-top: 20px;
+        }
       }
 
       & input:default {
@@ -1264,7 +1268,7 @@ input:focus {
       border: 4px solid;
     }
 
-    & div + p{
+    & div + p {
       background-color: peachpuff;
       color: blue;
     }
@@ -1275,7 +1279,7 @@ input:focus {
       border: 4px solid;
     }
 
-    & div ~ p{
+    & div ~ p {
       background-color: peachpuff;
       color: blue;
     }
@@ -1458,7 +1462,7 @@ input:focus {
 .scrollbars {}
 
 /***********************************************************************************************************************
-    ZNDEX
+    Z-INDEX
 ***********************************************************************************************************************/
 .z-index {}
 
