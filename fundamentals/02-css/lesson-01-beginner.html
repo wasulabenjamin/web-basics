@@ -224,7 +224,7 @@
 
     CSS Variables Syntax
     CSS Variables allows storing and reusing values throughout the CSS program.
-      :root {
+      root {
         --main-color: #04af2f;
       }
 
@@ -949,7 +949,7 @@
 
         IMPORTANT!
         You must place the :active rule after all the other link-related rules that are defined by, LVHA-order.
-          i.e. :link-:visited-:hover-active.
+          i.e. :link → :visited → :hover → :active
         This is important as the styles specified by :active get overridden by the later link-related
         pseudo-classes, such as, :link, :hover or :visited.
         -->
@@ -1005,8 +1005,8 @@
         <div class="pc-autofill">
           <h3>Pseudo-Class :autofill</h3>
           <form action="" autocomplete="on">
-            <label for="autofill-fname">First Name</label>
-            <input type="text" id="autofill-fname" name="autofill-fname" autocomplete="autofill-fname">
+            <label for="autofill-first-name">First Name</label>
+            <input type="text" id="autofill-first-name" name="autofill-first-name" autocomplete="autofill-first-name">
 
             <label for="autofill-lname">Last Name</label>
             <input type="text" id="autofill-lname" name="autofill-lname" autocomplete="autofill-lname">
@@ -1141,13 +1141,13 @@
           <h3>Pseudo-Class :first-child</h3>
 
           <section>
-            <p>This paragraph is first child of section element, will be blue.</p>
+            <p>This paragraph is the first child of a section element, will be blue.</p>
             <p>This paragraph will not be affected.</p>
             <p>Another paragraph that won't be affected.</p>
           </section>
 
           <div>
-            <p>This paragraph is first child of div element will be blue.</p>
+            <p>This paragraph is the first child of a div element will be blue.</p>
             <p>This paragraph will not be affected.</p>
             <p>Another paragraph that won't be affected.</p>
           </div>
@@ -1159,7 +1159,7 @@
           <h3>Pseudo-Class :first-of-type</h3>
           <div>
             <h4>Parent element</h4>
-            <p>First child looks different due to :first-of-type pseudo-class</p>
+            <p>The first child looks different due to :first-of-type pseudo-class</p>
             <p>second child, so no change</p>
           </div>
           <div>
@@ -1208,7 +1208,7 @@
         <div class="pc-has">
           <h3>Pseudo-Class :has() and :is()</h3>
           <h4>Parent H4 element</h4>
-          <p>First child looks different due to :has() pseudo-class</p>
+          <p>The first child looks different due to :has() pseudo-class</p>
           <p>second child, so no change</p>
           <div>
             <video src="../../assets/video/sample-video.mp4" controls></video>
@@ -1371,11 +1371,11 @@
         <div class="pc-invalid">
           <h3>Pseudo-Class :invalid</h3>
 
-          <p>Input type is number ranging between 1 and 10.</p>
+          <p>Input type is a number ranging between 1 and 10.</p>
           <input type="number" id="number-input" min="1" max="10" value="2">
           <label for="number-input"></label>
 
-          <p>Input type is email, which is required. If empty, its invalid.</p>
+          <p>The input type is email, which is required. If empty, it's invalid.</p>
           <input type="email" id="email-input" placeholder="abc@gmail.com" required>
           <label for="email-input"></label>
 
@@ -1417,13 +1417,13 @@
         <div class="pc-last-child">
           <h3>Pseudo-Class :last-child</h3>
           <section>
-            <p>This paragraph is first child of section element</p>
+            <p>This paragraph is the first child of a section element</p>
             <p>This paragraph will not be affected.</p>
             <p>This is the last paragraph that will be affected.</p>
           </section>
 
           <div>
-            <p>This paragraph is first child of div element</p>
+            <p>This paragraph is the first child of a div element</p>
             <p>This paragraph will not be affected.</p>
             <p>This is the last paragraph that will be affected.</p>
           </div>
@@ -1485,7 +1485,7 @@
           <p>This is a normal paragraph.</p>
           <p class="special" id="superSpecial">This is a super special paragraph.</p>
           <p>This is another normal paragraph.</p>
-          <p class="special">This is special paragraph.</p>
+          <p class="special">This is a special paragraph.</p>
         </div><br>
 
         <!--
@@ -1503,7 +1503,7 @@
         👉
         The “engine” never stops generating results (in theory, it’s infinite),
         but in practice you “run out” when indices go outside the child range.
-        See below example for a 10-item list:
+        See the below example for a 10-item list:
 
         for -n+1;
         n = -0 + 1 →  1 ✅
@@ -1520,12 +1520,12 @@
         for 3n+4;
         n = 3 * 0 + 4 → 4  ✅
         n = 3 * 1 + 4 → 7  ✅
-        n = 3 * 2 + 4 → 10 ✅ ... dont continue since we only have 10 list items
+        n = 3 * 2 + 4 → 10 ✅ ... don't continue since we only have 10 list items
 
         for 5n;
         n = 5 * 0 → 0   ❌ (0 is invalid, there’s no “0th child”).
         n = 5 * 1 → 5   ✅
-        n = 5 * 2 → 10  ✅ ... again, dont continue since we only have 10 list items
+        n = 5 * 2 → 10  ✅ ... again, don't continue since we only have 10 list items
         -->
 
         <!--
@@ -1555,9 +1555,9 @@
         <div class="pc-nth-last-child">
           <h3>Pseudo-Class :nth-last-child()</h3>
 
-          <p>Styling last item as bold and red color.</p>
+          <p>Styling the last item as bold and red color.</p>
           <p>Styling every third list item starting with the fourth list item from the last with a pink background.</p>
-          <p>Styling fifth item from last as bold.</p>
+          <p>Styling the fifth item from last as bold.</p>
           <ol>
             <li>Item 1</li>
             <li>Item 2</li>
@@ -1597,7 +1597,7 @@
           </table>
 
           <h3>Styling list items with the class fruits to have a pink background.</h3>
-          <h3>Counting from the last child, styling first child element of the fruits class.</h3>
+          <h3>Counting from the last child, styling a first child element of the fruit class.</h3>
           <ul>
             <li>Orange</li>
             <li>Apple</li>
@@ -1614,23 +1614,23 @@
         -->
         <div class="pc-nth-last-of-type">
           <h3>Pseudo-Class :nth-last-of-type()</h3>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-          <p>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
+          <p>Lorem Ipsum is simply fake text of the printing and typesetting industry. </p>
+          <p>Lorem Ipsum is simply fake text of the printing and typesetting industry. </p>
+          <p>Contrary to popular belief, Lorem Ipsum is not simply a random text.</p>
           <p>The standard chunk of Lorem Ipsum used since the 1500s</p>
           <p>Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero</p>
-          <p>Lorem Ipsum is therefore always free from repetition,</p>
+          <p>Lorem Ipsum is therefore always free from repetition.</p>
         </div><br>
 
         <!--
         -->
         <div class="pc-nth-of-type">
           <h3>Pseudo-Class :nth-of-type()</h3>
-          <p>This is first <b>p</b> tag. </p>
+          <p>This is the first <b>p</b> tag. </p>
           <div>This is first <b>div</b> tag.</div>
-          <p>This is second <b>p</b> tag.</p>
-          <p>This is third <b>p</b> tag.</p>
-          <p>This is fourth <b>p</b> tag.</p>
+          <p>This is the second <b>p</b> tag.</p>
+          <p>This is the third <b>p</b> tag.</p>
+          <p>This is the fourth <b>p</b> tag.</p>
           <div>This is second <b>div</b> tag..</div>
         </div><br>
 
@@ -1808,27 +1808,22 @@
         <br><br>
 
         <h3>Content Insertion Pseudo-Elements</h3>
-        <p class="content-insertion">Example paragraph:  We inserted intro at start and emoji at end.</p>
+        <p class="content-insertion">Example paragraph: We inserted intro at the start and emoji at the end.</p>
         <br><br>
 
         <h3>CSS Backdrop Pseudo-Element</h3>
-        <dialog id="dialogBox">
+        <dialog id="dialog-box">
           <p>This is a dialog box with a styled backdrop</p>
-          <button id="dialogClose">Close</button>
+          <button id="dialog-close">Close</button>
         </dialog>
-        <button id="dialogOpen">Open Dialog Box</button>
+        <button id="dialog-open">Open Dialog Box</button>
         <script>
-          const btnOpen = document.getElementById('dialogOpen');
-          const btnClose = document.getElementById('dialogClose');
-          const dialogBox = document.getElementById('dialogBox');
+          const btnOpen = document.getElementById('dialog-open');
+          const btnClose = document.getElementById('dialog-close');
+          const dialogBox = document.getElementById('dialog-box');
 
-          btnOpen.addEventListener('click', () => {
-            dialogBox.showModal();
-          })
-
-          btnClose.addEventListener('click', () => {
-            dialogBox.close();
-          })
+          btnOpen.addEventListener('click', () => dialogBox.showModal());
+          btnClose.addEventListener('click', () => dialogBox.close());
         </script>
         <br><br>
 
@@ -1838,16 +1833,16 @@
 
         <h3>CSS First-Letter Pseudo-Element</h3>
         <p class="f-letter">
-          this is a paragraph with first-letter in lower-case,
-          we used ::first-letter pseudo-element to capitalize first-letter of paragraph,
+          this is a paragraph with first-letter in lower-case;
+          we used the ::first-letter pseudo-element to capitalize the first-letter of the paragraph,
           with a larger font size and a different color.
         </p>
         <br><br>
 
         <h3>CSS First-Line Pseudo-Element</h3>
         <p class="f-line">
-          This is a normal paragraph with no stylings,
-          we used ::first-line pseudo-element to capitalize first-line of paragraph,
+          This is a normal paragraph with no styling;
+          we used the ::first-line pseudo-element to capitalize the first-line of the paragraph,
           with a background color.
         </p>
         <br><br>
@@ -1874,10 +1869,19 @@
         <br><br>
 
         <h3>CSS Placeholder Pseudo-Element</h3>
-        <input type="text" class="placeholder-pe" placeholder="First Name">
-        <input type="text" class="placeholder-pe" placeholder="Last Name">
-        <input type="text" class="placeholder-pe" placeholder="Address">
-        <input type="text" class="placeholder-pe" placeholder="Phone">
+
+        <label for="ph-first-name"></label>
+        <input type="text" class="placeholder-pe" id="ph-first-name" placeholder="First Name">
+
+        <label for="ph-last-name"></label>
+        <input type="text" class="placeholder-pe" id="ph-last-name" placeholder="Last Name">
+
+        <label for="ph-address"></label>
+        <input type="text" class="placeholder-pe" id="ph-address" placeholder="Address">
+
+        <label for="ph-phone"></label>
+        <input type="text" class="placeholder-pe" id="ph-phone" placeholder="Phone">
+
         <br><br>
 
         <h3>CSS Selection Pseudo-Element</h3>
@@ -1894,12 +1898,12 @@
       <!--
       CSS Descendant Selector
       CSS descendant selector styles all the tags which are child of a particular specified tag.
-      To mention as descendant, a single space between parent and child element is used.
+      To mention as descendant, a single space between a parent and child element is used.
       The syntax for the descendant selector is as follows:
         div p {
           color: blue;
         }
-      The above code set text color of paragraph tags that are inside div element to blue.
+      The above code set the text color of paragraph tags that are inside a div element to blue.
       -->
   		<article class="descendant-selectors">
         <h2>Descendant Selectors</h2>
@@ -1914,12 +1918,12 @@
       <!--
       CSS Child Selector
       CSS child selector selects all the direct child of a particular element.
-      This is denoted by '>' (Greater than) symbol.
+      This is denoted by a greater than symbol, >
       The syntax for the child selector is as follows:
         div > p {
           color: blue;
         }
-      The above code set text color of paragraph tags that are directly inside div element to blue.
+      The above code sets the text color of paragraph tags that are directly inside a div element to blue.
       -->
   		<article class="child-selectors">
         <h2>Child Selectors</h2>
@@ -1933,13 +1937,13 @@
 
       <!--
       CSS Adjacent Sibling Selectors
-      CSS adjacent sibling selector selects an element that is immediately preceded by a specified element.
-      A plus symbol ( "+" ) is used to denote adjacent sibling.
-      The syntax of adjacent sibling selector is as follows:
+      CSS adjacent sibling selector selects an element immediately preceded by a specified element.
+      A plus symbol (+) is used to denote an adjacent sibling.
+      The syntax of the adjacent sibling selector is as follows:
         h1 + p {
           margin-top: 0;
         }
-      The above code sets top margin of paragraph tag just after h1 tag to 0.
+      The above code sets the top margin of the paragraph tag just after h1 tag to 0.
       -->
   		<article class="adjacent-sibling-selectors">
         <h2>Adjacent Sibling Selectors</h2>
@@ -1954,12 +1958,12 @@
       <!--
       CSS General Sibling Selector
       CSS general sibling selector targets all the element that is preceded by a specified element.
-      The general sibling selector is denoted by tilde symbol ( "~" ).
+      The general sibling selector is denoted by a tilde symbol ~
       The syntax of general sibling selector is as follows:
         h1 ~ p {
           color: gray;
         }
-      The above code sets text color of all the paragraph after h1 tag to gray.
+      The above code sets the text color of all the paragraphs after h1 tag to gray.
       -->
       <article class="general-sibling-selectors">
         <h2>General Sibling Selectors</h2>
@@ -1974,168 +1978,144 @@
 		</section><hr>
 
 		<!--
-
 		-->
 		<section>
 			<h1>Colors</h1>
 		</section><hr>
 
 		<!--
-
 		-->
 		<section>
 			<h1>Color</h1>
 		</section><hr>
 
 		<!--
-
 		-->
 		<section>
 			<h1>Backgrounds</h1>
 		</section><hr>
 
 		<!--
-
 		-->
 		<section>
 			<h1>Fonts</h1>
 		</section><hr>
 
 		<!--
-
 		-->
 		<section>
 			<h1>Text</h1>
 		</section><hr>
 
 		<!--
-
 		-->
 		<section>
 			<h1>Text</h1>
 		</section><hr>
 
 		<!--
-
 		-->
 		<section>
 			<h1>Images</h1>
 		</section><hr>
 
 		<!--
-
 		-->
 		<section>
 			<h1>Image Gallery</h1>
 		</section><hr>
 
 		<!--
-
 		-->
 		<section>
 			<h1>Icons</h1>
 		</section><hr>
 
 		<!--
-
 		-->
 		<section>
 			<h1>Links</h1>
 		</section><hr>
 
 		<!--
-
 		-->
 		<section>
 			<h1>Tables</h1>
 		</section><hr>
 
 		<!--
-
 		-->
 		<section>
 			<h1>Lists</h1>
 		</section><hr>
 
 		<!--
-
 		-->
 		<section>
 			<h1>Borders</h1>
 		</section><hr>
 
 		<!--
-
 		-->
 		<section>
 			<h1>Rounded Corner</h1>
 		</section><hr>
 
 		<!--
-
 		-->
 		<section>
 			<h1>Padding</h1>
 		</section><hr>
 
 		<!--
-
 		-->
 		<section>
 			<h1>Margins</h1>
 		</section><hr>
 
 		<!--
-
 		-->
 		<section>
 			<h1>Box Model</h1>
 		</section><hr>
 
 		<!--
-
 		-->
 		<section>
 			<h1>Display</h1>
 		</section><hr>
 
 		<!--
-
 		-->
 		<section>
 			<h1>Inline Block</h1>
 		</section><hr>
 
 		<!--
-
 		-->
 		<section>
 			<h1>Cursor</h1>
 		</section><hr>
 
 		<!--
-
 		-->
 		<section>
 			<h1>Outlines</h1>
 		</section><hr>
 
 		<!--
-
 		-->
 		<section>
 			<h1>Data Types</h1>
 		</section><hr>
 
 		<!--
-
 		-->
 		<section>
 			<h1>All</h1>
 		</section><hr>
 
 		<!--
-
 		-->
 		<section>
 			<h1>Root</h1>
