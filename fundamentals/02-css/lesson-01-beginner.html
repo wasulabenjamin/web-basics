@@ -779,6 +779,7 @@
         <a href="https://example.com/page0">Page-0</a>
         <a href="https://www.example.com/page1">Page-1</a>
         <a href="https://example.com/page2">Page-2</a>
+        <!--suppress HttpUrlsUsage -->
         <a href="http://example.com/page3">Page-3</a>
         <a href="https://example.com/page4">Page-4</a>
         <a href="https://example.com/page5">Page-5</a>
@@ -822,10 +823,22 @@
 
         <h3>Multiple Attribute Selectors</h3>
         <ul class="multiple-attr-selectors">
-          <li><a href="web-basics.html">Link 01</a></li>
-          <li><a href="web-basics.htm">Link 02</a></li>
-          <li><a href="web-basics.com">Link 03</a></li>
-          <li><a href="web-basics.co.ke">Link 04</a></li>
+          <li>
+            <!--suppress HtmlUnknownTarget -->
+            <a href="web-basics.html">Link 01</a>
+          </li>
+          <li>
+            <!--suppress HtmlUnknownTarget -->
+            <a href="web-basics.htm">Link 02</a>
+          </li>
+          <li>
+            <!--suppress HtmlUnknownTarget -->
+            <a href="web-basics.com">Link 03</a>
+          </li>
+          <li>
+            <!--suppress HtmlUnknownTarget -->
+            <a href="web-basics.co.ke">Link 04</a>
+          </li>
         </ul>
       </article><br><br>
 
@@ -1008,14 +1021,14 @@
             <label for="autofill-first-name">First Name</label>
             <input type="text" id="autofill-first-name" name="autofill-first-name" autocomplete="autofill-first-name">
 
-            <label for="autofill-lname">Last Name</label>
-            <input type="text" id="autofill-lname" name="autofill-lname" autocomplete="autofill-lname">
+            <label for="autofill-last-name">Last Name</label>
+            <input type="text" id="autofill-last-name" name="autofill-last-name" autocomplete="autofill-last-name">
 
             <label for="autofill-email">Email</label>
             <input type="email" id="autofill-email" name="autofill-email" autocomplete="autofill-email">
 
-            <label for="autofill-passw">Password</label>
-            <input type="password" id="autofill-passw" name="autofill-passw" autocomplete="autofill-passw">
+            <label for="autofill-password">Password</label>
+            <input type="password" id="autofill-password" name="autofill-password" autocomplete="autofill-password">
 
             <button type="submit">Submit</button>
           </form>
@@ -1069,12 +1082,13 @@
 
               <input type="checkbox" name="flavor" id="strawberry" value="strawberry">
               <label for="strawberry">Strawberry</label>
-
             </fieldset>
           </form>
         </div><br>
 
         <!--
+        The CSS pseudo-class selector :defined represents an element that has been defined, using the
+        customElementRegistry.define() method. This includes standard elements, as well as the custom elements.
         -->
         <div class="pc-defined">
           <h3>Pseudo-Class :defined</h3>
@@ -1087,14 +1101,17 @@
 
           <script>
             customElements.define(
-              "sample-custom-element", class extends HTMLElement {
+              "sample-custom-element",
+              class extends HTMLElement {
                 constructor() {
                   super();
-                  let divElem = document.createElement("div");
-                  divElem.textContent = this.getAttribute("text");
-                  let shadowRoot = this.attachShadow({ mode: "open" }).appendChild(divElem);
+
+                  let divElement = document.createElement("div");
+                  divElement.textContent = this.getAttribute("text");
+
+                  this.attachShadow({ mode: "open" }).appendChild(divElement);
                 }
-              },
+              }
             );
           </script>
         </div><br>
@@ -1104,14 +1121,14 @@
         <div class="pc-disabled">
           <h3>Pseudo-Class :disabled</h3>
           <form action="">
-            <label>Doctor Name</label>
-            <input type="text"><br>
+            <label for="doctor-name">Doctor Name</label>
+            <input type="text" id="doctor-name"><br>
 
-            <label>Hospital Name</label>
-            <input type="text"><br>
+            <label for="hospital-name">Hospital Name</label>
+            <input type="text" id="hospital-name"><br>
 
-            <label>Diagnosis</label>
-            <input type="text" disabled="disabled" value="Diagnosis"><br><br>
+            <label for="diagnosis">Diagnosis</label>
+            <input type="text" id="diagnosis" disabled="disabled" value="Diagnosis"><br><br>
 
             <button type="submit" disabled="disabled">Submit</button>
             <button type="reset">Reset</button>
@@ -1180,8 +1197,9 @@
         -->
         <div class="pc-focus">
           <h3>Pseudo-Class :focus</h3>
-          <input type="text" name="something" placeholder="Type something mate!">
-          <p>The link here has a <a href="#0">change in background and foreground color</a> as it is focused.</p>
+          <label for="something"></label>
+          <input type="text" id="something" name="something" placeholder="Type something mate!">
+          <p>The link here has a <a href="#">change in background and foreground color</a> as it is focused.</p>
           <button>Click Me!!</button>
         </div><br>
 
@@ -1222,9 +1240,18 @@
 
           <h4>See the list:</h4>
           <ul>
-            <li><sample-span>Web component - Custom element</sample-span></li>
-            <li><sample-span>Host element</sample-span></li>
-            <li><sample-span>HTML, JS, CSS</sample-span></li>
+            <li>
+              <!--suppress HtmlUnknownTag -->
+              <sample-span>Web component - Custom element</sample-span>
+            </li>
+            <li>
+              <!--suppress HtmlUnknownTag -->
+              <sample-span>Host element</sample-span>
+            </li>
+            <li>
+              <!--suppress HtmlUnknownTag -->
+              <sample-span>HTML, JS, CSS</sample-span>
+            </li>
           </ul>
           <script>
             customElements.define("sample-span", class extends HTMLElement {
@@ -1258,6 +1285,7 @@
           <h3>Pseudo-Class :host()</h3>
           <p>
             Lorem ipsum dolor sit amet,
+            <!--suppress HtmlUnknownTag -->
             <paragraph-span class="pg-span">consectetur adipisicing elit.</paragraph-span>
             Eveniet nulla odio quam.
           </p>
@@ -1293,10 +1321,18 @@
         <div class="pc-host-context-b">
           <h3>Pseudo-Class :host-context()</h3>
 
-          <h4>CSS Basics - <a href="#"><context-span>:host-context()</context-span></a></h4>
+          <h4>CSS Basics -
+            <a href="#">
+              <!--suppress HtmlUnknownTag -->
+              <context-span>:host-context()</context-span>
+            </a>
+          </h4>
           <p>
-            CSS <context-span>:host-context()</context-span> pseudo-class selector allows you to style a custom element
-            differently depending on where it is used in the DOM, based on the classes or attributes of its ancestor
+            CSS
+            <!--suppress HtmlUnknownTag -->
+            <context-span>:host-context()</context-span>
+            pseudo-class selector allows you to style a custom element differently depending on where it is used in the
+            DOM, based on the classes or attributes of its ancestor
             elements.
           </p>
 
@@ -1344,8 +1380,13 @@
         -->
         <div class="pc-indeterminate">
           <h3>Pseudo-Class :indeterminate</h3>
-          <input type="checkbox" id="checkBox"> Checkbox
-          <input type="radio" id="radio"> Radio
+
+          <input type="checkbox" id="check-box">
+          <label for="check-box">Checkbox</label>
+
+          <input type="radio" id="radio">
+          <label for="radio">Radio</label>
+
           <progress></progress>
 
           <script>
@@ -1483,7 +1524,7 @@
         <div class="pc-not">
           <h3>Pseudo-Class :not()</h3>
           <p>This is a normal paragraph.</p>
-          <p class="special" id="superSpecial">This is a super special paragraph.</p>
+          <p class="special" id="super-special">This is a super special paragraph.</p>
           <p>This is another normal paragraph.</p>
           <p class="special">This is a special paragraph.</p>
         </div><br>
@@ -1650,7 +1691,7 @@
             <p>Ordered list:</p>
             <ol>
               <li>One item</li>
-              <li>Two item</li>
+              <li>Two items</li>
             </ol>
           </div>
 
@@ -1687,10 +1728,10 @@
           <form>
             <div class="field">
               <label for="name" class="required">Name:</label>
-              <input type="name" id="name" required/>
+              <input type="text" id="name" required/>
 
               <label for="age">Age: (optional)</label>
-              <input type="age" id="age" />
+              <input type="number" id="age" />
 
               <label for="feedback">Feedback: (optional)</label>
               <input type="text" id="feedback" /><br><br>
