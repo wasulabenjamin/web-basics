@@ -1117,6 +1117,13 @@
         </div><br>
 
         <!--
+        The CSS pseudo-class selector :disabled represents an element that is disabled. An element is in a disabled
+        state if it cannot be activated (selected, clicked on, typed into, etc.) or doesn't accept focus.
+        This is often used with form elements like <input>, <button>, <select>, <textarea>, etc.
+        The syntax for the disabled pseudo-class is as follows:
+          tag:disabled {
+            property: value;
+          }
         -->
         <div class="pc-disabled">
           <h3>Pseudo-Class :disabled</h3>
@@ -1128,21 +1135,48 @@
             <input type="text" id="hospital-name"><br>
 
             <label for="diagnosis">Diagnosis</label>
-            <input type="text" id="diagnosis" disabled="disabled" value="Diagnosis"><br><br>
+            <input type="text" id="diagnosis" disabled value="Diagnosis"><br><br>
 
-            <button type="submit" disabled="disabled">Submit</button>
+            <button type="submit" disabled>Submit</button>
             <button type="reset">Reset</button>
           </form>
         </div><br>
 
         <!--
+        The CSS pseudo-class selector :empty represents an element that is empty and has no children.
+        An element can be called empty if:
+          - It has nothing between its tags or contains code comment(s) only.
+              For example, <div></div>
+          - The CSS for the element generates content, such as from a pseudo-element like ::before or ::after.
+              For example, div::before {content: "Empty element"}
+          - Self-closing elements like <br>, <hr> and <img> are also considered as empty.
+
+          Accessibility concerns:
+          Interactive content that is empty cannot be parsed by the assistive technologies, such as screen readers.
+          Hence, all interactive content must have an accessible name that can be provided by a text value for the
+          interactive control's parent element, which in turn makes it accessible to the assistive technologies.
         -->
         <div class="pc-empty">
           <h3>Pseudo-Class :empty</h3>
-          <div>
+          <div class="example-1">
             <p>Not an empty paragraph</p>
             <p></p>
             <p>Not an empty paragraph</p>
+          </div>
+
+          <div class="example-2">
+            <div class="circle"><!-- Yellow circle --></div>
+
+            <div class="circle"><!-- not an empty element-->
+              <h2>:empty</h2>
+            </div>
+
+            <div class="circle">
+              <p>
+                <!-- Non-collapsible whitespace and elements around this comment. -->
+              </p>
+            </div>
+
           </div>
         </div><br>
 

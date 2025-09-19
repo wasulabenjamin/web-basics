@@ -629,15 +629,31 @@ a:active {}
     }
 
     & .pc-empty {
-      & div {
+      & div.example-1 {
         border: 3px solid black;
         width: 200px;
         text-align: center;
+
+        & p:empty {
+          background-color: peachpuff;
+          height: 20px;
+        }
       }
 
-      & p:empty {
-        background-color: peachpuff;
-        height: 20px;
+      & div.example-2 {
+        margin-top: 20px;
+
+        & .circle {
+          width: 100px;
+          height: 100px;
+          background-color: red;
+          border-radius: 100%;
+          display: inline-block;
+        }
+
+        & .circle:empty {
+          background-color: yellow;
+        }
       }
     }
 
