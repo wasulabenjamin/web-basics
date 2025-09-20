@@ -657,6 +657,28 @@ a:active {}
       }
     }
 
+    & .pc-enabled {
+      & label {
+        display: block;
+        margin-top: 16px;
+      }
+
+      & input {
+        width: 250px;
+        padding: 8px;
+        margin-top: 10px;
+        border: 1px solid  black;
+      }
+
+      & input:enabled {
+        background-color: lightblue;
+      }
+
+      & input:disabled {
+        background-color: lightgrey;
+      }
+    }
+
     & .pc-first-child {
       & p:first-child {
         background-color: peachpuff;
