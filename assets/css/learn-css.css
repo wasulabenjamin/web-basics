@@ -679,6 +679,11 @@ a:active {}
       }
     }
 
+    & .pc-first {
+      background-color: peachpuff;
+      padding: 10px;
+    }
+
     & .pc-first-child {
       & p:first-child {
         background-color: peachpuff;

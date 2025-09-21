@@ -1204,6 +1204,93 @@
         </div><br>
 
         <!--
+        The CSS pseudo-class selector :first selects the first page of a printed document.
+        It is used with the @page at-rule.
+
+        All CSS properties cannot be changed using the :first pseudo-class.
+        The properties that can be changed are margins, orphans, widows, and page breaks of the document.
+        Also, only absolute-length units can be used for margins while using this pseudo-class.
+        All the other properties will be ignored.
+
+        Orphan is a CSS property that sets the minimum number of lines in a block container
+        that must be shown at the bottom of a page.
+        Widow is a CSS property that sets the minimum number of lines in a block container
+        that must be shown at the top of a page.
+
+        Syntax:
+          @page:first {
+             /* ... */
+          }
+
+        The following example demonstrates the use of :first pseudo-class. Here we see:
+          - A document is created with three pages, as we have used page-break-after: always on a p element.
+          - The first page of the document is styled using the @page at-rule and the :first pseudo-class.
+
+          - The pseudo-class :first is applied, which will result in the styling of margin set on the first page only.
+          - The text will appear in the bottom right corner of the page. Rest two pages show the text on its default location.
+
+        -->
+        <div class="pc-first">
+          <h3>Pseudo-Class :first</h3>
+
+          <h1>Annual Report</h1>
+          <p>
+            This is the first page.
+            Notice that when you print this document, the top and bottom margins are much larger on the first page.
+          </p>
+
+          <div class="page-break"></div>
+
+          <h1>Second Page</h1>
+          <p>
+            This is the second page.
+            The margins here are smaller because the :first pseudo-class no longer applies.
+          </p>
+
+          <div class="page-break"></div>
+
+          <h1>Third Page</h1>
+          <p>And here’s a third page, just to reinforce the difference.</p>
+
+          <button id="print-button">Print Me</button>
+
+          <script>
+            document.getElementById("print-button").addEventListener("click", () => {
+              const printSection = document.querySelector(".pc-first").innerHTML;
+              const printWindow = window.open("", "_blank");
+
+              printWindow.document.write(`
+                <html>
+                  <head>
+                    <title>Print</title>
+                    <style>
+                      /* Controls global print layout (margins, size, etc.) */
+                      @page {
+                        margin: 1in;
+                      }
+
+                      /* Controls the first page layout (margins, size, etc.) */
+                      @page:first {
+                        margin-top: 5in;
+                      }
+
+                      .page-break {
+                        page-break-before: always; /* Forces a page break before this element */
+                      }
+                    </style>
+                  </head>
+                  <body>${printSection}</body>
+                </html>
+              `);
+              printWindow.document.close();
+              printWindow.focus();
+              printWindow.print();
+              printWindow.close();
+            });
+          </script>
+        </div><br>
+
+        <!--
         Pseudo-Class First-Child.
         The pseudo-class first-child is used to select the first direct child element.
         The syntax for pseudo-class first-child selector is as follows:
