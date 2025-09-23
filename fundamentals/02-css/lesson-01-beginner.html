@@ -1377,6 +1377,31 @@
         </div><br>
 
         <!--
+        Pseudo-Class :fullscreen
+        The CSS pseudo-class selector :fullscreen targets and styles an element being displayed in fullscreen mode.
+        If more than one element is set in fullscreen mode, this pseudo-class selects all of them.
+        Typically, this pseudo-class is used with ::backdrop pseudo-elements to style backdrop behind a fullscreen
+        element.
+
+        The pseudo-class :fullscreen lets one configure the stylesheets to automatically adjust the layout,
+        style or size of the content when the elements are toggled back and forth between fullscreen and normal modes.
+
+        Select all elements in the fullscreen stack is supported only in the Firefox browser.
+        -->
+        <div class="pc-fullscreen">
+          <h3>Pseudo-Class :fullscreen</h3>
+          <p>Fullscreen mode</p>
+          <br>
+          <button id="fullscreen-toggle">Click here</button>
+          <script>
+            document.getElementById("fullscreen-toggle").addEventListener("click", () => {
+              const element = document.querySelector(".pc-fullscreen");
+              element.requestFullscreen();
+            });
+          </script>
+        </div>
+
+        <!--
         Pseudo-Class :focus.
         Applies style to an element when the user focuses on an element like input tag by clicking on it.
         Before typing text in the input element, a user has to click in the input area to enable the cursor;

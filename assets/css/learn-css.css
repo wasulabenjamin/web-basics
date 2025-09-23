@@ -706,6 +706,31 @@ a:active {}
       }
     }
 
+    & .pc-fullscreen {
+      padding: 10px;
+      height: 200px;
+      width: 95%;
+      background-color: lightgrey;
+
+      & p {
+        visibility: hidden;
+      }
+
+      &:fullscreen {
+        background-color: lightsalmon;
+
+        & p {
+          visibility: visible;
+          position: absolute;
+          top: 40%;
+          width: 100%;
+          text-align: center;
+          font-size: 1.5em;
+          color: black;
+        }
+      }
+    }
+
     & .pc-focus {
       & input {
         padding: 10px;
