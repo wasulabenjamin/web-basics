@@ -15,18 +15,18 @@ a:active {}
     HOME
 ***********************************************************************************************************************/
 .home {
-  & div {
+  div {
     border: 5px inset gold;
     background-color: black;
     text-align: center;
     width: 350px;
   }
 
-  & div h1{
+  div h1{
     color: #36CFFF;
   }
 
-  & p{
+  p{
     font-size: 1.5em;
     color: white;
   }
@@ -36,13 +36,13 @@ a:active {}
     SYNTAX
 ***********************************************************************************************************************/
 .syntax {
-  & p {
+  p {
     background-color: black;
     color: white;
     padding: 5px;
   }
 
-  & .special {
+  .special {
     color: red;
   }
 }
@@ -51,7 +51,7 @@ a:active {}
     TYPES
 ***********************************************************************************************************************/
 .types {
-  & .external-css {
+  .external-css {
     color: blue;
     font-family: Verdana, sans-serif;
   }
@@ -61,103 +61,103 @@ a:active {}
     MEASUREMENT UNITS
 ***********************************************************************************************************************/
 .measurement-units {
-  & .absolute-unit-mm {
+  .absolute-unit-mm {
     font-size: 5mm;
   }
 
-  & .absolute-unit-cm {
+  .absolute-unit-cm {
     font-size: 1cm;
   }
 
-  & .absolute-unit-q {
+  .absolute-unit-q {
     font-size: 40Q;
   }
 
-  & .absolute-unit-in {
+  .absolute-unit-in {
     font-size: .167in;
   }
 
-  & .absolute-unit-pt {
+  .absolute-unit-pt {
     font-size: 12pt;
   }
 
-  & .absolute-unit-pc {
+  .absolute-unit-pc {
     font-size: 1pc;
   }
 
-  & .absolute-unit-px {
+  .absolute-unit-px {
     font-size: 16px;
   }
 
-  & .absolute-unit-em {
+  .absolute-unit-em {
     font-size: 4em;
   }
 
-  & .absolute-unit-ex {
+  .absolute-unit-ex {
     font-size: 4ex;
   }
 
-  & .absolute-unit-ch {
+  .absolute-unit-ch {
     font-size: 4ch;
   }
 
-  & .absolute-unit-rem {
+  .absolute-unit-rem {
     font-size: 4rem;
   }
 
-  & .absolute-unit-lh {
+  .absolute-unit-lh {
     font-size: 4lh;
   }
 
-  & .absolute-unit-rlh {
+  .absolute-unit-rlh {
     font-size: 4rlh;
   }
 
-  & .relative-unit-vb {
+  .relative-unit-vb {
     font-size: 4vb;
   }
 
-  & .relative-unit-vh {
+  .relative-unit-vh {
     font-size: 4vh;
   }
 
-  & .relative-unit-dvh {
+  .relative-unit-dvh {
     font-size: 4dvh;
   }
 
-  & .relative-unit-lvh {
+  .relative-unit-lvh {
     font-size: 4lvh;
   }
 
-  & .relative-unit-svh {
+  .relative-unit-svh {
     font-size: 4svh;
   }
 
-  & .relative-unit-vi {
+  .relative-unit-vi {
     font-size: 4vi;
   }
 
-  & .relative-unit-vw {
+  .relative-unit-vw {
     font-size: 4vw;
   }
 
-  & .relative-unit-dvw {
+  .relative-unit-dvw {
     font-size: 4dvw;
   }
 
-  & .relative-unit-lvw {
+  .relative-unit-lvw {
     font-size: 4lvw;
   }
 
-  & .relative-unit-svw {
+  .relative-unit-svw {
     font-size: 4svw;
   }
 
-  & .relative-unit-vmin {
+  .relative-unit-vmin {
     font-size: 4vmin;
   }
 
-  & .relative-unit-vmax {
+  .relative-unit-vmax {
     font-size: 4vmax;
   }
 }
@@ -166,8 +166,8 @@ a:active {}
     SELECTORS
 ***********************************************************************************************************************/
 .selectors {
-  & .universal-selectors {
-    & * {
+  .universal-selectors {
+    * {
       margin: 0;
       padding: 0;
       background-color: #04af2f;
@@ -176,22 +176,22 @@ a:active {}
     }
   }
 
-  & .element-selectors {
-    & p {
+  .element-selectors {
+    p {
       color: purple;
     }
 
-    & div {
+    div {
       color: darkolivegreen;
     }
 
-    & span {
+    span {
       color: sandybrown;
     }
   }
 
-  & .class-selectors {
-    & .cs {
+  .class-selectors {
+    .cs {
       color: yellow;
     }
 
@@ -201,55 +201,55 @@ a:active {}
     .bgc .brd {}..... Means that their is a nested relationship, with parent as .bgc and child as .brd
                       Matches only descendant .brd inside .bgc, never the same element.
     */
-    & .bgc.brd {
+    .bgc.brd {
       background-color: peachpuff;
       border: 4px solid red;
     }
 
-    & p.bgc {
+    p.bgc {
       text-decoration: underline;
     }
 
-    & .room {
+    .room {
       background-color: peachpuff;
     }
 
-    & .bed {
+    .bed {
       border: 2px solid blue;
     }
 
-    & .lvg {
+    .lvg {
       border: 2px solid green;
     }
 
-    & .cs-mq {
+    .cs-mq {
       background-color: peachpuff;
     }
 
     @media (max-width: 700px) {
-      & .cs-mq {
+      .cs-mq {
         background-color: lightgrey;
       }
     }
   }
 
-  & .id-selectors {
-    & #id1,
-    & #id2,
-    & #id3,
-    & #id4 {
+  .id-selectors {
+    #id1,
+    #id2,
+    #id3,
+    #id4 {
       color: blue;
       text-decoration: underline;
     }
 
-    & #id1:hover,
-    & #id2:hover,
-    & #id3:hover,
-    & #id4:hover {
+    #id1:hover,
+    #id2:hover,
+    #id3:hover,
+    #id4:hover {
       color: green;
     }
 
-    & form {
+    form {
       #user {
         border: 2px solid black;
         border-radius: 5px;
@@ -271,117 +271,117 @@ a:active {}
     }
   }
 
-  & .combinators {
-    & .descendant-combinator {
-      & div p {
+  .combinators {
+    .descendant-combinator {
+      div p {
         color: red;
       }
     }
 
-    & .child-combinator {
-      & > div > p {
+    .child-combinator {
+      > div > p {
         color: red;
       }
     }
 
-    & .adjacent-sibling-combinator {
-      & h4 + p {
+    .adjacent-sibling-combinator {
+      h4 + p {
         color: red;
       }
     }
 
-    & .general-sibling-combinator {
-      & h4 ~ p {
+    .general-sibling-combinator {
+      h4 ~ p {
         color: red;
       }
     }
 
-    & .multiple-combinator {
-      & nav {
+    .multiple-combinator {
+      nav {
         padding: 10px;
         background-color: #f0f0f0;
       }
 
-      & ul {
+      ul {
         list-style-type: none;
         padding: 0;
       }
 
-      & ul > li {
+      ul > li {
         display: inline;
         margin-right: 15px;
       }
 
-      & ul > li + a {
+      ul > li + a {
         color: red;
         text-decoration: underline;
       }
 
-      & ul > li > a {
+      ul > li > a {
         text-decoration: none;
         color: green;
       }
     }
   }
 
-  & .attr-selectors {
-    & a[target] {
+  .attr-selectors {
+    a[target] {
       background-color: lightcoral;
     }
 
-    & a[target="_blank"] {
+    a[target="_blank"] {
       background-color: peachpuff;
     }
 
-    & a[href="https://github.com/wasulabenjamin"] {
+    a[href="https://github.com/wasulabenjamin"] {
       background-color: lightskyblue;
     }
 
-    & [data-toggle] {
+    [data-toggle] {
       background-color: yellow;
     }
 
-    & [type="password"] {
+    [type="password"] {
       border: 2px solid red;
     }
 
-    & [href*="www"] {
+    [href*="www"] {
       color: red;
     }
 
-    & [href^="http:"] {
+    [href^="http:"] {
       color: green;
     }
 
-    & [href$="page5"] {
+    [href$="page5"] {
       color: purple;
     }
 
-    & [href*="www"],
-    & [href^="http:"],
-    & [href$="page5"] {
+    [href*="www"],
+    [href^="http:"],
+    [href$="page5"] {
       background-color: peachpuff;
       font-size: 20px;
       padding: 5px;
     }
 
-    & [href$="page5"] {
+    [href$="page5"] {
       color: purple;
     }
 
-    & [lang|="en"] {
+    [lang|="en"] {
       background-color: peachpuff;
     }
 
-    & [class~="featured"] {
+    [class~="featured"] {
       background-color: peachpuff;
     }
 
-    & .additional-examples {
+    .additional-examples {
       /*
       Will style all paragraphs with a blue border
       */
-      & p[title] {
+      p[title] {
         border: 2px solid blue;
         padding: 5px;
       }
@@ -392,7 +392,7 @@ a:active {}
                 title="css bg-red3"
       Styles nothing because nothing matches: title="css"
       */
-      & p[title="css"],
+      p[title="css"],
 
       /*
       We have:  title="css bg-red1"
@@ -400,41 +400,41 @@ a:active {}
                 title="css bg-red3"
       Styles only: title="css bg-red3"
       */
-      & p[title="css bg-red3"] {
+      p[title="css bg-red3"] {
         background-color: red;
       }
 
-      & p[title*="blu"] {
+      p[title*="blu"] {
         background-color: blue;
       }
 
-      & p[title^="css bg-b"] {
+      p[title^="css bg-b"] {
         color: white;
       }
 
-      & p[title$="1"] {
+      p[title$="1"] {
         background-color: yellow;
         color: black;
       }
 
       /* Will not work because theres no hyphen after css */
-      & p[title|="css"] {
+      p[title|="css"] {
         background-color: green;
       }
 
-      & p[title~="background"] {
+      p[title~="background"] {
         background-color: indigo;
         color: white;
       }
     }
 
-    & .multiple-attr-selectors {
-      & li {
+    .multiple-attr-selectors {
+      li {
         list-style-type: none;
         margin: 0 0 10px -40px; /* margin: top -> right -> bottom -> left */
       }
 
-      & a[href] {
+      a[href] {
         text-decoration: none;
       }
 
@@ -450,54 +450,54 @@ a:active {}
     }
   }
 
-  & .group-selectors {
-    & p,
-    & div,
-    & span {
+  .group-selectors {
+    p,
+    div,
+    span {
       background-color: peachpuff;
     }
 
-    & p,
-    & #gs,
-    & .gs {
+    p,
+    #gs,
+    .gs {
       padding: 5px;
     }
   }
 
-  & .pseudo-classes {
-    & .pseudo-hover:hover {
+  .pseudo-classes {
+    .pseudo-hover:hover {
       background-color: peachpuff;
     }
 
-    & .pseudo-active:active {
+    .pseudo-active:active {
       background-color: peachpuff;
     }
 
-    & .pc-active {
-      & a,
-      & p,
-      & li {
+    .pc-active {
+      a,
+      p,
+      li {
         color: black;
         background-color: lightgrey;
         padding: 7px;
         border: 3px solid;
       }
 
-      & li {
+      li {
         list-style-type: none;
         margin: 0 0 10px -40px; /* margin: top -> right -> bottom -> left */
       }
 
-      & a:active {
+      a:active {
         color: red;
       }
 
-      & p:active,
-      & li:active {
+      p:active,
+      li:active {
         background-color: gold;
       }
 
-      & form {
+      form {
         border: 2px solid black;
         margin: 10px;
         padding: 20px;
@@ -506,45 +506,45 @@ a:active {}
           background-color: lightblue;
         }
 
-        & button {
+        button {
           background: black;
           color: white;
         }
       }
     }
 
-    & .pc-any-link {
-      & div {
+    .pc-any-link {
+      div {
         padding: 5px;
         border: 2px solid black;
         margin: 1em;
         width: 500px;
       }
 
-      & a:any-link {
+      a:any-link {
         text-decoration: none;
         font-weight: 900;
         color: green;
         font-size: 1em;
       }
 
-      & :any-link:hover {
+      :any-link:hover {
         color: red;
       }
     }
 
-    & .pc-autofill {
-      & form {
+    .pc-autofill {
+      form {
         max-width: 500px;
         margin: auto;
 
-        & label {
+        label {
           display: inline-block;
           margin: 1em 0 .5em 0;
           font-weight: bold;
         }
 
-        & input {
+        input {
           width: 100%;
           padding: 0.5rem;
           border: 2px solid #ccc;
@@ -575,75 +575,75 @@ a:active {}
       }
     }
 
-    & .pc-default {
-      & fieldset {
+    .pc-default {
+      fieldset {
         width: 700px;
         height: 50px;
 
-        & + * {
+        + * {
           margin-top: 20px;
         }
       }
 
-      & input:default {
+      input:default {
         box-shadow: 0 0 4px 3px lightgreen;
       }
 
-      & input:checked {
+      input:checked {
         box-shadow: 0 0 4px 3px lightblue;
       }
     }
 
-    & .pc-defined {
+    .pc-defined {
       /*noinspection CssInvalidHtmlTagReference*/
-      & sample-custom-element {
+      sample-custom-element {
         color: blue;
       }
 
-      & p {
+      p {
         background-color: peachpuff;
       }
 
-      & :defined {
+      :defined {
         font-style: normal;
         font-weight: 700;
         font-family: fantasy;
       }
     }
 
-    & .pc-disabled {
-      & input {
+    .pc-disabled {
+      input {
         width: 150px;
         padding-left: 10px;
         margin-top: 10px;
         border: 1px solid  black;
       }
 
-      & input[type="text"]:enabled {
+      input[type="text"]:enabled {
         background-color: white;
       }
 
-      & input[type="text"]:disabled {
+      input[type="text"]:disabled {
         background-color: lightgrey;
       }
     }
 
-    & .pc-empty {
-      & div.example-1 {
+    .pc-empty {
+      div.example-1 {
         border: 3px solid black;
         width: 200px;
         text-align: center;
 
-        & p:empty {
+        p:empty {
           background-color: peachpuff;
           height: 20px;
         }
       }
 
-      & div.example-2 {
+      div.example-2 {
         margin-top: 20px;
 
-        & .circle {
+        .circle {
           width: 100px;
           height: 100px;
           background-color: red;
@@ -651,105 +651,80 @@ a:active {}
           display: inline-block;
         }
 
-        & .circle:empty {
+        .circle:empty {
           background-color: yellow;
         }
       }
     }
 
-    & .pc-enabled {
-      & label {
+    .pc-enabled {
+      label {
         display: block;
         margin-top: 16px;
       }
 
-      & input {
+      input {
         width: 250px;
         padding: 8px;
         margin-top: 10px;
         border: 1px solid  black;
       }
 
-      & input:enabled {
+      input:enabled {
         background-color: lightblue;
       }
 
-      & input:disabled {
+      input:disabled {
         background-color: lightgrey;
       }
     }
 
-    & .pc-first {
+    .pc-first {
       background-color: peachpuff;
       padding: 10px;
     }
 
-    & .pc-first-child {
-      & p:first-child,
-      & ul li:first-child {
+    .pc-first-child {
+      p:first-child,
+      ul li:first-child {
         background-color: peachpuff;
         color: blue;
       }
     }
 
-    & .pc-first-of-type {
-      & div {
+    .pc-first-of-type {
+      div {
         border: 2px solid black;
         margin-bottom: 5px;
         padding: 10px;
       }
 
-      & p:first-of-type,
-      & li:first-of-type {
+      p:first-of-type,
+      li:first-of-type {
         color: black;
         background-color: peachpuff;
       }
     }
 
-    & .pc-fullscreen {
-      padding: 10px;
-      height: 200px;
-      width: 95%;
-      background-color: lightgrey;
-
-      & p {
-        visibility: hidden;
-      }
-
-      &:fullscreen {
-        background-color: lightsalmon;
-
-        & p {
-          visibility: visible;
-          position: absolute;
-          top: 40%;
-          width: 100%;
-          text-align: center;
-          font-size: 1.5em;
-          color: black;
-        }
-      }
-    }
-
-    & .pc-focus {
-      & input {
+    .pc-focus {
+      input {
         padding: 10px;
         outline: none; /* remove default blue focus glow */
+
+        &:focus {
+          outline: none; /* remove default blue focus glow */
+          border: 3px solid green;
+          background-color: lightgrey;
+        }
       }
 
-      & input:focus {
-        outline: none; /* remove default blue focus glow */
-        border: 3px solid green;
-        background-color: lightgrey;
-      }
-
-      & a:focus {
+      a:focus {
         outline: none;
         color: green;
         background-color: yellow;
       }
 
-      & button {
+      button {
         width: 150px;
         height: 50px;
         font-size: 16px;
@@ -757,31 +732,31 @@ a:active {}
         border: 2px solid black;
         border-radius: 30px;
         transition: all 0.3s ease;
+
+        &:hover {
+          background-color: lightpink;
+          color: blue;
+          border-radius: 12px;
+        }
+
+        &:focus {
+          background-color: darkred;
+          color: white;
+          border-radius: 6px;
+        }
       }
 
-      & button:hover {
-        background-color: lightpink;
-        color: blue;
-        border-radius: 12px;
-      }
-
-      & button:focus {
-        background-color: darkred;
-        color: white;
-        border-radius: 6px;
-      }
-
-      & form {
+      form {
         margin-top: 10px;
 
-        & label {
+        label {
           font-size: 18px;
           color: black;
           width: 500px;
           padding: 10px;
         }
 
-        & select {
+        select {
           padding: 10px 16px;
           font-size: 16px;
           color: black;
@@ -799,13 +774,13 @@ a:active {}
         }
       }
 
-      & .toggle {
+      .toggle {
         position: relative;
         display: block;
         width: 100%;
         margin: 2em;
 
-        & label {
+        label {
           padding-right: 8px;
           font-family: Verdana, Geneva, Tahoma, sans-serif;
           font-size: 16px;
@@ -813,23 +788,23 @@ a:active {}
           color: black;
         }
 
-        & span {
+        span {
           position: relative;
           display: inline-block;
           vertical-align: middle;
           cursor: pointer;
 
-          &:before {
+          &::before {
             display: block;
             width: 50px;
-            height: 30px;
+            height: 20px;
             content: "";
             background-color: #a9adaf;
             border-radius: 28px;
             transition: background-color 0.3s ease;
           }
 
-          &:after {
+          &::after {
             position: absolute;
             top: 1px;
             left: 1px;
@@ -846,25 +821,25 @@ a:active {}
 
         input[type="checkbox"] {
           &:checked ~ span {
-            &:before {
+            &::before {
               background-color: orange;
             }
 
-            &:after {
+            &::after {
               top: 1px;
               left: 21px;
             }
           }
 
-          &:hover ~ span:before {
+          &:hover ~ span::before {
             background-color: #1194d1;
           }
 
-          &:not(:checked):hover ~ span:before {
+          &:not(:checked):hover ~ span::before {
             background-color: #afbec9;
           }
 
-          &:focus ~ span:before {
+          &:focus ~ span::before {
             outline: none;
             box-shadow: 0 0 0 4px red;
           }
@@ -872,94 +847,119 @@ a:active {}
       }
     }
 
-    & .pc-focus-visible {
+    .pc-focus-visible {
       /* Apply focus styles for all focused elements */
-      & .btn-f:focus {
+      .btn-f:focus {
         outline: 3px solid blue;
       }
 
       /* Apply focus styles only when accessed via keyboard navigation */
-      & .btn-fo:focus-visible {
+      .btn-fo:focus-visible {
         outline: 3px solid green;
         background-color: yellow;
       }
     }
 
-    & .pc-focus-within {
-      & label {
+    .pc-focus-within {
+      label {
         display: block;
         font-size: 16px;
         color: black;
       }
 
-      & input[type="text"] {
+      input[type="text"] {
         padding: 5px;
         font-size: 16px;
         border: 2px solid black;
         width: 500px;
       }
 
-      & input[type="text"]:focus {
+      input[type="text"]:focus {
         background-color: lightblue;
       }
 
-      & label:focus-within {
+      label:focus-within {
         font-size: 25px;
         color: red;
       }
     }
 
-    & .pc-has {
-      & :is(h1, h2, h3, h4, h5, h6):has(+ p, + ul, + ol) {
+    .pc-fullscreen {
+      padding: 10px;
+      height: 200px;
+      width: 95%;
+      background-color: lightgrey;
+
+      p {
+        visibility: hidden;
+      }
+
+      &:fullscreen {
+        background-color: lightsalmon;
+
+        p {
+          visibility: visible;
+          position: absolute;
+          top: 40%;
+          width: 100%;
+          text-align: center;
+          font-size: 1.5em;
+          color: black;
+        }
+      }
+    }
+
+    .pc-has {
+      :is(h1, h2, h3, h4, h5, h6):has(+ p, + ul, + ol) {
         background-color: lightblue;
         padding-top: 50px;
       }
 
-      & div:has(video, audio) {
+      div:has(video, audio) {
         border: 2px solid red;
         width: fit-content;
         padding: 15px;
       }
     }
 
-    & .pc-host {
-      & li {
+    .pc-host {
+      li {
         padding: 10px;
       }
     }
 
-    & .pc-hover {
-      & a {
+    .pc-hover {
+      a {
         background-color: lightgrey;
         padding: 10px;
       }
 
-      & div {
+      div {
         margin-top: 20px;
         padding: 10px;
         border: solid 3px;
         background-color: aqua;
       }
 
-      & a:hover {
+      a:hover {
         color: red;
       }
 
-      & div:hover {
+      div:hover {
         background-color: lightgreen;
       }
     }
 
-    & .pc-indeterminate {
-      & input[type="checkbox"]:indeterminate {
+    .pc-indeterminate {
+      input[type="checkbox"]:indeterminate {
         box-shadow: 0 0 5px 5px rgb(224, 5, 5);
       }
 
-      & input[type="radio"]:indeterminate {
+      input[type="radio"]:indeterminate {
         box-shadow: 0 0 5px 5px rgb(17, 235, 28);
       }
 
-      & progress:indeterminate {
+      progress:indeterminate {
         display: block;
         margin-top: 10px;
         width: 300px;
@@ -967,31 +967,31 @@ a:active {}
       }
     }
 
-    & .pc-in-range {
-      & input:in-range {
+    .pc-in-range {
+      input:in-range {
         background-color: beige;
         padding: 5px;
         border: 2px solid green;
       }
 
-      & input:in-range + label::after {
+      input:in-range + label::after {
         content: "In range";
         color: green;
       }
 
-      & input:out-of-range {
+      input:out-of-range {
         border: 2px solid red;
         padding: 5px;
       }
 
-      & input:out-of-range + label::after {
+      input:out-of-range + label::after {
         content: "Sorry! Enter a value within the specified range.";
         color: red;
       }
     }
 
-    & .pc-invalid {
-      & input {
+    .pc-invalid {
+      input {
         outline: none;
         margin-left: 10px;
         height: 24px;
@@ -999,40 +999,40 @@ a:active {}
         padding: 5px;
       }
 
-      & input:invalid {
+      input:invalid {
         background-color: lightpink;
       }
 
-      & input:invalid + label::after {
+      input:invalid + label::after {
         display: block;
         margin: 5px 0 0 10px;
       }
 
-      & input:invalid:hover,
-      & input:invalid:focus {
+      input:invalid:hover,
+      input:invalid:focus {
         border: 3px solid red;
       }
 
-      & input[type="number"]:invalid + label::after {
+      input[type="number"]:invalid + label::after {
         content: "Please enter a valid number.";
         color: red;
       }
 
-      & input[type="email"]:invalid + label::after {
+      input[type="email"]:invalid + label::after {
         content: "Please enter a valid email address.";
         color: red;
       }
 
-      & fieldset:invalid ~ fieldset {
+      fieldset:invalid ~ fieldset {
         visibility: hidden;
       }
 
-      & form:invalid button {
+      form:invalid button {
         background-color: darkgrey;
         opacity: .2;
       }
 
-      & button {
+      button {
         width: 200px;
         border: thin solid darkgrey;
         font-size: 1.25em;
@@ -1042,26 +1042,26 @@ a:active {}
       }
     }
 
-    & .pc-lang {
-      & :lang(en) {
+    .pc-lang {
+      :lang(en) {
         quotes: '"' '"';
       }
 
-      & :lang(fr) {
+      :lang(fr) {
         quotes: ' ' ' ';
       }
     }
 
-    & .pc-last-child {
-      & p:last-child {
+    .pc-last-child {
+      p:last-child {
         background-color: peachpuff;
         color: blue;
       }
     }
 
-    & .pc-last-of-type {
-      & div,
-      & p {
+    .pc-last-of-type {
+      div,
+      p {
         padding-top: 10px;
       }
 
@@ -1070,62 +1070,62 @@ a:active {}
       }
     }
 
-    & .pc-link {
-      & a {
+    .pc-link {
+      a {
         font-size: 1em;
         padding: 5px;
         display: inline-block;
         margin-right: 10px;
       }
 
-      & a:link {
+      a:link {
         background-color: lightyellow;
       }
 
-      & a:hover {
+      a:hover {
         background-color: lightsalmon;
         color: green;
       }
     }
 
-    & .pc-modal {
-      & ::backdrop {
+    .pc-modal {
+      ::backdrop {
         background-color: rgba(0, 0, 0, 0.5);
       }
 
-      & :modal {
+      :modal {
         background-color: white;
         border: 2px solid black;
         box-shadow: 3px 3px 10px rgba(0 0 0 / 0.5);
       }
     }
 
-    & .pc-not {
-      & p:not(.special) {
+    .pc-not {
+      p:not(.special) {
         color: red;
       }
 
-      & .special:not(#super-special) {
+      .special:not(#super-special) {
         background-color: peachpuff;
       }
     }
 
-    & .pc-nth-child {
-      & div > div {
+    .pc-nth-child {
+      div > div {
         border: 2px solid;
         margin-bottom: 20px;
         padding: 2px;
       }
 
-      & div > div:nth-child(odd) {
+      div > div:nth-child(odd) {
         background-color: lightgrey;
       }
 
-      & div > div:nth-child(even) {
+      div > div:nth-child(even) {
         background-color: lightblue;
       }
 
-      & div > div:nth-child(5) {
+      div > div:nth-child(5) {
         color: red;
       }
     }
@@ -1169,153 +1169,153 @@ a:active {}
     n = 5 * 1 → 5   ✅
     n = 5 * 2 → 10  ✅ ... again, dont continue since we only have 10 list items
     */
-    & .pc-nth-last-child {
-      & ol li:nth-last-child(-n+1) {
+    .pc-nth-last-child {
+      ol li:nth-last-child(-n+1) {
         font-weight: bold;
         color: red;
       }
 
-      & ol li:nth-last-child(3n+4){
+      ol li:nth-last-child(3n+4){
         background-color: pink;
       }
 
-      & ol li:nth-last-child(5n){
+      ol li:nth-last-child(5n){
         font-weight: bold;
       }
 
-      & .results li:nth-child(-n+3) {
+      .results li:nth-child(-n+3) {
         background: lightgreen;
         font-weight: bold;
       }
 
-      & .results li:nth-last-child(-n+3) {
+      .results li:nth-last-child(-n+3) {
         background: lightcoral;
         font-weight: bold;
       }
 
-      & table {
+      table {
         border: 2px solid black;
       }
 
-      & table tr:nth-child(even) {
+      table tr:nth-child(even) {
         background-color: lightblue;
       }
 
-      & tr:nth-last-child(6) {
+      tr:nth-last-child(6) {
         font-weight: bold;
         color: blue;
       }
 
-      & tr:nth-last-child(odd)  {
+      tr:nth-last-child(odd)  {
         background-color: pink;
       }
 
-      & tr:nth-last-child(even)  {
+      tr:nth-last-child(even)  {
         background-color: greenyellow;
       }
 
-      & h3 + ul {
+      h3 + ul {
         list-style-type: none;
       }
 
-      & h3 + ul > li {
+      h3 + ul > li {
         display: inline-block;
         border: 3px solid black;
         margin: 5px;
         padding: 5px;
       }
 
-      & .fruits {
+      .fruits {
         background-color: pink;
       }
 
-      & li:nth-last-child(3),
-      & li:nth-last-child(3 of .fruits) {
+      li:nth-last-child(3),
+      li:nth-last-child(3 of .fruits) {
         font-weight: bold;
         color: blue;
       }
     }
 
-    & .pc-nth-last-of-type {
-      & p:nth-last-of-type(2) {
+    .pc-nth-last-of-type {
+      p:nth-last-of-type(2) {
         background-color: pink;
       }
 
-      & p:nth-last-of-type(odd) {
+      p:nth-last-of-type(odd) {
         background-color: pink;
         color: blue;
       }
 
-      & p:nth-last-of-type(even) {
+      p:nth-last-of-type(even) {
         background-color: greenyellow;
         color: red;
       }
     }
 
-    & .pc-nth-of-type {
-      & p:nth-of-type(2) {
+    .pc-nth-of-type {
+      p:nth-of-type(2) {
         background-color: pink;
       }
 
-      & p:nth-of-type(2n+1) {
+      p:nth-of-type(2n+1) {
         color: blue;
       }
 
-      & div:nth-of-type(2) {
+      div:nth-of-type(2) {
         background-color: peachpuff;
       }
     }
 
-    & .pc-only-child {
-      & .field {
+    .pc-only-child {
+      .field {
         margin: 1px;
         padding: 1px;
       }
 
-      & li:only-child {
+      li:only-child {
         color: darkblue;
         background-color: lightpink;
         padding: 10px;
       }
 
-      & div {
+      div {
         border: 2px solid black;
         width: 500px;
       }
     }
 
-    & .pc-only-of-type {
-      & .field {
+    .pc-only-of-type {
+      .field {
         margin: 1px;
         padding: 1px;
       }
 
-      & p:only-of-type {
+      p:only-of-type {
         color: darkblue;
         background-color: lightpink;
         padding: 10px;
       }
 
-      & h2:only-of-type {
+      h2:only-of-type {
         color: darkblue;
         background-color: lightsalmon;
       }
     }
 
-    & .pc-optional {
-      & label {
+    .pc-optional {
+      label {
         display: block;
         margin: 10px 0 10px 0;
         padding: 1px;
       }
 
-      & .field {
+      .field {
         border: 2px solid black;
         padding: 10px;
         width: fit-content;
       }
 
-      & input:optional {
+      input:optional {
         border: 5px solid red;
       }
 
@@ -1324,131 +1324,131 @@ a:active {}
       The `+` is the adjacent sibling combinator, which selects the input element that immediately follows the label.
       The `::after` pseudo-element is used to insert content after the selected element.
       */
-      & label:has(+ input:required)::after {
+      label:has(+ input:required)::after {
         content: "*";
         color: red;
       }
     }
 
-    & .pc-picture-in-picture {
-      & video {
+    .pc-picture-in-picture {
+      video {
         max-width: 50%;
         border: 1px solid black;
       }
 
-      & .container {
+      .container {
         margin-top: 20px;
       }
 
-      & .heading {
+      .heading {
         margin-right: 10px;
       }
 
-      & .hidden {
+      .hidden {
         display: none;
       }
     }
 
-    & .pc-placeholder-shown {}
+    .pc-placeholder-shown {}
 
-    & .pc-read-only {}
+    .pc-read-only {}
 
-    & .pc-read-write {}
+    .pc-read-write {}
 
-    & .pc-required {}
+    .pc-required {}
 
-    & .pc-right {}
+    .pc-right {}
 
-    & .pc-root {}
+    .pc-root {}
 
-    & .pc-scope {}
+    .pc-scope {}
 
-    & .pc-target {}
+    .pc-target {}
 
-    & .pc-valid {}
+    .pc-valid {}
 
-    & .pc-visited {}
+    .pc-visited {}
 
-    & .pc-where {}
+    .pc-where {}
   }
 
-  & .pseudo-elements {
-    & .content-insertion::before {
+  .pseudo-elements {
+    .content-insertion::before {
       content: "Note: ";
       font-weight: bold;
       color: red;
     }
 
-    & .content-insertion::after {
+    .content-insertion::after {
       content: url("https://img.icons8.com/?size=32&id=SSa3O7HCPrBv&format=png&color=000000");
     }
 
-    & dialog {
+    dialog {
       padding: 20px;
       border: 2px solid black;
       border-radius: 10px;
     }
 
-    & dialog::backdrop {
+    dialog::backdrop {
       background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
     }
 
-    & .f-letter::first-letter {
+    .f-letter::first-letter {
       text-transform: uppercase;
       font-size: 2em;
       color: red;
     }
 
-    & .f-line::first-line {
+    .f-line::first-line {
       text-transform: uppercase;
       background-color: peachpuff;
     }
 
-    & .select-file::file-selector-button {
+    .select-file::file-selector-button {
       background-color: blue;
       color: white;
       height: 32px;
       border: 2px solid red;
     }
 
-    & .list li::marker {
+    .list li::marker {
       color: red;
     }
 
-    & .placeholder-pe::placeholder {
+    .placeholder-pe::placeholder {
       color: red;
     }
   }
 
-  & .descendant-selectors {
-    & p {
+  .descendant-selectors {
+    p {
       background-color: peachpuff;
     }
   }
 
-  & .child-selectors {
-    & > p {
+  .child-selectors {
+    > p {
       background-color: peachpuff;
     }
   }
 
-  & .adjacent-sibling-selectors {
-    & div {
+  .adjacent-sibling-selectors {
+    div {
       border: 4px solid;
     }
 
-    & div + p {
+    div + p {
       background-color: peachpuff;
       color: blue;
     }
   }
 
-  & .general-sibling-selectors {
-    & div {
+  .general-sibling-selectors {
+    div {
       border: 4px solid;
     }
 
-    & div ~ p {
+    div ~ p {
       background-color: peachpuff;
       color: blue;
     }
