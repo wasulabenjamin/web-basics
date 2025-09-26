@@ -279,20 +279,28 @@ a:active {}
     }
 
     .child-combinator {
-      > div > p {
+      div > p {
         color: red;
       }
     }
 
     .adjacent-sibling-combinator {
-      h4 + p {
+      div + p {
         color: red;
+      }
+
+      h4 + p {
+        color: blue;
       }
     }
 
     .general-sibling-combinator {
-      h4 ~ p {
+      div ~ p {
         color: red;
+      }
+
+      h4 ~ p {
+        color: blue;
       }
     }
 
@@ -797,7 +805,7 @@ a:active {}
           &::before {
             display: block;
             width: 50px;
-            height: 20px;
+            height: 30px;
             content: "";
             background-color: #a9adaf;
             border-radius: 28px;
@@ -849,12 +857,12 @@ a:active {}
 
     .pc-focus-visible {
       /* Apply focus styles for all focused elements */
-      .btn-f:focus {
+      button:focus {
         outline: 3px solid blue;
       }
 
       /* Apply focus styles only when accessed via keyboard navigation */
-      .btn-fo:focus-visible {
+      button:focus-visible {
         outline: 3px solid green;
         background-color: yellow;
       }
@@ -865,22 +873,54 @@ a:active {}
         display: block;
         font-size: 16px;
         color: black;
+        margin-bottom: 10px;
+
+        input[type="text"] {
+          padding: 5px;
+          font-size: 16px;
+          border: 2px solid black;
+          width: 500px;
+
+          &:focus {
+            background-color: lightblue;
+          }
+        }
+
+        &:focus-within {
+          font-size: 25px;
+          color: red;
+        }
       }
 
-      input[type="text"] {
-        padding: 5px;
-        font-size: 16px;
-        border: 2px solid black;
-        width: 500px;
-      }
+      form {
+        label {
+          display: grid;
+          font-size: 18px;
+          color: black;
+          width: 400px;
 
-      input[type="text"]:focus {
-        background-color: lightblue;
-      }
+          select {
+            margin-top: 10px;
+            padding: 10px 16px;
+            font-size: 16px;
+            color: black;
+            background-color: #fff;
+            border: 1px solid #597183;
+            border-radius: 8px;
+            width: 300px;
+            transition: all 0.3s ease;
 
-      label:focus-within {
-        font-size: 25px;
-        color: red;
+            &:focus {
+              background-color: rgb(173, 233, 209);
+            }
+          }
+
+          &:focus-within {
+            background-color: coral;
+            border: 2px dashed black;
+            color: black;
+          }
+        }
       }
     }
 
@@ -910,15 +950,21 @@ a:active {}
     }
 
     .pc-has {
-      :is(h1, h2, h3, h4, h5, h6):has(+ p, + ul, + ol) {
+      :is(h1, h2, h3, h4, h5, h6, p):has(+ p, + ul, + ol) {
         background-color: lightblue;
         padding-top: 50px;
       }
 
+      /* checks if either a video or audio element is present within the div element. */
       div:has(video, audio) {
         border: 2px solid red;
         width: fit-content;
         padding: 15px;
+      }
+
+      /* checks whether the div element contains both video and audio element. */
+      div:has(video):has(audio) {
+        background-color: lightgreen;
       }
     }
 

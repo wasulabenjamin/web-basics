@@ -618,6 +618,28 @@
       They specify a relationship between selectors so that styling can be done based on that relationship.
       In other words, combinators help focus on elements based on their position and hierarchy within the HTML document.
       For example, with combinators you can style a paragraph element placed immediately after a div element.
+
+      POINTS TO REMEMBER. 💡
+
+      `div p`   → children, grandchildren, everyone...
+                  All `<p>` elements inside a `<div>`, no matter how deep.
+                  Descendant combinator — space means “any level down.”
+
+      `div > p` → only the direct kids.
+                  Only `<p>` elements that are immediate children of `<div>`.
+                  Child combinator — `>` means “one level below.”
+
+      `div + p` → the next-door sibling only.
+                  The first `<p>` that comes right after a `<div>`, sharing the same parent.
+                  Adjacent sibling combinator — `+` means “immediately after.”
+
+      `div ~ p` → all the younger siblings after.
+                  Every `<p>` that comes after a `<div>`, under the same parent — not just the first.
+                  General sibling combinator — `~` means “all that follow.”
+
+      `col || td` → same column gang.
+                  All `<td>` cells that belong to the same column as a `<col>` element.
+                  Column combinator — `||` means “same column in table layout.”
       -->
       <article class="combinators">
         <h2>Combinators</h2>
@@ -978,7 +1000,7 @@
 
           <form action="">
             <label for="names">Name: </label>
-            <input id="names"/>
+            <input id="names">
             <button id="my-button" type="button">Click Me!</button>
           </form>
         </div><br>
@@ -1182,7 +1204,6 @@
                 <!-- Non-collapsible whitespace and elements around this comment. -->
               </p>
             </div>
-
           </div>
         </div><br>
 
@@ -1408,13 +1429,34 @@
 
           <div class="toggle">
             <label for="toggle1">Check the box to toggle me</label>
-            <input type="checkbox" id="toggle1"/>
+            <input type="checkbox" id="toggle1">
             <span></span>
           </div>
         </div><br>
 
         <!--
         Pseudo-Class :focus-visible
+        The :focus-visible pseudo-class in CSS represents an element that has received focus.
+        This class is generally triggered when a user clicks, taps on an element or selects an element using the tab key
+        of a keyboard. The :focus-visible pseudo-class can be used to apply a different focus indicator, as per the
+        user's preferred mode of functioning (either using a mouse or a keyboard).
+
+        :focus vs. :focus-visible
+        The :focus and :focus-visible pseudo-classes in CSS are used to target elements that currently have keyboard
+        focus, but they behave differently, especially with regard to user experience and accessibility.
+
+        :focus
+        Targets elements that have keyboard focus, whether that focus is achieved through keyboard navigation or by
+        clicking with the mouse.
+        It doesn't take into account how the user reached the focused element, so it can include cases where a user
+        clicked on an element with a mouse or tapped it on a touch device.
+
+        :focus-visible
+        Targets elements that have keyboard focus but are only visible when keyboard navigation is used.
+        This helps improve user experience by ensuring that styles are applied only when an element is focused via
+        keyboard input and not when focused via mouse or touch input.
+        It is especially useful for creating a more accessible and user-friendly experience for keyboard users,
+        as it avoids applying potentially distracting or irrelevant styles to elements when clicked with a mouse.
         -->
         <div class="pc-focus-visible">
           <h3>Pseudo-Class :focus-visible</h3>
@@ -1424,13 +1466,29 @@
 
         <!--
         Pseudo-Class :focus-within
+        Selects an element if it contains an element that has received focus (:focus).
+        For example, if you want to highlight or focus a complete form, when focus is set on any of the input fields,
+        use the pseudo-class :focus-within.
         -->
         <div class="pc-focus-within">
           <h3>Pseudo-Class :focus-within</h3>
-          <label for="fstname">
+          <label for="fw-first-name">
             First Name
-            <input type="text" id="fstname"/>
+            <input type="text" id="fw-first-name">
           </label>
+
+          <form>
+            <label>
+              Ice cream Flavors:
+              <select name="flavor">
+                <option>Cookie dough</option>
+                <option>Pistachio</option>
+                <option>Cookies & Cream</option>
+                <option>Cotton Candy</option>
+                <option>Lemon & Raspberry Sorbet</option>
+              </select>
+            </label>
+          </form>
         </div><br>
 
         <!--
@@ -1459,15 +1517,55 @@
         </div><br>
 
         <!--
-        Pseudo-Class :has
+        Pseudo-Class :has() and :is()
+        The CSS pseudo-class selector :has() and :is() are used to select elements that have a descendant element
+        that matches the specified selector.
+        The syntax for :has() and :is() pseudo-class selectors is as follows:
+          tag:has(selector) {
+            property: value;
+          }
+          tag:is(selector) {
+            property: value;
+          }
+
+        POINTS TO REMEMBER. 💡
+          1. `:has()` is a relational pseudo-class, it selects elements based on its descendants, children, or siblings.
+              For Example:
+                div:has(> img) { border: 2px solid green; } /* has direct child */
+                article:has(h2 + p) { background: yellow; } /* has sibling relationship inside */
+          2. `:is()` is a selector simplifier, it matches any of a list of selectors.
+              For Example:
+                :is(h1, h2, h3) { font-weight: bold; }
+          3. `:has()` and `:is()` are compatible, they can be used together:
+              For Example:
+                section:has(:is(h2, h3)) { border-color: red; }
+          4. They can be combined with `:not()` and `:where()` without issue.
+              For Example:
+                div:not(:has(img)) { opacity: 0.5; }
+          5. Limitations:
+              * `:has()` cannot contain pseudo-elements (`::before`, `::after`, etc.)
+              * `:has()` cannot nest inside another `:has()`
+
+        Regular Expressions and :has() Analogy
+        CSS :has() selectors and regular expressions with lookahead assertions share a similarity in that they enable
+        you to target elements (or strings) based on a specific pattern, all without actually choosing the element
+        (or string) that matches that pattern.
+          * Positive lookahead (?=pattern)
+            CSS selector and the regular expression abc(?=xyz) both allow you to select an element based on the presence
+            of another element immediately after it, without actually selecting the other element itself.
+          * Negative lookahead (?!pattern)
+            CSS selector .abc:has(+ :not(.xyz)) is like the regular expression abc(?!xyz).
+            Both select .abc only if it is not followed by .xyz.
         -->
         <div class="pc-has">
           <h3>Pseudo-Class :has() and :is()</h3>
           <h4>Parent H4 element</h4>
           <p>The first child looks different due to :has() pseudo-class</p>
           <p>second child, so no change</p>
+
           <div>
             <video src="../../assets/video/sample-video.mp4" controls></video>
+            <audio src="../../assets/audio/sample-audio.mp3" controls></audio>
           </div>
         </div><br>
 
@@ -1666,14 +1764,14 @@
 
           <form>
             <fieldset>
-              <label for="user-id">UserId</label><br />
-              <input type="number" name="user-id" id="user-id" required />
+              <label for="user-id">UserId</label><br>
+              <input type="number" name="user-id" id="user-id" required>
               <label for="user-id"></label>
             </fieldset>
 
             <fieldset>
-              <label for="user-email">Email</label><br />
-              <input type="email" name="user-email" id="user-email" required />
+              <label for="user-email">Email</label><br>
+              <input type="email" name="user-email" id="user-email" required>
               <label for="user-email"></label>
             </fieldset>
 
@@ -1796,7 +1894,7 @@
         * `:nth-child()` starts counting from the first child forward.
         * `:nth-last-child()` starts counting from the last child backward (same formula logic, applied from the back).
 
-        👉
+        REMEMBER! 👉
         The “engine” never stops generating results (in theory, it’s infinite),
         but in practice you “run out” when indices go outside the child range.
         See the below example for a 10-item list:
@@ -1979,13 +2077,13 @@
           <form>
             <div class="field">
               <label for="name" class="required">Name:</label>
-              <input type="text" id="name" required/>
+              <input type="text" id="name" required>
 
               <label for="age">Age: (optional)</label>
-              <input type="number" id="age" />
+              <input type="number" id="age" >
 
               <label for="feedback">Feedback: (optional)</label>
-              <input type="text" id="feedback" /><br><br>
+              <input type="text" id="feedback" ><br><br>
 
               <button type="submit">Submit</button>
             </div>
@@ -2001,7 +2099,7 @@
           <video id="sample-video" src="../../assets/video/sample-video.mp4" controls=""></video>
           <div class="container">
             <label for="pip-toggle" class="heading">Toggle Picture-in-Picture: </label>
-            <input id="pip-toggle" type="checkbox" class="hidden"/>
+            <input id="pip-toggle" type="checkbox" class="hidden">
             <span id="pip-status" class="hidden">Off</span>
           </div>
           <script>
