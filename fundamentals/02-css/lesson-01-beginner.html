@@ -1571,6 +1571,15 @@
 
         <!--
         Pseudo-Class :host
+        The CSS pseudo-class selector :host is mainly useful in styling the host element or the container of a web
+        component, from within the component's shadow DOM. A web component is a custom element that is defined and built
+        using HTML, JavaScript or CSS. These components are reusable.
+
+        When the pseudo-class :host is used to style, it targets the element that hosts the web component,
+        unlike targeting the elements within the shadow DOM itself. This is helpful in encapsulation of styles within a
+        web component and prevents their leakage to other elements or getting affected by the external styling.
+
+        The :host pseudo-class has no effect when used outside a shadow DOM.
         -->
         <div class="pc-host">
           <h3>Pseudo-Class :host</h3>
@@ -1592,32 +1601,34 @@
           </ul>
           <script>
             customElements.define("sample-span", class extends HTMLElement {
-                constructor() {
-                  super();
+              constructor() {
+                super();
 
-                  const shadowRoot = this.attachShadow({ mode: "open" });
-                  const style = document.createElement("style");
-                  const span = document.createElement("span");
+                const shadow = this.attachShadow({mode: "open"}); // Create shadow DOM
+                const style = document.createElement("style");    // Create a style element
+                const span = document.createElement("span");      // Create span element
 
-                  style.textContent = `
-                    :host {
-                      background-color: yellow;
-                      padding: 5px;
-                      color: blue;
-                      border: 2px solid red;
-                    }
-                  `;
+                style.textContent = `
+                  :host {
+                    background-color: yellow;
+                    padding: 5px;
+                    color: blue;
+                    border: 2px solid red;
+                  }
+                `; // Add style to shadow DOM
 
-                  span.textContent = this.textContent;
-                  shadowRoot.appendChild(style);
-                  shadowRoot.appendChild(span);
-                }
+                span.textContent = this.textContent; // Add text content to span element
+                shadow.append(style, span); // Append style and span to shadow DOM
+              }
             });
           </script>
         </div><br>
 
         <!--
         Pseudo-Class :host()
+        The :host() CSS pseudo-class function allows you to select a custom element from inside its shadow DOM, \
+        but only if the selector (e.g., a class selector) given as the function's parameter matches the shadow host.
+        The :host() pseudo-class function has no effect when used outside a shadow DOM.
         -->
         <div class="pc-host-b">
           <h3>Pseudo-Class :host()</h3>
@@ -1625,7 +1636,6 @@
             Lorem ipsum dolor sit amet,
             <!--suppress HtmlUnknownTag -->
             <paragraph-span class="pg-span">consectetur adipisicing elit.</paragraph-span>
-            Eveniet nulla odio quam.
           </p>
 
           <script>
@@ -1633,9 +1643,9 @@
               constructor() {
                 super();
 
-                const shadowRoot = this.attachShadow({ mode: "open" });
-                const style = document.createElement("style");
-                const span = document.createElement("span");
+                const shadow = this.attachShadow({ mode: "open" }); // Create shadow DOM
+                const style = document.createElement("style");      // Create a style element
+                const span = document.createElement("span");        // Create span element
 
                 style.textContent = `
                   :host(.pg-span) {
@@ -1644,11 +1654,10 @@
                     color: blue;
                     border: 2px solid red;
                   }
-                `;
+                `; // Add style to shadow DOM
 
-                span.textContent = this.textContent;
-                shadowRoot.appendChild(style);
-                shadowRoot.appendChild(span);
+                span.textContent = this.textContent; // Add text content to span element
+                shadow.append(style, span);          // Append style and span to shadow DOM
               }
             });
           </script>
@@ -1656,6 +1665,16 @@
 
         <!--
         Pseudo-Class :host-context()
+        CSS :host-context() pseudo-class selector allows you to style a custom element differently depending on where it
+        is used in the DOM, based on the classes or attributes of its ancestor elements.
+        The :host-context() pseudo-class function has no effect when used outside a shadow DOM.
+
+        Syntax,
+            :host-context(<compound-selector>) {
+              property: value;
+            }
+
+        NOTE: The :host-context() is not supported by Firebox and Safari Browser.
         -->
         <div class="pc-host-context">
           <h3>Pseudo-Class :host-context()</h3>
@@ -1663,38 +1682,40 @@
           <h4>CSS Basics -
             <a href="#">
               <!--suppress HtmlUnknownTag -->
-              <context-span>:host-context()</context-span>
+              <context-span></context-span>
             </a>
           </h4>
-          <p>
-            CSS
+          <aside>
             <!--suppress HtmlUnknownTag -->
-            <context-span>:host-context()</context-span>
-            pseudo-class selector allows you to style a custom element differently depending on where it is used in the
-            DOM, based on the classes or attributes of its ancestor
-            elements.
-          </p>
+            <context-span></context-span> pseudo-class selector allows you to style a custom element differently
+            depending on where it is used in the DOM, based on the classes or attributes of its ancestor elements.
+          </aside>
 
           <script>
             customElements.define("context-span", class extends HTMLElement {
               constructor() {
                 super();
 
-                const shadowRoot = this.attachShadow({ mode: "open" });
-                const style = document.createElement("style");
+                const shadowRoot = this.attachShadow({ mode: "open" }); // Create shadow DOM
+                const style = document.createElement("style");          // Create a style element
 
                 style.textContent = `
-                  :host-context(div) {
+                  :host-context(aside) {
                     background-color: violet;
                     color: blue;
                     border: 3px solid red;
-                  }
-                  :host-context(div)::after {
-                    content: "This is a div element";
-                  }
-                `;
 
-                shadowRoot.appendChild(style);
+                    &::after {
+                      content: "This is an aside element";
+                    }
+                  }
+
+                  :host-context(:not(aside))::after {
+                    content: "This is not an aside element";
+                  }
+                `; // Add style to shadow DOM
+
+                shadowRoot.appendChild(style); // Append style to shadow DOM
               }
             });
           </script>
@@ -1702,17 +1723,41 @@
 
         <!--
         Pseudo-Class :hover.
-        In CSS, pseudo-class :hover is used to specify the mouse hovering state of an element.
-        This used to style an element while users mouse passes through an element in a document.
-        The syntax for pseudo-class hover selector is as follows:
-          tag:hover {
-             property: value;
-          }
+        The `:hover` pseudo-class in CSS applies styles to an element when a user’s mouse pointer is over it.
+        It’s commonly used to create interactive effects such as changing colors, revealing elements, etc.
+          Syntax,
+            selector:hover {
+               property: value;
+            }
         -->
         <div class="pc-hover">
           <h3>Pseudo-Class :hover</h3>
-          <a href="#"> Hover over me!</a>
-          <div>Hover over this div</div>
+
+          <div class="example-1">
+            <a href="#">Hover over to see the color change!!!</a>
+          </div>
+
+          <div class="example-2">
+            <button>Hover me!!!</button>
+          </div>
+
+          <div class="example-3">
+            <a class="link" href="#">Check my borders on hover</a>
+          </div>
+
+          <div class="example-4">
+            <a href="#">Hover over me!!</a>
+          </div>
+
+          <div class="example-5">
+            <a href="#">Hover over me!!</a>
+          </div>
+
+          <div class="example-6">
+            <a href="#">Hover over me!!</a>
+          </div>
+
+          <div class="example-7"></div>
         </div><br>
 
         <!--

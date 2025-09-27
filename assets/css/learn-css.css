@@ -20,10 +20,10 @@ a:active {}
     background-color: black;
     text-align: center;
     width: 350px;
-  }
 
-  div h1{
-    color: #36CFFF;
+    h1{
+      color: #36CFFF;
+    }
   }
 
   p{
@@ -573,12 +573,11 @@ a:active {}
           border: 2px solid #1abc9c;
           box-shadow: 0 0 0 1000px #d1f2eb inset; /* override yellow */
           transition: background-color 9999s ease-in-out 0s; /* trick to suppress autofill flash */
-        }
 
-        input:autofill:focus,
-        input:-webkit-autofill:focus {
-          border: 2px solid #16a085;
-          box-shadow: 0 0 0 1000px peachpuff inset;
+          &:focus {
+            border: 2px solid #16a085;
+            box-shadow: 0 0 0 1000px peachpuff inset;
+          }
         }
       }
     }
@@ -657,10 +656,10 @@ a:active {}
           background-color: red;
           border-radius: 100%;
           display: inline-block;
-        }
 
-        .circle:empty {
-          background-color: yellow;
+          &:empty {
+            background-color: yellow;
+          }
         }
       }
     }
@@ -676,14 +675,14 @@ a:active {}
         padding: 8px;
         margin-top: 10px;
         border: 1px solid  black;
-      }
 
-      input:enabled {
-        background-color: lightblue;
-      }
+        &:enabled {
+          background-color: lightblue;
+        }
 
-      input:disabled {
-        background-color: lightgrey;
+        &:disabled {
+          background-color: lightgrey;
+        }
       }
     }
 
@@ -975,25 +974,108 @@ a:active {}
     }
 
     .pc-hover {
-      a {
-        background-color: lightgrey;
-        padding: 10px;
-      }
-
       div {
-        margin-top: 20px;
         padding: 10px;
-        border: solid 3px;
-        background-color: aqua;
       }
 
-      a:hover {
-        color: red;
+      .example-1 {
+        a {
+          background-color: rgb(238, 135, 9);
+          font-size: 1rem;
+          padding: 5px;
+
+          &:hover {
+            background-color: rgb(235, 235, 169);
+          }
+        }
       }
 
-      div:hover {
-        background-color: lightgreen;
+      .example-2 {
+        button {
+          background-color: greenyellow;
+          font-size: large;
+
+          &:hover {
+            background-color: gold;
+          }
+        }
       }
+
+      .example-3 {
+        .link {
+          color: blue;
+          text-transform: uppercase;
+          padding: 20px;
+          border: 4px solid blue;
+          border-radius: 10px;
+          display: inline-block;
+
+          &:hover {
+            color: #494949;
+            border-radius: 45px;
+            border-color: #494949;
+          }
+        }
+      }
+
+      .example-4 {
+        a {
+          font-size: 2rem;
+          color: #071402;
+          margin: 0 .25rem;
+          padding: 0 .25rem;
+          transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+
+          &:hover {
+            box-shadow: inset 100px 0 0 100px #9ce2cc;
+            color: rgb(240, 32, 32);
+          }
+        }
+      }
+
+      .example-5 {
+        a {
+          color: #18272F;
+          font-size: 2rem;
+          position: relative; /* to position the ::before pseudo-element absolutely within the link */
+
+          &::before {
+            content: '';
+
+            background-color: rgba(118, 213, 83, 0.75);
+            position: absolute;
+            bottom: 3px;
+            width: 100%;
+            height: 10px;
+            z-index: -1;
+            transition: all .5s ease-in-out;
+          }
+
+          &:hover::before {
+            height: 100%;
+          }
+        }
+      }
+
+      .example-6 {
+        a {
+          color: black;
+          text-decoration: none;
+          padding-bottom: 5px;
+          background:
+            linear-gradient(to right, rgb(179, 232, 168), rgb(185, 162, 215)) 100% 100% / 100% 3px no-repeat,
+            linear-gradient(
+              to right, rgba(255, 0, 0, 1), rgba(255, 0, 180, 1), rgba(0, 200, 50, 1)
+            ) 0 100% / 0 3px no-repeat;
+          transition: background-size 700ms;
+
+          &:hover {
+            background-size: 0 3px, 100% 3px;
+          }
+        }
+      }
+
+      .example-7 {}
     }
 
     .pc-indeterminate {
