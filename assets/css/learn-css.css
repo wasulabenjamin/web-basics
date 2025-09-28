@@ -1063,9 +1063,16 @@ a:active {}
           text-decoration: none;
           padding-bottom: 5px;
           background:
-            linear-gradient(to right, rgb(179, 232, 168), rgb(185, 162, 215)) 100% 100% / 100% 3px no-repeat,
             linear-gradient(
-              to right, rgba(255, 0, 0, 1), rgba(255, 0, 180, 1), rgba(0, 200, 50, 1)
+              to right, 
+              rgb(179, 232, 168), 
+              rgb(185, 162, 215)
+            ) 100% 100% / 100% 3px no-repeat,
+            linear-gradient(
+              to right, 
+              rgba(255, 0, 0, 1), 
+              rgba(255, 0, 180, 1), 
+              rgba(0, 200, 50, 1)
             ) 0 100% / 0 3px no-repeat;
           transition: background-size 700ms;
 
@@ -1075,7 +1082,63 @@ a:active {}
         }
       }
 
-      .example-7 {}
+      .example-7 {
+        .glow {
+          position: relative;
+          padding: 10px 20px;
+          color: #fff;
+          background: #111;
+          border: none;
+          border-radius: 12px;
+          cursor: pointer;
+          z-index: 0;
+          transition: color 0.3s ease;
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: -4px;
+            left: -4px;
+            width: calc(100% + 8px);
+            height: calc(100% + 8px);
+            background: linear-gradient(
+              60deg, #ff0000, #ff7300, #fffb00, #48ff00, 
+              #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000
+            );
+            background-size: 400%;
+            filter: blur(15px);
+            opacity: 0;
+            border-radius: 12px;
+            z-index: -1;
+            transition: opacity 0.3s ease-in-out;
+            animation: glowing 20s linear infinite;
+          }
+
+          &:active {
+            color: rgb(246, 235, 235);
+
+            &::after {
+              background: transparent;
+            }
+          }
+
+          &:hover::before {
+            opacity: 1;
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #111;
+            border-radius: 12px;
+            z-index: -1;
+          }
+        }
+      }
     }
 
     .pc-indeterminate {
