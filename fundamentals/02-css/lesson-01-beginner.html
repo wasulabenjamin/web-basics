@@ -316,7 +316,7 @@
       demostyle.css
       @import url("style.css");
       h1 {
-            color: #36CFFF;
+            color: #36CFFI;
          }
       p {
             font-size: 1.5em;
@@ -573,8 +573,8 @@
         <br><br>
 
         <h3>Combining Class Selector with Other Selectors</h3>
-        <p class="bgc">This is a paragraph with background color. will not be styled</p>
-        <p class="bgc brd">This is a paragraph with background color and border. will be styled</p>
+        <p class="bgc">This is a paragraph with background color, it will not be styled</p>
+        <p class="bgc brd">This is a paragraph with background color and border, it will be styled</p>
         <br><br>
 
         <h3>Combining Multiple Classes</h3>
@@ -1020,7 +1020,7 @@
             <a href="https://github.com/wasulabenjamin">click here</a>
           </div>
           <div>
-            <a class="with-nohref">with no href</a>
+            <a class="with-no-href">with no href</a>
           </div>
           <div>
             <a href="" class="">with empty href</a>
@@ -1635,7 +1635,7 @@
           <p>
             Lorem ipsum dolor sit amet,
             <!--suppress HtmlUnknownTag -->
-            <paragraph-span class="pg-span">consectetur adipisicing elit.</paragraph-span>
+            <paragraph-span class="pg-span">consectetur radicalising elit.</paragraph-span>
           </p>
 
           <script>
@@ -1764,10 +1764,14 @@
 
         <!--
         Pseudo-Class :indeterminate
+        The CSS pseudo-class selector :indeterminate represents an element whose state is indeterminate or unknown.
+        To be more specific, the :indeterminate pseudo-class targets the following elements:
+          * Checkbox - <input type="checkbox"> whose indeterminate value is set to true.
+          * Radio button - <input type="radio"> whose radio button group does not list any checked radio button.
+          * Progress element - <progress> in an indeterminate state, i.e., with no value attribute.
         -->
         <div class="pc-indeterminate">
           <h3>Pseudo-Class :indeterminate</h3>
-
           <input type="checkbox" id="check-box">
           <label for="check-box">Checkbox</label>
 
@@ -1777,21 +1781,39 @@
           <progress></progress>
 
           <script>
-            const checkBox = document.getElementById("checkBox");
-            const radio = document.getElementById("radio");
-
-            checkBox.indeterminate = true;
-            radio.indeterminate = true;
+            document.getElementById("check-box").indeterminate = true;
+            document.getElementById("radio").indeterminate = true;
           </script>
         </div><br>
 
         <!--
         Pseudo-Class :in-range
+        The CSS pseudo-class selector :in-range represents an <input>element whose value is within the range limited by
+        the min and max attributes. This gives a visual indication to the user about the current value of a field,
+        whether it is within the permitted range of values or not.
+        This can only apply to the elements that can either have or take values in a range limitation.
+        When there is no such limitation, the element is said to be neither in-range nor out-of-range.
+
+        The syntax for pseudo-class :in-range is as follows:
+          tag:in-range {
+            property: value;
+          }
+
+        The CSS pseudo-class selector :out-of-range represents an <input>element whose value is outside the range
+        limited by the min and max attributes. This gives a visual indication to the user about the current value of a
+        field, that it is outside the permitted range of values.
+        This can only apply to the elements that can either have or take values in a range limitation.
+        When there is no such limitation, the element is said to be neither in-range nor out-of-range.
+
+        The syntax for pseudo-class :out-of-range is as follows:
+          tag:out-of-range {
+            property: value;
+          }
         -->
         <div class="pc-in-range">
           <h3>Pseudo-Class :in-range</h3>
-          <label for="inrange">Pick a number: </label>
-          <input type="number" min="1" max="50" value="1" id="inrange">
+          <label for="in-range">Pick a number between 1 and 50: </label>
+          <input type="number" min="1" max="50" value="1" id="in-range">
           <label></label>
         </div><br>
 
@@ -2021,10 +2043,10 @@
           <p>Styling all even-numbered rows from the end with a greenyellow background color.</p>
           <table>
             <tr> <th>Names        </th> </tr>
-            <tr> <td>Jhon Sean    </td> </tr>
+            <tr> <td>John Sean    </td> </tr>
             <tr> <td>Rocky Luis   </td> </tr>
             <tr> <td>Oliver David </td> </tr>
-            <tr> <td>Marry Alamnd </td> </tr>
+            <tr> <td>Marry Allan </td> </tr>
             <tr> <td>Dora Ann     </td> </tr>
           </table>
 
@@ -2051,7 +2073,7 @@
           <p>Lorem Ipsum is simply fake text of the printing and typesetting industry. </p>
           <p>Contrary to popular belief, Lorem Ipsum is not simply a random text.</p>
           <p>The standard chunk of Lorem Ipsum used since the 1500s</p>
-          <p>Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero</p>
+          <p>Sections 1.10.32 and 1.10.33 from "de Minibus Bono rum et Malo rum" by Cicero</p>
           <p>Lorem Ipsum is therefore always free from repetition.</p>
         </div><br>
 
@@ -2104,14 +2126,14 @@
           <h3>Pseudo-Class :only-of-type</h3>
 
           <div class="field">
-            <h2>Heading 2 - only type</h2>
+            <h2>Heading 2—only type</h2>
             <p>Paragraph tag - only type</p>
           </div>
 
           <div class="field">
-            <h2>Heading 2 - only type</h2>
-            <p>Paragraph tag 1 - we are two</p>
-            <p>Paragraph tag 2 - we are two</p>
+            <h2>Heading 2—only type</h2>
+            <p>Paragraph tag 1—we are two</p>
+            <p>Paragraph tag 2—we are two</p>
           </div>
         </div><br>
 
