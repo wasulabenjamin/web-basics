@@ -1819,6 +1819,24 @@
 
         <!--
         Pseudo-Class :invalid
+        The CSS pseudo-class selector :invalid represents an element (such as <form>, <fieldset>, or <input>) whose
+        contents or value is invalid as per its type specified in the type attribute, or fail to validate.
+        For instance, email inputs, <input type="email"> whose value does not match a valid email pattern or a number
+        input <input type="number"> having a value with alphabets. Both these cases are invalid.
+
+        The pseudo-class :invalid is useful in indicating the field errors to the user.
+        - Any style applied using :out-of-range pseudo-class, overrides the styles applied using :invalid pseudo-class.
+          Works for <input type="number">.
+        - The :invalid pseudo-class can be used with other selectors, such as hover, :focus, etc.
+        - In the case of radio buttons, if one of them is required,
+          the :invalid pseudo-class is applied to all the radio buttons.
+        - Gecko does not apply a style to the :invalid pseudo-class.
+          However, Gecko does apply a style to :user-invalid pseudo-class.
+
+        Accessibility concerns:
+        For an invalid input, the default color used is red, which might be challenging for people with certain color
+        blindness state. Instead, it is advisable to add an icon or descriptive text along with the invalid input so
+        that it is easier to understand.
         -->
         <div class="pc-invalid">
           <h3>Pseudo-Class :invalid</h3>

@@ -1184,30 +1184,29 @@ a:active {}
         height: 24px;
         width: 200px;
         padding: 5px;
-      }
 
-      input:invalid {
-        background-color: lightpink;
-      }
+        &:invalid {
+          background-color: lightpink;
 
-      input:invalid + label::after {
-        display: block;
-        margin: 5px 0 0 10px;
-      }
+          + label::after {
+            display: block;
+            margin: 5px 0 0 10px;
+            color: red;
+          }
 
-      input:invalid:hover,
-      input:invalid:focus {
-        border: 3px solid red;
+          &:hover,
+          &:focus {
+            border: 3px solid red;
+          }
+        }
       }
 
       input[type="number"]:invalid + label::after {
         content: "Please enter a valid number.";
-        color: red;
       }
 
       input[type="email"]:invalid + label::after {
         content: "Please enter a valid email address.";
-        color: red;
       }
 
       fieldset:invalid ~ fieldset {
