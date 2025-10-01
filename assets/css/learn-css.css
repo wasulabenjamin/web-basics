@@ -950,7 +950,7 @@ a:active {}
     }
 
     .pc-has {
-      :is(h1, h2, h3, h4, h5, h6, p):has(+ p, + ul, + ol) {
+      :is(h1, h2, h3, h4, h5, h6):has(+ p, + ul, + ol) {
         background-color: lightblue;
         padding-top: 50px;
       }
@@ -1239,16 +1239,28 @@ a:active {}
     }
 
     .pc-last-child {
-      p:last-child {
+      section,
+      div {
+        margin: 50px 0;
+      }
+
+      p:last-child,
+      li:last-of-type {
         background-color: peachpuff;
         color: blue;
-      }
+      } /* will only affect last child of a parent element IF AND ONLY IF the element is p or li */
     }
 
     .pc-last-of-type {
-      div,
-      p {
-        padding-top: 10px;
+      .example-1 {
+        section,
+        div {
+          margin: 50px 0;
+        }
+
+        p:last-of-type {
+          background-color: lightblue;
+        }
       }
 
       .item:last-of-type {

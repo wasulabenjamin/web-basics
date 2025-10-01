@@ -1518,6 +1518,51 @@
 
         <!--
         Pseudo-Class :has() and :is()
+
+        ----------------------------------------------------------------------------------------------------------------
+
+        Pseudo-Class :has()
+        This pseudo-class represents an element based on whether it has a child element that matches a certain selector.
+
+        Syntax,
+          :has(<relative-selector-list>) {
+             /* ... */
+          }
+
+        The :has() pseudo-class is not supported by Firefox browser.
+
+        POINTS TO REMEMBER. 💡
+        - When a browser doesn't support the :has() pseudo-class,
+          the entire selector block will only work if :has() is used inside an :is() or :where() selector.
+        - You can't use a :has() selector inside another :has()selector because many pseudo-elements exist based on how
+          their parent elements are styled. Allowing you to select these pseudo-elements with :has() can cause cyclic
+          querying.
+        - Pseudo-elements cannot be used as selectors or anchors within the :has() pseudo-class.
+
+        ----------------------------------------------------------------------------------------------------------------
+
+        Pseudo-Class :is()
+        The CSS pseudo-class function :is() takes the arguments as a list of selectors, and thus targets any element
+        that can be selected by any of the selectors in the list.
+
+        - It simplifies large number of selectors that are required to be written, in a more compact form.
+        - Simplifies the section selectors i.e while dealing with HTML sections and headings at different levels,
+          such as <section>, <article>, <aside>, and <nav>.
+        - Does not select pseudo-elements. Refer the syntax below, these are not allowed:
+
+        :is() vs :where()
+        :is() is responsible for counting towards more specific of all the selectors in the list,
+        whereas :where() holds the specificity value of 0.
+
+        Forgiving selector parsing
+        - With usage of :is() and :where(), when one of the selectors fail to parse,
+          instead of the whole list of selectors being deemed invalid,
+          only the incorrect or unsupported selectors gets ignored and the rest of the selectors are used.
+        - :is(:valid, :unsupported) − this will parse correctly and match :valid,
+          even when the browsers don't support :unsupported.
+
+        ----------------------------------------------------------------------------------------------------------------
+
         The CSS pseudo-class selector :has() and :is() are used to select elements that have a descendant element
         that matches the specified selector.
         The syntax for :has() and :is() pseudo-class selectors is as follows:
@@ -1562,6 +1607,20 @@
           <h4>Parent H4 element</h4>
           <p>The first child looks different due to :has() pseudo-class</p>
           <p>second child, so no change</p>
+
+          <div>
+            <h4>Heading 1 Example</h4>
+            <a href="">Link A Example</a>.
+            <p>Paragraph 1</p>
+
+            <h4>Heading 1 Example</h4>
+            <p>Paragraph 1 Example</p>
+            <p>Paragraph 2 Example</p>
+
+            <h4>Heading 2 Example</h4>
+            <p>Paragraph 1 Example</p>
+            <p>Paragraph 2 Example <a href="">Link B</a></p>
+          </div>
 
           <div>
             <video src="../../assets/video/sample-video.mp4" controls></video>
@@ -1869,6 +1928,17 @@
         <!--
         Pseudo-Class :lang()
         Applies style to an element based on the value of lang attribute set to the element, or it's parent.
+        This pseudo-class matches the elements as per the language that is passed in the function as an argument.
+
+        Possible Values, <language-code>
+        - A list of one or more <string>s separated by commas that target an element with language values.
+        - The value should be according to BCP47 language codes.
+        - The matching language range is case-sensitive.
+
+        Implicit wildcard matching is allowed,
+        such that :lang(de-DE) will match de-DE, de-DE-1996, de-Latn-DE, de-Latf-DE and de-Latn-DE-1996.
+
+        Using wildcards explicitly will require including a full match of language subtag.
         -->
         <div class="pc-lang">
           <h3>Pseudo-Class :lang()</h3>
@@ -1879,6 +1949,11 @@
         <!--
         Pseudo-Class :last-child
         The pseudo-class last-child used to select the last direct child element.
+        The CSS pseudo-class selector :last-child represents the last element that is inside the containing element.
+
+        The pseudo-class :last-child is similar to :last-of-type, but the former is more specific and targets the very
+        last child of the parent element, while the latter matches the last occurrence of a specified element.
+
         The syntax for pseudo-class last-child selector is as follows:
           tag:last-child {
             property: value;
@@ -1889,7 +1964,8 @@
           <section>
             <p>This paragraph is the first child of a section element</p>
             <p>This paragraph will not be affected.</p>
-            <p>This is the last paragraph that will be affected.</p>
+            <p>This is the last paragraph that will not be affected.</p>
+            <span>This is the last child of a span element</span>
           </section>
 
           <div>
@@ -1897,18 +1973,49 @@
             <p>This paragraph will not be affected.</p>
             <p>This is the last paragraph that will be affected.</p>
           </div>
+
+          <ul>
+            <li>One</li>
+            <li>Two</li>
+            <li>Three
+          </ul>
         </div><br>
 
         <!--
         Pseudo-Class :last-of-type
+        The CSS pseudo-class selector :last-of-type is used to select and style the last element of its type within its
+        parent container. This pseudo-class lets you target and apply the styles specifically to the last occurrence of
+        a kind of element within a given container.
+
+        :last-child vs :last-of-type
+        The CSS pseudo-class selector :last-child is similar to :last-of-type, but there is a difference: it is less
+        specific. The :last-child matches only the last child of a parent element; whereas :last-of-type matches the
+        specified elements child even if it is not the last one.
         -->
         <div class="pc-last-of-type">
           <h3>Pseudo-Class :last-of-type</h3>
 
-          <div class="item">first div, so no change.</div>
-          <div class="item">second div, so no change.</div>
-          <div class="item">Third div, last child of the parent div, so CSS applied.</div>
-          <p class="item">Last p element of its parent, selected by .container.item class selector.</p>
+          <div class="example-1">
+            <section>
+              <p>This paragraph is the first child of a section element</p>
+              <p>This paragraph will not be affected.</p>
+              <p>This is the last paragraph that will be affected.</p>
+              <span>This is the last child of a span element</span>
+            </section>
+
+            <div>
+              <p>This paragraph is the first child of a div element</p>
+              <p>This paragraph will not be affected.</p>
+              <p>This is the last paragraph that will be affected.</p>
+            </div>
+          </div>
+
+          <div class="example-2">
+            <div class="item">first div, so no change.</div>
+            <div class="item">second div, so no change.</div>
+            <div class="item">Third div, last child of the parent div, so CSS applied.</div>
+            <p class="item">Last p element of its parent, selected by .container.item class selector.</p>
+          </div>
         </div><br>
 
         <!--
