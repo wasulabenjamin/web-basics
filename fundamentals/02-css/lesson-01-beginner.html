@@ -1529,7 +1529,7 @@
              /* ... */
           }
 
-        The :has() pseudo-class is not supported by Firefox browser.
+        The :has() pseudo-class is not supported by the Firefox browser.
 
         POINTS TO REMEMBER. 💡
         - When a browser doesn't support the :has() pseudo-class,
@@ -1542,20 +1542,20 @@
         ----------------------------------------------------------------------------------------------------------------
 
         Pseudo-Class :is()
-        The CSS pseudo-class function :is() takes the arguments as a list of selectors, and thus targets any element
+        The CSS pseudo-class function :is() takes the arguments as a list of selectors and thus targets any element
         that can be selected by any of the selectors in the list.
 
-        - It simplifies large number of selectors that are required to be written, in a more compact form.
-        - Simplifies the section selectors i.e while dealing with HTML sections and headings at different levels,
+        - It simplifies a large number of selectors that are required to be written, in a more compact form.
+        - Simplifies the section selectors i.e., while dealing with HTML sections and headings at different levels,
           such as <section>, <article>, <aside>, and <nav>.
-        - Does not select pseudo-elements. Refer the syntax below, these are not allowed:
+        - Does not select pseudo-elements.
 
         :is() vs :where()
-        :is() is responsible for counting towards more specific of all the selectors in the list,
+        :is() is responsible for counting towards a more specific of all the selectors in the list,
         whereas :where() holds the specificity value of 0.
 
         Forgiving selector parsing
-        - With usage of :is() and :where(), when one of the selectors fail to parse,
+        - With usage of :is() and :where(), when one of the selectors fails to parse,
           instead of the whole list of selectors being deemed invalid,
           only the incorrect or unsupported selectors gets ignored and the rest of the selectors are used.
         - :is(:valid, :unsupported) − this will parse correctly and match :valid,
@@ -1987,7 +1987,7 @@
         parent container. This pseudo-class lets you target and apply the styles specifically to the last occurrence of
         a kind of element within a given container.
 
-        :last-child vs :last-of-type
+        :last-child vs. :last-of-type
         The CSS pseudo-class selector :last-child is similar to :last-of-type, but there is a difference: it is less
         specific. The :last-child matches only the last child of a parent element; whereas :last-of-type matches the
         specified elements child even if it is not the last one.
@@ -2016,6 +2016,87 @@
             <div class="item">Third div, last child of the parent div, so CSS applied.</div>
             <p class="item">Last p element of its parent, selected by .container.item class selector.</p>
           </div>
+        </div><br>
+
+        <!--
+        Pseudo-Class :left
+        The CSS pseudo-class selector :left represents all left-hand pages of a printed document.
+        It is used with the @page at-rule.
+
+        Based on the writing direction of the document, it is determined whether it is "left" or "right".
+        In case the writing direction is left-to-right, the document is said to be :right and
+        when the major writing direction is right-to-left, it is :left page.
+
+        All CSS properties cannot be changed using the :left pseudo-class.
+        The properties that can be changed are margin, padding, border, and background.
+        Just the page box will be affected and not the content on the page.
+        -->
+        <div class="pc-left">
+          <h3>Pseudo-Class :left</h3>
+
+          <section>
+            <h1>Page 1</h1>
+          </section>
+          <section>
+            <h1>Page 2</h1>
+          </section>
+
+          <button id="print-pc-link">Print</button>
+
+          <script>
+            document.getElementById("print-pc-link").addEventListener("click", () => {
+              const printSection = document.querySelector(".pc-link").innerHTML;
+              const printWindow = window.open("", "_blank");
+
+              // noinspection CssUnusedSymbol
+              printWindow.document.write(`
+                <html lang="en">
+                  <head>
+                    <title>Print</title>
+                    <style>
+                      @page:left {
+                        margin: 2in 3in;
+                      }
+
+                      body {
+                        display: grid;
+                      }
+
+                      section {
+                        border-radius: 10px;
+                        display: grid;
+                        margin: 2px;
+                        padding: 0.25rem;
+                        place-items: center;
+                        width: 35%;
+                        print-color-adjust: exact;
+                        -webkit-print-color-adjust: exact;
+                      }
+
+                      section {
+                        page-break-after: always;
+                        break-after: page;
+                      }
+
+                      button {
+                        visibility: hidden;
+                        padding: 10px;
+                        width: 20%;
+                        height: 50px;
+                        margin-left: 55px;
+                        margin-top: 10px;
+                      }
+                    </style>
+                  </head>
+                  <body>${printSection}</body>
+                </html>
+              `);
+              printWindow.document.close();
+              printWindow.focus();
+              printWindow.print();
+              printWindow.close();
+            });
+          </script>
         </div><br>
 
         <!--
