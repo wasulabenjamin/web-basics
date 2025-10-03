@@ -2101,6 +2101,17 @@
 
         <!--
         Pseudo-Class :link
+        The CSS pseudo-class selector :link matches or represents an element that has not been visited yet,
+        i.e., all the <a> and <area> elements, with href attribute or even with an empty href attribute.
+
+        All the styles specified by the pseudo-classes :link and :visited get overridden by any subsequent interactive
+        pseudo-classes, such as :hover or :active.
+
+        To style the links correctly, you need to place the :link rule before all other link-related rules.
+        You need to follow the LVHA rule, i.e., :link, :visited, :hover and :active.
+        The pseudo-classes :visited and :link are mutually exclusive.
+
+        To select an element independent of whether it has been visited or not, use the pseudo-class :any-link.
         -->
         <div class="pc-link">
           <h3>Pseudo-Class :link</h3>

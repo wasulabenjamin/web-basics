@@ -1274,15 +1274,15 @@ a:active {}
         padding: 5px;
         display: inline-block;
         margin-right: 10px;
-      }
 
-      a:link {
-        background-color: lightyellow;
-      }
+        &:link {
+          background-color: lightyellow;
+        }
 
-      a:hover {
-        background-color: lightsalmon;
-        color: green;
+        &:hover {
+          background-color: lightsalmon;
+          color: red;
+        }
       }
     }
 
