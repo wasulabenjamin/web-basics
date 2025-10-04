@@ -2121,6 +2121,13 @@
 
         <!--
         Pseudo-Class :modal
+        The CSS pseudo-class selector :modal matches or targets an element in a state in which it does not make any
+        interaction with the elements outside it, until that interaction has been dismissed.
+        It can select multiple elements, but only one of the elements will be active and receive input.
+
+        The elements that can be selected by the :modal pseudo-class are one or many of the following:
+        - The <dialog> element that can be opened using the showModal API.
+        - The element selected by the :fullscreen pseudo-class, that can be opened by the requestFullscreen API.
         -->
         <div class="pc-modal">
           <h3>Pseudo-Class :modal</h3>
@@ -2134,11 +2141,9 @@
 
           <script>
             const dialog = document.querySelector("dialog");
-            const buttonOpen = document.querySelector("dialog + button");
-            const buttonClose = document.querySelector("dialog button");
 
-            buttonOpen.addEventListener("click", () => dialog.showModal());
-            buttonClose.addEventListener("click", () => dialog.close());
+            document.querySelector("dialog + button").addEventListener("click", () => dialog.showModal());
+            document.querySelector("dialog button").addEventListener("click", () => dialog.close());
           </script>
         </div><br>
 
