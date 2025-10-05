@@ -2149,8 +2149,27 @@
 
         <!--
         Pseudo-Class :not()
-        The pseudo-class :not(selector) is used to apply style on all the elements expect elements that included in
-        mentioned selectors.
+        The CSS pseudo-class function :not() represents or matches the elements that do not match a given list of
+        selectors. It is also known as negation pseudo-class, as it avoids the selection of specific items from a list.
+        This is a very tricky pseudo-class and renders unexpected results. So you should be aware of it.
+        Few of the unexpected and unusual results of using :not() are as follows:
+         - The :not() pseudo-class is used to write the useless selectors,
+           like :use(*) shows that it will match any element, which is not an element.
+           This doesn't make any sense, hence no rule will be applied.
+         - It can increase the specificity of a rule;
+           such as #foo.not(#bar), will match the same element as simple as #foo,
+           with increased specificity of two selector ids.
+         - The specificity of the most specific selector, from the list of comma-separated selectors,
+           replaces that of the :not() pseudo-class.
+         - If you pass something like this :not(.foo), the pseudo-class will match everything,
+           including the basic HTML tags such as <html> or <body>.
+         - If you pass :not(table), it will result is matching of tr, tbody, th, td, caption, etc.,
+           as they can all match the given argument :not(table).
+         - At a time multiple selectors can be negated, like :not(.foo, .bar), means :not(.foo) :not(.bar)
+         - When any selector is passed as a part of the list, proves to be invalid or unsupported,
+           will result in invalidating the whole rule.
+           To avoid this situation, you should use :is(), as it has the property of forgiving selector list.
+
         The syntax for pseudo-class not selector is as follows:
           tag:not(selector){
             property: value;
@@ -2159,10 +2178,36 @@
         -->
         <div class="pc-not">
           <h3>Pseudo-Class :not()</h3>
-          <p>This is a normal paragraph.</p>
-          <p class="special" id="super-special">This is a super special paragraph.</p>
-          <p>This is another normal paragraph.</p>
-          <p class="special">This is a special paragraph.</p>
+
+          <div class="example-1">
+            <p>This is a normal paragraph.</p>
+            <p class="special" id="super-special">This is a super special paragraph.</p>
+            <p>This is another normal paragraph.</p>
+            <p class="special">This is a special paragraph.</p>
+          </div>
+
+          <div class="example-2">
+            <h4>heading with :not(.sample) pseudo-class applied</h4>
+            <h4 class="sample">heading with styling applied</h4>
+            <p>Paragraph, hence :not(h1) and :not(div):not(span) applied.</p>
+            <div>div element, hence :not(h1) applied.</div>
+          </div>
+
+          <div class="example-3">
+            <p>Paragraph 1</p>
+            <p>Paragraph 2</p>
+            <p>Paragraph 3</p>
+            <p>Paragraph 4</p>
+            <p>Paragraph 5</p>
+          </div>
+
+          <div class="example-4">
+            <ul>
+              <li>list item 1</li>
+              <li class="sample">list item 2</li>
+              <li>list item 3</li>
+            </ul>
+          </div>
         </div><br>
 
         <!--
