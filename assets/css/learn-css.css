@@ -1358,22 +1358,74 @@ a:active {}
     }
 
     .pc-nth-child {
-      div > div {
-        border: 2px solid;
-        margin-bottom: 20px;
-        padding: 2px;
-      }
+      div {
+        margin-top: 50px;
 
-      div > div:nth-child(odd) {
-        background-color: lightgrey;
-      }
+        &.example-1 {
+          p:nth-child(odd) {
+            background-color: lightgrey;
+          }
 
-      div > div:nth-child(even) {
-        background-color: lightblue;
-      }
+          p:nth-child(even) {
+            background-color: lightblue;
+          }
 
-      div > div:nth-child(5) {
-        color: red;
+          p:nth-child(5) {
+            color: red;
+          }
+        }
+
+        /*
+        for 2n+3;
+        n = 2 * 0 + 3 →  3 ✅
+        n = 2 * 1 + 3 →  5 ✅
+        n = 2 * 2 + 3 →  7 ✅
+        n = 2 * 3 + 3 →  9 ... don't continue since we only have 9 paragraph elements
+
+        WHAT TO EXPECT: Style paragraph 3, 5, 7 and 9
+        */
+        &.example-2 {
+          p:nth-child(2n+3) {
+            color: pink;
+          }
+        }
+
+        &.example-3 {
+          li:nth-child(1) {
+            font-weight: bold;
+            color: red;
+          }
+
+          li:nth-child(3n+4){
+            background-color: pink;
+          }
+
+          li:nth-child(n+6){
+            font-weight: bold;
+          }
+        }
+
+        &.example-4 {
+          ul {
+            list-style-type: none;
+
+            li {
+              display: inline-block;
+              border: 3px solid black;
+              margin: 5px;
+              padding: 5px;
+
+              &.fruits {
+                background-color: pink;
+              }
+
+              &:nth-child(even of .fruits) {
+                font-weight: bold;
+                color: blue;
+              }
+            }
+          }
+        }
       }
     }
 
