@@ -2212,7 +2212,19 @@
 
         <!--
         Pseudo-Class :nth-child()
+        This pseudo-class selects elements based on their position among the children of their parent element.
         The pseudo-class :nth-child(n) will apply style to any specified direct child of an element.
+        The :nth-child() pseudo-class takes an argument that can be a number, a keyword, or a mathematical expression.
+
+        Possible Values:
+        * odd − Represents all odd-numbered (such as, 1,3,5, etc.) sibling elements in a series counting from the end.
+        * even − Represents all even-numbered (such as, 2,4,6 etc.) sibling elements in a series counting from the end.
+        * functional notation (<an+b>) − This value represents every an+b-th child element in a series
+          counting from the end of its parent container,
+          where:  a is a positive (+ve) integer, and
+                  n is a counter variable that starts from 0.
+                  b is another positive integer.
+
         The syntax for pseudo-class nth-child(n) selector is as follows:
           tag:nth-child(number/ expression / odd / even) {
             property: value;
@@ -2310,54 +2322,188 @@
               <li class="fruits">Pear</li>
             </ul>
           </div>
+
+          <div class="example-5">
+            <p>Styling the first two child elements (with .fruits class) in the list.</p>
+            <ul class="list1">
+              <li>Orange</li>
+              <li class="fruits">Apple</li>
+              <li>Mango</li>
+              <li class="fruits">Grapes</li>
+              <li class="fruits">Banana</li>
+              <li>Watermelon</li>
+              <li>Cheery</li>
+              <li class="fruits">Pear</li>
+            </ul>
+            <p>Select the first four child elements that are both .fruits elements and in the .list2 list.</p>
+            <ul class="list2">
+              <li class="fruits">Orange</li>
+              <li>Apple</li>
+              <li class="fruits">Mango</li>
+              <li>Grapes</li>
+              <li>Banana</li>
+              <li class="fruits">Watermelon</li>
+              <li>Cheery</li>
+              <li class="fruits">Pear</li>
+            </ul>
+          </div>
+
+          <div class="example-6">
+            <p>Selector selects all even rows in the tbody of a table.</p>
+            <table class="even-rows">
+              <thead>
+              <tr>
+                <th>First Names</th>
+                <th>Last Names</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>Jhon</td>
+                <td>Sean</td>
+              </tr>
+              <tr>
+                <td>Rocky</td>
+                <td>Luis</td>
+              </tr>
+              <tr hidden>
+                <td>Oliver</td>
+                <td>David</td>
+              </tr>
+              <tr>
+                <td>Marry</td>
+                <td>Alamnd</td>
+              </tr>
+              <tr>
+                <td>Dora</td>
+                <td>Ann</td>
+              </tr>
+              <tr>
+                <td>Tonny</td>
+                <td>Rai</td>
+              </tr>
+              </tbody>
+            </table>
+            <p>Selector selects all even rows in the tbody of a table, but skips any rows that are hidden.</p>
+            <table class="even-rows-hidden">
+              <thead>
+              <tr>
+                <th>First Names</th>
+                <th>Last Names</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>Jhon</td>
+                <td>Sean</td>
+              </tr>
+              <tr>
+                <td>Rocky</td>
+                <td>Luis</td>
+              </tr>
+              <tr hidden>
+                <td>Oliver</td>
+                <td>David</td>
+              </tr>
+              <tr>
+                <td>Marry</td>
+                <td>Alamnd</td>
+              </tr>
+              <tr>
+                <td>Dora</td>
+                <td>Ann</td>
+              </tr>
+              <tr>
+                <td>Tonny</td>
+                <td>Rai</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
         </div><br>
 
         <!--
         Pseudo-Class :nth-last-child()
+        This pseudo-class matches elements based on their position among a group of siblings, counting from the end.
+        The pseudo-class :nth-last-child(n) will apply style to any specified direct child of an element.
+
+        Possible Values:
+        * odd − Represents all odd-numbered (such as, 1,3,5, etc.) sibling elements in a series counting from the end.
+        * even − Represents all even-numbered (such as, 2,4,6 etc.) sibling elements in a series counting from the end.
+        * functional notation (<an+b>) − This value represents every an+b-th child element in a series
+          counting from the end of its parent container,
+          where:  a is a positive (+ve) integer, and
+                  n is a counter variable that starts from 0.
+                  b is another positive integer.
+
+        The syntax for pseudo-class nth-last-child(n) selector is as follows:
+          tag:nth-last-child(number/ expression / odd / even) {
+            property: value;
+          }
         -->
         <div class="pc-nth-last-child">
           <h3>Pseudo-Class :nth-last-child()</h3>
 
-          <p>Styling the last item as bold and red color.</p>
-          <p>Styling every third list item starting with the fourth list item from the last with a pink background.</p>
-          <p>Styling the fifth item from last as bold.</p>
-          <ol>
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-            <li>Item 4</li>
-            <li>Item 5</li>
-            <li>Item 6</li>
-            <li>Item 7</li>
-            <li>Item 8</li>
-            <li>Item 9</li>
-            <li>Item 10</li>
-          </ol>
+          <div class="example-1">
+            <p>Styling the last item as bold and red color.</p>
+            <p>Styling every third list item starting with the fourth list item from the last with a pink background.</p>
+            <p>Styling the fifth item from last as bold.</p>
+            <ol>
+              <li>Item 01</li>
+              <li>Item 02</li>
+              <li>Item 03</li>
+              <li>Item 04</li>
+              <li>Item 05</li>
+              <li>Item 06</li>
+              <li>Item 07</li>
+              <li>Item 08</li>
+              <li>Item 09</li>
+              <li>Item 10</li>
+            </ol>
+          </div>
 
-          <ul class="results">
-            <li>Alice — 98%</li>
-            <li>Bob — 95%</li>
-            <li>Carol — 92%</li>
-            <li>David — 80%</li>
-            <li>Eve — 75%</li>
-            <li>Frank — 70%</li>
-            <li>Grace — 65%</li>
-            <li>Heidi — 60%</li>
-            <li>Ivan — 55%</li>
-            <li>Judy — 50%</li>
-          </ul>
+          <div class="example-2">
+            <p>Styling the heading of the table as bold and blue in color.</p>
+            <p>Styling all odd-numbered rows from the end with a pink background color.</p>
+            <p>Styling all even-numbered rows from the end with a greenyellow background color.</p>
+            <table>
+              <tr> <th>Names        </th> </tr>
+              <tr> <td>John Sean    </td> </tr>
+              <tr> <td>Rocky Luis   </td> </tr>
+              <tr> <td>Oliver David </td> </tr>
+              <tr> <td>Marry Allan </td> </tr>
+              <tr> <td>Dora Ann     </td> </tr>
+            </table>
+          </div>
 
-          <p>Styling the heading of the table as bold and blue in color.</p>
-          <p>Styling all odd-numbered rows from the end with a pink background color.</p>
-          <p>Styling all even-numbered rows from the end with a greenyellow background color.</p>
-          <table>
-            <tr> <th>Names        </th> </tr>
-            <tr> <td>John Sean    </td> </tr>
-            <tr> <td>Rocky Luis   </td> </tr>
-            <tr> <td>Oliver David </td> </tr>
-            <tr> <td>Marry Allan </td> </tr>
-            <tr> <td>Dora Ann     </td> </tr>
-          </table>
+          <div class="example-3">
+            <ul>
+              <li>Alice — 98%</li>
+              <li>Bob — 95%</li>
+              <li>Carol — 92%</li>
+              <li>David — 80%</li>
+              <li>Eve — 75%</li>
+              <li>Frank — 70%</li>
+              <li>Grace — 65%</li>
+              <li>Heidi — 60%</li>
+              <li>Ivan — 55%</li>
+              <li>Judy — 50%</li>
+            </ul>
+          </div>
+
+          <div class="example-4"></div>
+
+          <div class="example-5"></div>
+
+          <div class="example-6"></div>
+
+          <div class="example-7"></div>
+
+          <div class="example-8"></div>
+
+          <div class="example-9"></div>
+
+
 
           <h3>Styling list items with the class fruits to have a pink background.</h3>
           <h3>Counting from the last child, styling a first child element of the fruit class.</h3>

@@ -1426,6 +1426,45 @@ a:active {}
             }
           }
         }
+
+        &.example-5 {
+          ul {
+            list-style-type: none;
+
+            li {
+              display: inline-block;
+              border: 3px solid black;
+              margin: 5px;
+              padding: 5px;
+
+              &.fruits {
+                background-color: pink;
+              }
+            }
+
+            &.list1 > li:nth-child(-n + 2 of .fruits) {
+              color: blue;
+            }
+
+            &.list2 > li.fruits:nth-child(-n + 4) {
+              color: blue;
+            }
+          }
+        }
+
+        &.example-6 {
+          table {
+            margin-top: 50px;
+
+            &.even-rows > tbody > tr:nth-child(even) {
+              background-color: pink;
+            }
+
+            &.even-rows-hidden > tbody > tr:nth-child(even of :not([hidden])) {
+              background-color: pink;
+            }
+          }
+        }
       }
     }
 
@@ -1469,48 +1508,101 @@ a:active {}
     n = 5 * 2 → 10  ✅ ... again, dont continue since we only have 10 list items
     */
     .pc-nth-last-child {
-      ol li:nth-last-child(-n+1) {
-        font-weight: bold;
-        color: red;
-      }
+      div {
+        margin-top: 50px;
 
-      ol li:nth-last-child(3n+4){
-        background-color: pink;
-      }
+        &.example-1 {
+          ol li {
 
-      ol li:nth-last-child(5n){
-        font-weight: bold;
-      }
+            /*
+            for -n+1;
+            n = -1 * 0 + 1 → 1  ✅
+            n = -1 * 1 + 1 → 0  ❌ STOP HERE. No need to continue, we'll always get -ve values
 
-      .results li:nth-child(-n+3) {
-        background: lightgreen;
-        font-weight: bold;
-      }
+            WHAT TO EXPECT: Style Item 9 (1 at the back)
+            */
+            &:nth-last-child(-n+1) {
+              font-weight: bold;
+              color: red;
+            }
 
-      .results li:nth-last-child(-n+3) {
-        background: lightcoral;
-        font-weight: bold;
-      }
+            /*
+            for -n+1;
+            n = 3 * 0 + 4 →  4  ✅
+            n = 3 * 1 + 4 →  7  ✅
+            n = 3 * 2 + 4 → 10  ✅
+            n = 3 * 3 + 4 → 13  ❌ STOP HERE. We only have 10 list items
 
-      table {
-        border: 2px solid black;
-      }
+            WHAT TO EXPECT: Style Item 6, 4 and 1 (4, 7 and 10 from the back)
+            */
+            &:nth-last-child(3n+4){
+              background-color: pink;
+            }
 
-      table tr:nth-child(even) {
-        background-color: lightblue;
-      }
+            /*
+            for 5n;
+            n = 5 * 0 + 4 →  0  ❌ (0 is invalid, there’s no “0th child”)
+            n = 5 * 1 + 4 →  5  ✅
+            n = 5 * 2 + 4 → 14  ❌ STOP HERE. We only have 10 list items
 
-      tr:nth-last-child(6) {
-        font-weight: bold;
-        color: blue;
-      }
+            WHAT TO EXPECT: Style Item 6 (5th from the back)
+            */
+            &:nth-last-child(5n){
+              font-weight: bold;
+            }
+          }
+        }
 
-      tr:nth-last-child(odd)  {
-        background-color: pink;
-      }
+        &.example-2 {
+          table {
+            border: 2px solid black;
 
-      tr:nth-last-child(even)  {
-        background-color: greenyellow;
+            tr:nth-child(even) {
+              background-color: lightblue;
+            }
+
+            tr:nth-last-child(6) {
+              font-weight: bold;
+              color: blue;
+            }
+
+            tr:nth-last-child(odd)  {
+              background-color: pink;
+            }
+
+            tr:nth-last-child(even)  {
+              background-color: greenyellow;
+            }
+          }
+        }
+
+        &.example-3 {
+          ul {
+            list-style-type: number;
+
+            li:nth-child(-n+3) {
+              background: lightgreen;
+              font-weight: bold;
+            }
+
+            li:nth-last-child(-n+3) {
+              background: lightcoral;
+              font-weight: bold;
+            }
+          }
+        }
+
+        &.example-4 {}
+
+        &.example-5 {}
+
+        &.example-6 {}
+
+        &.example-7 {}
+
+        &.example-8 {}
+
+        &.example-9 {}
       }
 
       h3 + ul {
