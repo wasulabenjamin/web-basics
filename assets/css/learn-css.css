@@ -1592,48 +1592,46 @@ a:active {}
           }
         }
 
-        &.example-4 {}
+        &.example-4 {
+          p:nth-last-child(n){
+            color: red;
+          }
 
-        &.example-5 {}
+          p:nth-last-child(1){
+            color: blue;
+          }
+        }
 
-        &.example-6 {}
+        &.example-5 {
+          ul {
+            list-style-type: none;
 
-        &.example-7 {}
+            li {
+              display: inline-block;
+              border: 3px solid black;
+              margin: 5px;
+              padding: 5px;
 
-        &.example-8 {}
+              &.fruits {
+                background-color: pink;
+              }
 
-        &.example-9 {}
-      }
-
-      h3 + ul {
-        list-style-type: none;
-      }
-
-      h3 + ul > li {
-        display: inline-block;
-        border: 3px solid black;
-        margin: 5px;
-        padding: 5px;
-      }
-
-      .fruits {
-        background-color: pink;
-      }
-
-      li:nth-last-child(3),
-      li:nth-last-child(3 of .fruits) {
-        font-weight: bold;
-        color: blue;
+              &:nth-last-child(1 of .fruits) {
+                font-weight: bold;
+                color: blue;
+              }
+            }
+          }
+        }
       }
     }
 
     .pc-nth-last-of-type {
-      p:nth-last-of-type(2) {
+      p:nth-last-of-type(3) {
         background-color: pink;
       }
 
       p:nth-last-of-type(odd) {
-        background-color: pink;
         color: blue;
       }
 

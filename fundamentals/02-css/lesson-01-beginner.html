@@ -2217,10 +2217,10 @@
         The :nth-child() pseudo-class takes an argument that can be a number, a keyword, or a mathematical expression.
 
         Possible Values:
-        * odd − Represents all odd-numbered (such as, 1,3,5, etc.) sibling elements in a series counting from the end.
-        * even − Represents all even-numbered (such as, 2,4,6 etc.) sibling elements in a series counting from the end.
+        * odd − Represents all odd-numbered (such as, 1,3,5, etc.) sibling elements in a series counting from the front.
+        * even − Represents all even-numbered (such as, 2,4,6 etc.) sibling elements in a series counting from the front.
         * functional notation (<an+b>) − This value represents every an+b-th child element in a series
-          counting from the end of its parent container,
+          counting from the front of its parent container,
           where:  a is a positive (+ve) integer, and
                   n is a counter variable that starts from 0.
                   b is another positive integer.
@@ -2491,36 +2491,49 @@
             </ul>
           </div>
 
-          <div class="example-4"></div>
+          <div class="example-4">
+            <h3>Styled all paragraphs with red color.</h3>
+            <h3>Sets the text color of the last paragraph to blue.</h3>
+            <p>Lorem Ipsum is simply fake text of the printing and typesetting industry.</p>
+            <p>It is a long-established fact that a reader will be distracted by the readable content.</p>
+            <p>Contrary to popular belief, Lorem Ipsum is not simply a random text.</p>
+            <p>The standard chunk of Lorem Ipsum used since the 1500s</p>
+          </div>
 
-          <div class="example-5"></div>
-
-          <div class="example-6"></div>
-
-          <div class="example-7"></div>
-
-          <div class="example-8"></div>
-
-          <div class="example-9"></div>
-
-
-
-          <h3>Styling list items with the class fruits to have a pink background.</h3>
-          <h3>Counting from the last child, styling a first child element of the fruit class.</h3>
-          <ul>
-            <li>Orange</li>
-            <li>Apple</li>
-            <li class="fruits">Mango</li>
-            <li>Grapes</li>
-            <li class="fruits">Banana</li>
-            <li>Watermelon</li>
-            <li class="fruits">Cheery</li>
-            <li class="fruits">Pear</li>
-          </ul>
+          <div class="example-5">
+            <h3>Styling list items with the class fruits to have a pink background.</h3>
+            <h3>Counting from the last child, styling first child element of the fruits class.</h3>
+            <ul>
+              <li>Orange</li>
+              <li>Apple</li>
+              <li class="fruits">Mango</li>
+              <li>Grapes</li>
+              <li class="fruits">Banana</li>
+              <li>Watermelon</li>
+              <li class="fruits">Cheery</li>
+              <li class="fruits">Pear</li>
+            </ul>
+          </div>
         </div><br>
 
         <!--
         Pseudo-Class :last-of-type()
+        The CSS pseudo-class selector :last-of-type is used to select and style one or more elements of its type within
+        its parent container, counting from the last.
+
+        Possible Values:
+        * odd − Represents all odd-numbered (such as, 1,3,5, etc.) sibling elements in a series counting from the end.
+        * even − Represents all even-numbered (such as, 2,4,6 etc.) sibling elements in a series counting from the end.
+        * functional notation (<an+b>) − This value represents every an+b-th child element in a series
+          counting from the end of its parent container,
+          where:  a is a positive (+ve) integer, and
+                  n is a counter variable that starts from 0.
+                  b is another positive integer.
+
+        The syntax for pseudo-class nth-last-of-type(n) selector is as follows:
+          tag:nth-last-of-type(number/ expression / odd / even) {
+            property: value;
+          }
         -->
         <div class="pc-nth-last-of-type">
           <h3>Pseudo-Class :nth-last-of-type()</h3>
@@ -2534,6 +2547,21 @@
 
         <!--
         Pseudo-Class :nth-of-type()
+        The CSS pseudo-class selector :nth-of-type is used to select and style one or more elements of its type within
+
+        Possible Values:
+        * odd − Represents all odd-numbered (such as, 1,3,5, etc.) sibling elements in a series counting from the front.
+        * even − Represents all even-numbered (such as, 2,4,6 etc.) sibling elements in a series counting from the front.
+        * functional notation (<an+b>) − This value represents every an+b-th child element in a series
+          counting from the front of its parent container,
+          where:  a is a positive (+ve) integer, and
+                  n is a counter variable that starts from 0.
+                  b is another positive integer.
+
+        The syntax for pseudo-class nth-of-type(n) selector is as follows:
+          tag:nth-of-type(number/ expression / odd / even) {
+            property: value;
+          }
         -->
         <div class="pc-nth-of-type">
           <h3>Pseudo-Class :nth-of-type()</h3>
