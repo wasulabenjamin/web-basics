@@ -1557,7 +1557,7 @@
         Forgiving selector parsing
         - With usage of :is() and :where(), when one of the selectors fails to parse,
           instead of the whole list of selectors being deemed invalid,
-          only the incorrect or unsupported selectors gets ignored and the rest of the selectors are used.
+          only the incorrect or unsupported selectors get ignored and the rest of the selectors are used.
         - :is(:valid, :unsupported) − this will parse correctly and match :valid,
           even when the browsers don't support :unsupported.
 
@@ -1935,9 +1935,6 @@
         - The value should be according to BCP47 language codes.
         - The matching language range is case-sensitive.
 
-        Implicit wildcard matching is allowed,
-        such that :lang(de-DE) will match de-DE, de-DE-1996, de-Latn-DE, de-Latf-DE and de-Latn-DE-1996.
-
         Using wildcards explicitly will require including a full match of language subtag.
         -->
         <div class="pc-lang">
@@ -2168,7 +2165,7 @@
          - At a time multiple selectors can be negated, like :not(.foo, .bar), means :not(.foo) :not(.bar)
          - When any selector is passed as a part of the list, proves to be invalid or unsupported,
            will result in invalidating the whole rule.
-           To avoid this situation, you should use :is(), as it has the property of forgiving selector list.
+           To avoid this situation, you should use :is(), as it has the property of forgiving a selector list.
 
         The syntax for pseudo-class not selector is as follows:
           tag:not(selector){
@@ -2359,7 +2356,7 @@
               </thead>
               <tbody>
               <tr>
-                <td>Jhon</td>
+                <td>John</td>
                 <td>Sean</td>
               </tr>
               <tr>
@@ -2372,7 +2369,7 @@
               </tr>
               <tr>
                 <td>Marry</td>
-                <td>Alamnd</td>
+                <td>Allan</td>
               </tr>
               <tr>
                 <td>Dora</td>
@@ -2384,7 +2381,7 @@
               </tr>
               </tbody>
             </table>
-            <p>Selector selects all even rows in the tbody of a table, but skips any rows that are hidden.</p>
+            <p>Selector selects all even rows in the tbody of a table but skips any rows that are hidden.</p>
             <table class="even-rows-hidden">
               <thead>
               <tr>
@@ -2394,7 +2391,7 @@
               </thead>
               <tbody>
               <tr>
-                <td>Jhon</td>
+                <td>John</td>
                 <td>Sean</td>
               </tr>
               <tr>
@@ -2407,7 +2404,7 @@
               </tr>
               <tr>
                 <td>Marry</td>
-                <td>Alamnd</td>
+                <td>Allan</td>
               </tr>
               <tr>
                 <td>Dora</td>
@@ -2502,7 +2499,7 @@
 
           <div class="example-5">
             <h3>Styling list items with the class fruits to have a pink background.</h3>
-            <h3>Counting from the last child, styling first child element of the fruits class.</h3>
+            <h3>Counting from the last child, styling a first child element of the fruit class.</h3>
             <ul>
               <li>Orange</li>
               <li>Apple</li>
@@ -2575,31 +2572,37 @@
 
         <!--
         Pseudo-Class :only-child
+        The CSS pseudo-class selector :only-child matches or represents an element that is the only child of its parent
+        element or in other words, an element without any siblings.
+        This pseudo-class behaves in the same manner as :first-child :last-child or :nth-child(1) :nth-last-child(1),
+        but the specificity is low.
+
+        The element selected by this pseudo-class must have a parent.
         -->
         <div class="pc-only-child">
           <h3>Pseudo-Class :only-child</h3>
 
-          <div class="field">
-            <p>Ordered list:</p>
-            <ol>
-              <li>Only one item</li>
-            </ol>
-          </div>
+          <p>An ordered list with one list item: </p>
+          <ol>
+            <li>Only one item</li>
+          </ol>
 
-          <div class="field">
-            <p>Ordered list:</p>
-            <ol>
-              <li>One item</li>
-              <li>Two items</li>
-            </ol>
-          </div>
+          <p>An Ordered list with two list items:</p>
+          <ol>
+            <li>One item</li>
+            <li>Two items</li>
+          </ol>
 
-          <div class="field">
-            <p>Unordered list:</p>
-            <ul>
-              <li>First Item</li>
-            </ul>
-          </div>
+          <p>An Unordered list with one list item:</p>
+          <ul>
+            <li>First Item</li>
+          </ul>
+
+          <p>An Unordered list with two list items:</p>
+          <ul>
+            <li>First Item</li>
+            <li>Second Item</li>
+          </ul>
         </div><br>
 
         <!--

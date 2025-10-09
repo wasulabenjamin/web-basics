@@ -1656,20 +1656,17 @@ a:active {}
     }
 
     .pc-only-child {
-      .field {
-        margin: 1px;
-        padding: 1px;
-      }
-
-      li:only-child {
-        color: darkblue;
-        background-color: lightpink;
-        padding: 10px;
-      }
-
-      div {
+      ol,
+      ul {
         border: 2px solid black;
-        width: 500px;
+        padding: 20px;
+        list-style-type: none;
+
+        li:only-child {
+          color: darkblue;
+          background-color: lightpink;
+          padding: 10px;
+        }
       }
     }
 
